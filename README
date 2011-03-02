@@ -14,3 +14,9 @@ that was an extension of a compiler that was itself an extension
 of another compiler also seemed beyond me at the time.  There is 
 a regression test suite that used phc, a polyglot-specific test
 harness.
+
+There are a few half-baked ideas in here that never ended up 
+implemented, or never ended up in a published paper.  I'm not 
+sure that increasing code quality would have made my life in 
+graduate school any easier, but it probably would have made me 
+feel a little better.
