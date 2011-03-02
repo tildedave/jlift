@@ -1,0 +1,18 @@
+public class IllegalInlineArray {
+
+    int{} publicInt;
+    Container{} publicContainer;
+    Container[{Alice:}]{Alice:} aliceContainer;
+
+    public void test{}() {
+	Container[] myContainer = { aliceContainer };
+	publicContainer = myContainer[0];
+	publicInt = myContainer[0].theInt;
+    }
+
+}
+
+class Container[label L] {
+
+    public int{L} theInt;
+}

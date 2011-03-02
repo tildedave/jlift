@@ -1,0 +1,23 @@
+public class IllegalParamRecursion {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	Functor[{Bob:}] bobFunctor = new Functor[{Bob:}]();
+	aliceInt = bobFunctor.doFunction(4);
+    }
+
+}
+
+class Functor[label L] {
+
+    int{L} data = -1;
+
+    public int{L} doFunction(int{L} input) {
+	if (input > 0) {
+	    return 2 * data * doFunction(input - 1);
+	}
+	else
+	    return input;
+    }
+}

@@ -1,0 +1,7 @@
+package javacard.framework;
+
+
+public class SystemException extends CardRuntimeException {
+
+    public native static void throwIt(short reason) throws SystemException;
+}

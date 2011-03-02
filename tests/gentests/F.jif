@@ -1,0 +1,4 @@
+public abstract class F
+{
+    abstract public F returnme();
+}

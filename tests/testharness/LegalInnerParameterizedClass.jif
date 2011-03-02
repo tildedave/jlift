@@ -1,0 +1,11 @@
+public class LegalInnerParameterizedClass[label L] {
+
+    public static void test{}() {
+	new A.Inner();
+    }
+}
+
+class A[label M] {
+    public static final class Inner[label L] extends A[L] {
+    }
+}

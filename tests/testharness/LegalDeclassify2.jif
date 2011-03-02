@@ -1,0 +1,21 @@
+public class LegalDeclassify2 {
+
+    int{Alice:} aliceInt;
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	Container[{Bob:}] bobContainer = new Container();
+	aliceInt = declassify(bobContainer.getString().length(),{Alice:});
+    }
+
+}
+
+class Container[label L] {
+
+    String{L} i;
+
+    public String getString() { 
+	return i;
+    }
+
+}

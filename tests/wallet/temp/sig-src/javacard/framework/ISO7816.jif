@@ -1,0 +1,15 @@
+package javacard.framework;
+
+
+public class ISO7816{
+    public static byte OFFSET_CDATA = 0;
+    public static byte OFFSET_INS = 1;
+    public static byte OFFSET_P1 = 1;
+    public static byte OFFSET_CLA = 2;
+    public static short SW_DATA_INVALID = 3;
+    public static short SW_INS_NOT_SUPPORTED = 4;
+    public static short SW_FUNC_NOT_SUPPORTED = 4;
+    public static short SW_SECURITY_STATUS_NOT_SATISFIED = 4;
+    public static short SW_UNKNOWN;
+    public static byte INS_SELECT;
+}

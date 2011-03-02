@@ -1,0 +1,11 @@
+public class IllegalReturn {
+
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	bobInt = getAliceInt();
+    }
+
+    public int{Alice:} getAliceInt() { return 1; }
+
+}

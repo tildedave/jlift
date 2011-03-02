@@ -1,0 +1,16 @@
+This is a checkin of the main work I did for my thesis: 
+an extension of the Jif compiler (http://www.cs.cornell.edu)
+so that it could find information flows in Java programs.  
+This information would be outputted to XML, which would then
+be processed by an external graph cut program (simp or 
+lemon-mincut in my github account).
+
+This work was eventually published in ESOP10 and FSE08.
+
+There's a lot of dead code around -- mostly because the 
+environment of graduate school does not encourage best (or 
+even good) code practices.  Writing unit tests for a compiler 
+that was an extension of a compiler that was itself an extension 
+of another compiler also seemed beyond me at the time.  There is 
+a regression test suite that used phc, a polyglot-specific test
+harness.

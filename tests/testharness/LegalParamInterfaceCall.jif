@@ -1,0 +1,25 @@
+public class LegalParamInterfaceCall {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	I myC = new C();
+	myC.passInt(aliceInt);
+	aliceInt = myC.getInt();
+    }
+
+}
+
+class C[label L] implements I[L] {
+    public void passInt(int aliceInt) {
+    }
+
+    public int getInt() {
+	return 0;
+    }
+}
+
+interface I[label L] {
+    public void passInt(int{L} lInt);
+    public int{L} getInt();
+}

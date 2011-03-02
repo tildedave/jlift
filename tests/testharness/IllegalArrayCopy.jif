@@ -1,0 +1,13 @@
+public class IllegalArrayCopy {
+
+    int{Alice:}[]{Alice:} aliceArray;
+    int{Bob:}[]{Bob:} bobArray;
+
+    public void test{}() {
+	for(int i = 0; i < aliceArray.length; ++i) {
+	    bobArray[i] = declassify(aliceArray[i],{});
+	}
+    }
+
+
+}

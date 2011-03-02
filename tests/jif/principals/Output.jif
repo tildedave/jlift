@@ -1,0 +1,15 @@
+package jif.principals;
+
+public class Output extends ExternalPrincipal {
+    public Output() {
+        super("Output");
+    }
+
+    private static Output{*!:*} P;
+    public static Principal getInstance{*!:*}() {
+        if (P == null) {
+            P = new Output();
+        }
+        return P;
+    }
+}

@@ -1,0 +1,14 @@
+public class IllegalDivideByZero {
+
+    int i;
+    int{Alice:} j;
+
+    public void test{}() {
+	foo();
+    }
+
+    public void foo() {
+	int k = i / j;
+    }
+
+}

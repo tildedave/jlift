@@ -1,0 +1,24 @@
+public class LegalParam {
+
+    int{Alice:} aliceInt;
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	Container c = new Container();
+	c.setInt(aliceInt);
+	bobInt = c.getInt();
+    }
+
+}
+
+class Container[label L] {
+    int{L} myInt;
+
+    public int getInt() { 
+	return myInt;
+    }
+
+    public void setInt(int k) {
+	this.myInt = k;
+    }
+}

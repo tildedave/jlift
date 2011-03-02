@@ -1,0 +1,27 @@
+/*public class B {
+
+    int{Alice:} aliceInt;
+    Container aliceContainer;
+    int{Alice:} bobInt;
+    Container bobContainer;
+    /*
+    void api1{}() {
+	aliceInt = aliceContainer.getData();
+	launder(aliceContainer, bobInt);
+    }
+
+    void launder(Container c, int i) {
+	if (c.getData() == i) {
+	}
+    }
+
+}
+*/
+
+class Container[label L]
+{
+    public int{L} data;
+
+    public int{L} getData() { return data; }
+    public void setData{L}(int{L} newData) {  this.data = newData; }
+}

@@ -1,0 +1,46 @@
+package javacard.framework;
+
+/*
+* This is a Jif signature for the Java class. It provides Jif label
+* annotations for the Java class, allowing it to be usable by Jif
+* code. There is no automated check that the signature provided here
+* agrees with the actual Java code.
+*/
+
+
+
+public interface  ISO7816 {
+	static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0; // jif signature of a java class
+	public static final short SW_NO_ERROR = 0;
+	public static final short SW_BYTES_REMAINING_00 = 0;
+	public static final short SW_WRONG_LENGTH = 0;
+	public static final short SW_SECURITY_STATUS_NOT_SATISFIED = 0;
+	public static final short SW_FILE_INVALID = 0;
+	public static final short SW_DATA_INVALID = 0;
+	public static final short SW_CONDITIONS_NOT_SATISFIED = 0;
+	public static final short SW_COMMAND_NOT_ALLOWED = 0;
+	public static final short SW_APPLET_SELECT_FAILED = 0;
+	public static final short SW_WRONG_DATA = 0;
+	public static final short SW_FUNC_NOT_SUPPORTED = 0;
+	public static final short SW_FILE_NOT_FOUND = 0;
+	public static final short SW_RECORD_NOT_FOUND = 0;
+	public static final short SW_INCORRECT_P1P2 = 0;
+	public static final short SW_WRONG_P1P2 = 0;
+	public static final short SW_CORRECT_LENGTH_00 = 0;
+	public static final short SW_INS_NOT_SUPPORTED = 0;
+	public static final short SW_CLA_NOT_SUPPORTED = 0;
+	public static final short SW_UNKNOWN = 0;
+	public static final short SW_FILE_FULL = 0;
+	public static final short SW_LOGICAL_CHANNEL_NOT_SUPPORTED = 0;
+	public static final short SW_SECURE_MESSAGING_NOT_SUPPORTED = 0;
+	public static final short SW_WARNING_STATE_UNCHANGED = 0;
+	public static final byte OFFSET_CLA = 0;
+	public static final byte OFFSET_INS = 0;
+	public static final byte OFFSET_P1 = 0;
+	public static final byte OFFSET_P2 = 0;
+	public static final byte OFFSET_LC = 0;
+	public static final byte OFFSET_CDATA = 0;
+	public static final byte CLA_ISO7816 = 0;
+	public static final byte INS_SELECT = 0;
+	public static final byte INS_EXTERNAL_AUTHENTICATE = 0;
+}

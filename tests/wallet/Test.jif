@@ -1,0 +1,16 @@
+//import javacard.framework.*;
+
+public class Test {
+    
+    // signal the the PIN validation is required
+    // for a credit or a debit transaction
+    //    final static short SW_PIN_VERIFICATION_REQUIRED = 0x6301;
+
+    String{Alice:} str;
+
+    public void foo{}() throws (NullPointerException) { // APDU{} apdu) throws ISOException
+	if (str.length() == 0) {
+	    throw new NullPointerException();
+	}
+    }
+}

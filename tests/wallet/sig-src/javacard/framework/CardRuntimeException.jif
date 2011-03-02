@@ -1,0 +1,21 @@
+package javacard.framework;
+
+/*
+* This is a Jif signature for the Java class. It provides Jif label
+* annotations for the Java class, allowing it to be usable by Jif
+* code. There is no automated check that the signature provided here
+* agrees with the actual Java code.
+*/
+
+import java.lang.RuntimeException;
+import javacard.framework.CardRuntimeException;
+
+
+public class CardRuntimeException extends RuntimeException {
+	static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0; // jif signature of a java class
+	public CardRuntimeException() { }
+	public CardRuntimeException(short v0) { }
+	native public static void throwIt(short v1) throws CardRuntimeException;
+	native public void setReason(short v2);
+	native public short{this} getReason();
+}

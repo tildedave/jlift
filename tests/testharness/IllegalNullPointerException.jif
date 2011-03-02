@@ -1,0 +1,21 @@
+public class IllegalNullPointerException {
+
+    int{Alice:} aliceInt;
+    Object obj;
+    Object obj2;
+
+    public void test{}() {
+	foo();
+    }
+
+    public void foo() {
+	if (aliceInt == 0) {
+	    bork();
+	}
+    }
+
+    public void bork() {
+	int hc = obj.hashCode();
+	int hc2 = obj2.hashCode();
+    }
+}

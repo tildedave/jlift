@@ -1,0 +1,18 @@
+public class Exception2 {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() : {} {
+	verify();
+    }
+
+    public void verify() {
+	if (aliceInt > 0) {
+	    throw new OurException();
+	}
+    }
+
+}
+
+class OurException extends RuntimeException {
+}

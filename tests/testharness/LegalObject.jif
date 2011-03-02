@@ -1,0 +1,15 @@
+public class LegalObject {
+
+
+
+
+
+
+}
+
+class A {
+}
+
+class B extends A {
+
+}

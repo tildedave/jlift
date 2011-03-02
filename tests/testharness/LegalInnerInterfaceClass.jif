@@ -1,0 +1,29 @@
+public class LegalInnerInterfaceClass {
+
+    static int{Alice:} aliceInt;
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	if (aliceInt == 0)
+	    new B().bar();
+    }
+
+}
+
+interface I {
+
+    final public static class InnerClass {
+
+	public void foo() {
+	    LegalInnerInterfaceClass.aliceInt = 0;
+	}
+
+    }
+}
+
+class B implements I {
+
+    public void bar() {
+	new InnerClass().foo();
+    }
+}

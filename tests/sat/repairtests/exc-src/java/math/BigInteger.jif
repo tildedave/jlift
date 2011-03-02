@@ -1,0 +1,23 @@
+/*
+* This is a Jif signature for the Java class. It provides Jif label
+* annotations for the Java class, allowing it to be usable by Jif
+* code. There is no automated check that the signature provided here
+* agrees with the actual Java code.
+*
+* Automatically generated with Siggen 0.1.0.
+* Available from: http://www.cse.psu.edu/~dhking/siggen
+*/
+
+package java.math;
+
+import java.util.Random;
+import java.math.BigInteger;
+import java.lang.Object;
+
+public class BigInteger extends Object {
+	static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0; // jif signature of a java class
+	public BigInteger() { }
+	native public int{this} bitLength();
+	public BigInteger(int v0, Random v1) { }
+	native public int{this; v2} compareTo(BigInteger v2);
+}

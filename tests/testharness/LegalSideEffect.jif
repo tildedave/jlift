@@ -1,0 +1,13 @@
+public class LegalSideEffect {
+
+    int{Alice:} aliceInt;
+    int{Alice:} otherAliceInt;
+
+    public void test{}() {
+	if (aliceInt > 3) {
+	    otherAliceInt = 1;
+	}
+    }
+
+
+}

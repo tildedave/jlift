@@ -1,0 +1,165 @@
+generating list to iterate over
+===== Starting solver Job solver: G.jl (#1) =====
+   2 equations
+ Number of relaxation steps: 2
+ ======== VAR MAP ========
+inst(aliceContainer) = {*!: }    	summary variable for aliceContainer
+inst(bobContainer) = {*!: }    	summary variable for bobContainer
+Variables not in this map will receive default label of {*!: }
+=========================
+
+   finished Job solver: G.jl (#1)
+===== Starting solver Job solver: G.jl (#2) =====
+   2 equations
+ Number of relaxation steps: 2
+ ======== VAR MAP ========
+data = {L}    	label of the field Container.data
+Variables not in this map will receive default label of {*!: }
+=========================
+
+   finished Job solver: G.jl (#2)
+===== Starting solver getData (#8) =====
+   13 equations
+ Number of relaxation steps: 13
+ ======== VAR MAP ========
+R8_call1 = {*!: }    	path variable for value of { return this.data; }
+getData:return_call1 = {*!: }    	label representing return termination of the procedure declaration
+caller_pc@getData:G.jl:15,11-22@callto:getData = {*!: }    	upper bound for the pc at the call site of getData
+pc1_call1 = {*!: }    	pc at position G.jl:15,11-22
+getData_reciever = {*!: }    	variable for this
+NV2_call1 = {*!: }    	path variable for value of this
+L:param@G.jl:7,24-36 = {*!: }    	variable to replace param {L}
+NV3_call1 = {*!: }    	path variable for value of this.data
+R4_call1 = {*!: }    	path variable for value of return this.data;
+getData_rv_call1 = {*!: }    	return value label of the procedure decl getData
+R5_call1 = {*!: }    	path variable for value of return this.data;
+R7_call1 = {*!: }    	path variable for value of { return this.data; }
+Variables not in this map will receive default label of {*!: }
+=========================
+
+   finished getData (#8)
+===== Starting solver foo (#9) =====
+   70 equations
+ ===== Starting recursive search =====
+ 0|-> starting recursive search {NV3_call1} <= {getData_rv_call1; caller_pc@getData:G.jl:15,11-22@callto:getData}@G.jl:15,27-39
+ Number of relaxation steps: 1
+ ======== VAR MAP ========
+R8_call1 = {}    	path variable for value of { return this.data; }
+getData:return_call1 = {}    	label representing return termination of the procedure declaration
+pc24 = {}    	pc at position G.jl:6,11-19
+caller_pc@getData:G.jl:15,11-22@callto:getData = {}    	upper bound for the pc at the call site of getData
+getData_rv = {*!: }    	return value label of the procedure decl getData
+getData:return_observed = {*!: }    	label representing the return label of the method call
+getData:value_returned = {*!: }    	label representing the return value label of the method call
+NV28 = {}    	path variable for value of this.bobContainer
+receiver = {}    	label of receiver of call this.bobContainer.getData()
+R23_call2:2 = {*!: }    	path variable for value of public void setData(...)
+setData:return_call2 = {*!: }    	label representing return termination of the procedure declaration
+NV29 = {}    	path variable for value of this.bobContainer.getData()
+newData@callto:setData = {}    	upper bound for the formal argument newData
+caller_pc@setData:G.jl:16,11-23@callto:setData = {}    	upper bound for the pc at the call site of setData
+setData:return_observed = {*!: }    	label representing the return label of the method call
+setData:value_returned = {*!: }    	label representing the return value label of the method call
+NV26 = {}    	path variable for value of this.aliceContainer
+receiver:2 = {}    	label of receiver of call this.aliceContainer.setData(this.bobContainer.getData())
+arg1label = {}    	label of arg 1 of call this.aliceContainer.setData(this.bobContainer.getData())
+R33 = {*!: }    	path variable for value of public void foo(...)
+foo:return = {*!: }    	label representing return termination of the procedure declaration
+foo_apireceiver = {*!: }    	variable for this
+NV25 = {}    	path variable for value of this
+inst(aliceContainer) = {*!: }    	summary variable for aliceContainer
+NV27 = {}    	path variable for value of this
+inst(bobContainer) = {*!: }    	summary variable for bobContainer
+pc1_call1 = {}    	pc at position G.jl:15,11-22
+getData_reciever = {*!: }    	variable for this
+NV2_call1 = {}    	path variable for value of this
+L:param@G.jl:7,24-36 = {Bob: }    	variable to replace param {L}
+NV3_call1 = {Bob: }    	path variable for value of this.data
+R4_call1 = {}    	path variable for value of return this.data;
+getData_rv_call1 = {Bob: }    	return value label of the procedure decl getData
+R5_call1 = {}    	path variable for value of return this.data;
+R7_call1 = {}    	path variable for value of { return this.data; }
+NV30 = {}    	path variable for value of this.aliceContainer.setData(this.bobContainer.getData())
+pc31 = {}    	pc at position G.jl:7,1-47
+pc19_call2 = {}    	pc at position G.jl:16,11-23
+setData_reciever = {*!: }    	variable for this
+NV20_call2 = {}    	path variable for value of this
+NV21_call2 = {}    	path variable for value of newData
+NV22_call2 = {}    	path variable for value of this.data = newData
+L:param@G.jl:7,1-15 = {Alice: }    	variable to replace param {L}
+R23_call2 = {*!: }    	path variable for value of public void setData(...)
+NV32 = {}    	path variable for value of this.aliceContainer.setData(this.bobContainer.getData())
+Variables not in this map will receive default label of {*!: }
+=========================
+
+ Solution succeeded, finishing up
+ Number of relaxation steps: 99
+ ======== VAR MAP ========
+R8_call1 = {}    	path variable for value of { return this.data; }
+getData:return_call1 = {}    	label representing return termination of the procedure declaration
+pc24 = {}    	pc at position G.jl:6,11-19
+caller_pc@getData:G.jl:15,11-22@callto:getData = {}    	upper bound for the pc at the call site of getData
+getData_rv = {*!: }    	return value label of the procedure decl getData
+getData:return_observed = {*!: }    	label representing the return label of the method call
+getData:value_returned = {*!: }    	label representing the return value label of the method call
+NV28 = {}    	path variable for value of this.bobContainer
+receiver = {}    	label of receiver of call this.bobContainer.getData()
+R23_call2:2 = {*!: }    	path variable for value of public void setData(...)
+setData:return_call2 = {*!: }    	label representing return termination of the procedure declaration
+NV29 = {}    	path variable for value of this.bobContainer.getData()
+newData@callto:setData = {}    	upper bound for the formal argument newData
+caller_pc@setData:G.jl:16,11-23@callto:setData = {}    	upper bound for the pc at the call site of setData
+setData:return_observed = {*!: }    	label representing the return label of the method call
+setData:value_returned = {*!: }    	label representing the return value label of the method call
+NV26 = {}    	path variable for value of this.aliceContainer
+receiver:2 = {}    	label of receiver of call this.aliceContainer.setData(this.bobContainer.getData())
+arg1label = {}    	label of arg 1 of call this.aliceContainer.setData(this.bobContainer.getData())
+R33 = {*!: }    	path variable for value of public void foo(...)
+foo:return = {*!: }    	label representing return termination of the procedure declaration
+foo_apireceiver = {*!: }    	variable for this
+NV25 = {}    	path variable for value of this
+inst(aliceContainer) = {*!: }    	summary variable for aliceContainer
+NV27 = {}    	path variable for value of this
+inst(bobContainer) = {*!: }    	summary variable for bobContainer
+pc1_call1 = {}    	pc at position G.jl:15,11-22
+getData_reciever = {*!: }    	variable for this
+NV2_call1 = {}    	path variable for value of this
+L:param@G.jl:7,24-36 = {Bob: }    	variable to replace param {L}
+NV3_call1 = {Bob: }    	path variable for value of this.data
+R4_call1 = {}    	path variable for value of return this.data;
+getData_rv_call1 = {Bob: }    	return value label of the procedure decl getData
+R5_call1 = {}    	path variable for value of return this.data;
+R7_call1 = {}    	path variable for value of { return this.data; }
+NV30 = {}    	path variable for value of this.aliceContainer.setData(this.bobContainer.getData())
+pc31 = {}    	pc at position G.jl:7,1-47
+pc19_call2 = {}    	pc at position G.jl:16,11-23
+setData_reciever = {*!: }    	variable for this
+NV20_call2 = {}    	path variable for value of this
+NV21_call2 = {}    	path variable for value of newData
+NV22_call2 = {}    	path variable for value of this.data = newData
+L:param@G.jl:7,1-15 = {Alice: }    	variable to replace param {L}
+R23_call2 = {*!: }    	path variable for value of public void setData(...)
+NV32 = {}    	path variable for value of this.aliceContainer.setData(this.bobContainer.getData())
+Variables not in this map will receive default label of {*!: }
+=========================
+
+   finished foo (#9)
+===== Starting solver setData (#10) =====
+   13 equations
+ Number of relaxation steps: 13
+ ======== VAR MAP ========
+R23_call2:2 = {*!: }    	path variable for value of public void setData(...)
+setData:return_call2 = {*!: }    	label representing return termination of the procedure declaration
+caller_pc@setData:G.jl:16,11-23@callto:setData = {*!: }    	upper bound for the pc at the call site of setData
+pc19_call2 = {*!: }    	pc at position G.jl:16,11-23
+setData_reciever = {*!: }    	variable for this
+NV20_call2 = {*!: }    	path variable for value of this
+newData@callto:setData = {*!: }    	upper bound for the formal argument newData
+NV21_call2 = {*!: }    	path variable for value of newData
+NV22_call2 = {*!: }    	path variable for value of this.data = newData
+L:param@G.jl:7,1-15 = {*!: }    	variable to replace param {L}
+R23_call2 = {*!: }    	path variable for value of public void setData(...)
+Variables not in this map will receive default label of {*!: }
+=========================
+
+   finished setData (#10)

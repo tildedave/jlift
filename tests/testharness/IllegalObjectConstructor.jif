@@ -1,0 +1,19 @@
+public class IllegalObjectConstructor {
+
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	B myB = new B(bobInt);
+    }
+}
+
+class A {
+    public A(int{Alice:} i) {
+    }
+}
+
+class B extends A {
+    public B(int k) {
+	super(k);
+    }
+}

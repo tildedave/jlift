@@ -1,0 +1,18 @@
+public class IllegalSideEffect {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	if (aliceInt > 3) {
+	    new T().doIt();
+	}
+    }
+}
+
+class T[label M] {
+    int{} publicInt;
+
+    public void doIt() {
+	publicInt = 3;
+    }
+}

@@ -1,0 +1,9 @@
+package javacard.security;
+
+
+public interface Key{
+    public void clearKey();
+    public short getSize();
+    public byte getType();
+    public boolean isInitialized();
+}

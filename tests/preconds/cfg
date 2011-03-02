@@ -1,0 +1,928 @@
+ digraph CFGBuildReachChecker0 {
+   label="CFGBuilder: ReachChecker0\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test(...) -> void
+ 7346727 [ label = "public void test(...)" ];
+ 29689095 [ label = "void" ];
+ 7346727 -> 29689095 [label=""];
+ // node public void test(...) -> []
+ //     edge void -> void
+ 29689095 [ label = "void" ];
+ 3941240 [ label = "void" ];
+ 29689095 -> 3941240 [label=""];
+ // node void -> [{edgeKey=,term={ eval(this.myField.getClass()); },entry}]
+ //     edge void -> { eval(this.myField.getClass()); }
+ 3941240 [ label = "void" ];
+ 16625677 [ label = "{ eval(this.myField.getClass()); }" ];
+ 3941240 -> 16625677 [label=""];
+ //     edge { eval(this.myField.getClass()); } -> eval(this.myField.getClass());
+ 16625677 [ label = "{ eval(this.myField.getClass()); }" ];
+ 5670411 [ label = "eval(this.myField.getClass());" ];
+ 16625677 -> 5670411 [label=""];
+ // node { eval(this.myField.getClass()); } -> [{edgeKey=,term=public void test(...),exit}]
+ //     edge eval(this.myField.getClass()); -> this.myField.getClass()
+ 5670411 [ label = "eval(this.myField.getClass());" ];
+ 11608737 [ label = "this.myField.getClass()" ];
+ 5670411 -> 11608737 [label=""];
+ // node eval(this.myField.getClass()); -> [{edgeKey=,term={ eval(this.myField.getClass()); },exit}]
+ //     edge this.myField.getClass() -> this.myField
+ 11608737 [ label = "this.myField.getClass()" ];
+ 16988783 [ label = "this.myField" ];
+ 11608737 -> 16988783 [label=""];
+ // node this.myField.getClass() -> [{edgeKey=,term=eval(this.myField.getClass());,exit}]
+ //     edge this.myField -> this
+ 16988783 [ label = "this.myField" ];
+ 12985263 [ label = "this" ];
+ 16988783 -> 12985263 [label=""];
+ // node this.myField -> [{edgeKey=,term=this.myField.getClass(),exit}]
+ //     edge this -> this
+ 12985263 [ label = "this" ];
+ 5294604 [ label = "this" ];
+ 12985263 -> 5294604 [label=""];
+ // node this -> [{edgeKey=,term=this.myField,exit}]
+ //     edge this -> this.myField
+ 5294604 [ label = "this" ];
+ 59219 [ label = "this.myField" ];
+ 5294604 -> 59219 [label=""];
+ //     edge this.myField -> this.myField.getClass()
+ 59219 [ label = "this.myField" ];
+ 22221245 [ label = "this.myField.getClass()" ];
+ 59219 -> 22221245 [label=""];
+ //     edge this.myField.getClass() -> eval(this.myField.getClass());
+ 22221245 [ label = "this.myField.getClass()" ];
+ 11644607 [ label = "eval(this.myField.getClass());" ];
+ 22221245 -> 11644607 [label=""];
+ //     edge this.myField.getClass() -> public void test(...)
+ 22221245 [ label = "this.myField.getClass()" ];
+ 21465667 [ label = "public void test(...)" ];
+ 22221245 -> 21465667 [label="NullPointerException"];
+ //     edge eval(this.myField.getClass()); -> { eval(this.myField.getClass()); }
+ 11644607 [ label = "eval(this.myField.getClass());" ];
+ 29774358 [ label = "{ eval(this.myField.getClass()); }" ];
+ 11644607 -> 29774358 [label=""];
+ //     edge { eval(this.myField.getClass()); } -> public void test(...)
+ 29774358 [ label = "{ eval(this.myField.getClass()); }" ];
+ 21465667 [ label = "public void test(...)" ];
+ 29774358 -> 21465667 [label=""];
+ }
+ digraph DataFlowReachChecker0 {
+   label="Dataflow: ReachChecker0\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 59219 [ label = "this.myField\n(Field_c)" ];
+ 22221245 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 59219 -> 22221245 [label="\nreachable"];
+ 16988783 [ label = "this.myField\n(Field_c)" ];
+ 12985263 [ label = "this (Special_c)" ];
+ 16988783 -> 12985263 [label="\nreachable"];
+ 22221245 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 11644607 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 22221245 -> 11644607 [label="\nreachable"];
+ 21465667 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 22221245 -> 21465667 [label="NullPointerException\nreachable by exceptions only"];
+ 11608737 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 16988783 [ label = "this.myField (Field_c)" ];
+ 11608737 -> 16988783 [label="\nreachable"];
+ 21465667 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 7346727 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 29689095 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 7346727 -> 29689095 [label="\nreachable"];
+ 3941240 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 16625677 [ label = "{ eval(this.myField.getClass()); } (Block_c)" ];
+ 3941240 -> 16625677 [label="\nreachable"];
+ 29689095 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 3941240 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 29689095 -> 3941240 [label="\nreachable"];
+ 5294604 [ label = "this\n(Special_c)" ];
+ 59219 [ label = "this.myField (Field_c)" ];
+ 5294604 -> 59219 [label="\nreachable"];
+ 12985263 [ label = "this\n(Special_c)" ];
+ 5294604 [ label = "this (Special_c)" ];
+ 12985263 -> 5294604 [label="\nreachable"];
+ 11644607 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 29774358 [ label = "{ eval(this.myField.getClass()); } (Block_c)" ];
+ 11644607 -> 29774358 [label="\nreachable"];
+ 5670411 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 11608737 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 5670411 -> 11608737 [label="\nreachable"];
+ 29774358 [ label = "{ eval(this.myField.getClass()); }\n(Block_c)" ];
+ 21465667 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 29774358 -> 21465667 [label="\nreachable"];
+ 16625677 [ label = "{ eval(this.myField.getClass()); }\n(Block_c)" ];
+ 5670411 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 16625677 -> 5670411 [label="\nreachable"];
+ }
+ digraph CFGBuildReachChecker1 {
+   label="CFGBuilder: ReachChecker1\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:9,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test2(...) -> void
+ 21716810 [ label = "public void test2(...)" ];
+ 22878167 [ label = "void" ];
+ 21716810 -> 22878167 [label=""];
+ // node public void test2(...) -> []
+ //     edge void -> void
+ 22878167 [ label = "void" ];
+ 13121387 [ label = "void" ];
+ 22878167 -> 13121387 [label=""];
+ // node void -> [{edgeKey=,term={ },entry}]
+ //     edge void -> { }
+ 13121387 [ label = "void" ];
+ 14293164 [ label = "{ }" ];
+ 13121387 -> 14293164 [label=""];
+ //     edge { } -> { }
+ 14293164 [ label = "{ }" ];
+ 9045316 [ label = "{ }" ];
+ 14293164 -> 9045316 [label=""];
+ // node { } -> [{edgeKey=,term=public void test2(...),exit}]
+ //     edge { } -> public void test2(...)
+ 9045316 [ label = "{ }" ];
+ 23053324 [ label = "public void test2(...)" ];
+ 9045316 -> 23053324 [label=""];
+ }
+ digraph DataFlowReachChecker1 {
+   label="Dataflow: ReachChecker1\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:9,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 9045316 [ label = "{ }\n(Block_c)" ];
+ 23053324 [ label = "public void test2(...) (JifMethodDecl_c)" ];
+ 9045316 -> 23053324 [label="\nreachable"];
+ 14293164 [ label = "{ }\n(Block_c)" ];
+ 9045316 [ label = "{ } (Block_c)" ];
+ 14293164 -> 9045316 [label="\nreachable"];
+ 13121387 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 14293164 [ label = "{ } (Block_c)" ];
+ 13121387 -> 14293164 [label="\nreachable"];
+ 22878167 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 13121387 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 22878167 -> 13121387 [label="\nreachable"];
+ 23053324 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 21716810 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 22878167 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 21716810 -> 22878167 [label="\nreachable"];
+ }
+ digraph CFGBuildReachChecker2 {
+   label="CFGBuilder: ReachChecker2\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public NullPrecond(...) -> { super(...) }
+ 20201168 [ label = "public NullPrecond(...)" ];
+ 17298525 [ label = "{ super(...) }" ];
+ 20201168 -> 17298525 [label=""];
+ // node public NullPrecond(...) -> []
+ //     edge { super(...) } -> super(...)
+ 17298525 [ label = "{ super(...) }" ];
+ 17535609 [ label = "super(...)" ];
+ 17298525 -> 17535609 [label=""];
+ // node { super(...) } -> [{edgeKey=,term=public NullPrecond(...),exit}]
+ //     edge super(...) -> super(...)
+ 17535609 [ label = "super(...)" ];
+ 12413535 [ label = "super(...)" ];
+ 17535609 -> 12413535 [label=""];
+ // node super(...) -> [{edgeKey=,term={ super(...) },exit}]
+ //     edge super(...) -> { super(...) }
+ 12413535 [ label = "super(...)" ];
+ 26388552 [ label = "{ super(...) }" ];
+ 12413535 -> 26388552 [label=""];
+ //     edge { super(...) } -> public NullPrecond(...)
+ 26388552 [ label = "{ super(...) }" ];
+ 23467239 [ label = "public NullPrecond(...)" ];
+ 26388552 -> 23467239 [label=""];
+ }
+ digraph DataFlowReachChecker2 {
+   label="Dataflow: ReachChecker2\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 23467239 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 20201168 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 17298525 [ label = "{ super(...) } (Block_c)" ];
+ 20201168 -> 17298525 [label="\nreachable"];
+ 26388552 [ label = "{ super(...) }\n(Block_c)" ];
+ 23467239 [ label = "public NullPrecond(...) (JLiftConstructorDecl_c)" ];
+ 26388552 -> 23467239 [label="\nreachable"];
+ 17298525 [ label = "{ super(...) }\n(Block_c)" ];
+ 17535609 [ label = "super(...) (ConstructorCall_c)" ];
+ 17298525 -> 17535609 [label="\nreachable"];
+ 12413535 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 26388552 [ label = "{ super(...) } (Block_c)" ];
+ 12413535 -> 26388552 [label="\nreachable"];
+ 17535609 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 12413535 [ label = "super(...) (ConstructorCall_c)" ];
+ 17535609 -> 12413535 [label="\nreachable"];
+ }
+ digraph CFGBuildNotNullChecker3 {
+   label="CFGBuilder: NotNullChecker3\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test(...) -> void
+ 1670071 [ label = "public void test(...)" ];
+ 17386824 [ label = "void" ];
+ 1670071 -> 17386824 [label=""];
+ // node public void test(...) -> []
+ //     edge void -> void
+ 17386824 [ label = "void" ];
+ 28360136 [ label = "void" ];
+ 17386824 -> 28360136 [label=""];
+ // node void -> [{edgeKey=,term={ eval(this.myField.getClass()); },entry}]
+ //     edge void -> { eval(this.myField.getClass()); }
+ 28360136 [ label = "void" ];
+ 11463270 [ label = "{ eval(this.myField.getClass()); }" ];
+ 28360136 -> 11463270 [label=""];
+ //     edge { eval(this.myField.getClass()); } -> eval(this.myField.getClass());
+ 11463270 [ label = "{ eval(this.myField.getClass()); }" ];
+ 367156 [ label = "eval(this.myField.getClass());" ];
+ 11463270 -> 367156 [label=""];
+ // node { eval(this.myField.getClass()); } -> [{edgeKey=,term=public void test(...),exit}]
+ //     edge eval(this.myField.getClass()); -> this.myField.getClass()
+ 367156 [ label = "eval(this.myField.getClass());" ];
+ 3445873 [ label = "this.myField.getClass()" ];
+ 367156 -> 3445873 [label=""];
+ // node eval(this.myField.getClass()); -> [{edgeKey=,term={ eval(this.myField.getClass()); },exit}]
+ //     edge this.myField.getClass() -> this.myField
+ 3445873 [ label = "this.myField.getClass()" ];
+ 27096558 [ label = "this.myField" ];
+ 3445873 -> 27096558 [label=""];
+ // node this.myField.getClass() -> [{edgeKey=,term=eval(this.myField.getClass());,exit}]
+ //     edge this.myField -> this
+ 27096558 [ label = "this.myField" ];
+ 7226213 [ label = "this" ];
+ 27096558 -> 7226213 [label=""];
+ // node this.myField -> [{edgeKey=,term=this.myField.getClass(),exit}]
+ //     edge this -> this
+ 7226213 [ label = "this" ];
+ 17477791 [ label = "this" ];
+ 7226213 -> 17477791 [label=""];
+ // node this -> [{edgeKey=,term=this.myField,exit}]
+ //     edge this -> this.myField
+ 17477791 [ label = "this" ];
+ 13748088 [ label = "this.myField" ];
+ 17477791 -> 13748088 [label=""];
+ //     edge this.myField -> this.myField.getClass()
+ 13748088 [ label = "this.myField" ];
+ 8303462 [ label = "this.myField.getClass()" ];
+ 13748088 -> 8303462 [label=""];
+ //     edge this.myField.getClass() -> eval(this.myField.getClass());
+ 8303462 [ label = "this.myField.getClass()" ];
+ 3403998 [ label = "eval(this.myField.getClass());" ];
+ 8303462 -> 3403998 [label=""];
+ //     edge this.myField.getClass() -> public void test(...)
+ 8303462 [ label = "this.myField.getClass()" ];
+ 701508 [ label = "public void test(...)" ];
+ 8303462 -> 701508 [label="NullPointerException"];
+ //     edge eval(this.myField.getClass()); -> { eval(this.myField.getClass()); }
+ 3403998 [ label = "eval(this.myField.getClass());" ];
+ 12644844 [ label = "{ eval(this.myField.getClass()); }" ];
+ 3403998 -> 12644844 [label=""];
+ //     edge { eval(this.myField.getClass()); } -> public void test(...)
+ 12644844 [ label = "{ eval(this.myField.getClass()); }" ];
+ 701508 [ label = "public void test(...)" ];
+ 12644844 -> 701508 [label=""];
+ }
+ digraph DataFlowNotNullChecker3 {
+   label="Dataflow: NotNullChecker3\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 17477791 [ label = "this\n(Special_c)" ];
+ 13748088 [ label = "this.myField (Field_c)" ];
+ 17477791 -> 13748088 [label="\n[nn access paths: []]"];
+ 7226213 [ label = "this\n(Special_c)" ];
+ 17477791 [ label = "this (Special_c)" ];
+ 7226213 -> 17477791 [label="\n[nn access paths: []]"];
+ 701508 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 1670071 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 17386824 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 1670071 -> 17386824 [label="\n[nn access paths: []]"];
+ 3403998 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 12644844 [ label = "{ eval(this.myField.getClass()); } (Block_c)" ];
+ 3403998 -> 12644844 [label="\n[nn access paths: []]"];
+ 367156 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 3445873 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 367156 -> 3445873 [label="\n[nn access paths: []]"];
+ 28360136 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 11463270 [ label = "{ eval(this.myField.getClass()); } (Block_c)" ];
+ 28360136 -> 11463270 [label="\n[nn access paths: []]"];
+ 17386824 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 28360136 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 17386824 -> 28360136 [label="\n[nn access paths: []]"];
+ 8303462 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 3403998 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 8303462 -> 3403998 [label="\n[nn access paths: []]"];
+ 701508 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 8303462 -> 701508 [label="NullPointerException\n[nn access paths: []]"];
+ 3445873 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 27096558 [ label = "this.myField (Field_c)" ];
+ 3445873 -> 27096558 [label="\n[nn access paths: []]"];
+ 13748088 [ label = "this.myField\n(Field_c)" ];
+ 8303462 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 13748088 -> 8303462 [label="\n[nn access paths: []]"];
+ 27096558 [ label = "this.myField\n(Field_c)" ];
+ 7226213 [ label = "this (Special_c)" ];
+ 27096558 -> 7226213 [label="\n[nn access paths: []]"];
+ 12644844 [ label = "{ eval(this.myField.getClass()); }\n(Block_c)" ];
+ 701508 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 12644844 -> 701508 [label="\n[nn access paths: []]"];
+ 11463270 [ label = "{ eval(this.myField.getClass()); }\n(Block_c)" ];
+ 367156 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 11463270 -> 367156 [label="\n[nn access paths: []]"];
+ }
+ digraph CFGBuildNotNullChecker4 {
+   label="CFGBuilder: NotNullChecker4\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:9,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test2(...) -> void
+ 26285048 [ label = "public void test2(...)" ];
+ 28715691 [ label = "void" ];
+ 26285048 -> 28715691 [label=""];
+ // node public void test2(...) -> []
+ //     edge void -> void
+ 28715691 [ label = "void" ];
+ 11228395 [ label = "void" ];
+ 28715691 -> 11228395 [label=""];
+ // node void -> [{edgeKey=,term={ },entry}]
+ //     edge void -> { }
+ 11228395 [ label = "void" ];
+ 5483268 [ label = "{ }" ];
+ 11228395 -> 5483268 [label=""];
+ //     edge { } -> { }
+ 5483268 [ label = "{ }" ];
+ 16825026 [ label = "{ }" ];
+ 5483268 -> 16825026 [label=""];
+ // node { } -> [{edgeKey=,term=public void test2(...),exit}]
+ //     edge { } -> public void test2(...)
+ 16825026 [ label = "{ }" ];
+ 15014700 [ label = "public void test2(...)" ];
+ 16825026 -> 15014700 [label=""];
+ }
+ digraph DataFlowNotNullChecker4 {
+   label="Dataflow: NotNullChecker4\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:9,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 11228395 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 5483268 [ label = "{ } (Block_c)" ];
+ 11228395 -> 5483268 [label="\n[nn access paths: []]"];
+ 28715691 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 11228395 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 28715691 -> 11228395 [label="\n[nn access paths: []]"];
+ 16825026 [ label = "{ }\n(Block_c)" ];
+ 15014700 [ label = "public void test2(...) (JifMethodDecl_c)" ];
+ 16825026 -> 15014700 [label="\n[nn access paths: []]"];
+ 5483268 [ label = "{ }\n(Block_c)" ];
+ 16825026 [ label = "{ } (Block_c)" ];
+ 5483268 -> 16825026 [label="\n[nn access paths: []]"];
+ 15014700 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 26285048 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 28715691 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 26285048 -> 28715691 [label="\n[nn access paths: []]"];
+ }
+ digraph CFGBuildNotNullChecker5 {
+   label="CFGBuilder: NotNullChecker5\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public NullPrecond(...) -> { super(...) }
+ 2804823 [ label = "public NullPrecond(...)" ];
+ 30238442 [ label = "{ super(...) }" ];
+ 2804823 -> 30238442 [label=""];
+ // node public NullPrecond(...) -> []
+ //     edge { super(...) } -> super(...)
+ 30238442 [ label = "{ super(...) }" ];
+ 7052420 [ label = "super(...)" ];
+ 30238442 -> 7052420 [label=""];
+ // node { super(...) } -> [{edgeKey=,term=public NullPrecond(...),exit}]
+ //     edge super(...) -> super(...)
+ 7052420 [ label = "super(...)" ];
+ 15775736 [ label = "super(...)" ];
+ 7052420 -> 15775736 [label=""];
+ // node super(...) -> [{edgeKey=,term={ super(...) },exit}]
+ //     edge super(...) -> { super(...) }
+ 15775736 [ label = "super(...)" ];
+ 29234933 [ label = "{ super(...) }" ];
+ 15775736 -> 29234933 [label=""];
+ //     edge { super(...) } -> public NullPrecond(...)
+ 29234933 [ label = "{ super(...) }" ];
+ 13986615 [ label = "public NullPrecond(...)" ];
+ 29234933 -> 13986615 [label=""];
+ }
+ digraph DataFlowNotNullChecker5 {
+   label="Dataflow: NotNullChecker5\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 13986615 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 2804823 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 30238442 [ label = "{ super(...) } (Block_c)" ];
+ 2804823 -> 30238442 [label="\n[nn access paths: []]"];
+ 15775736 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 29234933 [ label = "{ super(...) } (Block_c)" ];
+ 15775736 -> 29234933 [label="\n[nn access paths: []]"];
+ 7052420 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 15775736 [ label = "super(...) (ConstructorCall_c)" ];
+ 7052420 -> 15775736 [label="\n[nn access paths: []]"];
+ 29234933 [ label = "{ super(...) }\n(Block_c)" ];
+ 13986615 [ label = "public NullPrecond(...) (JLiftConstructorDecl_c)" ];
+ 29234933 -> 13986615 [label="\n[nn access paths: []]"];
+ 30238442 [ label = "{ super(...) }\n(Block_c)" ];
+ 7052420 [ label = "super(...) (ConstructorCall_c)" ];
+ 30238442 -> 7052420 [label="\n[nn access paths: []]"];
+ }
+ digraph CFGBuildPreciseClassChecker6 {
+   label="CFGBuilder: PreciseClassChecker6\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test(...) -> void
+ 24244617 [ label = "public void test(...)" ];
+ 27826089 [ label = "void" ];
+ 24244617 -> 27826089 [label=""];
+ // node public void test(...) -> []
+ //     edge void -> void
+ 27826089 [ label = "void" ];
+ 24964246 [ label = "void" ];
+ 27826089 -> 24964246 [label=""];
+ // node void -> [{edgeKey=,term={ eval(this.myField.getClass()); },entry}]
+ //     edge void -> { eval(this.myField.getClass()); }
+ 24964246 [ label = "void" ];
+ 9470766 [ label = "{ eval(this.myField.getClass()); }" ];
+ 24964246 -> 9470766 [label=""];
+ //     edge { eval(this.myField.getClass()); } -> eval(this.myField.getClass());
+ 9470766 [ label = "{ eval(this.myField.getClass()); }" ];
+ 26506390 [ label = "eval(this.myField.getClass());" ];
+ 9470766 -> 26506390 [label=""];
+ // node { eval(this.myField.getClass()); } -> [{edgeKey=,term=public void test(...),exit}]
+ //     edge eval(this.myField.getClass()); -> this.myField.getClass()
+ 26506390 [ label = "eval(this.myField.getClass());" ];
+ 24267421 [ label = "this.myField.getClass()" ];
+ 26506390 -> 24267421 [label=""];
+ // node eval(this.myField.getClass()); -> [{edgeKey=,term={ eval(this.myField.getClass()); },exit}]
+ //     edge this.myField.getClass() -> this.myField
+ 24267421 [ label = "this.myField.getClass()" ];
+ 8440521 [ label = "this.myField" ];
+ 24267421 -> 8440521 [label=""];
+ // node this.myField.getClass() -> [{edgeKey=,term=eval(this.myField.getClass());,exit}]
+ //     edge this.myField -> this
+ 8440521 [ label = "this.myField" ];
+ 25257701 [ label = "this" ];
+ 8440521 -> 25257701 [label=""];
+ // node this.myField -> [{edgeKey=,term=this.myField.getClass(),exit}]
+ //     edge this -> this
+ 25257701 [ label = "this" ];
+ 9065611 [ label = "this" ];
+ 25257701 -> 9065611 [label=""];
+ // node this -> [{edgeKey=,term=this.myField,exit}]
+ //     edge this -> this.myField
+ 9065611 [ label = "this" ];
+ 28616523 [ label = "this.myField" ];
+ 9065611 -> 28616523 [label=""];
+ //     edge this.myField -> this.myField.getClass()
+ 28616523 [ label = "this.myField" ];
+ 22238933 [ label = "this.myField.getClass()" ];
+ 28616523 -> 22238933 [label=""];
+ //     edge this.myField.getClass() -> eval(this.myField.getClass());
+ 22238933 [ label = "this.myField.getClass()" ];
+ 6934571 [ label = "eval(this.myField.getClass());" ];
+ 22238933 -> 6934571 [label=""];
+ //     edge this.myField.getClass() -> public void test(...)
+ 22238933 [ label = "this.myField.getClass()" ];
+ 14806696 [ label = "public void test(...)" ];
+ 22238933 -> 14806696 [label="NullPointerException"];
+ //     edge eval(this.myField.getClass()); -> { eval(this.myField.getClass()); }
+ 6934571 [ label = "eval(this.myField.getClass());" ];
+ 16474964 [ label = "{ eval(this.myField.getClass()); }" ];
+ 6934571 -> 16474964 [label=""];
+ //     edge { eval(this.myField.getClass()); } -> public void test(...)
+ 16474964 [ label = "{ eval(this.myField.getClass()); }" ];
+ 14806696 [ label = "public void test(...)" ];
+ 16474964 -> 14806696 [label=""];
+ }
+ digraph DataFlowPreciseClassChecker6 {
+   label="Dataflow: PreciseClassChecker6\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 9065611 [ label = "this\n(Special_c)" ];
+ 28616523 [ label = "this.myField (Field_c)" ];
+ 9065611 -> 28616523 [label="\n[{}]"];
+ 25257701 [ label = "this\n(Special_c)" ];
+ 9065611 [ label = "this (Special_c)" ];
+ 25257701 -> 9065611 [label="\n[{}]"];
+ 14806696 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 24244617 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 27826089 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 24244617 -> 27826089 [label="\n[{}]"];
+ 6934571 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 16474964 [ label = "{ eval(this.myField.getClass()); } (Block_c)" ];
+ 6934571 -> 16474964 [label="\n[{}]"];
+ 26506390 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 24267421 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 26506390 -> 24267421 [label="\n[{}]"];
+ 24964246 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 9470766 [ label = "{ eval(this.myField.getClass()); } (Block_c)" ];
+ 24964246 -> 9470766 [label="\n[{}]"];
+ 27826089 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 24964246 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 27826089 -> 24964246 [label="\n[{}]"];
+ 22238933 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 6934571 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 22238933 -> 6934571 [label="\n[{}]"];
+ 14806696 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 22238933 -> 14806696 [label="NullPointerException\n[{}]"];
+ 24267421 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 8440521 [ label = "this.myField (Field_c)" ];
+ 24267421 -> 8440521 [label="\n[{}]"];
+ 28616523 [ label = "this.myField\n(Field_c)" ];
+ 22238933 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 28616523 -> 22238933 [label="\n[{}]"];
+ 8440521 [ label = "this.myField\n(Field_c)" ];
+ 25257701 [ label = "this (Special_c)" ];
+ 8440521 -> 25257701 [label="\n[{}]"];
+ 16474964 [ label = "{ eval(this.myField.getClass()); }\n(Block_c)" ];
+ 14806696 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 16474964 -> 14806696 [label="\n[{}]"];
+ 9470766 [ label = "{ eval(this.myField.getClass()); }\n(Block_c)" ];
+ 26506390 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 9470766 -> 26506390 [label="\n[{}]"];
+ }
+ digraph CFGBuildPreciseClassChecker7 {
+   label="CFGBuilder: PreciseClassChecker7\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:9,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test2(...) -> void
+ 20870479 [ label = "public void test2(...)" ];
+ 25675100 [ label = "void" ];
+ 20870479 -> 25675100 [label=""];
+ // node public void test2(...) -> []
+ //     edge void -> void
+ 25675100 [ label = "void" ];
+ 11416420 [ label = "void" ];
+ 25675100 -> 11416420 [label=""];
+ // node void -> [{edgeKey=,term={ },entry}]
+ //     edge void -> { }
+ 11416420 [ label = "void" ];
+ 11544872 [ label = "{ }" ];
+ 11416420 -> 11544872 [label=""];
+ //     edge { } -> { }
+ 11544872 [ label = "{ }" ];
+ 22946636 [ label = "{ }" ];
+ 11544872 -> 22946636 [label=""];
+ // node { } -> [{edgeKey=,term=public void test2(...),exit}]
+ //     edge { } -> public void test2(...)
+ 22946636 [ label = "{ }" ];
+ 23032071 [ label = "public void test2(...)" ];
+ 22946636 -> 23032071 [label=""];
+ }
+ digraph DataFlowPreciseClassChecker7 {
+   label="Dataflow: PreciseClassChecker7\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:9,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 11416420 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 11544872 [ label = "{ } (Block_c)" ];
+ 11416420 -> 11544872 [label="\n[{}]"];
+ 25675100 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 11416420 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 25675100 -> 11416420 [label="\n[{}]"];
+ 22946636 [ label = "{ }\n(Block_c)" ];
+ 23032071 [ label = "public void test2(...) (JifMethodDecl_c)" ];
+ 22946636 -> 23032071 [label="\n[{}]"];
+ 11544872 [ label = "{ }\n(Block_c)" ];
+ 22946636 [ label = "{ } (Block_c)" ];
+ 11544872 -> 22946636 [label="\n[{}]"];
+ 23032071 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 20870479 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 25675100 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 20870479 -> 25675100 [label="\n[{}]"];
+ }
+ digraph CFGBuildPreciseClassChecker8 {
+   label="CFGBuilder: PreciseClassChecker8\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public NullPrecond(...) -> { super(...) }
+ 11716262 [ label = "public NullPrecond(...)" ];
+ 17824568 [ label = "{ super(...) }" ];
+ 11716262 -> 17824568 [label=""];
+ // node public NullPrecond(...) -> []
+ //     edge { super(...) } -> super(...)
+ 17824568 [ label = "{ super(...) }" ];
+ 3560063 [ label = "super(...)" ];
+ 17824568 -> 3560063 [label=""];
+ // node { super(...) } -> [{edgeKey=,term=public NullPrecond(...),exit}]
+ //     edge super(...) -> super(...)
+ 3560063 [ label = "super(...)" ];
+ 6426875 [ label = "super(...)" ];
+ 3560063 -> 6426875 [label=""];
+ // node super(...) -> [{edgeKey=,term={ super(...) },exit}]
+ //     edge super(...) -> { super(...) }
+ 6426875 [ label = "super(...)" ];
+ 4779445 [ label = "{ super(...) }" ];
+ 6426875 -> 4779445 [label=""];
+ //     edge { super(...) } -> public NullPrecond(...)
+ 4779445 [ label = "{ super(...) }" ];
+ 32386092 [ label = "public NullPrecond(...)" ];
+ 4779445 -> 32386092 [label=""];
+ }
+ digraph DataFlowPreciseClassChecker8 {
+   label="Dataflow: PreciseClassChecker8\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 32386092 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 11716262 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 17824568 [ label = "{ super(...) } (Block_c)" ];
+ 11716262 -> 17824568 [label="\n[{}]"];
+ 6426875 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 4779445 [ label = "{ super(...) } (Block_c)" ];
+ 6426875 -> 4779445 [label="\n[{}]"];
+ 3560063 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 6426875 [ label = "super(...) (ConstructorCall_c)" ];
+ 3560063 -> 6426875 [label="\n[{}]"];
+ 4779445 [ label = "{ super(...) }\n(Block_c)" ];
+ 32386092 [ label = "public NullPrecond(...) (JLiftConstructorDecl_c)" ];
+ 4779445 -> 32386092 [label="\n[{}]"];
+ 17824568 [ label = "{ super(...) }\n(Block_c)" ];
+ 3560063 [ label = "super(...) (ConstructorCall_c)" ];
+ 17824568 -> 3560063 [label="\n[{}]"];
+ }
+ digraph CFGBuildIntegerBoundsChecker9 {
+   label="CFGBuilder: IntegerBoundsChecker9\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test(...) -> void
+ 26622782 [ label = "public void test(...)" ];
+ 746824 [ label = "void" ];
+ 26622782 -> 746824 [label=""];
+ // node public void test(...) -> []
+ //     edge void -> void
+ 746824 [ label = "void" ];
+ 2529687 [ label = "void" ];
+ 746824 -> 2529687 [label=""];
+ // node void -> [{edgeKey=,term={ eval(this.myField.getClass()); },entry}]
+ //     edge void -> { eval(this.myField.getClass()); }
+ 2529687 [ label = "void" ];
+ 2994589 [ label = "{ eval(this.myField.getClass()); }" ];
+ 2529687 -> 2994589 [label=""];
+ //     edge { eval(this.myField.getClass()); } -> eval(this.myField.getClass());
+ 2994589 [ label = "{ eval(this.myField.getClass()); }" ];
+ 31966667 [ label = "eval(this.myField.getClass());" ];
+ 2994589 -> 31966667 [label=""];
+ // node { eval(this.myField.getClass()); } -> [{edgeKey=,term=public void test(...),exit}]
+ //     edge eval(this.myField.getClass()); -> this.myField.getClass()
+ 31966667 [ label = "eval(this.myField.getClass());" ];
+ 23763868 [ label = "this.myField.getClass()" ];
+ 31966667 -> 23763868 [label=""];
+ // node eval(this.myField.getClass()); -> [{edgeKey=,term={ eval(this.myField.getClass()); },exit}]
+ //     edge this.myField.getClass() -> this.myField
+ 23763868 [ label = "this.myField.getClass()" ];
+ 926353 [ label = "this.myField" ];
+ 23763868 -> 926353 [label=""];
+ // node this.myField.getClass() -> [{edgeKey=,term=eval(this.myField.getClass());,exit}]
+ //     edge this.myField -> this
+ 926353 [ label = "this.myField" ];
+ 33526517 [ label = "this" ];
+ 926353 -> 33526517 [label=""];
+ // node this.myField -> [{edgeKey=,term=this.myField.getClass(),exit}]
+ //     edge this -> this
+ 33526517 [ label = "this" ];
+ 610399 [ label = "this" ];
+ 33526517 -> 610399 [label=""];
+ // node this -> [{edgeKey=,term=this.myField,exit}]
+ //     edge this -> this.myField
+ 610399 [ label = "this" ];
+ 24880015 [ label = "this.myField" ];
+ 610399 -> 24880015 [label=""];
+ //     edge this.myField -> this.myField.getClass()
+ 24880015 [ label = "this.myField" ];
+ 3083604 [ label = "this.myField.getClass()" ];
+ 24880015 -> 3083604 [label=""];
+ //     edge this.myField.getClass() -> eval(this.myField.getClass());
+ 3083604 [ label = "this.myField.getClass()" ];
+ 18096534 [ label = "eval(this.myField.getClass());" ];
+ 3083604 -> 18096534 [label=""];
+ //     edge this.myField.getClass() -> public void test(...)
+ 3083604 [ label = "this.myField.getClass()" ];
+ 11085148 [ label = "public void test(...)" ];
+ 3083604 -> 11085148 [label="NullPointerException"];
+ //     edge eval(this.myField.getClass()); -> { eval(this.myField.getClass()); }
+ 18096534 [ label = "eval(this.myField.getClass());" ];
+ 13878947 [ label = "{ eval(this.myField.getClass()); }" ];
+ 18096534 -> 13878947 [label=""];
+ //     edge { eval(this.myField.getClass()); } -> public void test(...)
+ 13878947 [ label = "{ eval(this.myField.getClass()); }" ];
+ 11085148 [ label = "public void test(...)" ];
+ 13878947 -> 11085148 [label=""];
+ }
+ digraph DataFlowIntegerBoundsChecker9 {
+   label="Dataflow: IntegerBoundsChecker9\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 610399 [ label = "this\n(Special_c)" ];
+ 24880015 [ label = "this.myField (Field_c)" ];
+ 610399 -> 24880015 [label="\n{}"];
+ 33526517 [ label = "this\n(Special_c)" ];
+ 610399 [ label = "this (Special_c)" ];
+ 33526517 -> 610399 [label="\n{}"];
+ 11085148 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 26622782 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 746824 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 26622782 -> 746824 [label="\n{}"];
+ 18096534 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 13878947 [ label = "{ eval(this.myField.getClass()); } (Block_c)" ];
+ 18096534 -> 13878947 [label="\n{}"];
+ 31966667 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 23763868 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 31966667 -> 23763868 [label="\n{}"];
+ 2529687 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 2994589 [ label = "{ eval(this.myField.getClass()); } (Block_c)" ];
+ 2529687 -> 2994589 [label="\n{}"];
+ 746824 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 2529687 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 746824 -> 2529687 [label="\n{}"];
+ 3083604 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 18096534 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 3083604 -> 18096534 [label="\n{}"];
+ 11085148 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 3083604 -> 11085148 [label="NullPointerException\n{}"];
+ 23763868 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 926353 [ label = "this.myField (Field_c)" ];
+ 23763868 -> 926353 [label="\n{}"];
+ 24880015 [ label = "this.myField\n(Field_c)" ];
+ 3083604 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 24880015 -> 3083604 [label="\n{}"];
+ 926353 [ label = "this.myField\n(Field_c)" ];
+ 33526517 [ label = "this (Special_c)" ];
+ 926353 -> 33526517 [label="\n{}"];
+ 13878947 [ label = "{ eval(this.myField.getClass()); }\n(Block_c)" ];
+ 11085148 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 13878947 -> 11085148 [label="\n{}"];
+ 2994589 [ label = "{ eval(this.myField.getClass()); }\n(Block_c)" ];
+ 31966667 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 2994589 -> 31966667 [label="\n{}"];
+ }
+ digraph CFGBuildIntegerBoundsChecker10 {
+   label="CFGBuilder: IntegerBoundsChecker10\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:9,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test2(...) -> void
+ 26613121 [ label = "public void test2(...)" ];
+ 6151022 [ label = "void" ];
+ 26613121 -> 6151022 [label=""];
+ // node public void test2(...) -> []
+ //     edge void -> void
+ 6151022 [ label = "void" ];
+ 32580443 [ label = "void" ];
+ 6151022 -> 32580443 [label=""];
+ // node void -> [{edgeKey=,term={ },entry}]
+ //     edge void -> { }
+ 32580443 [ label = "void" ];
+ 4744654 [ label = "{ }" ];
+ 32580443 -> 4744654 [label=""];
+ //     edge { } -> { }
+ 4744654 [ label = "{ }" ];
+ 18071221 [ label = "{ }" ];
+ 4744654 -> 18071221 [label=""];
+ // node { } -> [{edgeKey=,term=public void test2(...),exit}]
+ //     edge { } -> public void test2(...)
+ 18071221 [ label = "{ }" ];
+ 21854021 [ label = "public void test2(...)" ];
+ 18071221 -> 21854021 [label=""];
+ }
+ digraph DataFlowIntegerBoundsChecker10 {
+   label="Dataflow: IntegerBoundsChecker10\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:9,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 32580443 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 4744654 [ label = "{ } (Block_c)" ];
+ 32580443 -> 4744654 [label="\n{}"];
+ 6151022 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 32580443 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 6151022 -> 32580443 [label="\n{}"];
+ 18071221 [ label = "{ }\n(Block_c)" ];
+ 21854021 [ label = "public void test2(...) (JifMethodDecl_c)" ];
+ 18071221 -> 21854021 [label="\n{}"];
+ 4744654 [ label = "{ }\n(Block_c)" ];
+ 18071221 [ label = "{ } (Block_c)" ];
+ 4744654 -> 18071221 [label="\n{}"];
+ 21854021 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 26613121 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 6151022 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 26613121 -> 6151022 [label="\n{}"];
+ }
+ digraph CFGBuildIntegerBoundsChecker11 {
+   label="CFGBuilder: IntegerBoundsChecker11\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public NullPrecond(...) -> { super(...) }
+ 13729475 [ label = "public NullPrecond(...)" ];
+ 31022504 [ label = "{ super(...) }" ];
+ 13729475 -> 31022504 [label=""];
+ // node public NullPrecond(...) -> []
+ //     edge { super(...) } -> super(...)
+ 31022504 [ label = "{ super(...) }" ];
+ 26474210 [ label = "super(...)" ];
+ 31022504 -> 26474210 [label=""];
+ // node { super(...) } -> [{edgeKey=,term=public NullPrecond(...),exit}]
+ //     edge super(...) -> super(...)
+ 26474210 [ label = "super(...)" ];
+ 20287235 [ label = "super(...)" ];
+ 26474210 -> 20287235 [label=""];
+ // node super(...) -> [{edgeKey=,term={ super(...) },exit}]
+ //     edge super(...) -> { super(...) }
+ 20287235 [ label = "super(...)" ];
+ 20983130 [ label = "{ super(...) }" ];
+ 20287235 -> 20983130 [label=""];
+ //     edge { super(...) } -> public NullPrecond(...)
+ 20983130 [ label = "{ super(...) }" ];
+ 6386542 [ label = "public NullPrecond(...)" ];
+ 20983130 -> 6386542 [label=""];
+ }
+ digraph DataFlowIntegerBoundsChecker11 {
+   label="Dataflow: IntegerBoundsChecker11\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 6386542 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 13729475 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 31022504 [ label = "{ super(...) } (Block_c)" ];
+ 13729475 -> 31022504 [label="\n{}"];
+ 20287235 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 20983130 [ label = "{ super(...) } (Block_c)" ];
+ 20287235 -> 20983130 [label="\n{}"];
+ 26474210 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 20287235 [ label = "super(...) (ConstructorCall_c)" ];
+ 26474210 -> 20287235 [label="\n{}"];
+ 20983130 [ label = "{ super(...) }\n(Block_c)" ];
+ 6386542 [ label = "public NullPrecond(...) (JLiftConstructorDecl_c)" ];
+ 20983130 -> 6386542 [label="\n{}"];
+ 31022504 [ label = "{ super(...) }\n(Block_c)" ];
+ 26474210 [ label = "super(...) (ConstructorCall_c)" ];
+ 31022504 -> 26474210 [label="\n{}"];
+ }
+ digraph CFGBuildCallGraphVisitor$MockDataFlow12 {
+   label="CFGBuilder: CallGraphVisitor$MockDataFlow12\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test(...) -> void
+ 7634850 [ label = "public void test(...)" ];
+ 6783657 [ label = "void" ];
+ 7634850 -> 6783657 [label=""];
+ // node public void test(...) -> []
+ //     edge void -> void
+ 6783657 [ label = "void" ];
+ 28524838 [ label = "void" ];
+ 6783657 -> 28524838 [label=""];
+ // node void -> [{edgeKey=,term={ eval(this.myField.getClass()); },entry}]
+ //     edge void -> { eval(this.myField.getClass()); }
+ 28524838 [ label = "void" ];
+ 24791433 [ label = "{ eval(this.myField.getClass()); }" ];
+ 28524838 -> 24791433 [label=""];
+ //     edge { eval(this.myField.getClass()); } -> eval(this.myField.getClass());
+ 24791433 [ label = "{ eval(this.myField.getClass()); }" ];
+ 24248500 [ label = "eval(this.myField.getClass());" ];
+ 24791433 -> 24248500 [label=""];
+ // node { eval(this.myField.getClass()); } -> [{edgeKey=,term=public void test(...),exit}]
+ //     edge eval(this.myField.getClass()); -> this.myField.getClass()
+ 24248500 [ label = "eval(this.myField.getClass());" ];
+ 25966201 [ label = "this.myField.getClass()" ];
+ 24248500 -> 25966201 [label=""];
+ // node eval(this.myField.getClass()); -> [{edgeKey=,term={ eval(this.myField.getClass()); },exit}]
+ //     edge this.myField.getClass() -> this.myField
+ 25966201 [ label = "this.myField.getClass()" ];
+ 4999131 [ label = "this.myField" ];
+ 25966201 -> 4999131 [label=""];
+ // node this.myField.getClass() -> [{edgeKey=,term=eval(this.myField.getClass());,exit}]
+ //     edge this.myField -> this
+ 4999131 [ label = "this.myField" ];
+ 101492 [ label = "this" ];
+ 4999131 -> 101492 [label=""];
+ // node this.myField -> [{edgeKey=,term=this.myField.getClass(),exit}]
+ //     edge this -> this
+ 101492 [ label = "this" ];
+ 28062585 [ label = "this" ];
+ 101492 -> 28062585 [label=""];
+ // node this -> [{edgeKey=,term=this.myField,exit}]
+ //     edge this -> this.myField
+ 28062585 [ label = "this" ];
+ 6781414 [ label = "this.myField" ];
+ 28062585 -> 6781414 [label=""];
+ //     edge this.myField -> this.myField.getClass()
+ 6781414 [ label = "this.myField" ];
+ 24387997 [ label = "this.myField.getClass()" ];
+ 6781414 -> 24387997 [label=""];
+ //     edge this.myField.getClass() -> eval(this.myField.getClass());
+ 24387997 [ label = "this.myField.getClass()" ];
+ 21684929 [ label = "eval(this.myField.getClass());" ];
+ 24387997 -> 21684929 [label=""];
+ //     edge this.myField.getClass() -> public void test(...)
+ 24387997 [ label = "this.myField.getClass()" ];
+ 23930626 [ label = "public void test(...)" ];
+ 24387997 -> 23930626 [label="NullPointerException"];
+ //     edge eval(this.myField.getClass()); -> { eval(this.myField.getClass()); }
+ 21684929 [ label = "eval(this.myField.getClass());" ];
+ 18623335 [ label = "{ eval(this.myField.getClass()); }" ];
+ 21684929 -> 18623335 [label=""];
+ //     edge { eval(this.myField.getClass()); } -> public void test(...)
+ 18623335 [ label = "{ eval(this.myField.getClass()); }" ];
+ 23930626 [ label = "public void test(...)" ];
+ 18623335 -> 23930626 [label=""];
+ }
+successfully built polyglot.visit.CFGBuilder@659db7 for public void test(...)
+ digraph CFGBuildCallGraphVisitor$MockDataFlow13 {
+   label="CFGBuilder: CallGraphVisitor$MockDataFlow13\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:9,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test2(...) -> void
+ 22375698 [ label = "public void test2(...)" ];
+ 23848591 [ label = "void" ];
+ 22375698 -> 23848591 [label=""];
+ // node public void test2(...) -> []
+ //     edge void -> void
+ 23848591 [ label = "void" ];
+ 15594377 [ label = "void" ];
+ 23848591 -> 15594377 [label=""];
+ // node void -> [{edgeKey=,term={ },entry}]
+ //     edge void -> { }
+ 15594377 [ label = "void" ];
+ 1035988 [ label = "{ }" ];
+ 15594377 -> 1035988 [label=""];
+ //     edge { } -> { }
+ 1035988 [ label = "{ }" ];
+ 30657962 [ label = "{ }" ];
+ 1035988 -> 30657962 [label=""];
+ // node { } -> [{edgeKey=,term=public void test2(...),exit}]
+ //     edge { } -> public void test2(...)
+ 30657962 [ label = "{ }" ];
+ 6510044 [ label = "public void test2(...)" ];
+ 30657962 -> 6510044 [label=""];
+ }
+successfully built polyglot.visit.CFGBuilder@19a029e for public void test2(...)
+ digraph CFGBuildCallGraphVisitor$MockDataFlow14 {
+   label="CFGBuilder: CallGraphVisitor$MockDataFlow14\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public NullPrecond(...) -> { super(...) }
+ 22485234 [ label = "public NullPrecond(...)" ];
+ 19331111 [ label = "{ super(...) }" ];
+ 22485234 -> 19331111 [label=""];
+ // node public NullPrecond(...) -> []
+ //     edge { super(...) } -> super(...)
+ 19331111 [ label = "{ super(...) }" ];
+ 23984709 [ label = "super(...)" ];
+ 19331111 -> 23984709 [label=""];
+ // node { super(...) } -> [{edgeKey=,term=public NullPrecond(...),exit}]
+ //     edge super(...) -> super(...)
+ 23984709 [ label = "super(...)" ];
+ 21621663 [ label = "super(...)" ];
+ 23984709 -> 21621663 [label=""];
+ // node super(...) -> [{edgeKey=,term={ super(...) },exit}]
+ //     edge super(...) -> { super(...) }
+ 21621663 [ label = "super(...)" ];
+ 798740 [ label = "{ super(...) }" ];
+ 21621663 -> 798740 [label=""];
+ //     edge { super(...) } -> public NullPrecond(...)
+ 798740 [ label = "{ super(...) }" ];
+ 2661678 [ label = "public NullPrecond(...)" ];
+ 798740 -> 2661678 [label=""];
+ }
+successfully built polyglot.visit.CFGBuilder@6754d6 for public NullPrecond(...)
+path: this.myField.getClass()[]
+preds: []
+succs: []

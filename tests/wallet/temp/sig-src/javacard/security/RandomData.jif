@@ -1,0 +1,12 @@
+package javacard.security;
+
+public abstract class RandomData{
+
+    public static byte ALG_PSUEDO_RANDOM;
+    public static byte ALG_SECURE_RANDOM;
+
+    public abstract void generateData(byte[] buffer, short offset, short length);
+    public native static RandomData getInstance(byte algorithm);
+    public abstract void setSeed(byte[] buffer, short offset, short length);
+
+}

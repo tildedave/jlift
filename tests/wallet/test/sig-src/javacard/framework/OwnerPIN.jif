@@ -1,0 +1,26 @@
+/*
+* This is a Jif signature for the Java class. It provides Jif label
+* annotations for the Java class, allowing it to be usable by Jif
+* code. There is no automated check that the signature provided here
+* agrees with the actual Java code.
+*
+* Automatically generated with Siggen 0.1.0.
+* Available from: http://www.cse.psu.edu/~dhking/siggen
+*/
+
+package javacard.framework;
+
+import java.lang.ArrayIndexOutOfBoundsException;
+import java.lang.Object;
+import java.lang.NullPointerException;
+
+public class OwnerPIN[label L] extends Object {
+	static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0; // jif signature of a java class
+	public OwnerPIN() { }
+	public OwnerPIN(byte{L} v0, byte{L} v1) { }
+	native public void update(byte[]{L} v2, short{L} v3, byte{L} v4);
+	native public byte{L} getTriesRemaining();
+	native public void reset();
+	native public boolean{L} isValidated();
+	native public boolean{L; v5; v6; v7} check(byte[]{L} v5, short{L} v6, byte{L} v7) throws ArrayIndexOutOfBoundsException, NullPointerException;
+}

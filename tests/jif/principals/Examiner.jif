@@ -1,0 +1,15 @@
+package jif.principals;
+
+public class Examiner extends ExternalPrincipal {
+    public Examiner() {
+	super("Examiner");
+    }
+
+    private static Examiner{*!:*} P;
+    public static Principal getInstance{*!:*}() {
+	if (P == null) {
+	    P = new Examiner();
+	}
+	return P;
+    }
+}

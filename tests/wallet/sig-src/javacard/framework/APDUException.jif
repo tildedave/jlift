@@ -1,0 +1,25 @@
+package javacard.framework;
+
+/*
+* This is a Jif signature for the Java class. It provides Jif label
+* annotations for the Java class, allowing it to be usable by Jif
+* code. There is no automated check that the signature provided here
+* agrees with the actual Java code.
+*/
+
+import javacard.framework.CardRuntimeException;
+
+
+public class APDUException extends CardRuntimeException {
+	static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0; // jif signature of a java class
+	public APDUException() { }
+	public APDUException(short v0) { }
+	public static final short ILLEGAL_USE = 0;
+	public static final short BUFFER_BOUNDS = 0;
+	public static final short BAD_LENGTH = 0;
+	public static final short IO_ERROR = 0;
+	public static final short NO_T0_GETRESPONSE = 0;
+	public static final short T1_IFD_ABORT = 0;
+	public static final short NO_T0_REISSUE = 0;
+	native public static void throwIt(short v1) throws APDUException;
+}

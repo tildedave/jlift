@@ -1,0 +1,17 @@
+public class LegalInnerClass3 extends SuperClass {
+
+    public void test{}() {
+	new Inner().foo(otherAliceInt);
+    }
+
+    public final class Inner {
+	public void foo(int k) {
+	    aliceInt = k;
+	}
+    }
+}
+
+class SuperClass {
+    int{Alice:} aliceInt;
+    int{Alice:} otherAliceInt;
+}

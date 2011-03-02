@@ -1,0 +1,23 @@
+/*
+* This is a Jif signature for the Java class. It provides Jif label
+* annotations for the Java class, allowing it to be usable by Jif
+* code. There is no automated check that the signature provided here
+* agrees with the actual Java code.
+*
+* Automatically generated with Siggen 0.1.0.
+* Available from: http://www.cse.psu.edu/~dhking/siggen
+*/
+
+package javacard.framework;
+
+import java.lang.Object;
+
+public final class APDU[label L] extends Object {
+	static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0; // jif signature of a java class
+	public APDU() { }
+	native public byte[]{L} getBuffer();
+	native public short{L} setIncomingAndReceive();
+	native public short{L} setOutgoing();
+	native public void setOutgoingLength(short{L} v0);
+	native public void sendBytes(short{} v1, short{} v2);
+}

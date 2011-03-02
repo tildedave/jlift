@@ -1,0 +1,9 @@
+package java.util;
+
+import java.lang.Object;
+
+public  interface  Enumeration {
+	static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0; // jif signature of a java class
+	public  boolean{this} hasMoreElements();
+	public  Object{this} nextElement();
+}

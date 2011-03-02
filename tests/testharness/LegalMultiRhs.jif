@@ -1,0 +1,18 @@
+public class LegalMultiRhs {
+
+
+    C{Alice:} myC;
+
+    public void test{}() {
+	addOne(myC.canThrowException());
+    }
+
+
+    public void addOne(int i) { }
+}
+
+class C {
+    public int canThrowException() throws OurException { return 1; }
+}
+
+class OurException extends RuntimeException { }

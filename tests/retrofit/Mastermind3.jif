@@ -1,0 +1,20 @@
+public class Mastermind3 {
+ 
+    int{Bob:}[]{Bob:} code;
+    int{Alice:}[]{Alice:} guess;
+    int{Alice:}[]{Alice:} returnArray;
+
+    void foo() throws RuntimeException {
+
+	int codeLength = code.length;
+	int guessLength = guess.length;
+
+	if (guess.length == declassify(code.length,{Alice:})){ 
+	             
+	for(int j = 0; j < guess.length; ++j){ 
+	    int guessResult = 0; 
+	    returnArray[j] = guessResult;
+	} 
+    }
+    }
+}

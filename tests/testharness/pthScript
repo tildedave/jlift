@@ -1,0 +1,150 @@
+# pth test script
+#
+# This file is a test script for pth (Polyglot Test Harness). It
+# conforms to the following grammar.
+#
+#      ScriptFile   ::= CompilerTest+
+#      CompilerTest ::= ExtClassName ["CmdLineArgs"] { FileTest [; FileTest]* }
+#      FileTest     ::= Filenames [Description] [FailureSet]
+#      Filenames    ::= Filename [Filename]*
+#      Description  ::= LitString
+#      FailureSet   ::= Failure [, Failure]*
+#      Failure      ::= ( ErrorKind )
+#                    |  ( ErrorKind, "RegExp" )
+#                    |  ( "RegExp" )
+#                    |  ( )
+#      ErrorKind    :   one of, or a unique prefix of one of the following
+#                       strings: "Warning", "Internal Error", "I/O Error",
+#                       "Lexical Error", "Syntax Error", "Semantic Error"
+#                       or "Post-compiler Error".
+#      Filename     :   the name of a file. Is interpreted from the
+#                       directory where pth is run.
+#      LitString    :   a literal string, enclosed in quotes.
+#      RegExp       :   a regular expression, as in java.util.regex;
+#                       is always enclosed in quotes.
+#      CmdLineArgs  :   additional command line args for the Polyglot
+#                       compiler; is always enclosed in quotes.
+#
+# When invoking this script, it will probably be necessary to supply
+# an appropriate class path, to make sure that pth can find the Jif compiler.
+#    $ pth pthScript -classpath "../classes:../lib-classes:../lib/jif.jar:../lib/jiflib.jar:."
+
+jlift.ExtensionInfo "-testharness -noex -classpath ../../classes:../../lib-classes:../../lib/jif.jar:../../lib/jiflib.jar:../../rt-classes:../../lib/jifrt.jar:../../lib/jifclipse-backend.jar:.:$CLASSPATH -sigcp ../../sig-classes:../../lib/jifsig.jar" {
+	LegalAssign.jif (Warning, "label checking method .* test");
+	LegalAssign2.jif (Warning, "label checking method .* test");
+	LegalSideEffect.jif (Warning, "label checking method .* test");
+	LegalCall.jif (Warning, "label checking method .* test");
+	LegalSimpleCall.jif (Warning, "label checking method .* test");
+	LegalConstructorCall.jif (Warning, "label checking method .* test");
+	LegalSubtypeCall.jif (Warning, "label checking method .* test");
+	LegalParamSubtypeCall.jif (Warning, "label checking method .* test");
+	LegalSideEffectCall.jif (Warning, "label checking method .* test");
+	LegalSideEffectCall2.jif (Warning, "label checking method .* test");
+	LegalArrayCall.jif (Warning, "label checking method .* test");
+	LegalInlineArray.jif (Warning, "label checking method .* test");
+	LegalInterfaceCall.jif (Warning, "label checking method .* test");
+	LegalInterfaceCall2.jif (Warning, "label checking method .* test");
+	LegalRecursiveCall.jif (Warning, "label checking method .* test");
+	LegalRecursiveCall2.jif (Warning, "label checking method .* test");
+	LegalRecursiveCallArray.jif (Warning, "label checking method .* test");
+	LegalRecursiveSideEffectCall.jif (Warning, "label checking method .* test");
+	LegalRecursiveSideEffectCall2.jif (Warning, "label checking method .* test");
+	LegalMutuallyRecursiveCalls.jif (Warning, "label checking method .* test");
+	LegalReturnValue.jif (Warning, "label checking method .* test");
+	LegalInnerClass.jif (Warning, "label checking method .* test");
+	LegalInnerClass2.jif (Warning, "label checking method .* test");
+	LegalInnerClass3.jif (Warning, "label checking method .* test");
+	LegalInnerParameterizedClass.jif (Warning, "label checking method .* test");
+	LegalInnerClassArray.jif (Warning, "label checking method .* test");
+	LegalDeclassify.jif (Warning, "label checking method .* test");
+	LegalDeclassify2.jif (Warning, "label checking method .* test");
+	LegalDeclassify3.jif (Warning, "label checking method .* test");
+	LegalParam.jif (Warning, "label checking method .* test");
+	LegalParam2.jif (Warning, "label checking method .* test");
+	LegalParam3.jif (Warning, "label checking method .* test");
+	LegalParam4.jif (Warning, "label checking method .* test");
+	LegalParam5.jif (Warning, "label checking method .* test");
+	LegalParamInterfaceCall.jif (Warning, "label checking method .* test");
+	LegalParamRecursion.jif (Warning, "label checking method .* test");
+	LegalContextSensitivePCCall.jif (Warning, "label checking method .* test");
+	LegalContextSensitiveReturnValue.jif (Warning, "label checking method .* test");
+	LegalContextSensitiveReturnValue2.jif (Warning, "label checking method .* test");
+	LegalContextSensitiveReturnValue3.jif (Warning, "label checking method .* test");
+	LegalObjectConstructor.jif (Warning, "label checking method .* test");
+	LegalObjectCall.jif (Warning, "label checking method .* test");
+	LegalDynamicLabel.jif (Warning, "label checking method .* test");
+	LegalMultiRhs.jif (Warning, "label checking method .* test");
+	LegalStaticField.jif;
+	LegalInnerInterface.jif;
+	LegalInnerInterface2.jif;
+	LegalInnerInterfaceClass.jif (Warning, "label checking method .* test");
+	LegalStaticInitializer.jif;
+	LegalReassignFormal.jif (Warning, "label checking method .* test");
+	LegalParamSanitizer.jif (Warning, "label checking method .* test");
+	LegalCatchException.jif (Warning, "label checking method .* test");
+        IllegalAssign.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalAssign2.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalSideEffect.jif (Warning, "label checking method .* test"), (Semantic);
+        IllegalCall.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalCast.jif (Warning, "label checking method .* test"), (Semantic);
+        IllegalConstructorCall.jif (Warning, "label checking method .* test"), (Semantic);
+        IllegalSideEffectCall.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalSubclass.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalSubclass2.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalArrayCopy.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalArrayCall.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalInterfaceCall.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalInterfaceCall2.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalInterfaceCall3.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalInlineArray.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalRecursiveCall.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalRecursiveCall2.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalRecursiveCallArray.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalRecursiveCallArray2.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalMutuallyRecursiveCalls.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalReturnValue.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalInnerClass.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalInnerClass2.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalInnerClass3.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalParam.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalParam2.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalParam3.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalParamSideEffectCall.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalParamInterfaceCall.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalParamRecursion.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalObjectConstructor.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalObjectCall.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalDynamicLabel.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalDynAssign.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalInnerInterfaceClass.jif (Warning, "label checking method .* test"), (Semantic);
+}
+
+# Examples requiring context sensitivity
+jlift.ExtensionInfo "-testharness -noex -ctxmethods -classpath ../../classes:../../lib-classes:../../lib/jif.jar:../../lib/jiflib.jar:../../rt-classes:../../lib/jifrt.jar:../../lib/jifclipse-backend.jar:.:$CLASSPATH -sigcp ../../sig-classes:../../lib/jifsig.jar" {
+	IllegalArrayCopy2.jif (Warning, "label checking method .* test"), (Semantic);
+}
+
+# Examples requiring exceptions
+jlift.ExtensionInfo "-testharness -classpath ../../classes:../../lib-classes:../../lib/jif.jar:../../lib/jiflib.jar:../../rt-classes:../../lib/jifrt.jar:../../lib/jifclipse-backend.jar:.:$CLASSPATH -sigcp ../../sig-classes:../../lib/jifsig.jar" {
+      	Exception1.jif (Warning, "label checking method .* test"), (Semantic);
+	Exception2.jif (Warning, "label checking method .* test"), (Semantic);
+	Exception3.jif (Warning, "label checking method .* test");
+	Exception4.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalStupidRuntimeException.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalNPE.jl (Warning, "label checking method .* test"), (Semantic);
+	IllegalNullPointerException.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalInterproceduralException.jl (Warning, "label checking method .* test"), (Semantic);
+}
+
+jlift.ExtensionInfo "-testharness -ctxmethods -classpath ../../classes:../../lib-classes:../../lib/jif.jar:../../lib/jiflib.jar:../../rt-classes:../../lib/jifrt.jar:../../lib/jifclipse-backend.jar:.:$CLASSPATH -sigcp ../../sig-classes:../../lib/jifsig.jar -addsigcp th-sig-classes" 
+{
+	LegalSignatureCall.jif  (Warning, "label checking method .* test");
+      	LegalToArray.jif (Warning, "label checking method .* test");
+	SignatureTest.jif (Warning, "label checking method .* test");
+	SignatureTest2.jif (Warning, "label checking method .* test");
+	SignatureTest3.jif (Warning, "label checking method .* test");
+	IllegalSignatureTest.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalSignatureTest2.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalSignatureInterface.jif (Warning, "label checking method .* test"), (Semantic);
+	IllegalToArray.jif (Warning, "label checking method .* test"), (Semantic);
+}

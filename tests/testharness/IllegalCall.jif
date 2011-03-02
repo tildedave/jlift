@@ -1,0 +1,23 @@
+public class IllegalCall {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	passIntFirst(aliceInt);
+    }
+
+    public void passIntFirst(int k) {
+	passIntSecond(k);
+    }
+
+    public void passIntSecond(int j) {
+	passIntThird(j);
+    }
+
+    public void passIntThird(int l) {
+	output(l);
+    }
+
+    public void output(int{Bob:} m) { }
+
+}

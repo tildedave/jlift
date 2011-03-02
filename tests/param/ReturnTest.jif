@@ -1,0 +1,15 @@
+import javacard.framework.APDU;
+
+public class ReturnTest {
+
+    public void main(APDU apdu) {
+	int i = new Box().getIt();
+	byte[] buff = apdu.getBuffer();
+	byte[] buff2 = new APDU[{Alice:}]().getBuffer();
+
+    }
+}
+
+class Box[label L] {
+    int{L} getIt() { return 1; }
+}

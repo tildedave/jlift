@@ -1,0 +1,17 @@
+public class IllegalRecursiveCall {
+
+    int{Alice:} aliceInt;
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	bobInt = recursiveCall(3);
+    }
+
+    public int recursiveCall(int k) {
+	if (k > 0) {
+	    return k * aliceInt * recursiveCall(k - 1);
+	}
+	return k;
+    }
+
+}

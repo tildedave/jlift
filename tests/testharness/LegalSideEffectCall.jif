@@ -1,0 +1,17 @@
+public class LegalSideEffectCall {
+
+    int{Alice:} aliceInt;
+    int{Alice:} otherAliceInt;
+
+    public void test{}() {
+	if (aliceInt > 3) {
+	    doIt();
+	}
+    }
+
+    public void doIt() {
+	otherAliceInt = 0;
+    }
+
+
+}

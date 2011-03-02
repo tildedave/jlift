@@ -1,0 +1,15 @@
+public class IllegalDoWhileLoop {
+
+    public int{} publicInt;
+    public int{Alice:} aliceInt;
+
+    public void test{}() {
+	int k;
+	do {
+	    k = 1;
+	} while (k * aliceInt > 0);
+
+	publicInt = k;
+    }
+
+}

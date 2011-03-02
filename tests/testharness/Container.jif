@@ -1,0 +1,7 @@
+class Container {
+
+    class ContainerException extends RuntimeException {
+
+    }
+
+}

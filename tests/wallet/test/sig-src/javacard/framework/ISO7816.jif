@@ -1,0 +1,22 @@
+/*
+* This is a Jif signature for the Java class. It provides Jif label
+* annotations for the Java class, allowing it to be usable by Jif
+* code. There is no automated check that the signature provided here
+* agrees with the actual Java code.
+*
+* Automatically generated with Siggen 0.1.0.
+* Available from: http://www.cse.psu.edu/~dhking/siggen
+*/
+
+package javacard.framework;
+
+public interface ISO7816 {
+	static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0; // jif signature of a java class
+	public static final byte OFFSET_CLA = 0;
+	public static final byte OFFSET_INS = 1;
+	public static final short SW_CLA_NOT_SUPPORTED = 28160;
+	public static final short SW_INS_NOT_SUPPORTED = 27904;
+	public static final byte OFFSET_LC = 4;
+	public static final short SW_WRONG_LENGTH = 26368;
+	public static final byte OFFSET_CDATA = 5;
+}

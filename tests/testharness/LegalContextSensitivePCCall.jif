@@ -1,0 +1,14 @@
+public class LegalContextSensitivePCCall {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	callMethod();
+	if (aliceInt == 0) {
+	    callMethod();
+	}
+    }
+
+    public void callMethod() {
+    }
+}

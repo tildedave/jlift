@@ -1,0 +1,29 @@
+package javacard.framework;
+
+/*
+* This is a Jif signature for the Java class. It provides Jif label
+* annotations for the Java class, allowing it to be usable by Jif
+* code. There is no automated check that the signature provided here
+* agrees with the actual Java code.
+*/
+
+import javacard.framework.PINException;
+import javacard.framework.PIN;
+import java.lang.ArrayIndexOutOfBoundsException;
+import java.lang.Object;
+import java.lang.NullPointerException;
+
+
+public class OwnerPIN extends Object implements PIN {
+	static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0; // jif signature of a java class
+	public OwnerPIN() { }
+	public OwnerPIN(byte v0, byte v1) throws PINException { }
+	native public boolean{this; v2; v3; v4} check(byte[] v2, short v3, byte v4) throws ArrayIndexOutOfBoundsException, NullPointerException;
+	native public void reset();
+	native public void update(byte[] v5, short v6, byte v7) throws PINException;
+	native protected boolean{this} getValidatedFlag();
+	native protected void setValidatedFlag(boolean v8);
+	native public byte{this} getTriesRemaining();
+	native public boolean{this} isValidated();
+	native public void resetAndUnblock();
+}

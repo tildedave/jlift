@@ -1,0 +1,18 @@
+public class LegalSubtypeCall {
+
+    public void test{}() {
+	B myB = new B();
+	passA(myB);
+    }
+
+    public void passA(A anA) { }
+
+}
+
+class A {
+
+}
+
+class B extends A {
+
+}

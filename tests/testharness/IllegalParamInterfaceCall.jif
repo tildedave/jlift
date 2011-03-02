@@ -1,0 +1,26 @@
+public class IllegalParamInterfaceCall {
+
+    int{Alice:} aliceInt;
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	I myC = new C();
+	myC.passInt(aliceInt);
+	bobInt = myC.getInt();
+    }
+
+}
+
+class C[label L] implements I[L] {
+    public void passInt(int aliceInt) {
+    }
+
+    public int getInt() {
+	return 0;
+    }
+}
+
+interface I[label L] {
+    public void passInt(int{L} lInt);
+    public int{L} getInt();
+}

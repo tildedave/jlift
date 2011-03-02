@@ -1,0 +1,38 @@
+digraph G {
+	constraint0 [shape=rectangle,label="Wallet.jl:220,12-22:\n  private void debit(APDU apdu) \{      "];
+	constraint1 [shape=rectangle,label="Wallet.jl:161,26-37:\n   case DEBIT:     debit(apdu);             "];
+	constraint2 [shape=rectangle,label="Wallet.jl:234,4-236:5:\n  if ( ( numBytes != 1 ) || (byteRead != 1) ) \{  "];
+	constraint3 [shape=rectangle,label="Wallet.jl:243,4-246:5:\n  if ( ( debitAmount > MAX_TRANSACTION_AMOUNT)  "];
+	constraint4 [shape=rectangle,label="Wallet.jl:134,11-23:\n  public void process\{Bob:\}(APDU\{\} apdu) \{      "];
+	constraint5 [shape=rectangle,label="Wallet.jl:249,4-251:5:\n  if ( (short)( balance - debitAmount ) < (short)0 ) \{  "];
+	constraint6 [shape=rectangle,label="Wallet.jl:155,4-157:31:\n  if (buffer[ISO7816.OFFSET_CLA] != Wallet_CLA)  "];
+	constraint7 [shape=rectangle,label="Wallet.jl:265,15-33:\n  short le = apdu.setOutgoing();        "];
+	constraint8 [shape=rectangle,label="Wallet.jl:158,4-168:51:\n  switch (buffer[ISO7816.OFFSET_INS]) \{  "];
+	constraint9 [shape=rectangle,label="Wallet.jl:159,26-42:\n   case GET_BALANCE:  getBalance(apdu);             "];
+	constraint10 [shape=rectangle,label="Wallet.jl:223,6-224:58:\n   if ( ! pin.isValidated() )   "];
+	constraint11 [shape=rectangle,label="Wallet.jl:223,13-30:\n   if ( ! pin.isValidated() )       "];
+	constraint12 [shape=rectangle,label="Wallet.jl:267,4-269:49:\n  if ( le < 2 )  "];
+	constraint13 [shape=rectangle,label="Wallet.jl:273,4-36:\n  apdu.setOutgoingLength((byte)2);  "];
+	constraint0 -> constraint0
+	constraint0 -> constraint0
+	constraint1 -> constraint8
+	constraint1 -> constraint9
+	constraint2 -> constraint3
+	constraint2 -> constraint3
+	constraint3 -> constraint5
+	constraint3 -> constraint5
+	constraint5 -> constraint0
+	constraint5 -> constraint0
+	constraint6 -> constraint6
+	constraint7 -> constraint7
+	constraint8 -> constraint4
+	constraint9 -> constraint7
+	constraint7 -> constraint12
+	constraint10 -> constraint2
+	constraint10 -> constraint2
+	constraint11 -> constraint10
+	constraint11 -> constraint10
+	constraint0 -> constraint1
+	constraint0 -> constraint1
+	constraint12 -> constraint13
+}

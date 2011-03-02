@@ -1,0 +1,30 @@
+import signature.SignatureParamClass;
+
+public class LegalFirstClassLabel {
+
+
+    public void test{}() {
+	final label l = new label{Alice:};
+	bork(l);
+    }
+
+    public void bork(final label{} myLabel) {
+	int i = Container[myLabel].whop();
+    }
+
+}
+
+class Container[label L] {
+
+    int{L} myInt;
+
+    static int whop() {
+	if (1 == 0) {
+	    int k = SignatureParamClass[L].getInt(0);
+	    k = 4;
+	}
+
+	return 9;
+    }
+
+}

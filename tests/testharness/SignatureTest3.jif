@@ -1,0 +1,19 @@
+import signature.SignatureClass;
+
+public class SignatureTest3 {
+
+    int{Alice:} aliceInt;
+    int{}[]{} publicArray;
+    int{Alice:}[]{Alice:} aliceArray;
+
+    public void test{}() {
+	SignatureClass sc = new SignatureClass();
+
+	if (aliceInt > 0) {
+	    aliceArray = sc.getIntArray();
+	}
+
+	publicArray = sc.getIntArray();
+    }
+
+}

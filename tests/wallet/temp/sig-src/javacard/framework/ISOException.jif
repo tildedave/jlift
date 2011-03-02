@@ -1,0 +1,10 @@
+package javacard.framework;
+
+
+public class ISOException extends CardRuntimeException {
+    public native static void throwIt(short sw) throws ISOException;
+    public static void throwIt(int sw) throws ISOException 
+    {
+	ISOException.throwIt((short) sw);
+    }
+}

@@ -1,0 +1,36 @@
+public class IllegalDynamicLegal2 {
+
+    final label inputLabel;
+    final label outputLabel;
+
+    public void test{*!:}() {
+	Container newContainer = new Container();
+	newContainer.setInt(receiveInt(inputLabel));
+	sendInt(newContainer.getInt(),outputLabel);
+    }
+
+    public int receiveInt(label inputLabel) {
+	int{*inputLabel} returnLabel;
+
+	return returnLabel;
+    }
+
+    public void sendInt(int out, label outputLabel) {
+	Container[{*outputLabel}] outputContainer;
+
+	outputContainer.setInt(out);
+    }
+
+}
+
+class Container[label L] {
+    int{L} i;
+
+    public int getInt() {
+	return i;
+    }
+
+    public void setInt(int k) {
+	this.i = k;
+    }
+}

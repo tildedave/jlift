@@ -1,0 +1,21 @@
+public class LegalRecursiveCall {
+
+    int{Alice:} aliceInt;
+    int{Alice:} otherAliceInt;
+
+    public void test{}() {
+	otherAliceInt = recursiveCall(aliceInt);
+    }
+
+    public int recursiveCall(int k) {
+	if (k > 0) {
+	    return k * recursiveCall2(k - 1);
+	}
+	return k;
+    }
+
+    public int recursiveCall2(int j) {
+	return 2 * j * recursiveCall(j - 1);
+    }
+
+}

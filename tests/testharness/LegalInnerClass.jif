@@ -1,0 +1,11 @@
+public class LegalInnerClass {
+
+    public void test{}() {
+	new A.Inner();
+    }
+}
+
+class A {
+    public static final class Inner {
+    }
+}

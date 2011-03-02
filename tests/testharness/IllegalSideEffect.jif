@@ -1,0 +1,13 @@
+public class IllegalSideEffect {
+
+    int{Alice:} aliceInt;
+    int{} publicInt;
+
+    public void test{}() {
+	if (aliceInt > 3) {
+	    publicInt = 1;
+	}
+    }
+
+
+}

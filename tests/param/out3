@@ -1,0 +1,857 @@
+Initializing jif.OutputExtensionInfo$1
+Initializing jif.OutputExtensionInfo$1
+Initializing jif.ctx.types.ContextSensitiveTypeSystem_c
+need to parameterize at C.jl:3,29-38
+t: Container[label L](class jif.types.JifParsedPolyType_c)
+returnNode: Container[{L_var#6129}] (class jif.ast.JifCanonicalTypeNode_c)
+need to parameterize at C.jl:7,14-23
+t: Container[label L](class jif.types.JifParsedPolyType_c)
+returnNode: Container[{L_var#3181}]{[sum(d)]} (class jif.ast.JifCanonicalTypeNode_c)
+===== Starting solver Job solver: C.jl (#1) =====
+   0 equations
+  ======EQUATIONS======
+   ===== Checking candidate solution =====
+ Number of relaxation steps: 0
+ ======== VAR MAP ========
+ Variables not in this map will receive default label of {*!: }
+ =========================
+   finished Job solver: C.jl (#1)
+ ======== VAR MAP ========
+ data = {L}    	label of the field Container.data
+ Variables not in this map will receive default label of {*!: }
+ =========================
+===== Starting solver Job solver: C.jl (#2) =====
+   2 equations
+  ======EQUATIONS======
+  {data} <= {L} in environment [] (produced from {data} == {L}) C.jl:16,11-23
+  {L} <= {data} in environment [] (produced from {data} == {L}) C.jl:16,11-23
+   ===== Checking candidate solution =====
+   Checking equation: {data} <= {L} in environment [] (produced from {data} == {L}) C.jl:16,11-23
+   Checking equation: {L} <= {data} in environment [] (produced from {data} == {L}) C.jl:16,11-23
+ Number of relaxation steps: 2
+ ======== VAR MAP ========
+ data = {L}    	label of the field Container.data
+ Variables not in this map will receive default label of {*!: }
+ =========================
+   finished Job solver: C.jl (#2)
+generating list to iterate over
+adding component #1
+adding component #2
+adding component #3
+adding component #4
+adding component #5
+adding component #6
+  1: [constructor public public Container[label L]()]
+  2: [method public void setData{L}(int{[L]}) : {*!: }]
+  3: [method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }]
+  4: [method void api{}() : {*!: }]
+  5: [method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: }]
+  6: [constructor public public C()]
+  #1: generate summary information for scc [constructor public public Container[label L]()]
+  generate summary information: constructor public public Container[label L]()@C.jl:14,0-15 inside Container[label L]
+    we found the node -- public Container(...)@C.jl:14,0-15
+     checking call to constructor public public java.lang.Object() from position C.jl:14,0-15 (1 procedure instances to check)
+   call to constructor public public java.lang.Object() requires checking 1 possible subtypes/implementors
+     checking call to constructor public public java.lang.Object() from position C.jl:14,0-15 (method subtype of original call)
+     constraining args for constructor public public java.lang.Object()
+   procedure constructor public public java.lang.Object() is not in the call graph, so we are not getting its summary constraints
+   checking call to constructor public public java.lang.Object() (after introducing variables for array bases)
+     constraining PC bound for constructor public public java.lang.Object()
+       adding constraint {java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}, {[sum(caller_pc@Container:C.jl:14,0-15)]} <= {*!: }]@C.jl:14,0-15 because of jif.extension.CallHelper.checkCall(CallHelper.java:586)
+       adding constraint {java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}, {[sum(caller_pc@Container:C.jl:14,0-15)]} <= {*!: }]@C.jl:14,0-15 because of jif.extension.CallHelper.checkCall(CallHelper.java:587)
+       adding constraint {Container:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}]@C.jl:14,0-15 because of jif.extension.JifProcedureDeclExt_c.addReturnConstraints(JifProcedureDeclExt_c.java:279)
+       adding constraint {Container:return} <= {sum(caller_pc@Container:C.jl:14,0-15)} in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}]@C.jl:14,0-15 because of jif.extension.JifProcedureDeclExt_c.addReturnConstraints(JifProcedureDeclExt_c.java:285)
+summary constraints generated for constructor public public Container[label L]()
+non-call constraints: 4/ call constraints: 0
+    unclosed constraints for constructor public public Container[label L]():
+    summary constraints for constructor public public Container[label L]()
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}, {[sum(caller_pc@Container:C.jl:14,0-15)]} <= {*!: }]@C.jl:14,0-15
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}, {[sum(caller_pc@Container:C.jl:14,0-15)]} <= {*!: }]@C.jl:14,0-15
+    -->{Container:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}]@C.jl:14,0-15
+    -->{Container:return} <= {sum(caller_pc@Container:C.jl:14,0-15)} in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}]@C.jl:14,0-15
+    closing constraints for [constructor public public Container[label L]()]
+      closing call constraints for procedure constructor public public Container[label L]() in scc [constructor public public Container[label L]()]
+      current procedure instance considered during closing: constructor public public Container[label L]()
+      call constraints size: 0
+      call constraints: []
+    closed constraints for constructor public public Container[label L]():
+    summary constraints for constructor public public Container[label L]()
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}, {[sum(caller_pc@Container:C.jl:14,0-15)]} <= {*!: }]@C.jl:14,0-15
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}, {[sum(caller_pc@Container:C.jl:14,0-15)]} <= {*!: }]@C.jl:14,0-15
+    -->{Container:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}]@C.jl:14,0-15
+    -->{Container:return} <= {sum(caller_pc@Container:C.jl:14,0-15)} in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}]@C.jl:14,0-15
+   total number of label constraints: 7
+   size of summary constraint info: 4
+  #2: generate summary information for scc [method public void setData{L}(int{[L]}) : {*!: }]
+  generate summary information: method public void setData{L}(int{[L]}) : {*!: }@C.jl:19,11-23 inside Container[label L]
+    we found the node -- public void setData(...)@C.jl:19,11-23
+       adding constraint {L; this} <= {L} in environment [{this} <= {[L]}]@C.jl:19,46-55 because of jif.extension.JifFieldAssignExt.labelCheckLHS(JifFieldAssignExt.java:139)
+Adding subtype constraints: int >= int
+       adding constraint {setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23 because of jif.extension.JifProcedureDeclExt_c.addReturnConstraints(JifProcedureDeclExt_c.java:279)
+       adding constraint {setData:return} <= {L} in environment [{this} <= {[L]}]@C.jl:19,11-23 because of jif.extension.JifProcedureDeclExt_c.addReturnConstraints(JifProcedureDeclExt_c.java:285)
+summary constraints generated for method public void setData{L}(int{[L]}) : {*!: }
+non-call constraints: 3/ call constraints: 0
+    unclosed constraints for method public void setData{L}(int{[L]}) : {*!: }:
+    summary constraints for method public void setData{L}(int{[L]}) : {*!: }
+    -->{L; this} <= {L} in environment [{this} <= {[L]}]@C.jl:19,46-55
+    -->{setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{setData:return} <= {L} in environment [{this} <= {[L]}]@C.jl:19,11-23
+    closing constraints for [method public void setData{L}(int{[L]}) : {*!: }]
+      closing call constraints for procedure method public void setData{L}(int{[L]}) : {*!: } in scc [method public void setData{L}(int{[L]}) : {*!: }]
+      current procedure instance considered during closing: method public void setData{L}(int{[L]}) : {*!: }
+      call constraints size: 0
+      call constraints: []
+    closed constraints for method public void setData{L}(int{[L]}) : {*!: }:
+    summary constraints for method public void setData{L}(int{[L]}) : {*!: }
+    -->{L; this} <= {L} in environment [{this} <= {[L]}]@C.jl:19,46-55
+    -->{setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{setData:return} <= {L} in environment [{this} <= {[L]}]@C.jl:19,11-23
+   total number of label constraints: 8
+   size of summary constraint info: 7
+  #3: generate summary information for scc [method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }]
+  generate summary information: method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }@C.jl:7,4-13 inside C
+    we found the node -- void pass(...)@C.jl:7,4-13
+     checking call to method public void setData{L_var#3181}(int{[L_var#3181]}) : {*!: } from position C.jl:9,1-13 (0 procedure instances to check)
+   call to method public void setData{L_var#3181}(int{[L_var#3181]}) : {*!: } requires checking 1 possible subtypes/implementors
+     checking call to method public void setData{L_var#3181}(int{[L_var#3181]}) : {*!: } from position C.jl:9,1-13 (method subtype of original call)
+     constraining args for method public void setData{L_var#3181}(int{[L_var#3181]}) : {*!: }
+   total number of label constraints BEFORE call constraints for: method public void setData{L_var#3181}(int{[L_var#3181]}) : {*!: } is 7 with 3
+   total number of label constraints AFTER call constraints: 10
+receiverExpr: d
+receiverExpr.type(): Container[{L_var#3181}] (class jif.types.LabeledType_c)
+      substitute {L_var#3181} for {L} in constraint set
+      call to method public void setData{L_var#3181}(int{[L_var#3181]}) : {*!: } generates 4 constraints
+       summary constraints for constraint set
+       -->{inst[L]@C.jl:9,1-2; this} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,46-55
+       -->{setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23
+       -->{setData:return} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,11-23
+       -->{inst[L]@C.jl:9,1-2} == {L_var#3181} in environment []@C.jl:7,14-23
+       adding constraint {sum(caller_pc@pass:C.jl:7,4-13)} <= {L_var#3181} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,11-12 because of jif.extension.CallHelper.constrainArg(CallHelper.java:386)
+Adding subtype constraints: int >= int
+     finished constraining args for call to method public void setData{L_var#3181}(int{[L_var#3181]}) : {*!: } inside method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }
+     constraining PC bound for method public void setData{L_var#3181}(int{[L_var#3181]}) : {*!: }
+      substituting away "this" label
+      adding call position to each constraint (5 constraints)
+       adding constraint {inst[L]@C.jl:9,1-2; setData_reciever} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,46-55 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {setData:return} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,11-23 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {inst[L]@C.jl:9,1-2} == {L_var#3181} in environment []@C.jl:7,14-23 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {setData_reciever} ==_{def} {sum(d); sum(caller_pc@pass:C.jl:7,4-13)} in environment []@C.jl:7,14-26 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {setData:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13 because of jif.extension.CallHelper.checkCall(CallHelper.java:586)
+       adding constraint {setData:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13 because of jif.extension.CallHelper.checkCall(CallHelper.java:587)
+       adding constraint {receiver} == {sum(d); sum(caller_pc@pass:C.jl:7,4-13)} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13 because of jif.extension.CallHelper.bindVarLabels(CallHelper.java:887)
+       adding constraint {arg1label} == {sum(caller_pc@pass:C.jl:7,4-13)} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13 because of jif.extension.CallHelper.bindVarLabels(CallHelper.java:903)
+       adding constraint {pass:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13 because of jif.extension.JifProcedureDeclExt_c.addReturnConstraints(JifProcedureDeclExt_c.java:279)
+       adding constraint {pass:return} <= {sum(caller_pc@pass:C.jl:7,4-13)} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13 because of jif.extension.JifProcedureDeclExt_c.addReturnConstraints(JifProcedureDeclExt_c.java:285)
+summary constraints generated for method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }
+non-call constraints: 12/ call constraints: 0
+    unclosed constraints for method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }:
+    summary constraints for method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }
+    -->{sum(caller_pc@pass:C.jl:7,4-13)} <= {L_var#3181} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,11-12
+    -->{inst[L]@C.jl:9,1-2; setData_reciever} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,46-55
+    -->{setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{setData:return} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{inst[L]@C.jl:9,1-2} == {L_var#3181} in environment []@C.jl:7,14-23
+    -->{setData_reciever} ==_{def} {sum(d); sum(caller_pc@pass:C.jl:7,4-13)} in environment []@C.jl:7,14-26
+    -->{setData:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{setData:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{receiver} == {sum(d); sum(caller_pc@pass:C.jl:7,4-13)} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{arg1label} == {sum(caller_pc@pass:C.jl:7,4-13)} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{pass:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13
+    -->{pass:return} <= {sum(caller_pc@pass:C.jl:7,4-13)} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13
+    closing constraints for [method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }]
+      closing call constraints for procedure method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: } in scc [method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }]
+      current procedure instance considered during closing: method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }
+      call constraints size: 0
+      call constraints: []
+    closed constraints for method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }:
+    summary constraints for method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }
+    -->{sum(caller_pc@pass:C.jl:7,4-13)} <= {L_var#3181} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,11-12
+    -->{inst[L]@C.jl:9,1-2; setData_reciever} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,46-55
+    -->{setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{setData:return} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{inst[L]@C.jl:9,1-2} == {L_var#3181} in environment []@C.jl:7,14-23
+    -->{setData_reciever} ==_{def} {sum(d); sum(caller_pc@pass:C.jl:7,4-13)} in environment []@C.jl:7,14-26
+    -->{setData:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{setData:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{receiver} == {sum(d); sum(caller_pc@pass:C.jl:7,4-13)} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{arg1label} == {sum(caller_pc@pass:C.jl:7,4-13)} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{pass:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13
+    -->{pass:return} <= {sum(caller_pc@pass:C.jl:7,4-13)} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13
+   total number of label constraints: 19
+   size of summary constraint info: 19
+  #4: generate summary information for scc [method void api{}() : {*!: }]
+  generate summary information: method void api{}() : {*!: }@C.jl:2,4-12 inside C
+    we found the node -- void api(...)@C.jl:2,4-12
+     checking call to constructor public public Container[{L_var#6129}]() from position C.jl:3,25-40 (1 procedure instances to check)
+   call to constructor public public Container[{L_var#6129}]() requires checking 1 possible subtypes/implementors
+     checking call to constructor public public Container[{L_var#6129}]() from position C.jl:3,25-40 (method subtype of original call)
+       adding constraint {} <= {newContainer} in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40 because of jif.extension.CallHelper.labelCheckAndConstrainParams(CallHelper.java:282)
+     constraining args for constructor public public Container[{L_var#6129}]()
+   total number of label constraints BEFORE call constraints for: constructor public public Container[{L_var#6129}]() is 20 with 0
+   total number of label constraints AFTER call constraints: 20
+receiverExpr: null
+      call to constructor public public Container[{L_var#6129}]() generates 0 constraints
+       summary constraints for constraint set
+     finished constraining args for call to constructor public public Container[{L_var#6129}]() inside method void api{}() : {*!: }
+     constraining PC bound for constructor public public Container[{L_var#6129}]()
+      substituting away summary variable for PC
+      substituting away "this" label
+      adding call position to each constraint (2 constraints)
+       adding constraint {caller_pc@Container:C.jl:14,0-15} == {} in environment []@C.jl:3,25-40 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {Container[{L_var#6129}]_reciever} ==_{def} {newContainer} in environment []@C.jl:3,25-40 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {Container[{L_var#6129}]:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40 because of jif.extension.CallHelper.checkCall(CallHelper.java:586)
+       adding constraint {Container[{L_var#6129}]:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40 because of jif.extension.CallHelper.checkCall(CallHelper.java:587)
+Adding subtype constraints: Container[{Alice: }] >= Container[{L_var#6129}]
+       adding constraint {L_var#6129} == {Alice: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40 because of jif.extension.SubtypeChecker.addParamConstraints(SubtypeChecker.java:114)
+       adding constraint {Container[{L_var#6129}]:value_returned; _: _; _!: _; newContainer} <= {c} in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40 because of jif.extension.JifLocalDeclExt.labelCheckStmt(JifLocalDeclExt.java:112)
+     checking call to method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: } from position C.jl:4,1-8 (1 procedure instances to check)
+   call to method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: } requires checking 1 possible subtypes/implementors
+     checking call to method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: } from position C.jl:4,1-8 (method subtype of original call)
+     constraining args for method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }
+   total number of label constraints BEFORE call constraints for: method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: } is 26 with 12
+   total number of label constraints AFTER call constraints: 38
+receiverExpr: this
+receiverExpr.type(): C (class jif.types.LabeledType_c)
+      call to method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: } generates 12 constraints
+       summary constraints for constraint set
+       -->{sum(caller_pc@pass:C.jl:7,4-13)} <= {L_var#3181} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,11-12
+       -->{inst[L]@C.jl:9,1-2; setData_reciever} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,46-55
+       -->{setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23
+       -->{setData:return} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,11-23
+       -->{inst[L]@C.jl:9,1-2} == {L_var#3181} in environment []@C.jl:7,14-23
+       -->{setData_reciever} ==_{def} {sum(d); sum(caller_pc@pass:C.jl:7,4-13)} in environment []@C.jl:7,14-26
+       -->{setData:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+       -->{setData:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+       -->{receiver} == {sum(d); sum(caller_pc@pass:C.jl:7,4-13)} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+       -->{arg1label} == {sum(caller_pc@pass:C.jl:7,4-13)} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+       -->{pass:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13
+       -->{pass:return} <= {sum(caller_pc@pass:C.jl:7,4-13)} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13
+       about to substitute {c; [_: _; _!: _]} for {sum(d)} in generated constraint set
+       finished substituting
+Adding subtype constraints: Container[{L_var#3181}] >= Container[{Alice: }]
+       adding constraint {Alice: } == {L_var#3181} in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,6-7 because of jif.extension.SubtypeChecker.addParamConstraints(SubtypeChecker.java:114)
+     finished constraining args for call to method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: } inside method void api{}() : {*!: }
+     constraining PC bound for method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: }
+      substituting away summary variable for PC
+      substituting away "this" label
+      adding call position to each constraint (15 constraints)
+       adding constraint {caller_pc@pass:C.jl:7,4-13} <= {L_var#3181} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,11-12 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {inst[L]@C.jl:9,1-2; setData_reciever} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,46-55 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {setData:return} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,11-23 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {inst[L]@C.jl:9,1-2} == {L_var#3181} in environment []@C.jl:7,14-23 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {setData_reciever} ==_{def} {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13} in environment []@C.jl:7,14-26 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {setData:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {setData:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {receiver} == {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {arg1label} == {caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {pass:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {pass:return} <= {caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {d@callto:pass:C.jl:4,1-8} == {c; _: _; _!: _} in environment []@C.jl:4,1-8 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {caller_pc@pass:C.jl:7,4-13} == {} in environment []@C.jl:4,1-8 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {pass_reciever} ==_{def} {this} in environment []@C.jl:1,7-14 because of jif.ctx.extension.SummaryCallHelper.constrainPCBound(SummaryCallHelper.java:404)
+       adding constraint {pass:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8 because of jif.extension.CallHelper.checkCall(CallHelper.java:586)
+       adding constraint {pass:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8 because of jif.extension.CallHelper.checkCall(CallHelper.java:587)
+       adding constraint {receiver} == {this} in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8 because of jif.extension.CallHelper.bindVarLabels(CallHelper.java:887)
+       adding constraint {arg1label} == {c; _: _; _!: _} in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8 because of jif.extension.CallHelper.bindVarLabels(CallHelper.java:903)
+       adding constraint {api:return} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:2,4-12 because of jif.extension.JifProcedureDeclExt_c.addReturnConstraints(JifProcedureDeclExt_c.java:279)
+       adding constraint {api:return} <= {} in environment [{this} <= {[_: _; _!: _]}]@C.jl:2,4-12 because of jif.extension.JifProcedureDeclExt_c.addReturnConstraints(JifProcedureDeclExt_c.java:285)
+summary constraints generated for method void api{}() : {*!: }
+non-call constraints: 29/ call constraints: 0
+    unclosed constraints for method void api{}() : {*!: }:
+    summary constraints for method void api{}() : {*!: }
+    -->{} <= {newContainer} in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{caller_pc@Container:C.jl:14,0-15} == {} in environment []@C.jl:3,25-40
+    -->{Container[{L_var#6129}]_reciever} ==_{def} {newContainer} in environment []@C.jl:3,25-40
+    -->{Container[{L_var#6129}]:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{Container[{L_var#6129}]:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{L_var#6129} == {Alice: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{Container[{L_var#6129}]:value_returned; _: _; _!: _; newContainer} <= {c} in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{Alice: } == {L_var#3181} in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,6-7
+    -->{caller_pc@pass:C.jl:7,4-13} <= {L_var#3181} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,11-12
+    -->{inst[L]@C.jl:9,1-2; setData_reciever} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,46-55
+    -->{setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{setData:return} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{inst[L]@C.jl:9,1-2} == {L_var#3181} in environment []@C.jl:7,14-23
+    -->{setData_reciever} ==_{def} {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13} in environment []@C.jl:7,14-26
+    -->{setData:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{setData:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{receiver} == {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{arg1label} == {caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{pass:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13
+    -->{pass:return} <= {caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13
+    -->{d@callto:pass:C.jl:4,1-8} == {c; _: _; _!: _} in environment []@C.jl:4,1-8
+    -->{caller_pc@pass:C.jl:7,4-13} == {} in environment []@C.jl:4,1-8
+    -->{pass_reciever} ==_{def} {this} in environment []@C.jl:1,7-14
+    -->{pass:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8
+    -->{pass:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8
+    -->{receiver} == {this} in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8
+    -->{arg1label} == {c; _: _; _!: _} in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8
+    -->{api:return} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:2,4-12
+    -->{api:return} <= {} in environment [{this} <= {[_: _; _!: _]}]@C.jl:2,4-12
+    closing constraints for [method void api{}() : {*!: }]
+      closing call constraints for procedure method void api{}() : {*!: } in scc [method void api{}() : {*!: }]
+      current procedure instance considered during closing: method void api{}() : {*!: }
+      call constraints size: 0
+      call constraints: []
+    closed constraints for method void api{}() : {*!: }:
+    summary constraints for method void api{}() : {*!: }
+    -->{} <= {newContainer} in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{caller_pc@Container:C.jl:14,0-15} == {} in environment []@C.jl:3,25-40
+    -->{Container[{L_var#6129}]_reciever} ==_{def} {newContainer} in environment []@C.jl:3,25-40
+    -->{Container[{L_var#6129}]:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{Container[{L_var#6129}]:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{L_var#6129} == {Alice: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{Container[{L_var#6129}]:value_returned; _: _; _!: _; newContainer} <= {c} in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{Alice: } == {L_var#3181} in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,6-7
+    -->{caller_pc@pass:C.jl:7,4-13} <= {L_var#3181} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,11-12
+    -->{inst[L]@C.jl:9,1-2; setData_reciever} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,46-55
+    -->{setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{setData:return} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{inst[L]@C.jl:9,1-2} == {L_var#3181} in environment []@C.jl:7,14-23
+    -->{setData_reciever} ==_{def} {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13} in environment []@C.jl:7,14-26
+    -->{setData:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{setData:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{receiver} == {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{arg1label} == {caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{pass:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13
+    -->{pass:return} <= {caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13
+    -->{d@callto:pass:C.jl:4,1-8} == {c; _: _; _!: _} in environment []@C.jl:4,1-8
+    -->{caller_pc@pass:C.jl:7,4-13} == {} in environment []@C.jl:4,1-8
+    -->{pass_reciever} ==_{def} {this} in environment []@C.jl:1,7-14
+    -->{pass:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8
+    -->{pass:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8
+    -->{receiver} == {this} in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8
+    -->{arg1label} == {c; _: _; _!: _} in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8
+    -->{api:return} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:2,4-12
+    -->{api:return} <= {} in environment [{this} <= {[_: _; _!: _]}]@C.jl:2,4-12
+   total number of label constraints: 48
+   size of summary constraint info: 48
+   ** label {sum(caller_pc@pass:C.jl:7,4-13)} contains summary variables [{sum(caller_pc@pass:C.jl:7,4-13)}]
+method void pass{sum(caller_pc@pass:C.jl:7,4-13)}(Container[{L_var#3181}]{[sum(d)]}) : {*!: } can have its constraints deleted now that we have handled [method void api{}() : {*!: }]
+this would save 12 constraints
+  #5: generate summary information for scc [method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: }]
+  generate summary information: method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: }@C.jl:18,11-25 inside Container[label L]
+    we found the node -- public int{L} getData(...)@C.jl:18,11-25
+       adding constraint {L; this; sum(caller_pc@getData:C.jl:18,11-25)} <= {L; sum(caller_pc@getData:C.jl:18,11-25)} in environment [{this} <= {[sum(caller_pc@getData:C.jl:18,11-25)]}]@C.jl:18,30-42 because of jif.extension.JifReturnExt.labelCheckStmt(JifReturnExt.java:69)
+Adding subtype constraints: int >= int
+       adding constraint {getData:return} ==_{def} {sum(caller_pc@getData:C.jl:18,11-25)} in environment [{this} <= {[sum(caller_pc@getData:C.jl:18,11-25)]}]@C.jl:18,11-25 because of jif.extension.JifProcedureDeclExt_c.addReturnConstraints(JifProcedureDeclExt_c.java:279)
+       adding constraint {getData:return} <= {sum(caller_pc@getData:C.jl:18,11-25)} in environment [{this} <= {[sum(caller_pc@getData:C.jl:18,11-25)]}]@C.jl:18,11-25 because of jif.extension.JifProcedureDeclExt_c.addReturnConstraints(JifProcedureDeclExt_c.java:285)
+summary constraints generated for method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: }
+non-call constraints: 3/ call constraints: 0
+    unclosed constraints for method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: }:
+    summary constraints for method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: }
+    -->{L; this; sum(caller_pc@getData:C.jl:18,11-25)} <= {L; sum(caller_pc@getData:C.jl:18,11-25)} in environment [{this} <= {[sum(caller_pc@getData:C.jl:18,11-25)]}]@C.jl:18,30-42
+    -->{getData:return} ==_{def} {sum(caller_pc@getData:C.jl:18,11-25)} in environment [{this} <= {[sum(caller_pc@getData:C.jl:18,11-25)]}]@C.jl:18,11-25
+    -->{getData:return} <= {sum(caller_pc@getData:C.jl:18,11-25)} in environment [{this} <= {[sum(caller_pc@getData:C.jl:18,11-25)]}]@C.jl:18,11-25
+    closing constraints for [method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: }]
+      closing call constraints for procedure method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: } in scc [method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: }]
+      current procedure instance considered during closing: method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: }
+      call constraints size: 0
+      call constraints: []
+    closed constraints for method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: }:
+    summary constraints for method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: }
+    -->{L; this; sum(caller_pc@getData:C.jl:18,11-25)} <= {L; sum(caller_pc@getData:C.jl:18,11-25)} in environment [{this} <= {[sum(caller_pc@getData:C.jl:18,11-25)]}]@C.jl:18,30-42
+    -->{getData:return} ==_{def} {sum(caller_pc@getData:C.jl:18,11-25)} in environment [{this} <= {[sum(caller_pc@getData:C.jl:18,11-25)]}]@C.jl:18,11-25
+    -->{getData:return} <= {sum(caller_pc@getData:C.jl:18,11-25)} in environment [{this} <= {[sum(caller_pc@getData:C.jl:18,11-25)]}]@C.jl:18,11-25
+   total number of label constraints: 51
+   size of summary constraint info: 39
+  #6: generate summary information for scc [constructor public public C()]
+  generate summary information: constructor public public C()@C.jl:1,7-14 inside C
+    we found the node -- public C(...)@C.jl:1,7-14
+     checking call to constructor public public java.lang.Object() from position C.jl:1,7-14 (1 procedure instances to check)
+   call to constructor public public java.lang.Object() requires checking 1 possible subtypes/implementors
+     checking call to constructor public public java.lang.Object() from position C.jl:1,7-14 (method subtype of original call)
+     constraining args for constructor public public java.lang.Object()
+   procedure constructor public public java.lang.Object() is not in the call graph, so we are not getting its summary constraints
+   checking call to constructor public public java.lang.Object() (after introducing variables for array bases)
+     constraining PC bound for constructor public public java.lang.Object()
+       adding constraint {java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}, {[sum(caller_pc@C:C.jl:1,7-14)]} <= {*!: }]@C.jl:1,7-14 because of jif.extension.CallHelper.checkCall(CallHelper.java:586)
+       adding constraint {java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}, {[sum(caller_pc@C:C.jl:1,7-14)]} <= {*!: }]@C.jl:1,7-14 because of jif.extension.CallHelper.checkCall(CallHelper.java:587)
+       adding constraint {C:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}]@C.jl:1,7-14 because of jif.extension.JifProcedureDeclExt_c.addReturnConstraints(JifProcedureDeclExt_c.java:279)
+       adding constraint {C:return} <= {sum(caller_pc@C:C.jl:1,7-14)} in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}]@C.jl:1,7-14 because of jif.extension.JifProcedureDeclExt_c.addReturnConstraints(JifProcedureDeclExt_c.java:285)
+summary constraints generated for constructor public public C()
+non-call constraints: 4/ call constraints: 0
+    unclosed constraints for constructor public public C():
+    summary constraints for constructor public public C()
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}, {[sum(caller_pc@C:C.jl:1,7-14)]} <= {*!: }]@C.jl:1,7-14
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}, {[sum(caller_pc@C:C.jl:1,7-14)]} <= {*!: }]@C.jl:1,7-14
+    -->{C:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}]@C.jl:1,7-14
+    -->{C:return} <= {sum(caller_pc@C:C.jl:1,7-14)} in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}]@C.jl:1,7-14
+    closing constraints for [constructor public public C()]
+      closing call constraints for procedure constructor public public C() in scc [constructor public public C()]
+      current procedure instance considered during closing: constructor public public C()
+      call constraints size: 0
+      call constraints: []
+    closed constraints for constructor public public C():
+    summary constraints for constructor public public C()
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}, {[sum(caller_pc@C:C.jl:1,7-14)]} <= {*!: }]@C.jl:1,7-14
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}, {[sum(caller_pc@C:C.jl:1,7-14)]} <= {*!: }]@C.jl:1,7-14
+    -->{C:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}]@C.jl:1,7-14
+    -->{C:return} <= {sum(caller_pc@C:C.jl:1,7-14)} in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}]@C.jl:1,7-14
+   total number of label constraints: 57
+   size of summary constraint info: 43
+finished generating summary constraints
+    summary constraints for constructor public public Container[label L]()
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}, {[sum(caller_pc@Container:C.jl:14,0-15)]} <= {*!: }]@C.jl:14,0-15
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}, {[sum(caller_pc@Container:C.jl:14,0-15)]} <= {*!: }]@C.jl:14,0-15
+    -->{Container:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}]@C.jl:14,0-15
+    -->{Container:return} <= {sum(caller_pc@Container:C.jl:14,0-15)} in environment [{this} <= {[sum(caller_pc@Container:C.jl:14,0-15)]}]@C.jl:14,0-15
+   ** label {sum(caller_pc@Container:C.jl:14,0-15)} contains summary variables [{sum(caller_pc@Container:C.jl:14,0-15)}]
+    summary constraints for method void api{}() : {*!: }
+    -->{} <= {newContainer} in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{caller_pc@Container:C.jl:14,0-15} == {} in environment []@C.jl:3,25-40
+    -->{Container[{L_var#6129}]_reciever} ==_{def} {newContainer} in environment []@C.jl:3,25-40
+    -->{Container[{L_var#6129}]:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{Container[{L_var#6129}]:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{L_var#6129} == {Alice: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{Container[{L_var#6129}]:value_returned; _: _; _!: _; newContainer} <= {c} in environment [{this} <= {[_: _; _!: _]}]@C.jl:3,25-40
+    -->{Alice: } == {L_var#3181} in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,6-7
+    -->{caller_pc@pass:C.jl:7,4-13} <= {L_var#3181} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,11-12
+    -->{inst[L]@C.jl:9,1-2; setData_reciever} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,46-55
+    -->{setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{setData:return} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{inst[L]@C.jl:9,1-2} == {L_var#3181} in environment []@C.jl:7,14-23
+    -->{setData_reciever} ==_{def} {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13} in environment []@C.jl:7,14-26
+    -->{setData:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{setData:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{receiver} == {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{arg1label} == {caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:9,1-13
+    -->{pass:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13
+    -->{pass:return} <= {caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}]@C.jl:7,4-13
+    -->{d@callto:pass:C.jl:4,1-8} == {c; _: _; _!: _} in environment []@C.jl:4,1-8
+    -->{caller_pc@pass:C.jl:7,4-13} == {} in environment []@C.jl:4,1-8
+    -->{pass_reciever} ==_{def} {this} in environment []@C.jl:1,7-14
+    -->{pass:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8
+    -->{pass:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8
+    -->{receiver} == {this} in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8
+    -->{arg1label} == {c; _: _; _!: _} in environment [{this} <= {[_: _; _!: _]}]@C.jl:4,1-8
+    -->{api:return} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@C.jl:2,4-12
+    -->{api:return} <= {} in environment [{this} <= {[_: _; _!: _]}]@C.jl:2,4-12
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ Variables not in this map will receive default label of {*!: }
+ =========================
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ Variables not in this map will receive default label of {*!: }
+ =========================
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {*!: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {*!: }    	variable to replace param {L}
+ Variables not in this map will receive default label of {*!: }
+ =========================
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {*!: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {*!: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {*!: }    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {*!: }    	upper bound for the pc at the call site of pass
+ receiver = {*!: }    	label of receiver of call d.setData(4)
+ Variables not in this map will receive default label of {*!: }
+ =========================
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {*!: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {*!: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {*!: }    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {*!: }    	upper bound for the pc at the call site of pass
+ receiver = {*!: }    	label of receiver of call d.setData(4)
+ arg1label = {*!: }    	label of arg 1 of call d.setData(4)
+ Variables not in this map will receive default label of {*!: }
+ =========================
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {*!: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {*!: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {*!: }    	upper bound for the pc at the call site of pass
+ receiver = {*!: }    	label of receiver of call d.setData(4)
+ arg1label = {*!: }    	label of arg 1 of call d.setData(4)
+ c = {*!: }    	label of the local variable c
+ Variables not in this map will receive default label of {*!: }
+ =========================
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {*!: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {*!: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {}    	upper bound for the pc at the call site of pass
+ receiver = {*!: }    	label of receiver of call d.setData(4)
+ arg1label = {*!: }    	label of arg 1 of call d.setData(4)
+ c = {*!: }    	label of the local variable c
+ Variables not in this map will receive default label of {*!: }
+ =========================
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {*!: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {*!: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {}    	upper bound for the pc at the call site of pass
+ receiver = {*!: }    	label of receiver of call d.setData(4)
+ arg1label = {*!: }    	label of arg 1 of call d.setData(4)
+ c = {*!: }    	label of the local variable c
+ api_apireceiver = {*!: }    	variable for this
+ receiver = {*!: }    	label of receiver of call pass(c)
+ Variables not in this map will receive default label of {*!: }
+ =========================
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {*!: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {*!: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {}    	upper bound for the pc at the call site of pass
+ receiver = {*!: }    	label of receiver of call d.setData(4)
+ arg1label = {*!: }    	label of arg 1 of call d.setData(4)
+ c = {*!: }    	label of the local variable c
+ api_apireceiver = {*!: }    	variable for this
+ receiver = {*!: }    	label of receiver of call pass(c)
+ arg1label = {_: _; *!: ; _: _; _!: _}    	label of arg 1 of call pass(c)
+ Variables not in this map will receive default label of {*!: }
+ =========================
+===== Starting solver api (#9) =====
+   46 equations
+  ======EQUATIONS======
+  {} <= {newContainer} in environment [{this} <= {[_: _; _!: _]}] (produced from {} <= {newContainer}) C.jl:3,25-40
+  {caller_pc@Container:C.jl:14,0-15} <= {} in environment [] (produced from {caller_pc@Container:C.jl:14,0-15} == {}) C.jl:3,25-40
+  {} <= {caller_pc@Container:C.jl:14,0-15} in environment [] (produced from {caller_pc@Container:C.jl:14,0-15} == {}) C.jl:3,25-40
+  {newContainer} <= {Container[{L_var#6129}]_reciever} in environment [] (produced from {Container[{L_var#6129}]_reciever} ==_{def} {newContainer}) C.jl:3,25-40
+  {*!: } <= {Container[{L_var#6129}]:return_observed} in environment [{this} <= {[_: _; _!: _]}] (produced from {Container[{L_var#6129}]:return_observed} ==_{def} {*!: }) C.jl:3,25-40
+  {*!: } <= {Container[{L_var#6129}]:value_returned} in environment [{this} <= {[_: _; _!: _]}] (produced from {Container[{L_var#6129}]:value_returned} ==_{def} {*!: }) C.jl:3,25-40
+  {L_var#6129} <= {Alice: } in environment [{this} <= {[_: _; _!: _]}] (produced from {L_var#6129} == {Alice: }) C.jl:3,25-40
+  {Alice: } <= {L_var#6129} in environment [{this} <= {[_: _; _!: _]}] (produced from {L_var#6129} == {Alice: }) C.jl:3,25-40
+  {Container[{L_var#6129}]:value_returned} <= {c} in environment [{this} <= {[_: _; _!: _]}] (produced from {Container[{L_var#6129}]:value_returned; _: _; _!: _; newContainer} <= {c}) C.jl:3,25-40
+  {} <= {c} in environment [{this} <= {[_: _; _!: _]}] (produced from {Container[{L_var#6129}]:value_returned; _: _; _!: _; newContainer} <= {c}) C.jl:3,25-40
+  {newContainer} <= {c} in environment [{this} <= {[_: _; _!: _]}] (produced from {Container[{L_var#6129}]:value_returned; _: _; _!: _; newContainer} <= {c}) C.jl:3,25-40
+  {Alice: } <= {L_var#3181} in environment [{this} <= {[_: _; _!: _]}] (produced from {Alice: } == {L_var#3181}) C.jl:4,6-7
+  {L_var#3181} <= {Alice: } in environment [{this} <= {[_: _; _!: _]}] (produced from {Alice: } == {L_var#3181}) C.jl:4,6-7
+  {caller_pc@pass:C.jl:7,4-13} <= {L_var#3181} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {caller_pc@pass:C.jl:7,4-13} <= {L_var#3181}) C.jl:9,11-12
+  {inst[L]@C.jl:9,1-2} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}] (produced from {inst[L]@C.jl:9,1-2; setData_reciever} <= {inst[L]@C.jl:9,1-2}) C.jl:19,46-55
+  {setData_reciever} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}] (produced from {inst[L]@C.jl:9,1-2; setData_reciever} <= {inst[L]@C.jl:9,1-2}) C.jl:19,46-55
+  {*!: } <= {setData:return} in environment [{this} <= {[L]}] (produced from {setData:return} ==_{def} {*!: }) C.jl:19,11-23
+  {setData:return} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}] (produced from {setData:return} <= {inst[L]@C.jl:9,1-2}) C.jl:19,11-23
+  {inst[L]@C.jl:9,1-2} <= {L_var#3181} in environment [] (produced from {inst[L]@C.jl:9,1-2} == {L_var#3181}) C.jl:7,14-23
+  {L_var#3181} <= {inst[L]@C.jl:9,1-2} in environment [] (produced from {inst[L]@C.jl:9,1-2} == {L_var#3181}) C.jl:7,14-23
+  {d@callto:pass:C.jl:4,1-8} <= {setData_reciever} in environment [] (produced from {setData_reciever} ==_{def} {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13}) C.jl:7,14-26
+  {caller_pc@pass:C.jl:7,4-13} <= {setData_reciever} in environment [] (produced from {setData_reciever} ==_{def} {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13}) C.jl:7,14-26
+  {*!: } <= {setData:return_observed} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {setData:return_observed} ==_{def} {*!: }) C.jl:9,1-13
+  {*!: } <= {setData:value_returned} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {setData:value_returned} ==_{def} {*!: }) C.jl:9,1-13
+  {receiver} <= {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {receiver} == {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13}) C.jl:9,1-13
+  {d@callto:pass:C.jl:4,1-8} <= {receiver} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {receiver} == {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13}) C.jl:9,1-13
+  {caller_pc@pass:C.jl:7,4-13} <= {receiver} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {receiver} == {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13}) C.jl:9,1-13
+  {arg1label} <= {caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {arg1label} == {caller_pc@pass:C.jl:7,4-13}) C.jl:9,1-13
+  {caller_pc@pass:C.jl:7,4-13} <= {arg1label} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {arg1label} == {caller_pc@pass:C.jl:7,4-13}) C.jl:9,1-13
+  {*!: } <= {pass:return} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {pass:return} ==_{def} {*!: }) C.jl:7,4-13
+  {pass:return} <= {caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {pass:return} <= {caller_pc@pass:C.jl:7,4-13}) C.jl:7,4-13
+  {d@callto:pass:C.jl:4,1-8} <= {c; _: _; _!: _} in environment [] (produced from {d@callto:pass:C.jl:4,1-8} == {c; _: _; _!: _}) C.jl:4,1-8
+  {c} <= {d@callto:pass:C.jl:4,1-8} in environment [] (produced from {d@callto:pass:C.jl:4,1-8} == {c; _: _; _!: _}) C.jl:4,1-8
+  {} <= {d@callto:pass:C.jl:4,1-8} in environment [] (produced from {d@callto:pass:C.jl:4,1-8} == {c; _: _; _!: _}) C.jl:4,1-8
+  {caller_pc@pass:C.jl:7,4-13} <= {} in environment [] (produced from {caller_pc@pass:C.jl:7,4-13} == {}) C.jl:4,1-8
+  {} <= {caller_pc@pass:C.jl:7,4-13} in environment [] (produced from {caller_pc@pass:C.jl:7,4-13} == {}) C.jl:4,1-8
+  {api_apireceiver} <= {pass_reciever} in environment [] (produced from {pass_reciever} ==_{def} {api_apireceiver}) C.jl:1,7-14
+  {*!: } <= {pass:return_observed} in environment [{this} <= {[_: _; _!: _]}] (produced from {pass:return_observed} ==_{def} {*!: }) C.jl:4,1-8
+  {*!: } <= {pass:value_returned} in environment [{this} <= {[_: _; _!: _]}] (produced from {pass:value_returned} ==_{def} {*!: }) C.jl:4,1-8
+  {receiver} <= {api_apireceiver} in environment [{this} <= {[_: _; _!: _]}] (produced from {receiver} == {api_apireceiver}) C.jl:4,1-8
+  {api_apireceiver} <= {receiver} in environment [{this} <= {[_: _; _!: _]}] (produced from {receiver} == {api_apireceiver}) C.jl:4,1-8
+  {arg1label} <= {c; _: _; _!: _} in environment [{this} <= {[_: _; _!: _]}] (produced from {arg1label} == {c; _: _; _!: _}) C.jl:4,1-8
+  {c} <= {arg1label} in environment [{this} <= {[_: _; _!: _]}] (produced from {arg1label} == {c; _: _; _!: _}) C.jl:4,1-8
+  {} <= {arg1label} in environment [{this} <= {[_: _; _!: _]}] (produced from {arg1label} == {c; _: _; _!: _}) C.jl:4,1-8
+  {*!: } <= {api:return} in environment [{this} <= {[_: _; _!: _]}] (produced from {api:return} ==_{def} {*!: }) C.jl:2,4-12
+  {api:return} <= {} in environment [{this} <= {[_: _; _!: _]}] (produced from {api:return} <= {}) C.jl:2,4-12
+   Considering constraint: {} <= {newContainer} in environment [{this} <= {[_: _; _!: _]}] (produced from {} <= {newContainer}) C.jl:3,25-40 (line 3)
+   JOIN ({newContainer}, NEEDED) := {}
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {*!: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {*!: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {}    	upper bound for the pc at the call site of pass
+ receiver = {*!: }    	label of receiver of call d.setData(4)
+ arg1label = {*!: }    	label of arg 1 of call d.setData(4)
+ c = {*!: }    	label of the local variable c
+ api_apireceiver = {*!: }    	variable for this
+ receiver = {*!: }    	label of receiver of call pass(c)
+ arg1label = {_: _; *!: ; _: _; _!: _}    	label of arg 1 of call pass(c)
+ newContainer = {}    	label of the reference to the newly created Container object, at C.jl:3,25-40
+ Variables not in this map will receive default label of {*!: }
+ =========================
+   Considering constraint: {newContainer} <= {Container[{L_var#6129}]_reciever} in environment [] (produced from {Container[{L_var#6129}]_reciever} ==_{def} {newContainer}) C.jl:3,25-40 (line 3)
+   JOIN ({Container[{L_var#6129}]_reciever}, NEEDED) := {}
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {*!: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {*!: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {}    	upper bound for the pc at the call site of pass
+ receiver = {*!: }    	label of receiver of call d.setData(4)
+ arg1label = {*!: }    	label of arg 1 of call d.setData(4)
+ c = {*!: }    	label of the local variable c
+ api_apireceiver = {*!: }    	variable for this
+ receiver = {*!: }    	label of receiver of call pass(c)
+ arg1label = {_: _; *!: ; _: _; _!: _}    	label of arg 1 of call pass(c)
+ newContainer = {}    	label of the reference to the newly created Container object, at C.jl:3,25-40
+ Container[{L_var#6129}]_reciever = {}    	variable for this
+ Variables not in this map will receive default label of {*!: }
+ =========================
+   Considering constraint: {} <= {c} in environment [{this} <= {[_: _; _!: _]}] (produced from {Container[{L_var#6129}]:value_returned; _: _; _!: _; newContainer} <= {c}) C.jl:3,25-40 (line 3)
+   JOIN ({c}, NEEDED) := {}
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {*!: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {*!: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {}    	upper bound for the pc at the call site of pass
+ receiver = {*!: }    	label of receiver of call d.setData(4)
+ arg1label = {*!: }    	label of arg 1 of call d.setData(4)
+ c = {}    	label of the local variable c
+ api_apireceiver = {*!: }    	variable for this
+ receiver = {*!: }    	label of receiver of call pass(c)
+ arg1label = {_: _; *!: ; _: _; _!: _}    	label of arg 1 of call pass(c)
+ newContainer = {}    	label of the reference to the newly created Container object, at C.jl:3,25-40
+ Container[{L_var#6129}]_reciever = {}    	variable for this
+ Container[{L_var#6129}]:return_observed = {*!: }    	label representing the return label of the method call
+ Container[{L_var#6129}]:value_returned = {*!: }    	label representing the return value label of the method call
+ Variables not in this map will receive default label of {*!: }
+ =========================
+   Considering constraint: {Alice: } <= {L_var#3181} in environment [{this} <= {[_: _; _!: _]}] (produced from {Alice: } == {L_var#3181}) C.jl:4,6-7 (line 4)
+   JOIN ({L_var#3181}, NEEDED) := {Alice: }
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {*!: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {}    	upper bound for the pc at the call site of pass
+ receiver = {*!: }    	label of receiver of call d.setData(4)
+ arg1label = {*!: }    	label of arg 1 of call d.setData(4)
+ c = {}    	label of the local variable c
+ api_apireceiver = {*!: }    	variable for this
+ receiver = {*!: }    	label of receiver of call pass(c)
+ arg1label = {_: _; *!: ; _: _; _!: _}    	label of arg 1 of call pass(c)
+ newContainer = {}    	label of the reference to the newly created Container object, at C.jl:3,25-40
+ Container[{L_var#6129}]_reciever = {}    	variable for this
+ Container[{L_var#6129}]:return_observed = {*!: }    	label representing the return label of the method call
+ Container[{L_var#6129}]:value_returned = {*!: }    	label representing the return value label of the method call
+ Variables not in this map will receive default label of {*!: }
+ =========================
+   Considering constraint: {L_var#3181} <= {inst[L]@C.jl:9,1-2} in environment [] (produced from {inst[L]@C.jl:9,1-2} == {L_var#3181}) C.jl:7,14-23 (line 7)
+   JOIN ({inst[L]@C.jl:9,1-2}, NEEDED) := {Alice: }
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {Alice: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {}    	upper bound for the pc at the call site of pass
+ receiver = {*!: }    	label of receiver of call d.setData(4)
+ arg1label = {*!: }    	label of arg 1 of call d.setData(4)
+ c = {}    	label of the local variable c
+ api_apireceiver = {*!: }    	variable for this
+ receiver = {*!: }    	label of receiver of call pass(c)
+ arg1label = {_: _; *!: ; _: _; _!: _}    	label of arg 1 of call pass(c)
+ newContainer = {}    	label of the reference to the newly created Container object, at C.jl:3,25-40
+ Container[{L_var#6129}]_reciever = {}    	variable for this
+ Container[{L_var#6129}]:return_observed = {*!: }    	label representing the return label of the method call
+ Container[{L_var#6129}]:value_returned = {*!: }    	label representing the return value label of the method call
+ setData_reciever = {*!: }    	variable for this
+ setData:return = {*!: }    	label representing return termination of the procedure declaration
+ Variables not in this map will receive default label of {*!: }
+ =========================
+   Considering constraint: {d@callto:pass:C.jl:4,1-8} <= {setData_reciever} in environment [] (produced from {setData_reciever} ==_{def} {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13}) C.jl:7,14-26 (line 7)
+   JOIN ({setData_reciever}, NEEDED) := {}
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {Alice: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {}    	upper bound for the pc at the call site of pass
+ receiver = {*!: }    	label of receiver of call d.setData(4)
+ arg1label = {*!: }    	label of arg 1 of call d.setData(4)
+ c = {}    	label of the local variable c
+ api_apireceiver = {*!: }    	variable for this
+ receiver = {*!: }    	label of receiver of call pass(c)
+ arg1label = {_: _; *!: ; _: _; _!: _}    	label of arg 1 of call pass(c)
+ newContainer = {}    	label of the reference to the newly created Container object, at C.jl:3,25-40
+ Container[{L_var#6129}]_reciever = {}    	variable for this
+ Container[{L_var#6129}]:return_observed = {*!: }    	label representing the return label of the method call
+ Container[{L_var#6129}]:value_returned = {*!: }    	label representing the return value label of the method call
+ setData_reciever = {}    	variable for this
+ setData:return = {*!: }    	label representing return termination of the procedure declaration
+ Variables not in this map will receive default label of {*!: }
+ =========================
+   Considering constraint: {d@callto:pass:C.jl:4,1-8} <= {receiver} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {receiver} == {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13}) C.jl:9,1-13 (line 9)
+   JOIN ({receiver}, NEEDED) := {}
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {Alice: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {}    	upper bound for the pc at the call site of pass
+ receiver = {}    	label of receiver of call d.setData(4)
+ arg1label = {*!: }    	label of arg 1 of call d.setData(4)
+ c = {}    	label of the local variable c
+ api_apireceiver = {*!: }    	variable for this
+ receiver = {*!: }    	label of receiver of call pass(c)
+ arg1label = {_: _; *!: ; _: _; _!: _}    	label of arg 1 of call pass(c)
+ newContainer = {}    	label of the reference to the newly created Container object, at C.jl:3,25-40
+ Container[{L_var#6129}]_reciever = {}    	variable for this
+ Container[{L_var#6129}]:return_observed = {*!: }    	label representing the return label of the method call
+ Container[{L_var#6129}]:value_returned = {*!: }    	label representing the return value label of the method call
+ setData_reciever = {}    	variable for this
+ setData:return = {*!: }    	label representing return termination of the procedure declaration
+ setData:return_observed = {*!: }    	label representing the return label of the method call
+ setData:value_returned = {*!: }    	label representing the return value label of the method call
+ sum(caller_pc@pass:C.jl:7,4-13) = {*!: }    	upper bound for the pc at the call site of pass
+ Variables not in this map will receive default label of {*!: }
+ =========================
+   Considering constraint: {caller_pc@pass:C.jl:7,4-13} <= {arg1label} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {arg1label} == {caller_pc@pass:C.jl:7,4-13}) C.jl:9,1-13 (line 9)
+   JOIN ({arg1label}, NEEDED) := {}
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {Alice: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {}    	upper bound for the pc at the call site of pass
+ receiver = {}    	label of receiver of call d.setData(4)
+ arg1label = {}    	label of arg 1 of call d.setData(4)
+ c = {}    	label of the local variable c
+ api_apireceiver = {*!: }    	variable for this
+ receiver = {*!: }    	label of receiver of call pass(c)
+ arg1label = {_: _; *!: ; _: _; _!: _}    	label of arg 1 of call pass(c)
+ newContainer = {}    	label of the reference to the newly created Container object, at C.jl:3,25-40
+ Container[{L_var#6129}]_reciever = {}    	variable for this
+ Container[{L_var#6129}]:return_observed = {*!: }    	label representing the return label of the method call
+ Container[{L_var#6129}]:value_returned = {*!: }    	label representing the return value label of the method call
+ setData_reciever = {}    	variable for this
+ setData:return = {*!: }    	label representing return termination of the procedure declaration
+ setData:return_observed = {*!: }    	label representing the return label of the method call
+ setData:value_returned = {*!: }    	label representing the return value label of the method call
+ sum(caller_pc@pass:C.jl:7,4-13) = {*!: }    	upper bound for the pc at the call site of pass
+ Variables not in this map will receive default label of {*!: }
+ =========================
+   ===== Checking candidate solution =====
+   Checking equation: {} <= {newContainer} in environment [{this} <= {[_: _; _!: _]}] (produced from {} <= {newContainer}) C.jl:3,25-40
+   Checking equation: {caller_pc@Container:C.jl:14,0-15} <= {} in environment [] (produced from {caller_pc@Container:C.jl:14,0-15} == {}) C.jl:3,25-40
+   Checking equation: {} <= {caller_pc@Container:C.jl:14,0-15} in environment [] (produced from {caller_pc@Container:C.jl:14,0-15} == {}) C.jl:3,25-40
+   Checking equation: {newContainer} <= {Container[{L_var#6129}]_reciever} in environment [] (produced from {Container[{L_var#6129}]_reciever} ==_{def} {newContainer}) C.jl:3,25-40
+   Checking equation: {*!: } <= {Container[{L_var#6129}]:return_observed} in environment [{this} <= {[_: _; _!: _]}] (produced from {Container[{L_var#6129}]:return_observed} ==_{def} {*!: }) C.jl:3,25-40
+   Checking equation: {*!: } <= {Container[{L_var#6129}]:value_returned} in environment [{this} <= {[_: _; _!: _]}] (produced from {Container[{L_var#6129}]:value_returned} ==_{def} {*!: }) C.jl:3,25-40
+   Checking equation: {L_var#6129} <= {Alice: } in environment [{this} <= {[_: _; _!: _]}] (produced from {L_var#6129} == {Alice: }) C.jl:3,25-40
+   Checking equation: {Alice: } <= {L_var#6129} in environment [{this} <= {[_: _; _!: _]}] (produced from {L_var#6129} == {Alice: }) C.jl:3,25-40
+   Checking equation: {Container[{L_var#6129}]:value_returned} <= {c} in environment [{this} <= {[_: _; _!: _]}] (produced from {Container[{L_var#6129}]:value_returned; _: _; _!: _; newContainer} <= {c}) C.jl:3,25-40
+   Checking equation: {} <= {c} in environment [{this} <= {[_: _; _!: _]}] (produced from {Container[{L_var#6129}]:value_returned; _: _; _!: _; newContainer} <= {c}) C.jl:3,25-40
+   Checking equation: {newContainer} <= {c} in environment [{this} <= {[_: _; _!: _]}] (produced from {Container[{L_var#6129}]:value_returned; _: _; _!: _; newContainer} <= {c}) C.jl:3,25-40
+   Checking equation: {Alice: } <= {L_var#3181} in environment [{this} <= {[_: _; _!: _]}] (produced from {Alice: } == {L_var#3181}) C.jl:4,6-7
+   Checking equation: {L_var#3181} <= {Alice: } in environment [{this} <= {[_: _; _!: _]}] (produced from {Alice: } == {L_var#3181}) C.jl:4,6-7
+   Checking equation: {caller_pc@pass:C.jl:7,4-13} <= {L_var#3181} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {caller_pc@pass:C.jl:7,4-13} <= {L_var#3181}) C.jl:9,11-12
+   Checking equation: {inst[L]@C.jl:9,1-2} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}] (produced from {inst[L]@C.jl:9,1-2; setData_reciever} <= {inst[L]@C.jl:9,1-2}) C.jl:19,46-55
+   Checking equation: {setData_reciever} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}] (produced from {inst[L]@C.jl:9,1-2; setData_reciever} <= {inst[L]@C.jl:9,1-2}) C.jl:19,46-55
+   Checking equation: {*!: } <= {setData:return} in environment [{this} <= {[L]}] (produced from {setData:return} ==_{def} {*!: }) C.jl:19,11-23
+   Checking equation: {setData:return} <= {inst[L]@C.jl:9,1-2} in environment [{this} <= {[L]}] (produced from {setData:return} <= {inst[L]@C.jl:9,1-2}) C.jl:19,11-23
+   Checking equation: {inst[L]@C.jl:9,1-2} <= {L_var#3181} in environment [] (produced from {inst[L]@C.jl:9,1-2} == {L_var#3181}) C.jl:7,14-23
+   Checking equation: {L_var#3181} <= {inst[L]@C.jl:9,1-2} in environment [] (produced from {inst[L]@C.jl:9,1-2} == {L_var#3181}) C.jl:7,14-23
+   Checking equation: {d@callto:pass:C.jl:4,1-8} <= {setData_reciever} in environment [] (produced from {setData_reciever} ==_{def} {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13}) C.jl:7,14-26
+   Checking equation: {caller_pc@pass:C.jl:7,4-13} <= {setData_reciever} in environment [] (produced from {setData_reciever} ==_{def} {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13}) C.jl:7,14-26
+   Checking equation: {*!: } <= {setData:return_observed} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {setData:return_observed} ==_{def} {*!: }) C.jl:9,1-13
+   Checking equation: {*!: } <= {setData:value_returned} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {setData:value_returned} ==_{def} {*!: }) C.jl:9,1-13
+   Checking equation: {receiver} <= {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {receiver} == {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13}) C.jl:9,1-13
+   Checking equation: {d@callto:pass:C.jl:4,1-8} <= {receiver} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {receiver} == {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13}) C.jl:9,1-13
+   Checking equation: {caller_pc@pass:C.jl:7,4-13} <= {receiver} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {receiver} == {d@callto:pass:C.jl:4,1-8; caller_pc@pass:C.jl:7,4-13}) C.jl:9,1-13
+   Checking equation: {arg1label} <= {caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {arg1label} == {caller_pc@pass:C.jl:7,4-13}) C.jl:9,1-13
+   Checking equation: {caller_pc@pass:C.jl:7,4-13} <= {arg1label} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {arg1label} == {caller_pc@pass:C.jl:7,4-13}) C.jl:9,1-13
+   Checking equation: {*!: } <= {pass:return} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {pass:return} ==_{def} {*!: }) C.jl:7,4-13
+   Checking equation: {pass:return} <= {caller_pc@pass:C.jl:7,4-13} in environment [{this} <= {[sum(caller_pc@pass:C.jl:7,4-13)]}] (produced from {pass:return} <= {caller_pc@pass:C.jl:7,4-13}) C.jl:7,4-13
+   Checking equation: {d@callto:pass:C.jl:4,1-8} <= {c; _: _; _!: _} in environment [] (produced from {d@callto:pass:C.jl:4,1-8} == {c; _: _; _!: _}) C.jl:4,1-8
+   Checking equation: {c} <= {d@callto:pass:C.jl:4,1-8} in environment [] (produced from {d@callto:pass:C.jl:4,1-8} == {c; _: _; _!: _}) C.jl:4,1-8
+   Checking equation: {} <= {d@callto:pass:C.jl:4,1-8} in environment [] (produced from {d@callto:pass:C.jl:4,1-8} == {c; _: _; _!: _}) C.jl:4,1-8
+   Checking equation: {caller_pc@pass:C.jl:7,4-13} <= {} in environment [] (produced from {caller_pc@pass:C.jl:7,4-13} == {}) C.jl:4,1-8
+   Checking equation: {} <= {caller_pc@pass:C.jl:7,4-13} in environment [] (produced from {caller_pc@pass:C.jl:7,4-13} == {}) C.jl:4,1-8
+   Checking equation: {api_apireceiver} <= {pass_reciever} in environment [] (produced from {pass_reciever} ==_{def} {api_apireceiver}) C.jl:1,7-14
+   Checking equation: {*!: } <= {pass:return_observed} in environment [{this} <= {[_: _; _!: _]}] (produced from {pass:return_observed} ==_{def} {*!: }) C.jl:4,1-8
+   Checking equation: {*!: } <= {pass:value_returned} in environment [{this} <= {[_: _; _!: _]}] (produced from {pass:value_returned} ==_{def} {*!: }) C.jl:4,1-8
+   Checking equation: {receiver} <= {api_apireceiver} in environment [{this} <= {[_: _; _!: _]}] (produced from {receiver} == {api_apireceiver}) C.jl:4,1-8
+   Checking equation: {api_apireceiver} <= {receiver} in environment [{this} <= {[_: _; _!: _]}] (produced from {receiver} == {api_apireceiver}) C.jl:4,1-8
+   Checking equation: {arg1label} <= {c; _: _; _!: _} in environment [{this} <= {[_: _; _!: _]}] (produced from {arg1label} == {c; _: _; _!: _}) C.jl:4,1-8
+   Checking equation: {c} <= {arg1label} in environment [{this} <= {[_: _; _!: _]}] (produced from {arg1label} == {c; _: _; _!: _}) C.jl:4,1-8
+   Checking equation: {} <= {arg1label} in environment [{this} <= {[_: _; _!: _]}] (produced from {arg1label} == {c; _: _; _!: _}) C.jl:4,1-8
+   Checking equation: {*!: } <= {api:return} in environment [{this} <= {[_: _; _!: _]}] (produced from {api:return} ==_{def} {*!: }) C.jl:2,4-12
+   Checking equation: {api:return} <= {} in environment [{this} <= {[_: _; _!: _]}] (produced from {api:return} <= {}) C.jl:2,4-12
+ Number of relaxation steps: 51
+ ======== VAR MAP ========
+ caller_pc@Container:C.jl:14,0-15 = {}    	upper bound for the pc at the call site of Container
+ L_var#6129 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:3,29-38
+ L_var#3181 = {Alice: }    	variable for the instantiation of Container[label L] at position C.jl:7,14-23
+ inst[L]@C.jl:9,1-2 = {Alice: }    	variable to replace param {L}
+ d@callto:pass:C.jl:4,1-8 = {_: _; *!: ; _: _; _!: _}    	upper bound for the formal argument d
+ caller_pc@pass:C.jl:7,4-13 = {}    	upper bound for the pc at the call site of pass
+ receiver = {}    	label of receiver of call d.setData(4)
+ arg1label = {}    	label of arg 1 of call d.setData(4)
+ c = {}    	label of the local variable c
+ api_apireceiver = {*!: }    	variable for this
+ receiver = {*!: }    	label of receiver of call pass(c)
+ arg1label = {_: _; *!: ; _: _; _!: _}    	label of arg 1 of call pass(c)
+ newContainer = {}    	label of the reference to the newly created Container object, at C.jl:3,25-40
+ Container[{L_var#6129}]_reciever = {}    	variable for this
+ Container[{L_var#6129}]:return_observed = {*!: }    	label representing the return label of the method call
+ Container[{L_var#6129}]:value_returned = {*!: }    	label representing the return value label of the method call
+ setData_reciever = {}    	variable for this
+ setData:return = {*!: }    	label representing return termination of the procedure declaration
+ setData:return_observed = {*!: }    	label representing the return label of the method call
+ setData:value_returned = {*!: }    	label representing the return value label of the method call
+ sum(caller_pc@pass:C.jl:7,4-13) = {*!: }    	upper bound for the pc at the call site of pass
+ pass:return = {*!: }    	label representing return termination of the procedure declaration
+ pass_reciever = {*!: }    	variable for this
+ pass:return_observed = {*!: }    	label representing the return label of the method call
+ pass:value_returned = {*!: }    	label representing the return value label of the method call
+ api:return = {*!: }    	label representing return termination of the procedure declaration
+ Variables not in this map will receive default label of {*!: }
+ =========================
+   finished api (#9)
+    summary constraints for method public void setData{L}(int{[L]}) : {*!: }
+    -->{L; this} <= {L} in environment [{this} <= {[L]}]@C.jl:19,46-55
+    -->{setData:return} ==_{def} {*!: } in environment [{this} <= {[L]}]@C.jl:19,11-23
+    -->{setData:return} <= {L} in environment [{this} <= {[L]}]@C.jl:19,11-23
+===== Starting solver setData (#10) =====
+   3 equations
+  ======EQUATIONS======
+  {setData_apireceiver} <= {L} in environment [{this} <= {[L]}] (produced from {L; setData_apireceiver} <= {L}) C.jl:19,46-55
+  {*!: } <= {setData:return} in environment [{this} <= {[L]}] (produced from {setData:return} ==_{def} {*!: }) C.jl:19,11-23
+  {setData:return} <= {L} in environment [{this} <= {[L]}] (produced from {setData:return} <= {L}) C.jl:19,11-23
+   ===== Checking candidate solution =====
+   Checking equation: {setData_apireceiver} <= {L} in environment [{this} <= {[L]}] (produced from {L; setData_apireceiver} <= {L}) C.jl:19,46-55
+   Checking equation: {*!: } <= {setData:return} in environment [{this} <= {[L]}] (produced from {setData:return} ==_{def} {*!: }) C.jl:19,11-23
+   Checking equation: {setData:return} <= {L} in environment [{this} <= {[L]}] (produced from {setData:return} <= {L}) C.jl:19,11-23
+ Number of relaxation steps: 3
+ ======== VAR MAP ========
+ setData_apireceiver = {*!: }    	variable for this
+ setData:return = {*!: }    	label representing return termination of the procedure declaration
+ Variables not in this map will receive default label of {*!: }
+ =========================
+   finished setData (#10)
+    summary constraints for method public int{L} getData{sum(caller_pc@getData:C.jl:18,11-25)}() : {*!: }
+    -->{L; this; sum(caller_pc@getData:C.jl:18,11-25)} <= {L; sum(caller_pc@getData:C.jl:18,11-25)} in environment [{this} <= {[sum(caller_pc@getData:C.jl:18,11-25)]}]@C.jl:18,30-42
+    -->{getData:return} ==_{def} {sum(caller_pc@getData:C.jl:18,11-25)} in environment [{this} <= {[sum(caller_pc@getData:C.jl:18,11-25)]}]@C.jl:18,11-25
+    -->{getData:return} <= {sum(caller_pc@getData:C.jl:18,11-25)} in environment [{this} <= {[sum(caller_pc@getData:C.jl:18,11-25)]}]@C.jl:18,11-25
+   ** label {L; this; sum(caller_pc@getData:C.jl:18,11-25)} contains summary variables [{sum(caller_pc@getData:C.jl:18,11-25)}]
+    summary constraints for constructor public public C()
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}, {[sum(caller_pc@C:C.jl:1,7-14)]} <= {*!: }]@C.jl:1,7-14
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}, {[sum(caller_pc@C:C.jl:1,7-14)]} <= {*!: }]@C.jl:1,7-14
+    -->{C:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}]@C.jl:1,7-14
+    -->{C:return} <= {sum(caller_pc@C:C.jl:1,7-14)} in environment [{this} <= {[sum(caller_pc@C:C.jl:1,7-14)]}]@C.jl:1,7-14
+   ** label {sum(caller_pc@C:C.jl:1,7-14)} contains summary variables [{sum(caller_pc@C:C.jl:1,7-14)}]

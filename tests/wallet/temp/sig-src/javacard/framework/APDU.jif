@@ -1,0 +1,25 @@
+package javacard.framework;
+
+/**
+ * APDU: application protocol data unit
+ * 
+ * this is where we get the input and the output -- getBuffer() has the input and
+ * setIncomingAndReceive
+ */
+
+public class APDU {
+/*
+    public native byte{Input:}[]{Input:} getBuffer();
+    public native short setIncomingAndReceive{Input:}();
+    public native short setOutgoing{Output:}();
+    public native short setOutgoingLength{Output:}(short{Output:} len);
+    public native short sendBytesLong{Output:}(byte{Output:}[]{Output:} outData, short{Output:} bOff, short{Output:} len);
+*/
+
+    public native byte[]{Input:} getBuffer();
+    public native short setIncomingAndReceive{Input:}();
+    public native short setOutgoing{Output:}();
+    public native short setOutgoingLength{Output:}(short{Output:} len);
+    public native short sendBytesLong{Output:}(byte[]{Output:} outData, short{Output:} bOff, short{Output:} len);
+
+}

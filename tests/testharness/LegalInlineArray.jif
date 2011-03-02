@@ -1,0 +1,19 @@
+public class LegalInlineArray {
+
+
+    public void test{}() {
+	doTest();
+    }
+
+    public Container[] doTest() {
+	Container i;
+	Container j;
+
+	Container[] retVal = {i , j};
+	return retVal;
+    }
+}
+
+class Container[label L] {
+
+}

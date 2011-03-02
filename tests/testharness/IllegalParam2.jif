@@ -1,0 +1,33 @@
+public class IllegalParam2 {
+
+    int{Alice:} aliceInt;
+    int{Alice:} otherAliceInt;
+
+    int{Bob:} bobInt;
+    int{Bob:} otherBobInt;
+
+    public void test{}() {
+	Container c = new Container();
+	c.setInt(aliceInt);
+	otherAliceInt = c.getInt();
+
+	Container d = new Container();
+	d.setInt(bobInt);
+
+	// for once, let's have alice try to steal bob's data
+	aliceInt = d.getInt();
+    }
+
+}
+
+class Container[label L] {
+    int{L} myInt;
+
+    public int getInt() { 
+	return myInt;
+    }
+
+    public void setInt(int k) {
+	this.myInt = k;
+    }
+}

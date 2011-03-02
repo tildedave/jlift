@@ -1,0 +1,5 @@
+package signature;
+
+public interface SignatureInterface[label L] {
+    public void foo(int{L} intToPass);
+}

@@ -1,0 +1,19 @@
+public class LegalInterfaceCall {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	I myC = new C();
+	myC.passInt(aliceInt);
+    }
+
+}
+
+class C implements I {
+    public void passInt(int aliceInt) {
+    }
+}
+
+interface I {
+    public void passInt(int{Alice:} aliceInt);
+}

@@ -1,0 +1,15 @@
+public class LegalCall {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	pass(aliceInt);
+    }
+
+    public void pass(int k) {
+	output(k);
+    }
+
+    public void output(int{Alice:} m) { }
+
+}

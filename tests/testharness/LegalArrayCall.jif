@@ -1,0 +1,17 @@
+public class LegalArrayCall {
+
+    int{Alice:}[]{Alice:} aliceArray;
+    int{Alice:}[]{Alice:} otherAliceArray;
+
+    public void test{}() {
+	arrayCopy(aliceArray, otherAliceArray);
+    }
+
+    public void arrayCopy(int[] src, int[] dest) {
+	for(int i = 0; i < src.length; ++i) {
+	    dest[i] = src[i];
+	}
+    }
+
+
+}

@@ -1,0 +1,13 @@
+import signature.SignatureClass;
+
+public class IllegalSignatureTest {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	SignatureClass sc = new SignatureClass();
+
+	aliceInt = sc.getAliceInt();
+	sc.passPublicInt(aliceInt);
+    }
+}

@@ -1,0 +1,14 @@
+public class LegalAssign {
+
+    int{Alice:} aliceInt;
+    int{Alice:} otherAliceInt;
+
+    public void test{}() {
+	aliceInt = getAliceInt();
+    }
+
+    public int getAliceInt() {
+	return otherAliceInt;
+    }
+
+}

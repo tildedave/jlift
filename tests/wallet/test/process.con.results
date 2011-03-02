@@ -1,0 +1,696 @@
+Declassification: d1  is 0
+Declassification: d2  is 0
+Declassification: !d1!d2  is 1
+Declassification: d110  is 0
+Declassification: d111  is 0
+Declassification: !d110!d111  is 1
+Declassification: d112  is 0
+Declassification: d113  is 0
+Declassification: !d112!d113  is 1
+Declassification: d114  is 0
+Declassification: d115  is 0
+Declassification: !d114!d115  is 1
+Declassification: d3  is 0
+Declassification: d116  is 0
+Declassification: d4  is 0
+Declassification: d117  is 0
+Declassification: !d3!d4  is 1
+Declassification: !d116!d117  is 1
+Declassification: d5  is 0
+Declassification: d6  is 0
+Declassification: !d5!d6  is 1
+Declassification: d7  is 0
+Declassification: d8  is 0
+Declassification: !d7!d8  is 1
+Declassification: d118  is 0
+Declassification: d119  is 0
+Declassification: !d118!d119  is 1
+Declassification: d9  is 0
+Declassification: d10  is 0
+Declassification: !d9!d10  is 1
+Declassification: d120  is 0
+Declassification: d121  is 0
+Declassification: !d120!d121  is 1
+Declassification: d11  is 0
+Declassification: !d11  is 1
+Declassification: d122  is 0
+Declassification: d123  is 0
+Declassification: !d122!d123  is 1
+Declassification: d12  is 0
+Declassification: d13  is 0
+Declassification: !d12!d13  is 1
+Declassification: d14  is 0
+Declassification: d15  is 0
+Declassification: !d14!d15  is 1
+Declassification: d124  is 1
+(* d124: declassify this.pin.check(buffer, javacard.framework.ISO7816.OFFSET_CDATA, byteRead) to {*!: } *)
+Declassification: d125  is 0
+Declassification: d16  is 0
+Declassification: !d124!d125  is 0
+Declassification: d17  is 0
+Declassification: !d16!d17  is 1
+Declassification: d126  is 0
+Declassification: d127  is 0
+Declassification: !d126!d127  is 1
+Declassification: d18  is 1
+(* d18: declassify this.pin.isValidated() to {*!: } *)
+Declassification: d19  is 0
+Declassification: !d18!d19  is 0
+Declassification: d20  is 0
+Declassification: d21  is 0
+Declassification: !d20!d21  is 1
+Declassification: d22  is 0
+Declassification: d23  is 0
+Declassification: !d22!d23  is 1
+Declassification: d24  is 0
+Declassification: d25  is 0
+Declassification: !d24!d25  is 1
+Declassification: d26  is 0
+Declassification: d27  is 0
+Declassification: !d26!d27  is 1
+Declassification: d28  is 0
+Declassification: d29  is 0
+Declassification: !d28!d29  is 1
+Declassification: d30  is 0
+Declassification: d31  is 0
+Declassification: !d30!d31  is 1
+Declassification: d32  is 0
+Declassification: d33  is 0
+Declassification: !d32!d33  is 1
+Declassification: d34  is 0
+Declassification: d35  is 0
+Declassification: !d34!d35  is 1
+Declassification: d36  is 0
+Declassification: d37  is 0
+Declassification: !d36!d37  is 1
+Declassification: d38  is 0
+Declassification: d39  is 0
+Declassification: !d38!d39  is 1
+Declassification: d40  is 0
+Declassification: d41  is 0
+Declassification: !d40!d41  is 1
+Declassification: d42  is 0
+Declassification: d43  is 0
+Declassification: !d42!d43  is 1
+Declassification: d44  is 0
+Declassification: d45  is 0
+Declassification: !d44!d45  is 1
+Declassification: d46  is 0
+Declassification: d47  is 0
+Declassification: !d46!d47  is 1
+Declassification: d48  is 0
+Declassification: d49  is 0
+Declassification: !d48!d49  is 1
+Declassification: d50  is 0
+Declassification: d51  is 0
+Declassification: !d50!d51  is 1
+Declassification: d52  is 0
+Declassification: d53  is 0
+Declassification: !d52!d53  is 1
+Declassification: d54  is 0
+Declassification: d55  is 0
+Declassification: !d54!d55  is 1
+Declassification: d56  is 0
+Declassification: d57  is 0
+Declassification: !d56!d57  is 1
+Declassification: d58  is 0
+Declassification: d59  is 0
+Declassification: !d58!d59  is 1
+Declassification: d60  is 0
+Declassification: d61  is 0
+Declassification: !d60!d61  is 1
+Declassification: d62  is 0
+Declassification: d63  is 0
+Declassification: !d62!d63  is 1
+Declassification: d64  is 0
+Declassification: d65  is 0
+Declassification: !d64!d65  is 1
+Declassification: d66  is 0
+Declassification: d67  is 0
+Declassification: !d66!d67  is 1
+Declassification: d68  is 1
+(* d68: declassify this.pin.isValidated() to {*!: } *)
+Declassification: d69  is 0
+Declassification: !d68!d69  is 0
+Declassification: d70  is 0
+Declassification: d71  is 0
+Declassification: !d70!d71  is 1
+Declassification: d72  is 0
+Declassification: d73  is 0
+Declassification: !d72!d73  is 1
+Declassification: d74  is 0
+Declassification: d75  is 0
+Declassification: !d74!d75  is 1
+Declassification: d76  is 0
+Declassification: d77  is 0
+Declassification: !d76!d77  is 1
+Declassification: d78  is 0
+Declassification: d79  is 0
+Declassification: !d78!d79  is 1
+Declassification: d80  is 0
+Declassification: d81  is 0
+Declassification: !d80!d81  is 1
+Declassification: d82  is 0
+Declassification: d83  is 0
+Declassification: !d82!d83  is 1
+Declassification: d84  is 0
+Declassification: d85  is 0
+Declassification: !d84!d85  is 1
+Declassification: d86  is 0
+Declassification: d87  is 0
+Declassification: !d86!d87  is 1
+Declassification: d88  is 0
+Declassification: d89  is 0
+Declassification: !d88!d89  is 1
+Declassification: d90  is 0
+Declassification: d91  is 0
+Declassification: !d90!d91  is 1
+Declassification: d92  is 0
+Declassification: d93  is 0
+Declassification: !d92!d93  is 1
+Declassification: d94  is 0
+Declassification: d95  is 0
+Declassification: !d94!d95  is 1
+Declassification: d96  is 0
+Declassification: d97  is 0
+Declassification: !d96!d97  is 1
+Declassification: d98  is 0
+Declassification: d99  is 0
+Declassification: !d98!d99  is 1
+Declassification: d100  is 0
+Declassification: d101  is 0
+Declassification: !d100!d101  is 1
+Declassification: d102  is 0
+Declassification: d103  is 0
+Declassification: !d102!d103  is 1
+Declassification: d104  is 0
+Declassification: d105  is 0
+Declassification: !d104!d105  is 1
+Declassification: d106  is 0
+Declassification: d107  is 0
+Declassification: !d106!d107  is 1
+Declassification: d108  is 0
+Declassification: d109  is 0
+Declassification: !d108!d109  is 1
+
+---------------------------------------------
+Variable: 0 BOTTOM  is [000]
+Variable: 1 throwIt:return_observed_4  is [000]
+Variable: 2 throwIt:value_returned_4  is [000]
+Variable: 3 Alice:  is [110]
+Variable: 4 TOP  is [111]
+Variable: 5 NV78  is [000]
+Variable: 6 pc74  is [000]
+Variable: 7 pc301  is [000]
+Variable: 8 ISOException78  is [000]
+Variable: 9 NV302  is [000]
+Variable: 10 getBuffer:return_observed_5  is [000]
+Variable: 11 arg1label_15  is [000]
+Variable: 12 NV76  is [000]
+Variable: 13 getBuffer:value_returned_5  is [000]
+Variable: 14 NV73  is [000]
+Variable: 15 pc80  is [000]
+Variable: 17 NV303  is [000]
+Variable: 19 credit_reciever  is [000]
+Variable: 20 NV81  is [000]
+Variable: 22 NV82  is [000]
+Variable: 23 receiver_6  is [000]
+Variable: 25 NV83  is [000]
+Variable: 27 array_base@../Wallet.jl:147,4-10_2  is [000]
+Variable: 29 inst(balance)_2  is [000]
+Variable: 30 buffer  is [000]
+Variable: 31 NV304  is [000]
+Variable: 33 NV84  is [000]
+Variable: 34 NV305  is [000]
+Variable: 36 NV306  is [000]
+Variable: 38 creditAmount  is [000]
+Variable: 39 NV307  is [000]
+Variable: 40 NV308  is [000]
+Variable: 42 NV85  is [000]
+Variable: 44 NV309  is [000]
+Variable: 46 NV310  is [000]
+Variable: 48 NV311  is [000]
+Variable: 50 NV86  is [000]
+Variable: 55 pc312  is [000]
+Variable: 56 NV313  is [000]
+Variable: 57 caller_pc@credit:../Wallet.jl:173,9-20@callto:credit  is [000]
+Variable: 58 credit:normal_termination  is [000]
+Variable: 59 NV314  is [000]
+Variable: 60 NV315  is [000]
+Variable: 61 NV316  is [000]
+Variable: 62 ISOException14  is [000]
+Variable: 63 pc10  is [000]
+Variable: 64 NV317  is [000]
+Variable: 65 ISOException42  is [000]
+Variable: 66 pc38  is [000]
+Variable: 67 NV318  is [000]
+Variable: 68 ISOException64  is [000]
+Variable: 69 NV319  is [000]
+Variable: 70 pc60  is [000]
+Variable: 72 NV320  is [000]
+Variable: 74 L_var@1351  is [000]
+Variable: 76 apdu@callto:credit  is [000]
+Variable: 77 NV377  is [000]
+Variable: 78 pc321  is [000]
+Variable: 79 pc347  is [000]
+Variable: 80 R322  is [000]
+Variable: 81 R323  is [000]
+Variable: 82 credit:return_observed  is [000]
+Variable: 83 R324  is [000]
+Variable: 84 pc325  is [000]
+Variable: 85 credit:value_returned  is [000]
+Variable: 86 R326  is [000]
+Variable: 87 NV327  is [000]
+Variable: 88 NV379  is [000]
+Variable: 89 NV328  is [000]
+Variable: 90 ISOException379  is [000]
+Variable: 91 NV329  is [000]
+Variable: 92 NV330  is [000]
+Variable: 93 receiver_12  is [000]
+Variable: 94 this  is [000]
+Variable: 95 NV331  is [000]
+Variable: 96 arg1label_8  is [000]
+Variable: 97 NV332  is [000]
+Variable: 98 pc381  is [000]
+Variable: 99 inst(Wallet_CLA)_2  is [000]
+Variable: 100 NV333  is [000]
+Variable: 101 R382  is [000]
+Variable: 103 NV334  is [000]
+Variable: 104 R383  is [000]
+Variable: 106 R385  is [000]
+Variable: 107 R386  is [000]
+Variable: 109 R373  is [000]
+Variable: 110 NV387  is [000]
+Variable: 111 pc335  is [000]
+Variable: 112 inst(VERIFY)_2  is [000]
+Variable: 113 NV388  is [000]
+Variable: 114 NV336  is [000]
+Variable: 115 NV337  is [000]
+Variable: 116 NV389  is [000]
+Variable: 117 NV338  is [000]
+Variable: 118 throwIt:return_observed_11  is [000]
+Variable: 119 NV390  is [000]
+Variable: 120 NV391  is [000]
+Variable: 121 throwIt:value_returned_11  is [000]
+Variable: 122 caller_pc@verify:../Wallet.jl:286,12-23@callto:verify  is [000]
+Variable: 123 pc271  is [000]
+Variable: 124 apdu@callto:verify  is [000]
+Variable: 125 NV272  is [000]
+Variable: 126 NV339  is [000]
+Variable: 127 getBuffer:return_observed_4  is [000]
+Variable: 128 ISOException339  is [000]
+Variable: 129 getBuffer:value_returned_4  is [000]
+Variable: 130 L_var@5390  is [000]
+Variable: 131 arg1label_2  is [000]
+Variable: 133 NV273  is [000]
+Variable: 134 pc341  is [000]
+Variable: 137 NV342  is [000]
+Variable: 138 receiver_25  is [000]
+Variable: 139 NV343  is [000]
+Variable: 140 NV344  is [000]
+Variable: 141 array_base@../Wallet.jl:288,4-10_2  is [000]
+Variable: 142 NV345  is [000]
+Variable: 143 buffer_5  is [000]
+Variable: 145 NV346  is [000]
+Variable: 146 NV274  is [000]
+Variable: 148 NV275  is [000]
+Variable: 150 setIncomingAndReceive:return_observed_3  is [000]
+Variable: 151 setIncomingAndReceive:value_returned_3  is [000]
+Variable: 152 NV348  is [000]
+Variable: 153 inst(GET_BALANCE)_2  is [000]
+Variable: 154 NV349  is [000]
+Variable: 156 NV276  is [000]
+Variable: 158 NV350  is [000]
+Variable: 160 NV351  is [000]
+Variable: 161 NV352  is [000]
+Variable: 162 receiver_26  is [000]
+Variable: 163 caller_pc@getBalance:../Wallet.jl:257,10-25@callto:getBalance  is [000]
+Variable: 164 pc125  is [000]
+Variable: 165 apdu@callto:getBalance  is [000]
+Variable: 166 NV126  is [000]
+Variable: 167 pc277  is [000]
+Variable: 168 getBuffer:return_observed_2  is [000]
+Variable: 169 byteRead_3  is [000]
+Variable: 170 NV278  is [000]
+Variable: 171 getBuffer:value_returned_2  is [000]
+Variable: 172 L_var@3541  is [000]
+Variable: 173 verify_reciever  is [000]
+Variable: 174 NV279  is [000]
+Variable: 176 NV127  is [000]
+Variable: 177 NV280  is [110]
+Variable: 179 NV281  is [000]
+Variable: 180 receiver_21  is [000]
+Variable: 181 NV282  is [000]
+Variable: 182 array_base@../Wallet.jl:259,4-10_2  is [000]
+Variable: 183 NV283  is [000]
+Variable: 184 NV284  is [000]
+Variable: 185 buffer_4  is [000]
+Variable: 186 NV285  is [000]
+Variable: 187 NV128  is [000]
+Variable: 188 NV129  is [000]
+Variable: 190 NV286  is [000]
+Variable: 192 setOutgoing:return_observed  is [000]
+Variable: 194 setOutgoing:value_returned  is [000]
+Variable: 195 NV287  is [000]
+Variable: 197 NV130  is [000]
+Variable: 199 temp_array_base_6  is [000]
+Variable: 201 receiver_22  is [000]
+Variable: 202 check:return_observed  is [000]
+Variable: 203 le  is [000]
+Variable: 204 NV131  is [000]
+Variable: 205 check:value_returned  is [110]
+Variable: 207 NV132  is [000]
+Variable: 211 NV288  is [000]
+Variable: 213 NV133  is [000]
+Variable: 215 NV134  is [000]
+Variable: 218 ArrayIndexOutOfBoundsException288  is [000]
+Variable: 220 NullPointerException289  is [000]
+Variable: 221 pc135  is [000]
+Variable: 222 NV136  is [000]
+Variable: 223 receiver_27  is [110]
+Variable: 224 NV137  is [000]
+Variable: 225 NV138  is [000]
+Variable: 226 arg1label_23  is [000]
+Variable: 227 throwIt:return_observed_5  is [000]
+Variable: 228 arg2label_3  is [000]
+Variable: 229 throwIt:value_returned_5  is [000]
+Variable: 230 arg3label_2  is [000]
+Variable: 231 NV139  is [000]
+Variable: 232 pc291  is [000]
+Variable: 233 ISOException139  is [000]
+Variable: 234 NV292  is [000]
+Variable: 235 arg1label_20  is [000]
+Variable: 237 NV293  is [000]
+Variable: 239 pc141  is [000]
+Variable: 241 NV142  is [000]
+Variable: 242 pc294  is [000]
+Variable: 243 NV295  is [000]
+Variable: 244 NV143  is [000]
+Variable: 245 inst(SW_VERIFICATION_FAILED)_2  is [000]
+Variable: 246 NV296  is [000]
+Variable: 247 NV144  is [000]
+Variable: 248 NV297  is [000]
+Variable: 249 setOutgoingLength:return_observed  is [000]
+Variable: 250 throwIt:return_observed_10  is [000]
+Variable: 251 setOutgoingLength:value_returned  is [000]
+Variable: 252 throwIt:value_returned_10  is [000]
+Variable: 253 NV145  is [000]
+Variable: 254 NV298  is [000]
+Variable: 255 receiver_23  is [000]
+Variable: 256 ISOException298  is [000]
+Variable: 257 arg1label_21  is [000]
+Variable: 258 arg1label_24  is [000]
+Variable: 259 NV146  is [000]
+Variable: 260 pc300  is [000]
+Variable: 261 NV147  is [000]
+Variable: 262 NV148  is [000]
+Variable: 263 verify:normal_termination  is [000]
+Variable: 264 getBalance_reciever  is [000]
+Variable: 265 NV149  is [000]
+Variable: 266 NV150  is [000]
+Variable: 267 NV151  is [000]
+Variable: 268 NV152  is [000]
+Variable: 269 NV153  is [000]
+Variable: 270 verify:return_observed  is [000]
+Variable: 271 NV154  is [000]
+Variable: 272 verify:value_returned  is [000]
+Variable: 273 NV155  is [000]
+Variable: 274 NV392  is [000]
+Variable: 275 NV156  is [000]
+Variable: 276 ISOException392  is [000]
+Variable: 277 NV157  is [000]
+Variable: 278 receiver_14  is [000]
+Variable: 279 NV158  is [000]
+Variable: 280 arg1label_10  is [000]
+Variable: 281 NV159  is [000]
+Variable: 282 NV160  is [000]
+Variable: 283 pc394  is [000]
+Variable: 284 NV161  is [000]
+Variable: 285 R395  is [000]
+Variable: 286 R396  is [000]
+Variable: 287 R398  is [000]
+Variable: 288 R399  is [000]
+Variable: 289 NV162  is [000]
+Variable: 290 NV400  is [000]
+Variable: 291 NV163  is [000]
+Variable: 292 NV401  is [000]
+Variable: 293 NV164  is [000]
+Variable: 294 NV402  is [000]
+Variable: 295 NV165  is [000]
+Variable: 296 throwIt:return_observed_12  is [000]
+Variable: 297 NV166  is [000]
+Variable: 298 throwIt:value_returned_12  is [000]
+Variable: 299 NV403  is [000]
+Variable: 300 sendBytes:return_observed  is [000]
+Variable: 301 ISOException403  is [000]
+Variable: 302 sendBytes:value_returned  is [000]
+Variable: 303 arg1label_11  is [000]
+Variable: 304 NV167  is [000]
+Variable: 305 pc405  is [000]
+Variable: 306 receiver_24  is [000]
+Variable: 307 pc406  is [000]
+Variable: 308 arg1label_22  is [000]
+Variable: 309 switch  is [000]
+Variable: 310 arg2label_2  is [000]
+Variable: 311 pc407  is [000]
+Variable: 312 getBalance:normal_termination  is [000]
+Variable: 313 R408  is [000]
+Variable: 314 process:normal_termination  is [000]
+Variable: 315 process:return  is [000]
+Variable: 316 getBalance:return_observed  is [000]
+Variable: 317 ISOException366  is [000]
+Variable: 318 getBalance:value_returned  is [000]
+Variable: 319 ISOException353  is [000]
+Variable: 320 NV353  is [000]
+Variable: 321 receiver_8  is [000]
+Variable: 322 arg1label_4  is [000]
+Variable: 323 pc355  is [000]
+Variable: 324 R356  is [000]
+Variable: 325 R357  is [000]
+Variable: 326 R359  is [000]
+Variable: 327 R360  is [000]
+Variable: 328 NV361  is [000]
+Variable: 329 inst(DEBIT)_2  is [000]
+Variable: 330 NV362  is [000]
+Variable: 331 NV363  is [000]
+Variable: 332 NV364  is [000]
+Variable: 333 NV365  is [000]
+Variable: 334 caller_pc@debit:../Wallet.jl:220,12-22@callto:debit  is [000]
+Variable: 335 pc168  is [000]
+Variable: 336 debit_reciever  is [000]
+Variable: 337 NV169  is [000]
+Variable: 338 NV170  is [110]
+Variable: 339 isValidated:return_observed_2  is [000]
+Variable: 340 isValidated:value_returned_2  is [110]
+Variable: 342 NV171  is [000]
+Variable: 345 receiver_18  is [110]
+Variable: 346 pc172  is [000]
+Variable: 347 NV173  is [000]
+Variable: 348 inst(SW_PIN_VERIFICATION_REQUIRED)_2  is [000]
+Variable: 349 NV174  is [000]
+Variable: 350 NV175  is [000]
+Variable: 351 throwIt:return_observed_6  is [000]
+Variable: 352 throwIt:value_returned_6  is [000]
+Variable: 353 NV176  is [000]
+Variable: 354 ISOException176  is [000]
+Variable: 355 arg1label_16  is [000]
+Variable: 356 pc178  is [000]
+Variable: 357 apdu@callto:debit  is [000]
+Variable: 358 NV179  is [000]
+Variable: 359 getBuffer:return_observed_3  is [000]
+Variable: 360 getBuffer:value_returned_3  is [000]
+Variable: 361 L_var@9223  is [000]
+Variable: 363 NV180  is [000]
+Variable: 366 receiver_19  is [000]
+Variable: 367 array_base@../Wallet.jl:226,4-10_2  is [000]
+Variable: 368 buffer_3  is [000]
+Variable: 369 NV181  is [000]
+Variable: 370 NV182  is [000]
+Variable: 371 NV183  is [000]
+Variable: 372 NV184  is [000]
+Variable: 374 NV185  is [000]
+Variable: 378 NV186  is [000]
+Variable: 381 numBytes_2  is [000]
+Variable: 382 NV187  is [000]
+Variable: 383 NV188  is [000]
+Variable: 384 setIncomingAndReceive:return_observed_2  is [000]
+Variable: 385 setIncomingAndReceive:value_returned_2  is [000]
+Variable: 387 NV189  is [000]
+Variable: 390 receiver_20  is [000]
+Variable: 391 pc190  is [000]
+Variable: 392 byteRead_2  is [000]
+Variable: 393 NV191  is [000]
+Variable: 395 NV192  is [000]
+Variable: 398 NV193  is [000]
+Variable: 400 NV194  is [000]
+Variable: 403 pc195  is [000]
+Variable: 405 NV196  is [000]
+Variable: 408 NV197  is [000]
+Variable: 410 NV198  is [000]
+Variable: 414 NV199  is [000]
+Variable: 417 pc200  is [000]
+Variable: 418 NV201  is [000]
+Variable: 419 NV202  is [000]
+Variable: 420 NV203  is [000]
+Variable: 421 throwIt:return_observed_7  is [000]
+Variable: 422 throwIt:value_returned_7  is [000]
+Variable: 423 NV204  is [000]
+Variable: 424 ISOException204  is [000]
+Variable: 425 arg1label_17  is [000]
+Variable: 426 pc206  is [000]
+Variable: 427 pc207  is [000]
+Variable: 428 NV208  is [000]
+Variable: 429 NV209  is [000]
+Variable: 430 NV210  is [000]
+Variable: 432 NV211  is [000]
+Variable: 436 NV212  is [000]
+Variable: 439 debitAmount  is [000]
+Variable: 440 NV213  is [000]
+Variable: 442 NV214  is [000]
+Variable: 445 NV215  is [000]
+Variable: 446 inst(MAX_TRANSACTION_AMOUNT)_2  is [000]
+Variable: 447 NV216  is [000]
+Variable: 449 NV217  is [000]
+Variable: 452 pc218  is [000]
+Variable: 454 NV219  is [000]
+Variable: 457 NV220  is [000]
+Variable: 459 NV221  is [000]
+Variable: 463 NV222  is [000]
+Variable: 466 pc223  is [000]
+Variable: 467 NV224  is [000]
+Variable: 468 inst(SW_INVALID_TRANSACTION_AMOUNT)_2  is [000]
+Variable: 469 NV225  is [000]
+Variable: 470 NV226  is [000]
+Variable: 471 throwIt:return_observed_8  is [000]
+Variable: 472 throwIt:value_returned_8  is [000]
+Variable: 473 NV227  is [000]
+Variable: 474 ISOException227  is [000]
+Variable: 475 arg1label_18  is [000]
+Variable: 476 pc229  is [000]
+Variable: 477 pc230  is [000]
+Variable: 478 NV231  is [000]
+Variable: 480 NV232  is [000]
+Variable: 484 NV233  is [000]
+Variable: 488 NV234  is [000]
+Variable: 491 NV235  is [000]
+Variable: 493 NV236  is [000]
+Variable: 496 pc237  is [000]
+Variable: 497 NV238  is [000]
+Variable: 498 inst(SW_NEGATIVE_BALANCE)_2  is [000]
+Variable: 499 NV239  is [000]
+Variable: 500 NV240  is [000]
+Variable: 501 throwIt:return_observed_9  is [000]
+Variable: 502 throwIt:value_returned_9  is [000]
+Variable: 503 NV241  is [000]
+Variable: 504 ISOException241  is [000]
+Variable: 505 arg1label_19  is [000]
+Variable: 506 pc243  is [000]
+Variable: 507 pc244  is [000]
+Variable: 508 NV245  is [000]
+Variable: 509 NV246  is [000]
+Variable: 511 NV247  is [000]
+Variable: 515 NV248  is [000]
+Variable: 519 NV249  is [000]
+Variable: 523 NV250  is [000]
+Variable: 526 debit:normal_termination  is [000]
+Variable: 527 debit:return_observed  is [000]
+Variable: 528 debit:value_returned  is [000]
+Variable: 529 NV366  is [000]
+Variable: 530 receiver_10  is [000]
+Variable: 531 arg1label_6  is [000]
+Variable: 532 pc368  is [000]
+Variable: 533 R369  is [000]
+Variable: 534 R370  is [000]
+Variable: 535 R372  is [000]
+Variable: 536 NV374  is [000]
+Variable: 537 inst(CREDIT)_2  is [000]
+Variable: 538 NV375  is [000]
+Variable: 539 NV376  is [000]
+Variable: 540 NV378  is [000]
+Variable: 541 pc6  is [000]
+Variable: 542 NV7  is [000]
+Variable: 543 NV8  is [110]
+Variable: 544 isValidated:return_observed  is [000]
+Variable: 545 isValidated:value_returned  is [110]
+Variable: 547 NV9  is [000]
+Variable: 550 receiver_15  is [110]
+Variable: 551 NV11  is [000]
+Variable: 552 NV12  is [000]
+Variable: 553 NV13  is [000]
+Variable: 554 throwIt:return_observed  is [000]
+Variable: 555 throwIt:value_returned  is [000]
+Variable: 556 NV14  is [000]
+Variable: 557 arg1label_12  is [000]
+Variable: 558 pc16  is [000]
+Variable: 559 NV17  is [000]
+Variable: 560 getBuffer:return_observed  is [000]
+Variable: 561 getBuffer:value_returned  is [000]
+Variable: 563 NV18  is [000]
+Variable: 566 receiver_16  is [000]
+Variable: 567 array_base@../Wallet.jl:180,4-10_2  is [000]
+Variable: 568 buffer_2  is [000]
+Variable: 569 NV19  is [000]
+Variable: 570 NV20  is [000]
+Variable: 571 NV21  is [000]
+Variable: 572 NV22  is [000]
+Variable: 574 NV23  is [000]
+Variable: 578 NV24  is [000]
+Variable: 581 numBytes  is [000]
+Variable: 582 NV25  is [000]
+Variable: 583 NV26  is [000]
+Variable: 584 setIncomingAndReceive:return_observed  is [000]
+Variable: 585 setIncomingAndReceive:value_returned  is [000]
+Variable: 587 NV27  is [000]
+Variable: 590 receiver_17  is [000]
+Variable: 591 pc28  is [000]
+Variable: 592 byteRead  is [000]
+Variable: 593 NV29  is [000]
+Variable: 595 NV30  is [000]
+Variable: 598 NV31  is [000]
+Variable: 600 NV32  is [000]
+Variable: 603 pc33  is [000]
+Variable: 605 NV34  is [000]
+Variable: 608 NV35  is [000]
+Variable: 610 NV36  is [000]
+Variable: 614 NV37  is [000]
+Variable: 617 NV39  is [000]
+Variable: 618 NV40  is [000]
+Variable: 619 NV41  is [000]
+Variable: 620 throwIt:return_observed_2  is [000]
+Variable: 621 throwIt:value_returned_2  is [000]
+Variable: 622 NV42  is [000]
+Variable: 623 arg1label_13  is [000]
+Variable: 624 pc44  is [000]
+Variable: 625 NV45  is [000]
+Variable: 626 NV46  is [000]
+Variable: 627 NV47  is [000]
+Variable: 629 NV48  is [000]
+Variable: 633 NV49  is [000]
+Variable: 636 NV50  is [000]
+Variable: 638 NV51  is [000]
+Variable: 641 NV52  is [000]
+Variable: 642 NV53  is [000]
+Variable: 644 NV54  is [000]
+Variable: 647 pc55  is [000]
+Variable: 649 NV56  is [000]
+Variable: 652 NV57  is [000]
+Variable: 654 NV58  is [000]
+Variable: 658 NV59  is [000]
+Variable: 661 NV61  is [000]
+Variable: 662 NV62  is [000]
+Variable: 663 NV63  is [000]
+Variable: 664 throwIt:return_observed_3  is [000]
+Variable: 665 throwIt:value_returned_3  is [000]
+Variable: 666 NV64  is [000]
+Variable: 667 arg1label_14  is [000]
+Variable: 668 pc66  is [000]
+Variable: 669 NV67  is [000]
+Variable: 671 NV68  is [000]
+Variable: 675 NV69  is [000]
+Variable: 679 NV70  is [000]
+Variable: 682 NV71  is [000]
+Variable: 683 inst(MAX_BALANCE)_2  is [000]
+Variable: 684 NV72  is [000]
+Variable: 688 NV75  is [000]
+Variable: 689 inst(SW_EXCEED_MAXIMUM_BALANCE)_2  is [000]
+Variable: 690 NV77  is [000]

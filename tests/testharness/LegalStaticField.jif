@@ -1,0 +1,10 @@
+public class LegalStaticField {
+
+    public static C cField = C.getInstance();
+}
+
+class C {
+    public static C getInstance() {
+	throw new RuntimeException("meow");
+    }
+}

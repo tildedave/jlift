@@ -1,0 +1,11 @@
+public class LegalInnerInterface {
+
+}
+
+
+class I {
+
+    interface InnerInterface {
+    }
+
+}

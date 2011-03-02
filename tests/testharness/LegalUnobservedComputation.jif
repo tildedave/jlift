@@ -1,0 +1,29 @@
+public class LegalUnobservedComputation {
+
+    int{Alice:} aliceInt;
+    int{} publicInt;
+
+    public void test{}() {
+	foo();
+    }
+
+    public void foo() : {} {
+	try {
+	    if (bork() == 3) {
+		aliceInt = 4;
+	    }
+	    else {
+		aliceInt = 3;
+	    }
+	}
+	catch (NullPointerException e) {
+	    aliceInt = 2;
+	}
+
+	publicInt = 4;
+    }
+
+    int{Alice:} bork() throws NullPointerException {
+	return 3;
+    }
+}

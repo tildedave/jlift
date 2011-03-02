@@ -1,0 +1,21 @@
+package javacard.framework;
+
+
+public class JCSystem{
+    public static final byte CLEAR_ON_DESELECT;
+    public static final byte CLEAR_ON_RESET;
+    public static final byte NOT_A_TRANSIENT_OBJECT;
+
+    public native static boolean[] makeTransientBooleanArray(short length, byte event);
+    public native static byte[] makeTransientByteArray(short length, byte event);
+    public native static Object[] makeTransientObjectArray(short length, byte event);
+    public native static short[] makeTransientShortArray(short length, byte event);
+
+    public native static AID getAID();
+    public native static void beginTransaction();
+    public native static void abortTransaction();
+    public native static void commitTransaction();
+
+    public native static Shareable getAppletShareableInterfaceObject(AID serverAID, byte parameter);
+    public native static AID lookupAID(byte[] buffer, short offset, byte length);
+}

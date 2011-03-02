@@ -1,0 +1,20 @@
+public class StaticTest {
+
+    Util{Alice:} myUtil;
+    Util[{Alice:}] alreadyParameterized;
+
+    public void doIt (int k) {
+	new Util();
+	Util.foo();
+	Object o;
+	o = (Util) o;
+    }
+
+    public void whatever() {
+	doIt(1);
+    }
+}
+
+class Util[label L] {
+    public static void foo() { }
+}

@@ -1,0 +1,28 @@
+public class IllegalSubclass {
+
+    public static int{Alice:} aliceInt;
+    public static int{} publicInt;
+
+    public void test{}() {
+	A myA = new B();
+	myA.evil(aliceInt);
+    }
+
+}
+
+interface A {
+
+    public void evil(int k);
+
+}
+
+class B implements A {
+    public void evil(int m) { }
+}
+
+class C extends B {
+
+    public void evil(int j) {
+	IllegalSubclass.publicInt = j;
+    }
+}

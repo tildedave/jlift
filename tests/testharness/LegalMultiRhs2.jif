@@ -1,0 +1,13 @@
+public class LegalMultiRHS2[label L] {
+
+    public final label{} socketL;
+
+    public static int{L} die{L}(int{L} i) : {L} throws (NullPointerException{L}) {
+	throw new NullPointerException();
+    }
+
+    public void test{}() {
+	LegalMultiRHS2.die(3);
+    }
+
+}

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+jifc -d sig-classes -classpath sig-src/jif/principals  sig-src/javacard/framework/*.jif sig-src/javacard/security/*.jif sig-src/javacardx/crypto/*.jif

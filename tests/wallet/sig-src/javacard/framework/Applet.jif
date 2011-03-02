@@ -1,0 +1,26 @@
+package javacard.framework;
+
+/*
+* This is a Jif signature for the Java class. It provides Jif label
+* annotations for the Java class, allowing it to be usable by Jif
+* code. There is no automated check that the signature provided here
+* agrees with the actual Java code.
+*/
+
+import javacard.framework.APDU;
+import javacard.framework.ISOException;
+import javacard.framework.SystemException;
+import java.lang.Object;
+
+
+public abstract class Applet extends Object {
+	static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0; // jif signature of a java class
+	public Applet() { }
+	native protected final void register() throws SystemException;
+	native protected final void register(byte[] v0, short v1, byte v2) throws SystemException;
+        public abstract void process{}(APDU{} v3) throws ISOException;
+	native public static void install(byte[] v4, short v5, byte v6) throws ISOException;
+	native public boolean{this} select();
+	native public void deselect();
+	native protected final boolean{this} selectingApplet();
+}

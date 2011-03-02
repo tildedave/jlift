@@ -1,0 +1,25 @@
+public class IllegalArrayCopy {
+
+    int{Alice:}[]{Alice:} aliceArray;
+    int{Bob:}[]{Bob:} bobArray;
+
+    public void test{}() {
+	copyArray(launder1(aliceArray), launder2(bobArray));
+    }
+
+    public int[] launder1(int[] array) {
+	return array;
+    }
+
+    public int[] launder2(int[] array) {
+	return array;
+    }
+
+    public void copyArray(int[] array1, int[] array2) {
+	for(int i = 0; i < array1.length; ++i) {
+	    array1[i] = array2[i];
+	}
+    }
+
+
+}

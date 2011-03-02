@@ -1,0 +1,13 @@
+public class Exception5 {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() : {} {
+	if (aliceInt > 0) {
+	    throw new OurCheckedException();
+	}
+    }
+}
+
+class OurCheckedException extends Exception {
+}

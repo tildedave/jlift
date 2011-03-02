@@ -1,0 +1,19 @@
+public class LegalContextSensitiveReturnValue {
+
+    int{Alice:} aliceInt;
+    int{} publicInt;
+
+    public void test{}() {
+	publicInt = new C().callMethod();
+	if (aliceInt == 0) {
+	    aliceInt = new C().callMethod();
+	}
+    }
+}
+
+class C[label L] {
+    public int callMethod() {
+	int k = 1;
+	return 0;
+    }
+}

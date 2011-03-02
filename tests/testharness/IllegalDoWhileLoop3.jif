@@ -1,0 +1,23 @@
+public class IllegalDoWhileLoop {
+
+    public int{} publicInt;
+    public int{Alice:} aliceInt;
+
+    public void test{}() {
+	Container k;
+	do {
+	    k = new Container(0);
+	} while (k.theInt * aliceInt > 0);
+
+	publicInt = k.theInt;
+    }
+}
+
+class Container[label L]
+{
+    public Container(int{L} myInt) {
+	this.theInt = myInt;
+    }
+
+    public int{L} theInt;
+}

@@ -1,0 +1,20 @@
+public class LegalParameterizedPrincipalClass {
+
+
+    final principal alice = null;
+    int{alice:} aliceInt;
+
+    public void test{}() {
+	PrincipalContainer[alice] pc = new PrincipalContainer[alice]();
+	aliceInt = pc.theInt;
+    }
+}
+
+class PrincipalContainer[principal P] {
+
+    int{P:} theInt;
+
+    PrincipalContainer() { 
+	this.theInt = 0;
+    } 
+}

@@ -1,0 +1,23 @@
+import signature.SignatureInterface;
+
+public class IllegalSignatureInterface {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	getSignatureInterface().foo(aliceInt);
+    }
+
+    public SignatureInterface getSignatureInterface() {
+	return new C();
+    }
+}
+
+class C implements SignatureInterface {
+
+    int{Bob:} bobInt;
+
+    public void foo(int k) {
+	bobInt = k;
+    }
+}

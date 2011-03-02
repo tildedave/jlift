@@ -1,0 +1,28 @@
+package java.lang; 
+
+import java.util.Enumeration;
+import java.io.IOException;
+
+public class ClassLoader
+{
+    public ClassLoader() { }
+    public ClassLoader(ClassLoader cl) { }
+    public native Class loadClass(String name) throws ClassNotFoundException;
+    public native Enumeration getResources(String name) throws IOException;
+
+   native protected final Class defineClass(String name,
+                                  byte[] b,
+                                  int off,
+                                  int len);
+   native protected final void resolveClass(Class c);
+   native protected final Object definePackage(String name,
+                                 String specTitle,
+                                String specVersion,
+                                String specVendor,
+                                String implTitle,
+                                String implVersion,
+                                String implVendor,
+                                Object sealBase) // for j2ssh -- nothing is used though
+                         throws IllegalArgumentException;
+
+}

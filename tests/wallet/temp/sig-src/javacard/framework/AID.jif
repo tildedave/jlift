@@ -1,0 +1,7 @@
+package javacard.framework;
+
+
+public class AID{
+    public native byte getBytes(byte[] dest, short offset);
+    public native boolean equals(byte[] bArray, short offset, byte length);
+}

@@ -1,0 +1,21 @@
+public class IllegalObjectCall {
+
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	A myB = new B();
+	// can't generally know if myB is an A or a B, so 
+	// calling foo(bobInt) on myB should be illegal
+	myB.foo(bobInt * 2);
+    }
+}
+
+class A {
+    public void foo(int i) {
+    }
+}
+
+class B extends A {
+    public void foo(int{Alice:} k) {
+    }
+}

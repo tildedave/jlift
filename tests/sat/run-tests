@@ -1,0 +1,3 @@
+#!/bin/sh
+
+java -classpath $JLIFT/classes:$JLIFT/lib/polyglot.jar:$JLIFT/lib/JFlex.jar:$JLIFT/lib/jifclipse-backend.jar:$JLIFT/lib/jif.jar jlift.tests.TestDeclassificationFixes -extclass jlift.ExtensionInfo -classpath ../../classes:../../lib-classes:../../lib/jif.jar:../../lib/jiflib.jar:../../rt-classes:../../lib/jifrt.jar:../../lib/jifclipse-backend.jar:.:$CLASSPATH -sigcp ../../sig-classes:../../lib/jifsig.jar

@@ -1,0 +1,15 @@
+public class LegalSignatureCall {
+
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	if (aliceInt == 0) {
+	    Throwable t;
+	    // has a *: side effect, 
+	    // so should be legal...
+	    t.printStackTrace();
+	}
+    }
+
+}

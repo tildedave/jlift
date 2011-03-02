@@ -1,0 +1,7 @@
+package javacard.security;
+
+public interface DESKey extends SecretKey {
+
+    public byte getKey(byte[] keyData, short kOff);
+    public void setKey(byte[] keyData, short kOff);
+}

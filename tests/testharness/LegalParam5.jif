@@ -1,0 +1,24 @@
+public class LegalParam {
+
+    int{Alice:} aliceInt;
+    int{Alice:} otherAliceInt;
+
+    public void test{}() {
+	Container[{Alice:}] c = new Container[{Alice:}]();
+	c.overload(aliceInt, aliceInt);
+	c.overload(aliceInt, aliceInt, aliceInt);
+    }
+
+}
+
+class Container[label L] {
+
+    int{L} myInt;
+
+    Container() {
+    }
+
+    public void overload(int{L} a, int{L} b) { }
+    public void overload(int{L} a, int{L} b, int{L} c) { }
+
+}

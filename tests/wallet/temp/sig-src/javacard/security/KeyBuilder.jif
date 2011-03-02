@@ -1,0 +1,11 @@
+package javacard.security;
+
+
+public class KeyBuilder{
+    public static byte TYPE_DES;
+    public static byte TYPE_DES_TRANSIENT_DESELECT;
+
+    public static short LENGTH_DES3_2KEY;
+
+    public static native Key buildKey(byte keyType, short keyLength, boolean keyEncryption); 
+}

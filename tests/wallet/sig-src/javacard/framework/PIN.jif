@@ -1,0 +1,20 @@
+package javacard.framework;
+
+/*
+* This is a Jif signature for the Java class. It provides Jif label
+* annotations for the Java class, allowing it to be usable by Jif
+* code. There is no automated check that the signature provided here
+* agrees with the actual Java code.
+*/
+
+import java.lang.NullPointerException;
+import java.lang.ArrayIndexOutOfBoundsException;
+
+
+public interface  PIN {
+	static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0; // jif signature of a java class
+	public  boolean{this; v0; v1; v2} check(byte[] v0, short v1, byte v2) throws ArrayIndexOutOfBoundsException, NullPointerException;
+	public  void reset();
+	public  byte{this} getTriesRemaining();
+	public  boolean{this} isValidated();
+}

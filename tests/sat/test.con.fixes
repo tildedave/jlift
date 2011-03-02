@@ -1,0 +1,7 @@
+Assignment File: test.con.out
+Map File: test.con.map
+Output File: test.con.results
+Constraint File: test.con
+s OPTIMUM FOUND
+(* d48: declassify this.aliceArray[i] to {Bob: } (but we shouldn't declassify because it's a source for [{Alice: }] @ UnfixableArrayCopy.jl:8,19-29) *)
+(* d15: declassify this.aliceArray to {Bob: } (but we shouldn't declassify because it's a source for [{Alice: }, {Alice: }] @ UnfixableArrayCopy.jl:7,20-30) *)

@@ -1,0 +1,22 @@
+public class LegalParamSanitizer {
+
+    int{Alice:} aliceInt;
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	aliceInt = new Sanitizer().sanitizeInt(aliceInt);
+	bobInt = new Sanitizer().sanitizeInt(bobInt);
+    }
+
+
+}
+
+class Sanitizer[label L] {
+
+    public int{L} sanitizeInt(int k) {
+	int j = k * 2;
+	j -= 2;
+	return j;
+    }
+
+}

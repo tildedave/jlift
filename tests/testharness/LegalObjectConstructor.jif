@@ -1,0 +1,19 @@
+public class LegalObjectConstructor {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	B myB = new B(aliceInt);
+    }
+}
+
+class A {
+    public A(int{Alice:} i) {
+    }
+}
+
+class B extends A {
+    public B(int k) {
+	super(k);
+    }
+}

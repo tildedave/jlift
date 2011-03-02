@@ -1,0 +1,24 @@
+public class LegalRecursiveSideEffectCall {
+
+    int{Alice:} aliceInt;
+    int{Alice:} whichFibNum;
+
+    public void test{}() {
+	recursiveFib();
+    }
+
+    public void recursiveFib() {
+	if (whichFibNum == 0 | whichFibNum == 1) {
+	    aliceInt = 1;
+	}
+
+	int fibToFind = whichFibNum;
+	whichFibNum = fibToFind - 1;
+	recursiveFib();
+	int lastFib = aliceInt;
+	whichFibNum = fibToFind - 2;
+	recursiveFib();
+	aliceInt = aliceInt + lastFib;
+    }
+
+}

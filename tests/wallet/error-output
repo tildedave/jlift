@@ -1,0 +1,38 @@
+failed: {pc32} <= {Bob: }
+why: {pc32} == {apdu@getBalance:Wallet.java:159,26-42; pc31}@Wallet.java:282,4-38
+   failed: {apdu@getBalance:Wallet.java:159,26-42} <= {Bob: }
+   why: {apdu@getBalance:Wallet.java:159,26-42} == {_: _; _!: _; pc62}@Wallet.java:257,26-35
+      failed: {pc62} <= {Bob: }
+      why: {caller_pc@verify:Wallet.java:286,10-21@verify:Wallet.java:165,26-38} == {pc62}@Wallet.java:286,10-21
+         failed: {caller_pc@verify:Wallet.java:286,10-21@verify:Wallet.java:165,26-38} <= {Bob: }
+         why: {pc22; buffer; pc21; byteRead; pc23} <= {caller_pc@verify:Wallet.java:286,10-21@verify:Wallet.java:165,26-38}@Wallet.java:286,10-21
+            failed: {pc22} <= {Bob: }
+            why: {pc22} == {pc21}@Wallet.java:297,7-298:25
+               failed: {pc21} <= {Bob: }
+               why: {pc21} == {Alice: ; _!: _; _: _; _!: _; pc17}@Wallet.java:297,7-298:16
+                  failed: {Alice: ; _!: _; pc17} <= {Bob: }
+                  unsatisfiable: {Alice: ; _!: _; _: _; _!: _; pc17} <= {Bob: } in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25@getBalance:Wallet.java:159,26-42}]@Wallet.java:282,19-27
+failed: {pc62} == {array_base@Wallet.java:147,4-8; pc60; buffer}
+why: {caller_pc@verify:Wallet.java:286,10-21@verify:Wallet.java:165,26-38} == {pc62}@Wallet.java:286,10-21
+   failed: {caller_pc@verify:Wallet.java:286,10-21@verify:Wallet.java:165,26-38} == {array_base@Wallet.java:147,4-8; pc60; buffer}
+   why: {pc22; buffer; pc21; byteRead; pc23} <= {caller_pc@verify:Wallet.java:286,10-21@verify:Wallet.java:165,26-38}@Wallet.java:286,10-21
+      failed: {pc22} == {array_base@Wallet.java:147,4-8; pc60; buffer}
+      why: {pc22} == {pc21}@Wallet.java:297,7-298:25
+         failed: {pc21} == {array_base@Wallet.java:147,4-8; pc60; buffer}
+         why: {pc21} == {Alice: ; _!: _; _: _; _!: _; pc17}@Wallet.java:297,7-298:16
+            failed: {*!: } == {array_base@Wallet.java:147,4-8; pc60; buffer}
+            unsatisfiable: {Alice: ; _!: _; _: _; _!: _; pc17} == {array_base@Wallet.java:147,4-8; pc60; buffer} in environment [{this} <= {[_: _; _!: _]}]@Wallet.java:158,4-168:51
+ ----- ERROR EXPLANATIONS MAP ----- 
+Constraints and their frequency of occurrence:
+	{pc21} == {Alice: ; _!: _; _: _; _!: _; pc17}@Wallet.java:297,7-298:16: 2
+	{caller_pc@verify:Wallet.java:286,10-21@verify:Wallet.java:165,26-38} == {pc62}@Wallet.java:286,10-21: 2
+	{pc22} == {pc21}@Wallet.java:297,7-298:25: 2
+	{apdu@getBalance:Wallet.java:159,26-42} == {_: _; _!: _; pc62}@Wallet.java:257,26-35: 1
+	{pc22; buffer; pc21; byteRead; pc23} <= {caller_pc@verify:Wallet.java:286,10-21@verify:Wallet.java:165,26-38}@Wallet.java:286,10-21: 2
+	{pc32} == {apdu@getBalance:Wallet.java:159,26-42; pc31}@Wallet.java:282,4-38: 1
+Positions and their frequency of occurrence:
+	Wallet.java:282,4-38: 1
+	Wallet.java:257,26-35: 1
+	Wallet.java:297,7-298:25: 2
+	Wallet.java:286,10-21: 4
+	Wallet.java:297,7-298:16: 2

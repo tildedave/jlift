@@ -1,0 +1,30 @@
+public class LegalDynamicLegal {
+
+    final label ioLabel;
+
+    public void test{*!:}() {
+	Container[ioLabel] newContainer = new Container();
+	newContainer.setInt(receiveInt());
+	sendInt(newContainer.getInt());
+    }
+
+    public int{*ioLabel} receiveInt() {
+	return 0;
+    }
+
+    public void sendInt(int{*ioLabel} out) {
+    }
+
+}
+
+class Container[label L] {
+    int{L} i;
+
+    public int getInt() {
+	return i;
+    }
+
+    public void setInt(int k) {
+	this.i = k;
+    }
+}

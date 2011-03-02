@@ -1,0 +1,71 @@
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:cons="http://openuri.org/constraint"
+  targetNamespace="http://openuri.org/constraint"
+  elementFormDefault="qualified">
+
+    <xs:element name="constraint-set">
+       <xs:complexType>
+          <xs:sequence>
+             <xs:element name="con" type="cons:XmlConstraint" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="lattice">
+       <xs:complexType>
+          <xs:sequence>
+             <xs:element name="label" type="cons:XmlLatticeLabel" minOccurs="0" maxOccurs="unbounded"/>
+             <xs:element name="lt" type="cons:XmlLatticeLeq" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+       </xs:complexType>
+    </xs:element>
+    <xs:element name="procedureList">
+       <xs:complexType>
+          <xs:sequence>
+             <xs:element name="procedure" type="cons:XmlProcedure" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+       </xs:complexType>
+    </xs:element>
+          </xs:sequence>
+       </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="XmlProcedure">
+       <xs:attribute name="name" type="xs:string" />
+       <xs:attribute name="id" type="xs:integer" />
+       <xs:attribute name="weight" type="xs:integer" />
+    </xs:complexType>
+
+    <xs:complexType name="XmlConstraint">
+       <xs:sequence>
+          <xs:element name="lhs" type="cons:XmlJoin" />
+          <xs:element name="rhs" type="cons:XmlLabel" />
+          <xs:element name="pos" type="xs:string" />
+          <xs:element name="because" type="xs:string" />
+          <xs:element name="becauseType" type="xs:string" />
+          <xs:element name="asString" type="xs:string" />
+       </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="XmlJoin">
+       <xs:sequence>
+          <xs:element name="label" type="cons:XmlLabel" minOccurs="0" maxOccurs="unbounded"/>
+       </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="XmlLabel">
+       <xs:attribute name="name" type="xs:string" />
+       <xs:attribute name="isvar" type="xs:boolean" />
+       <xs:attribute name="canDecl" type="xs:boolean" />
+       <xs:attribute name="weight" type="xs:integer" />
+       <xs:attribute name="procedure" type="xs:integer" />
+    </xs:complexType>
+
+    <xs:complexType name="XmlLatticeLabel">
+       <xs:attribute name="name" type="xs:string" />
+       <xs:attribute name="id" type="xs:integer" />
+    </xs:complexType>
+
+    <xs:complexType name="XmlLatticeLeq">
+       <xs:attribute name="lhs" type="xs:integer" />
+       <xs:attribute name="rhs" type="xs:integer" />
+    </xs:complexType>
+
+</xs:schema>

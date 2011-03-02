@@ -1,0 +1,3 @@
+#!/bin/sh 
+
+../../bin/pth pthScript -classpath ../../classes:../../lib-classes:../../lib/jif.jar:../../lib/jiflib.jar:../../rt-classes:../../lib/jifrt.jar:../../lib/jifclipse-backend.jar:../../lib/jlift.jar:.:$CLASSPATH

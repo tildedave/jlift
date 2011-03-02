@@ -1,0 +1,26 @@
+public class Exception4 {
+
+    String{Alice:} str;
+    int{Alice:} secretInt;
+    int{} publicInt;
+
+    public void test{}() : {} {
+	try {
+	    if (str.length() > 0) {
+		if (str.length() > 0) {
+		    throw new ISOException();
+		}
+		secretInt = 2;
+	    }
+	    else {
+		secretInt = 3;
+	    }
+	    
+	    publicInt = 3;
+	}
+	catch (Exception e) { }
+    }
+}
+
+class ISOException extends RuntimeException {
+}

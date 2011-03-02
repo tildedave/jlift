@@ -1,0 +1,20 @@
+package javacard.framework;
+
+
+public class Util{
+    public native static byte arrayCompare(byte[] src, short srcOff, byte[] dest, short destOff, short length);
+    public native static short arrayCopy(byte[] src, short srcOff, byte[] dest, short destOff, short length);
+    
+    public native static byte arrayCopyNonAtomic(byte{src}[] src, short srcOff, byte{src}[] dest, short destOff, short length);
+    // DHK: for some reason we need two signatures, one where it's an int, one where it's a short
+    public native static byte arrayCopyNonAtomic(byte{src}[] src, int srcOff, byte{src}[] dest, short destOff, short length);
+    
+    public native static byte arrayFillNonAtomic(byte[] bArray, short bOff, short bLen, byte bValue);
+    public native static short getShort(byte[] bArray, short bOff);
+    public static short getShort(byte[] bArray, int bOff) {
+    	return Util.getShort(bArray, (short) bOff);
+    }
+    public native static short makeShort(byte b1, byte b2);
+    public native static short setShort(byte[] bArray, short bOff, short sValue);
+
+}

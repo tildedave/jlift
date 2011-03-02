@@ -1,0 +1,10 @@
+public class LegalAssign {
+
+    int{Alice:} aliceInt;
+    int{Alice:} otherAliceInt;
+
+    public void test{}() {
+	aliceInt = otherAliceInt;
+    }
+
+}

@@ -1,0 +1,17 @@
+public class E {
+
+    public void error() throws ParentException {
+	ChildException.throwIt();
+    }
+    /*
+    public void test() throws ParentException {
+	if (true)
+	    throw new ChildException();
+	else
+	    throw new SiblingException();
+    }
+
+    public void method1() throws ChildException { }
+    public void method2() throws SiblingException { }
+    */
+}

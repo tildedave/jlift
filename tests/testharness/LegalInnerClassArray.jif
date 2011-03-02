@@ -1,0 +1,14 @@
+public class LegalInnerClassArray {
+
+    public void test{}() {
+	Object[] wtvr = new Outer.Inner[5];
+    }
+
+}
+
+class Outer {
+
+    public static class Inner {
+    }
+
+}

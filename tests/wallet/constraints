@@ -1,0 +1,995 @@
+  1: [method public boolean{select_rv} select{sum(caller_pc@select:Wallet.java:118,9-23)}() : {*!: }]
+  2: [method public void deselect{sum(caller_pc@deselect:Wallet.java:128,9-22)}() : {*!: }]
+  3: [constructor private private com.sun.javacard.samples.wallet.Wallet(byte{sum(array_base@Wallet.java:100,18-22)}[], short, byte)]
+  4: [method public static void install{sum(caller_pc@install:Wallet.java:114,16-28)}(byte{sum(array_base@Wallet.java:114,29-33)}[]{[sum(bArray)]}, short{[sum(bOffset)]}, byte{[sum(bLength)]}) : {*!: }]
+  5: [method private void verify{sum(caller_pc@verify:Wallet.java:286,10-21)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }]
+  6: [method private void getBalance{sum(caller_pc@getBalance:Wallet.java:257,10-25)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }]
+  7: [method private void debit{sum(caller_pc@debit:Wallet.java:220,10-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }]
+  8: [method private void credit{sum(caller_pc@credit:Wallet.java:173,9-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }]
+  9: [method public void process{Bob: }(javacard.framework.APDU{[_: _; _!: _]}) : {*!: }]
+  #1: generate summary information for scc [method public boolean{select_rv} select{sum(caller_pc@select:Wallet.java:118,9-23)}() : {*!: }]
+  generate summary information: method public boolean{select_rv} select{sum(caller_pc@select:Wallet.java:118,9-23)}() : {*!: }@Wallet.java:118,9-23 inside com.sun.javacard.samples.wallet.Wallet
+   procedure method native public byte{*!: } getTriesRemaining{*: }() : {*!: } is not in the call graph, so we are not getting its summary constraints
+   ** label {sum(caller_pc@select:Wallet.java:118,9-23)} contains summary variables [{sum(caller_pc@select:Wallet.java:118,9-23)}]
+   ** label {sum(caller_pc@select:Wallet.java:118,9-23)} contains summary variables [{sum(caller_pc@select:Wallet.java:118,9-23)}]
+summary constraints generated for method public boolean{select_rv} select{sum(caller_pc@select:Wallet.java:118,9-23)}() : {*!: }
+non-call constraints: 9/ call constraints: 0
+  summary constraints for method public boolean{select_rv} select{sum(caller_pc@select:Wallet.java:118,9-23)}() : {*!: }
+  -->{pc1} == {sum(caller_pc@select:Wallet.java:118,9-23)} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:118,9-23
+  -->{pc2} == {Alice: ; _!: _; this; pc1} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:122,9-32
+  -->{receiver} == {Alice: ; _!: _; this; pc1} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:122,9-32
+  -->{pc3} == {pc2} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:122,9-37
+  -->{pc4} == {pc3; pc2} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:122,4-123:20
+  -->{pc4} <= {select_rv; sum(caller_pc@select:Wallet.java:118,9-23)} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:123,7-20
+  -->{pc5} == {pc3; pc2} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:118,26-127:3
+  -->{pc5} <= {select_rv; sum(caller_pc@select:Wallet.java:118,9-23)} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:125,4-16
+  -->{pc1} <= {sum(caller_pc@select:Wallet.java:118,9-23)} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:118,9-23
+  #2: generate summary information for scc [method public void deselect{sum(caller_pc@deselect:Wallet.java:128,9-22)}() : {*!: }]
+  generate summary information: method public void deselect{sum(caller_pc@deselect:Wallet.java:128,9-22)}() : {*!: }@Wallet.java:128,9-22 inside com.sun.javacard.samples.wallet.Wallet
+   procedure method native public void reset{*: }() : {*!: } is not in the call graph, so we are not getting its summary constraints
+   ** label {sum(caller_pc@deselect:Wallet.java:128,9-22)} contains summary variables [{sum(caller_pc@deselect:Wallet.java:128,9-22)}]
+   ** label {sum(caller_pc@deselect:Wallet.java:128,9-22)} contains summary variables [{sum(caller_pc@deselect:Wallet.java:128,9-22)}]
+summary constraints generated for method public void deselect{sum(caller_pc@deselect:Wallet.java:128,9-22)}() : {*!: }
+non-call constraints: 3/ call constraints: 0
+  summary constraints for method public void deselect{sum(caller_pc@deselect:Wallet.java:128,9-22)}() : {*!: }
+  -->{pc7} == {sum(caller_pc@deselect:Wallet.java:128,9-22)} in environment [{this} <= {[sum(caller_pc@deselect:Wallet.java:128,9-22)]}]@Wallet.java:128,9-22
+  -->{pc8} == {Alice: ; _!: _; this; pc7} in environment [{this} <= {[sum(caller_pc@deselect:Wallet.java:128,9-22)]}]@Wallet.java:131,4-15
+  -->{receiver} == {Alice: ; _!: _; this; pc7} in environment [{this} <= {[sum(caller_pc@deselect:Wallet.java:128,9-22)]}]@Wallet.java:131,4-15
+  #3: generate summary information for scc [constructor private private com.sun.javacard.samples.wallet.Wallet(byte{sum(array_base@Wallet.java:100,18-22)}[], short, byte)]
+  generate summary information: constructor private private com.sun.javacard.samples.wallet.Wallet(byte{sum(array_base@Wallet.java:100,18-22)}[], short, byte)@Wallet.java:100,10-59 inside com.sun.javacard.samples.wallet.Wallet
+   procedure constructor public public javacard.framework.Applet() is not in the call graph, so we are not getting its summary constraints
+   procedure constructor public public javacard.framework.OwnerPIN(byte, byte) is not in the call graph, so we are not getting its summary constraints
+   procedure method native public void update{*: }(byte{}[]{[*: ; _!: _]}, short{[*: ; _!: _]}, byte{[*: ; _!: _]}) : {*!: } throws (javacard.framework.PINException{*!: }) is not in the call graph, so we are not getting its summary constraints
+   procedure method final native protected void register{*: }() : {*!: } throws (javacard.framework.SystemException{*!: }) is not in the call graph, so we are not getting its summary constraints
+   ** label {sum(caller_pc@Wallet:Wallet.java:100,10-59)} contains summary variables [{sum(caller_pc@Wallet:Wallet.java:100,10-59)}]
+   ** label {sum(caller_pc@Wallet:Wallet.java:100,10-59)} contains summary variables [{sum(caller_pc@Wallet:Wallet.java:100,10-59)}]
+summary constraints generated for constructor private private com.sun.javacard.samples.wallet.Wallet(byte{sum(array_base@Wallet.java:100,18-22)}[], short, byte)
+non-call constraints: 17/ call constraints: 0
+  summary constraints for constructor private private com.sun.javacard.samples.wallet.Wallet(byte{sum(array_base@Wallet.java:100,18-22)}[], short, byte)
+  -->{pc9} == {sum(caller_pc@Wallet:Wallet.java:100,10-59)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  -->{pc10} == {*!: } in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  -->{pc11} == {pc10; sum(caller_pc@Wallet:Wallet.java:100,10-59)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  -->{pc12} == {pc10} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  -->{pc12; newOwnerPIN; this} <= {Alice: } in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:105,4-7
+  -->{sum(caller_pc@Wallet:Wallet.java:100,10-59)} <= {Alice: } in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:105,4-7
+  -->{pc13} == {Alice: ; _!: _; this; pc12} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+  -->{array_base@sig-src/javacard/framework/OwnerPIN.jif:23,27-31} <= {sum(array_base@Wallet.java:100,18-22)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,15-21
+  -->{sum(array_base@Wallet.java:100,18-22)} <= {array_base@sig-src/javacard/framework/OwnerPIN.jif:23,27-31} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,15-21
+  -->{receiver} == {Alice: ; _!: _; this; pc12} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+  -->{arg1label} == {sum(bArray); pc13} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+  -->{arg2label} == {sum(bOffset); pc13} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+  -->{arg3label} == {sum(bLength); pc13} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+  -->{pc14} == {pc13} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  -->{receiver} == {this} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:110,4-14
+  -->{pc15} == {pc14; sum(caller_pc@Wallet:Wallet.java:100,10-59)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  -->{pc14} <= {sum(caller_pc@Wallet:Wallet.java:100,10-59)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  #4: generate summary information for scc [method public static void install{sum(caller_pc@install:Wallet.java:114,16-28)}(byte{sum(array_base@Wallet.java:114,29-33)}[]{[sum(bArray)]}, short{[sum(bOffset)]}, byte{[sum(bLength)]}) : {*!: }]
+  generate summary information: method public static void install{sum(caller_pc@install:Wallet.java:114,16-28)}(byte{sum(array_base@Wallet.java:114,29-33)}[]{[sum(bArray)]}, short{[sum(bOffset)]}, byte{[sum(bLength)]}) : {*!: }@Wallet.java:114,16-28 inside com.sun.javacard.samples.wallet.Wallet
+   ** label {sum(caller_pc@install:Wallet.java:114,16-28)} contains summary variables [{sum(caller_pc@install:Wallet.java:114,16-28)}]
+   ** label {sum(caller_pc@install:Wallet.java:114,16-28)} contains summary variables [{sum(caller_pc@install:Wallet.java:114,16-28)}]
+summary constraints generated for method public static void install{sum(caller_pc@install:Wallet.java:114,16-28)}(byte{sum(array_base@Wallet.java:114,29-33)}[]{[sum(bArray)]}, short{[sum(bOffset)]}, byte{[sum(bLength)]}) : {*!: }
+non-call constraints: 23/ call constraints: 0
+  summary constraints for method public static void install{sum(caller_pc@install:Wallet.java:114,16-28)}(byte{sum(array_base@Wallet.java:114,29-33)}[]{[sum(bArray)]}, short{[sum(bOffset)]}, byte{[sum(bLength)]}) : {*!: }
+  -->{pc16} == {sum(caller_pc@install:Wallet.java:114,16-28)} in environment []@Wallet.java:114,16-28
+  -->{pc9} == {caller_pc@Wallet:Wallet.java:100,10-59} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{pc10} == {*!: } in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{pc11} == {pc10; caller_pc@Wallet:Wallet.java:100,10-59} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{pc12} == {pc10} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{pc12; newOwnerPIN; newWallet} <= {Alice: } in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:105,4-7
+  -->{caller_pc@Wallet:Wallet.java:100,10-59} <= {Alice: } in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:105,4-7
+  -->{pc13} == {Alice: ; _!: _; newWallet; pc12} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+  -->{array_base@sig-src/javacard/framework/OwnerPIN.jif:23,27-31} <= {array_base@Wallet.java:100,18-22} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,15-21
+  -->{array_base@Wallet.java:100,18-22} <= {array_base@sig-src/javacard/framework/OwnerPIN.jif:23,27-31} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,15-21
+  -->{receiver} == {Alice: ; _!: _; newWallet; pc12} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+  -->{arg1label} == {bArray@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40; pc13} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+  -->{arg2label} == {bOffset@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40; pc13} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+  -->{arg3label} == {bLength@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40; pc13} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+  -->{pc14} == {pc13} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{receiver} == {newWallet} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:110,4-14
+  -->{pc15} == {pc14; caller_pc@Wallet:Wallet.java:100,10-59} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{pc14} <= {caller_pc@Wallet:Wallet.java:100,10-59} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{sum(bArray); pc16} <= {bArray@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40} in environment []@Wallet.java:100,18-31
+  -->{sum(array_base@Wallet.java:114,29-33)} <= {array_base@Wallet.java:100,18-22} in environment []@Wallet.java:100,18-22
+  -->{sum(bOffset); pc16} <= {bOffset@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40} in environment []@Wallet.java:100,32-45
+  -->{sum(bLength); pc16} <= {bLength@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40} in environment []@Wallet.java:100,46-58
+  -->{pc16} <= {caller_pc@Wallet:Wallet.java:100,10-59} in environment []@Wallet.java:100,10-59
+  #5: generate summary information for scc [method private void verify{sum(caller_pc@verify:Wallet.java:286,10-21)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }]
+  generate summary information: method private void verify{sum(caller_pc@verify:Wallet.java:286,10-21)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }@Wallet.java:286,10-21 inside com.sun.javacard.samples.wallet.Wallet
+   procedure method native public byte{}[]{*!: } getBuffer{*: }() : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public short{*!: } setIncomingAndReceive{*: }() : {*!: } throws (javacard.framework.APDUException{*!: }) is not in the call graph, so we are not getting its summary constraints
+   procedure method native public boolean{[*: ; _!: _]; [*: ; _!: _]; [*: ; _!: _]} check{*: }(byte{}[]{[*: ; _!: _]}, short{[*: ; _!: _]}, byte{[*: ; _!: _]}) : {*!: } throws (java.lang.ArrayIndexOutOfBoundsException{*!: }, java.lang.NullPointerException{*!: }) is not in the call graph, so we are not getting its summary constraints
+   procedure method native public static void throwIt{*: }(short{[*: ; _!: _]}) : {*!: } is not in the call graph, so we are not getting its summary constraints
+   ** label {sum(caller_pc@verify:Wallet.java:286,10-21)} contains summary variables [{sum(caller_pc@verify:Wallet.java:286,10-21)}]
+   ** label {sum(caller_pc@verify:Wallet.java:286,10-21)} contains summary variables [{sum(caller_pc@verify:Wallet.java:286,10-21)}]
+summary constraints generated for method private void verify{sum(caller_pc@verify:Wallet.java:286,10-21)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+non-call constraints: 22/ call constraints: 0
+  summary constraints for method private void verify{sum(caller_pc@verify:Wallet.java:286,10-21)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+  -->{pc17} == {sum(caller_pc@verify:Wallet.java:286,10-21)} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:286,10-21
+  -->{pc18} == {sum(apdu); pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+  -->{receiver} == {sum(apdu); pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+  -->{array_base@Wallet.java:288,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:288,4-8} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+  -->{pc18} <= {buffer} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+  -->{pc19} == {sum(apdu); pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:291,19-47
+  -->{receiver} == {sum(apdu); pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:291,19-47
+  -->{pc20} == {pc19} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:291,12-47
+  -->{pc19} <= {byteRead} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:291,12-47
+  -->{pc21} == {Alice: ; _!: _; this; pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+  -->{array_base@sig-src/javacard/framework/OwnerPIN.jif:21,29-33} <= {array_base@Wallet.java:288,4-8} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,17-23
+  -->{array_base@Wallet.java:288,4-8} <= {array_base@sig-src/javacard/framework/OwnerPIN.jif:21,29-33} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,17-23
+  -->{receiver} == {Alice: ; _!: _; this; pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+  -->{arg1label} == {buffer; pc21} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+  -->{arg2label} == {pc21} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+  -->{arg3label} == {byteRead; pc21} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+  -->{pc22} == {pc21} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:25
+  -->{pc23} == {pc22; buffer; pc21; byteRead} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,2-300:47
+  -->{arg1label} == {inst(SW_VERIFICATION_FAILED); pc23} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:299,5-300:46
+  -->{pc24} == {pc22; buffer; pc21; byteRead; pc23} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:286,33-302:3
+  -->{pc22; buffer; pc21; byteRead; pc23} <= {sum(caller_pc@verify:Wallet.java:286,10-21)} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:286,10-21
+  #6: generate summary information for scc [method private void getBalance{sum(caller_pc@getBalance:Wallet.java:257,10-25)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }]
+  generate summary information: method private void getBalance{sum(caller_pc@getBalance:Wallet.java:257,10-25)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }@Wallet.java:257,10-25 inside com.sun.javacard.samples.wallet.Wallet
+   procedure method native public byte{}[]{*!: } getBuffer{*: }() : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public short{*!: } setOutgoing{*: }() : {*!: } throws (javacard.framework.APDUException{*!: }) is not in the call graph, so we are not getting its summary constraints
+   procedure method native public static void throwIt{*: }(short{[*: ; _!: _]}) : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public void setOutgoingLength{*: }(short{[*: ; _!: _]}) : {*!: } throws (javacard.framework.APDUException{*!: }) is not in the call graph, so we are not getting its summary constraints
+   procedure method native public void sendBytes{*: }(short{[Bob: ; _!: _]}, short{[*: ; _!: _]}) : {*!: } throws (javacard.framework.APDUException{*!: }) is not in the call graph, so we are not getting its summary constraints
+   ** label {sum(caller_pc@getBalance:Wallet.java:257,10-25)} contains summary variables [{sum(caller_pc@getBalance:Wallet.java:257,10-25)}]
+   ** label {sum(caller_pc@getBalance:Wallet.java:257,10-25)} contains summary variables [{sum(caller_pc@getBalance:Wallet.java:257,10-25)}]
+summary constraints generated for method private void getBalance{sum(caller_pc@getBalance:Wallet.java:257,10-25)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+non-call constraints: 27/ call constraints: 0
+  summary constraints for method private void getBalance{sum(caller_pc@getBalance:Wallet.java:257,10-25)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+  -->{pc25} == {sum(caller_pc@getBalance:Wallet.java:257,10-25)} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,10-25
+  -->{pc26} == {sum(apdu); pc25} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+  -->{receiver} == {sum(apdu); pc25} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+  -->{array_base@Wallet.java:259,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+  -->{pc26} <= {buffer} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+  -->{pc27} == {sum(apdu); pc25} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:265,15-33
+  -->{receiver} == {sum(apdu); pc25} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:265,15-33
+  -->{pc27} <= {le} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:265,15-33
+  -->{pc28} == {pc27} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,37-284:3
+  -->{pc29} == {pc28; le} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:267,4-269:49
+  -->{arg1label} == {pc29} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:268,7-269:48
+  -->{pc30} == {sum(apdu); pc28} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:273,4-35
+  -->{receiver} == {sum(apdu); pc28} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:273,4-35
+  -->{arg1label} == {pc30} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:273,4-35
+  -->{pc31} == {pc30} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,37-284:3
+  -->{pc31; inst(balance); this} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:277,4-10
+  -->{sum(caller_pc@getBalance:Wallet.java:257,10-25)} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:277,4-10
+  -->{pc31; inst(balance); this} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:278,4-10
+  -->{sum(caller_pc@getBalance:Wallet.java:257,10-25)} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:278,4-10
+  -->{pc32} == {sum(apdu); pc31} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,4-38
+  -->{pc32} <= {Bob: } in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,19-27
+  -->{receiver} == {sum(apdu); pc31} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,4-38
+  -->{arg1label} == {pc32} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,4-38
+  -->{arg2label} == {pc32} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,4-38
+  -->{pc33} == {pc32} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,37-284:3
+  -->{pc32} <= {sum(caller_pc@getBalance:Wallet.java:257,10-25)} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,10-25
+  #7: generate summary information for scc [method private void debit{sum(caller_pc@debit:Wallet.java:220,10-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }]
+  generate summary information: method private void debit{sum(caller_pc@debit:Wallet.java:220,10-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }@Wallet.java:220,10-20 inside com.sun.javacard.samples.wallet.Wallet
+   procedure method native public boolean{*!: } isValidated{*: }() : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public static void throwIt{*: }(short{[*: ; _!: _]}) : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public byte{}[]{*!: } getBuffer{*: }() : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public short{*!: } setIncomingAndReceive{*: }() : {*!: } throws (javacard.framework.APDUException{*!: }) is not in the call graph, so we are not getting its summary constraints
+   procedure method native public static void throwIt{*: }(short{[*: ; _!: _]}) : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public static void throwIt{*: }(short{[*: ; _!: _]}) : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public static void throwIt{*: }(short{[*: ; _!: _]}) : {*!: } is not in the call graph, so we are not getting its summary constraints
+   ** label {sum(caller_pc@debit:Wallet.java:220,10-20)} contains summary variables [{sum(caller_pc@debit:Wallet.java:220,10-20)}]
+   ** label {sum(caller_pc@debit:Wallet.java:220,10-20)} contains summary variables [{sum(caller_pc@debit:Wallet.java:220,10-20)}]
+summary constraints generated for method private void debit{sum(caller_pc@debit:Wallet.java:220,10-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+non-call constraints: 27/ call constraints: 0
+  summary constraints for method private void debit{sum(caller_pc@debit:Wallet.java:220,10-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+  -->{pc34} == {sum(caller_pc@debit:Wallet.java:220,10-20)} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:220,10-20
+  -->{pc35} == {Alice: ; _!: _; this; pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:223,11-28
+  -->{receiver} == {Alice: ; _!: _; this; pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:223,11-28
+  -->{pc36} == {pc35} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:223,4-225:31
+  -->{arg1label} == {inst(SW_PIN_VERIFICATION_REQUIRED); pc36} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:224,7-225:30
+  -->{pc37} == {sum(apdu); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+  -->{receiver} == {sum(apdu); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+  -->{array_base@Wallet.java:227,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:227,4-8} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+  -->{pc37} <= {buffer} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+  -->{array_base@Wallet.java:227,4-8; pc34; buffer} <= {numBytes} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:230,12-25
+  -->{pc38} == {sum(apdu); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:233,19-47
+  -->{receiver} == {sum(apdu); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:233,19-47
+  -->{pc39} == {pc38} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:233,12-47
+  -->{pc38} <= {byteRead} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:233,12-47
+  -->{pc40} == {pc34; numBytes} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:235,11-44
+  -->{pc41} == {pc40; byteRead; pc34; numBytes} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:235,4-237:50
+  -->{arg1label} == {pc41} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:236,7-237:49
+  -->{array_base@Wallet.java:227,4-8; pc34; buffer} <= {debitAmount} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:241,21-27
+  -->{pc42} == {inst(MAX_TRANSACTION_AMOUNT); pc34; debitAmount} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:244,11-245:30
+  -->{pc43} == {pc42; debitAmount; inst(MAX_TRANSACTION_AMOUNT); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:244,4-247:51
+  -->{arg1label} == {inst(SW_INVALID_TRANSACTION_AMOUNT); pc43} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:246,7-247:50
+  -->{pc44} == {pc34; debitAmount; inst(balance); this} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:250,4-251:51
+  -->{arg1label} == {inst(SW_NEGATIVE_BALANCE); pc44} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:251,9-50
+  -->{debitAmount; pc34; inst(balance); this} <= {inst(balance)} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:253,4-11
+  -->{sum(caller_pc@debit:Wallet.java:220,10-20)} <= {inst(balance)} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:253,4-11
+  -->{pc34} <= {sum(caller_pc@debit:Wallet.java:220,10-20)} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:220,10-20
+  #8: generate summary information for scc [method private void credit{sum(caller_pc@credit:Wallet.java:173,9-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }]
+  generate summary information: method private void credit{sum(caller_pc@credit:Wallet.java:173,9-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }@Wallet.java:173,9-20 inside com.sun.javacard.samples.wallet.Wallet
+   procedure method native public boolean{*!: } isValidated{*: }() : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public static void throwIt{*: }(short{[*: ; _!: _]}) : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public byte{}[]{*!: } getBuffer{*: }() : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public short{*!: } setIncomingAndReceive{*: }() : {*!: } throws (javacard.framework.APDUException{*!: }) is not in the call graph, so we are not getting its summary constraints
+   procedure method native public static void throwIt{*: }(short{[*: ; _!: _]}) : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public static void throwIt{*: }(short{[*: ; _!: _]}) : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public static void throwIt{*: }(short{[*: ; _!: _]}) : {*!: } is not in the call graph, so we are not getting its summary constraints
+   ** label {sum(caller_pc@credit:Wallet.java:173,9-20)} contains summary variables [{sum(caller_pc@credit:Wallet.java:173,9-20)}]
+   ** label {sum(caller_pc@credit:Wallet.java:173,9-20)} contains summary variables [{sum(caller_pc@credit:Wallet.java:173,9-20)}]
+summary constraints generated for method private void credit{sum(caller_pc@credit:Wallet.java:173,9-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+non-call constraints: 27/ call constraints: 0
+  summary constraints for method private void credit{sum(caller_pc@credit:Wallet.java:173,9-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+  -->{pc45} == {sum(caller_pc@credit:Wallet.java:173,9-20)} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:173,9-20
+  -->{pc46} == {Alice: ; _!: _; this; pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:176,10-27
+  -->{receiver} == {Alice: ; _!: _; this; pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:176,10-27
+  -->{pc47} == {pc46} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:176,3-178:38
+  -->{arg1label} == {inst(SW_PIN_VERIFICATION_REQUIRED); pc47} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:177,1-178:37
+  -->{pc48} == {sum(apdu); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+  -->{receiver} == {sum(apdu); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+  -->{array_base@Wallet.java:180,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:180,4-8} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+  -->{pc48} <= {buffer} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+  -->{array_base@Wallet.java:180,4-8; pc45; buffer} <= {numBytes} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:184,20-26
+  -->{pc49} == {sum(apdu); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:192,21-49
+  -->{receiver} == {sum(apdu); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:192,21-49
+  -->{pc50} == {pc49} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:192,14-49
+  -->{pc49} <= {byteRead} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:192,14-49
+  -->{pc51} == {pc45; numBytes} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:196,11-44
+  -->{pc52} == {pc51; byteRead; pc45; numBytes} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:196,4-197:51
+  -->{arg1label} == {pc52} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:197,5-50
+  -->{array_base@Wallet.java:180,4-8; pc45; buffer} <= {creditAmount} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:201,18-24
+  -->{pc53} == {inst(MAX_TRANSACTION_AMOUNT); pc45; creditAmount} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:204,11-205:30
+  -->{pc54} == {pc53; creditAmount; inst(MAX_TRANSACTION_AMOUNT); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:204,4-207:51
+  -->{arg1label} == {inst(SW_INVALID_TRANSACTION_AMOUNT); pc54} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:206,8-207:50
+  -->{pc55} == {inst(MAX_BALANCE); pc45; creditAmount; inst(balance); this} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:210,4-212:49
+  -->{arg1label} == {inst(SW_EXCEED_MAXIMUM_BALANCE); pc55} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:211,7-212:48
+  -->{creditAmount; pc45; inst(balance); this} <= {inst(balance)} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:216,4-11
+  -->{sum(caller_pc@credit:Wallet.java:173,9-20)} <= {inst(balance)} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:216,4-11
+  -->{pc45} <= {sum(caller_pc@credit:Wallet.java:173,9-20)} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:173,9-20
+  #9: generate summary information for scc [method public void process{Bob: }(javacard.framework.APDU{[_: _; _!: _]}) : {*!: }]
+  generate summary information: method public void process{Bob: }(javacard.framework.APDU{[_: _; _!: _]}) : {*!: }@Wallet.java:134,11-23 inside com.sun.javacard.samples.wallet.Wallet
+   procedure method native public byte{}[]{*!: } getBuffer{*: }() : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public static void throwIt{*: }(short{[*: ; _!: _]}) : {*!: } is not in the call graph, so we are not getting its summary constraints
+   procedure method native public static void throwIt{*: }(short{[*: ; _!: _]}) : {*!: } is not in the call graph, so we are not getting its summary constraints
+summary constraints generated for method public void process{Bob: }(javacard.framework.APDU{[_: _; _!: _]}) : {*!: }
+non-call constraints: 134/ call constraints: 0
+  summary constraints for method public void process{Bob: }(javacard.framework.APDU{[_: _; _!: _]}) : {*!: }
+  -->{pc56} == {Bob: } in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:134,11-23
+  -->{pc57} == {_: _; _!: _; pc56} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+  -->{receiver} == {_: _; _!: _; pc56} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+  -->{array_base@Wallet.java:147,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:147,4-8} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+  -->{pc57} <= {buffer} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+  -->{pc58} == {pc56; array_base@Wallet.java:147,4-8; buffer} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:149,9-150:49
+  -->{pc59} == {pc58; array_base@Wallet.java:147,4-8; buffer; pc56} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:149,4-151:13
+  -->{pc60} == {pc58; array_base@Wallet.java:147,4-8; buffer; pc56} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:134,43-171:2
+  -->{pc61} == {inst(Wallet_CLA); pc60; array_base@Wallet.java:147,4-8; buffer} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:155,4-157:31
+  -->{arg1label} == {pc61} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:156,7-157:30
+  -->{pc62} == {array_base@Wallet.java:147,4-8; pc60; buffer} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:158,4-168:51
+  -->{pc25} == {caller_pc@getBalance:Wallet.java:257,10-25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,10-25
+  -->{pc26} == {apdu@getBalance:Wallet.java:159,26-42; pc25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+  -->{receiver} == {apdu@getBalance:Wallet.java:159,26-42; pc25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+  -->{array_base@Wallet.java:259,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+  -->{pc26} <= {buffer} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+  -->{pc27} == {apdu@getBalance:Wallet.java:159,26-42; pc25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:265,15-33
+  -->{receiver} == {apdu@getBalance:Wallet.java:159,26-42; pc25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:265,15-33
+  -->{pc27} <= {le} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:265,15-33
+  -->{pc28} == {pc27} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,37-284:3
+  -->{pc29} == {pc28; le} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:267,4-269:49
+  -->{arg1label} == {pc29} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:268,7-269:48
+  -->{pc30} == {apdu@getBalance:Wallet.java:159,26-42; pc28} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:273,4-35
+  -->{receiver} == {apdu@getBalance:Wallet.java:159,26-42; pc28} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:273,4-35
+  -->{arg1label} == {pc30} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:273,4-35
+  -->{pc31} == {pc30} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,37-284:3
+  -->{pc31; inst(balance); this} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:277,4-10
+  -->{caller_pc@getBalance:Wallet.java:257,10-25} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:277,4-10
+  -->{pc31; inst(balance); this} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:278,4-10
+  -->{caller_pc@getBalance:Wallet.java:257,10-25} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:278,4-10
+  -->{pc32} == {apdu@getBalance:Wallet.java:159,26-42; pc31} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,4-38
+  -->{pc32} <= {Bob: } in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,19-27
+  -->{receiver} == {apdu@getBalance:Wallet.java:159,26-42; pc31} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,4-38
+  -->{arg1label} == {pc32} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,4-38
+  -->{arg2label} == {pc32} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,4-38
+  -->{pc33} == {pc32} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,37-284:3
+  -->{pc32} <= {caller_pc@getBalance:Wallet.java:257,10-25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,10-25
+  -->{_: _; _!: _; pc62} <= {apdu@getBalance:Wallet.java:159,26-42} in environment []@Wallet.java:257,26-35
+  -->{pc62} <= {caller_pc@getBalance:Wallet.java:257,10-25} in environment []@Wallet.java:257,10-25
+  -->{receiver} == {this} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:159,26-42
+  -->{arg1label} == {_: _; _!: _; pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:159,26-42
+  -->{pc34} == {caller_pc@debit:Wallet.java:220,10-20} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:220,10-20
+  -->{pc35} == {Alice: ; _!: _; this; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:223,11-28
+  -->{receiver} == {Alice: ; _!: _; this; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:223,11-28
+  -->{pc36} == {pc35} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:223,4-225:31
+  -->{arg1label} == {inst(SW_PIN_VERIFICATION_REQUIRED); pc36} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:224,7-225:30
+  -->{pc37} == {apdu@debit:Wallet.java:161,26-37; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+  -->{receiver} == {apdu@debit:Wallet.java:161,26-37; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+  -->{array_base@Wallet.java:227,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:227,4-8} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+  -->{pc37} <= {buffer} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+  -->{array_base@Wallet.java:227,4-8; pc34; buffer} <= {numBytes} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:230,12-25
+  -->{pc38} == {apdu@debit:Wallet.java:161,26-37; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:233,19-47
+  -->{receiver} == {apdu@debit:Wallet.java:161,26-37; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:233,19-47
+  -->{pc39} == {pc38} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:233,12-47
+  -->{pc38} <= {byteRead} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:233,12-47
+  -->{pc40} == {pc34; numBytes} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:235,11-44
+  -->{pc41} == {pc40; byteRead; pc34; numBytes} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:235,4-237:50
+  -->{arg1label} == {pc41} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:236,7-237:49
+  -->{array_base@Wallet.java:227,4-8; pc34; buffer} <= {debitAmount} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:241,21-27
+  -->{pc42} == {inst(MAX_TRANSACTION_AMOUNT); pc34; debitAmount} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:244,11-245:30
+  -->{pc43} == {pc42; debitAmount; inst(MAX_TRANSACTION_AMOUNT); pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:244,4-247:51
+  -->{arg1label} == {inst(SW_INVALID_TRANSACTION_AMOUNT); pc43} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:246,7-247:50
+  -->{pc44} == {pc34; debitAmount; inst(balance); this} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:250,4-251:51
+  -->{arg1label} == {inst(SW_NEGATIVE_BALANCE); pc44} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:251,9-50
+  -->{debitAmount; pc34; inst(balance); this} <= {inst(balance)} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:253,4-11
+  -->{caller_pc@debit:Wallet.java:220,10-20} <= {inst(balance)} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:253,4-11
+  -->{pc34} <= {caller_pc@debit:Wallet.java:220,10-20} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:220,10-20
+  -->{_: _; _!: _; pc62} <= {apdu@debit:Wallet.java:161,26-37} in environment []@Wallet.java:220,21-30
+  -->{pc62} <= {caller_pc@debit:Wallet.java:220,10-20} in environment []@Wallet.java:220,10-20
+  -->{receiver} == {this} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:161,26-37
+  -->{arg1label} == {_: _; _!: _; pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:161,26-37
+  -->{pc45} == {caller_pc@credit:Wallet.java:173,9-20} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:173,9-20
+  -->{pc46} == {Alice: ; _!: _; this; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:176,10-27
+  -->{receiver} == {Alice: ; _!: _; this; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:176,10-27
+  -->{pc47} == {pc46} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:176,3-178:38
+  -->{arg1label} == {inst(SW_PIN_VERIFICATION_REQUIRED); pc47} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:177,1-178:37
+  -->{pc48} == {apdu@credit:Wallet.java:163,26-38; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+  -->{receiver} == {apdu@credit:Wallet.java:163,26-38; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+  -->{array_base@Wallet.java:180,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:180,4-8} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+  -->{pc48} <= {buffer} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+  -->{array_base@Wallet.java:180,4-8; pc45; buffer} <= {numBytes} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:184,20-26
+  -->{pc49} == {apdu@credit:Wallet.java:163,26-38; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:192,21-49
+  -->{receiver} == {apdu@credit:Wallet.java:163,26-38; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:192,21-49
+  -->{pc50} == {pc49} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:192,14-49
+  -->{pc49} <= {byteRead} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:192,14-49
+  -->{pc51} == {pc45; numBytes} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:196,11-44
+  -->{pc52} == {pc51; byteRead; pc45; numBytes} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:196,4-197:51
+  -->{arg1label} == {pc52} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:197,5-50
+  -->{array_base@Wallet.java:180,4-8; pc45; buffer} <= {creditAmount} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:201,18-24
+  -->{pc53} == {inst(MAX_TRANSACTION_AMOUNT); pc45; creditAmount} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:204,11-205:30
+  -->{pc54} == {pc53; creditAmount; inst(MAX_TRANSACTION_AMOUNT); pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:204,4-207:51
+  -->{arg1label} == {inst(SW_INVALID_TRANSACTION_AMOUNT); pc54} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:206,8-207:50
+  -->{pc55} == {inst(MAX_BALANCE); pc45; creditAmount; inst(balance); this} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:210,4-212:49
+  -->{arg1label} == {inst(SW_EXCEED_MAXIMUM_BALANCE); pc55} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:211,7-212:48
+  -->{creditAmount; pc45; inst(balance); this} <= {inst(balance)} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:216,4-11
+  -->{caller_pc@credit:Wallet.java:173,9-20} <= {inst(balance)} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:216,4-11
+  -->{pc45} <= {caller_pc@credit:Wallet.java:173,9-20} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:173,9-20
+  -->{_: _; _!: _; pc62} <= {apdu@credit:Wallet.java:163,26-38} in environment []@Wallet.java:173,21-30
+  -->{pc62} <= {caller_pc@credit:Wallet.java:173,9-20} in environment []@Wallet.java:173,9-20
+  -->{receiver} == {this} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:163,26-38
+  -->{arg1label} == {_: _; _!: _; pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:163,26-38
+  -->{pc17} == {caller_pc@verify:Wallet.java:286,10-21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:286,10-21
+  -->{pc18} == {apdu@verify:Wallet.java:165,26-38; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+  -->{receiver} == {apdu@verify:Wallet.java:165,26-38; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+  -->{array_base@Wallet.java:288,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:288,4-8} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+  -->{pc18} <= {buffer} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+  -->{pc19} == {apdu@verify:Wallet.java:165,26-38; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:291,19-47
+  -->{receiver} == {apdu@verify:Wallet.java:165,26-38; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:291,19-47
+  -->{pc20} == {pc19} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:291,12-47
+  -->{pc19} <= {byteRead} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:291,12-47
+  -->{pc21} == {Alice: ; _!: _; this; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+  -->{array_base@sig-src/javacard/framework/OwnerPIN.jif:21,29-33} <= {array_base@Wallet.java:288,4-8} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,17-23
+  -->{array_base@Wallet.java:288,4-8} <= {array_base@sig-src/javacard/framework/OwnerPIN.jif:21,29-33} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,17-23
+  -->{receiver} == {Alice: ; _!: _; this; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+  -->{arg1label} == {buffer; pc21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+  -->{arg2label} == {pc21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+  -->{arg3label} == {byteRead; pc21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+  -->{pc22} == {pc21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:25
+  -->{pc23} == {pc22; buffer; pc21; byteRead} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,2-300:47
+  -->{arg1label} == {inst(SW_VERIFICATION_FAILED); pc23} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:299,5-300:46
+  -->{pc24} == {pc22; buffer; pc21; byteRead; pc23} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:286,33-302:3
+  -->{pc22; buffer; pc21; byteRead; pc23} <= {caller_pc@verify:Wallet.java:286,10-21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:286,10-21
+  -->{_: _; _!: _; pc62} <= {apdu@verify:Wallet.java:165,26-38} in environment []@Wallet.java:286,22-31
+  -->{pc62} <= {caller_pc@verify:Wallet.java:286,10-21} in environment []@Wallet.java:286,10-21
+  -->{receiver} == {this} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:165,26-38
+  -->{arg1label} == {_: _; _!: _; pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:165,26-38
+  -->{arg1label} == {pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:167,21-168:50
+  -->{pc62} <= {switch} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:158,4-168:51
+  -->{pc67} == {switch} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:134,43-171:2
+  summary constraints for method public void process{Bob: }(javacard.framework.APDU{[_: _; _!: _]}) : {*!: }
+  -->{pc56} == {Bob: } in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:134,11-23
+  -->{pc57} == {_: _; _!: _; pc56} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+  -->{receiver} == {_: _; _!: _; pc56} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+  -->{array_base@Wallet.java:147,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:147,4-8} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+  -->{pc57} <= {buffer} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+  -->{pc58} == {pc56; array_base@Wallet.java:147,4-8; buffer} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:149,9-150:49
+  -->{pc59} == {pc58; array_base@Wallet.java:147,4-8; buffer; pc56} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:149,4-151:13
+  -->{pc60} == {pc58; array_base@Wallet.java:147,4-8; buffer; pc56} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:134,43-171:2
+  -->{pc61} == {inst(Wallet_CLA); pc60; array_base@Wallet.java:147,4-8; buffer} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:155,4-157:31
+  -->{arg1label} == {pc61} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:156,7-157:30
+  -->{pc62} == {array_base@Wallet.java:147,4-8; pc60; buffer} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:158,4-168:51
+  -->{pc25} == {caller_pc@getBalance:Wallet.java:257,10-25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,10-25
+  -->{pc26} == {apdu@getBalance:Wallet.java:159,26-42; pc25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+  -->{receiver} == {apdu@getBalance:Wallet.java:159,26-42; pc25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+  -->{array_base@Wallet.java:259,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+  -->{pc26} <= {buffer} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+  -->{pc27} == {apdu@getBalance:Wallet.java:159,26-42; pc25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:265,15-33
+  -->{receiver} == {apdu@getBalance:Wallet.java:159,26-42; pc25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:265,15-33
+  -->{pc27} <= {le} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:265,15-33
+  -->{pc28} == {pc27} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,37-284:3
+  -->{pc29} == {pc28; le} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:267,4-269:49
+  -->{arg1label} == {pc29} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:268,7-269:48
+  -->{pc30} == {apdu@getBalance:Wallet.java:159,26-42; pc28} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:273,4-35
+  -->{receiver} == {apdu@getBalance:Wallet.java:159,26-42; pc28} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:273,4-35
+  -->{arg1label} == {pc30} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:273,4-35
+  -->{pc31} == {pc30} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,37-284:3
+  -->{pc31; inst(balance); this} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:277,4-10
+  -->{caller_pc@getBalance:Wallet.java:257,10-25} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:277,4-10
+  -->{pc31; inst(balance); this} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:278,4-10
+  -->{caller_pc@getBalance:Wallet.java:257,10-25} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:278,4-10
+  -->{pc32} == {apdu@getBalance:Wallet.java:159,26-42; pc31} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,4-38
+  -->{pc32} <= {Bob: } in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,19-27
+  -->{receiver} == {apdu@getBalance:Wallet.java:159,26-42; pc31} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,4-38
+  -->{arg1label} == {pc32} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,4-38
+  -->{arg2label} == {pc32} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,4-38
+  -->{pc33} == {pc32} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,37-284:3
+  -->{pc32} <= {caller_pc@getBalance:Wallet.java:257,10-25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,10-25
+  -->{_: _; _!: _; pc62} <= {apdu@getBalance:Wallet.java:159,26-42} in environment []@Wallet.java:257,26-35
+  -->{pc62} <= {caller_pc@getBalance:Wallet.java:257,10-25} in environment []@Wallet.java:257,10-25
+  -->{receiver} == {this} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:159,26-42
+  -->{arg1label} == {_: _; _!: _; pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:159,26-42
+  -->{pc34} == {caller_pc@debit:Wallet.java:220,10-20} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:220,10-20
+  -->{pc35} == {Alice: ; _!: _; this; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:223,11-28
+  -->{receiver} == {Alice: ; _!: _; this; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:223,11-28
+  -->{pc36} == {pc35} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:223,4-225:31
+  -->{arg1label} == {inst(SW_PIN_VERIFICATION_REQUIRED); pc36} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:224,7-225:30
+  -->{pc37} == {apdu@debit:Wallet.java:161,26-37; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+  -->{receiver} == {apdu@debit:Wallet.java:161,26-37; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+  -->{array_base@Wallet.java:227,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:227,4-8} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+  -->{pc37} <= {buffer} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+  -->{array_base@Wallet.java:227,4-8; pc34; buffer} <= {numBytes} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:230,12-25
+  -->{pc38} == {apdu@debit:Wallet.java:161,26-37; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:233,19-47
+  -->{receiver} == {apdu@debit:Wallet.java:161,26-37; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:233,19-47
+  -->{pc39} == {pc38} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:233,12-47
+  -->{pc38} <= {byteRead} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:233,12-47
+  -->{pc40} == {pc34; numBytes} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:235,11-44
+  -->{pc41} == {pc40; byteRead; pc34; numBytes} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:235,4-237:50
+  -->{arg1label} == {pc41} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:236,7-237:49
+  -->{array_base@Wallet.java:227,4-8; pc34; buffer} <= {debitAmount} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:241,21-27
+  -->{pc42} == {inst(MAX_TRANSACTION_AMOUNT); pc34; debitAmount} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:244,11-245:30
+  -->{pc43} == {pc42; debitAmount; inst(MAX_TRANSACTION_AMOUNT); pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:244,4-247:51
+  -->{arg1label} == {inst(SW_INVALID_TRANSACTION_AMOUNT); pc43} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:246,7-247:50
+  -->{pc44} == {pc34; debitAmount; inst(balance); this} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:250,4-251:51
+  -->{arg1label} == {inst(SW_NEGATIVE_BALANCE); pc44} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:251,9-50
+  -->{debitAmount; pc34; inst(balance); this} <= {inst(balance)} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:253,4-11
+  -->{caller_pc@debit:Wallet.java:220,10-20} <= {inst(balance)} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:253,4-11
+  -->{pc34} <= {caller_pc@debit:Wallet.java:220,10-20} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:220,10-20
+  -->{_: _; _!: _; pc62} <= {apdu@debit:Wallet.java:161,26-37} in environment []@Wallet.java:220,21-30
+  -->{pc62} <= {caller_pc@debit:Wallet.java:220,10-20} in environment []@Wallet.java:220,10-20
+  -->{receiver} == {this} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:161,26-37
+  -->{arg1label} == {_: _; _!: _; pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:161,26-37
+  -->{pc45} == {caller_pc@credit:Wallet.java:173,9-20} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:173,9-20
+  -->{pc46} == {Alice: ; _!: _; this; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:176,10-27
+  -->{receiver} == {Alice: ; _!: _; this; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:176,10-27
+  -->{pc47} == {pc46} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:176,3-178:38
+  -->{arg1label} == {inst(SW_PIN_VERIFICATION_REQUIRED); pc47} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:177,1-178:37
+  -->{pc48} == {apdu@credit:Wallet.java:163,26-38; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+  -->{receiver} == {apdu@credit:Wallet.java:163,26-38; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+  -->{array_base@Wallet.java:180,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:180,4-8} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+  -->{pc48} <= {buffer} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+  -->{array_base@Wallet.java:180,4-8; pc45; buffer} <= {numBytes} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:184,20-26
+  -->{pc49} == {apdu@credit:Wallet.java:163,26-38; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:192,21-49
+  -->{receiver} == {apdu@credit:Wallet.java:163,26-38; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:192,21-49
+  -->{pc50} == {pc49} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:192,14-49
+  -->{pc49} <= {byteRead} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:192,14-49
+  -->{pc51} == {pc45; numBytes} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:196,11-44
+  -->{pc52} == {pc51; byteRead; pc45; numBytes} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:196,4-197:51
+  -->{arg1label} == {pc52} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:197,5-50
+  -->{array_base@Wallet.java:180,4-8; pc45; buffer} <= {creditAmount} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:201,18-24
+  -->{pc53} == {inst(MAX_TRANSACTION_AMOUNT); pc45; creditAmount} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:204,11-205:30
+  -->{pc54} == {pc53; creditAmount; inst(MAX_TRANSACTION_AMOUNT); pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:204,4-207:51
+  -->{arg1label} == {inst(SW_INVALID_TRANSACTION_AMOUNT); pc54} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:206,8-207:50
+  -->{pc55} == {inst(MAX_BALANCE); pc45; creditAmount; inst(balance); this} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:210,4-212:49
+  -->{arg1label} == {inst(SW_EXCEED_MAXIMUM_BALANCE); pc55} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:211,7-212:48
+  -->{creditAmount; pc45; inst(balance); this} <= {inst(balance)} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:216,4-11
+  -->{caller_pc@credit:Wallet.java:173,9-20} <= {inst(balance)} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:216,4-11
+  -->{pc45} <= {caller_pc@credit:Wallet.java:173,9-20} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:173,9-20
+  -->{_: _; _!: _; pc62} <= {apdu@credit:Wallet.java:163,26-38} in environment []@Wallet.java:173,21-30
+  -->{pc62} <= {caller_pc@credit:Wallet.java:173,9-20} in environment []@Wallet.java:173,9-20
+  -->{receiver} == {this} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:163,26-38
+  -->{arg1label} == {_: _; _!: _; pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:163,26-38
+  -->{pc17} == {caller_pc@verify:Wallet.java:286,10-21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:286,10-21
+  -->{pc18} == {apdu@verify:Wallet.java:165,26-38; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+  -->{receiver} == {apdu@verify:Wallet.java:165,26-38; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+  -->{array_base@Wallet.java:288,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:288,4-8} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+  -->{pc18} <= {buffer} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+  -->{pc19} == {apdu@verify:Wallet.java:165,26-38; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:291,19-47
+  -->{receiver} == {apdu@verify:Wallet.java:165,26-38; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:291,19-47
+  -->{pc20} == {pc19} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:291,12-47
+  -->{pc19} <= {byteRead} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:291,12-47
+  -->{pc21} == {Alice: ; _!: _; this; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+  -->{array_base@sig-src/javacard/framework/OwnerPIN.jif:21,29-33} <= {array_base@Wallet.java:288,4-8} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,17-23
+  -->{array_base@Wallet.java:288,4-8} <= {array_base@sig-src/javacard/framework/OwnerPIN.jif:21,29-33} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,17-23
+  -->{receiver} == {Alice: ; _!: _; this; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+  -->{arg1label} == {buffer; pc21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+  -->{arg2label} == {pc21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+  -->{arg3label} == {byteRead; pc21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+  -->{pc22} == {pc21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:25
+  -->{pc23} == {pc22; buffer; pc21; byteRead} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,2-300:47
+  -->{arg1label} == {inst(SW_VERIFICATION_FAILED); pc23} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:299,5-300:46
+  -->{pc24} == {pc22; buffer; pc21; byteRead; pc23} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:286,33-302:3
+  -->{pc22; buffer; pc21; byteRead; pc23} <= {caller_pc@verify:Wallet.java:286,10-21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:286,10-21
+  -->{_: _; _!: _; pc62} <= {apdu@verify:Wallet.java:165,26-38} in environment []@Wallet.java:286,22-31
+  -->{pc62} <= {caller_pc@verify:Wallet.java:286,10-21} in environment []@Wallet.java:286,10-21
+  -->{receiver} == {this} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:165,26-38
+  -->{arg1label} == {_: _; _!: _; pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:165,26-38
+  -->{arg1label} == {pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:167,21-168:50
+  -->{pc62} <= {switch} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:158,4-168:51
+  -->{pc67} == {switch} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:134,43-171:2
+  summary constraints for method public static void install{sum(caller_pc@install:Wallet.java:114,16-28)}(byte{sum(array_base@Wallet.java:114,29-33)}[]{[sum(bArray)]}, short{[sum(bOffset)]}, byte{[sum(bLength)]}) : {*!: }
+  -->{pc16} == {sum(caller_pc@install:Wallet.java:114,16-28)} in environment []@Wallet.java:114,16-28
+  -->{pc9} == {caller_pc@Wallet:Wallet.java:100,10-59} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{pc10} == {*!: } in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{pc11} == {pc10; caller_pc@Wallet:Wallet.java:100,10-59} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{pc12} == {pc10} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{pc12; newOwnerPIN; newWallet} <= {Alice: } in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:105,4-7
+  -->{caller_pc@Wallet:Wallet.java:100,10-59} <= {Alice: } in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:105,4-7
+  -->{pc13} == {Alice: ; _!: _; newWallet; pc12} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+  -->{array_base@sig-src/javacard/framework/OwnerPIN.jif:23,27-31} <= {array_base@Wallet.java:100,18-22} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,15-21
+  -->{array_base@Wallet.java:100,18-22} <= {array_base@sig-src/javacard/framework/OwnerPIN.jif:23,27-31} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,15-21
+  -->{receiver} == {Alice: ; _!: _; newWallet; pc12} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+  -->{arg1label} == {bArray@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40; pc13} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+  -->{arg2label} == {bOffset@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40; pc13} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+  -->{arg3label} == {bLength@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40; pc13} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+  -->{pc14} == {pc13} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{receiver} == {newWallet} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:110,4-14
+  -->{pc15} == {pc14; caller_pc@Wallet:Wallet.java:100,10-59} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{pc14} <= {caller_pc@Wallet:Wallet.java:100,10-59} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+  -->{sum(bArray); pc16} <= {bArray@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40} in environment []@Wallet.java:100,18-31
+  -->{sum(array_base@Wallet.java:114,29-33)} <= {array_base@Wallet.java:100,18-22} in environment []@Wallet.java:100,18-22
+  -->{sum(bOffset); pc16} <= {bOffset@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40} in environment []@Wallet.java:100,32-45
+  -->{sum(bLength); pc16} <= {bLength@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40} in environment []@Wallet.java:100,46-58
+  -->{pc16} <= {caller_pc@Wallet:Wallet.java:100,10-59} in environment []@Wallet.java:100,10-59
+  summary constraints for method public void deselect{sum(caller_pc@deselect:Wallet.java:128,9-22)}() : {*!: }
+  -->{pc7} == {sum(caller_pc@deselect:Wallet.java:128,9-22)} in environment [{this} <= {[sum(caller_pc@deselect:Wallet.java:128,9-22)]}]@Wallet.java:128,9-22
+  -->{pc8} == {Alice: ; _!: _; this; pc7} in environment [{this} <= {[sum(caller_pc@deselect:Wallet.java:128,9-22)]}]@Wallet.java:131,4-15
+  -->{receiver} == {Alice: ; _!: _; this; pc7} in environment [{this} <= {[sum(caller_pc@deselect:Wallet.java:128,9-22)]}]@Wallet.java:131,4-15
+  summary constraints for method private void credit{sum(caller_pc@credit:Wallet.java:173,9-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+  -->{pc45} == {sum(caller_pc@credit:Wallet.java:173,9-20)} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:173,9-20
+  -->{pc46} == {Alice: ; _!: _; this; pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:176,10-27
+  -->{receiver} == {Alice: ; _!: _; this; pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:176,10-27
+  -->{pc47} == {pc46} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:176,3-178:38
+  -->{arg1label} == {inst(SW_PIN_VERIFICATION_REQUIRED); pc47} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:177,1-178:37
+  -->{pc48} == {sum(apdu); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+  -->{receiver} == {sum(apdu); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+  -->{array_base@Wallet.java:180,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:180,4-8} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+  -->{pc48} <= {buffer} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+  -->{array_base@Wallet.java:180,4-8; pc45; buffer} <= {numBytes} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:184,20-26
+  -->{pc49} == {sum(apdu); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:192,21-49
+  -->{receiver} == {sum(apdu); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:192,21-49
+  -->{pc50} == {pc49} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:192,14-49
+  -->{pc49} <= {byteRead} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:192,14-49
+  -->{pc51} == {pc45; numBytes} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:196,11-44
+  -->{pc52} == {pc51; byteRead; pc45; numBytes} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:196,4-197:51
+  -->{arg1label} == {pc52} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:197,5-50
+  -->{array_base@Wallet.java:180,4-8; pc45; buffer} <= {creditAmount} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:201,18-24
+  -->{pc53} == {inst(MAX_TRANSACTION_AMOUNT); pc45; creditAmount} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:204,11-205:30
+  -->{pc54} == {pc53; creditAmount; inst(MAX_TRANSACTION_AMOUNT); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:204,4-207:51
+  -->{arg1label} == {inst(SW_INVALID_TRANSACTION_AMOUNT); pc54} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:206,8-207:50
+  -->{pc55} == {inst(MAX_BALANCE); pc45; creditAmount; inst(balance); this} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:210,4-212:49
+  -->{arg1label} == {inst(SW_EXCEED_MAXIMUM_BALANCE); pc55} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:211,7-212:48
+  -->{creditAmount; pc45; inst(balance); this} <= {inst(balance)} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:216,4-11
+  -->{sum(caller_pc@credit:Wallet.java:173,9-20)} <= {inst(balance)} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:216,4-11
+  -->{pc45} <= {sum(caller_pc@credit:Wallet.java:173,9-20)} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:173,9-20
+  summary constraints for constructor private private com.sun.javacard.samples.wallet.Wallet(byte{sum(array_base@Wallet.java:100,18-22)}[], short, byte)
+  -->{pc9} == {sum(caller_pc@Wallet:Wallet.java:100,10-59)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  -->{pc10} == {*!: } in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  -->{pc11} == {pc10; sum(caller_pc@Wallet:Wallet.java:100,10-59)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  -->{pc12} == {pc10} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  -->{pc12; newOwnerPIN; this} <= {Alice: } in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:105,4-7
+  -->{sum(caller_pc@Wallet:Wallet.java:100,10-59)} <= {Alice: } in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:105,4-7
+  -->{pc13} == {Alice: ; _!: _; this; pc12} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+  -->{array_base@sig-src/javacard/framework/OwnerPIN.jif:23,27-31} <= {sum(array_base@Wallet.java:100,18-22)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,15-21
+  -->{sum(array_base@Wallet.java:100,18-22)} <= {array_base@sig-src/javacard/framework/OwnerPIN.jif:23,27-31} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,15-21
+  -->{receiver} == {Alice: ; _!: _; this; pc12} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+  -->{arg1label} == {sum(bArray); pc13} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+  -->{arg2label} == {sum(bOffset); pc13} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+  -->{arg3label} == {sum(bLength); pc13} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+  -->{pc14} == {pc13} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  -->{receiver} == {this} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:110,4-14
+  -->{pc15} == {pc14; sum(caller_pc@Wallet:Wallet.java:100,10-59)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  -->{pc14} <= {sum(caller_pc@Wallet:Wallet.java:100,10-59)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+  summary constraints for method private void debit{sum(caller_pc@debit:Wallet.java:220,10-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+  -->{pc34} == {sum(caller_pc@debit:Wallet.java:220,10-20)} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:220,10-20
+  -->{pc35} == {Alice: ; _!: _; this; pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:223,11-28
+  -->{receiver} == {Alice: ; _!: _; this; pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:223,11-28
+  -->{pc36} == {pc35} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:223,4-225:31
+  -->{arg1label} == {inst(SW_PIN_VERIFICATION_REQUIRED); pc36} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:224,7-225:30
+  -->{pc37} == {sum(apdu); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+  -->{receiver} == {sum(apdu); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+  -->{array_base@Wallet.java:227,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:227,4-8} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+  -->{pc37} <= {buffer} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+  -->{array_base@Wallet.java:227,4-8; pc34; buffer} <= {numBytes} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:230,12-25
+  -->{pc38} == {sum(apdu); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:233,19-47
+  -->{receiver} == {sum(apdu); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:233,19-47
+  -->{pc39} == {pc38} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:233,12-47
+  -->{pc38} <= {byteRead} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:233,12-47
+  -->{pc40} == {pc34; numBytes} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:235,11-44
+  -->{pc41} == {pc40; byteRead; pc34; numBytes} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:235,4-237:50
+  -->{arg1label} == {pc41} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:236,7-237:49
+  -->{array_base@Wallet.java:227,4-8; pc34; buffer} <= {debitAmount} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:241,21-27
+  -->{pc42} == {inst(MAX_TRANSACTION_AMOUNT); pc34; debitAmount} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:244,11-245:30
+  -->{pc43} == {pc42; debitAmount; inst(MAX_TRANSACTION_AMOUNT); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:244,4-247:51
+  -->{arg1label} == {inst(SW_INVALID_TRANSACTION_AMOUNT); pc43} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:246,7-247:50
+  -->{pc44} == {pc34; debitAmount; inst(balance); this} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:250,4-251:51
+  -->{arg1label} == {inst(SW_NEGATIVE_BALANCE); pc44} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:251,9-50
+  -->{debitAmount; pc34; inst(balance); this} <= {inst(balance)} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:253,4-11
+  -->{sum(caller_pc@debit:Wallet.java:220,10-20)} <= {inst(balance)} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:253,4-11
+  -->{pc34} <= {sum(caller_pc@debit:Wallet.java:220,10-20)} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:220,10-20
+  summary constraints for method private void getBalance{sum(caller_pc@getBalance:Wallet.java:257,10-25)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+  -->{pc25} == {sum(caller_pc@getBalance:Wallet.java:257,10-25)} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,10-25
+  -->{pc26} == {sum(apdu); pc25} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+  -->{receiver} == {sum(apdu); pc25} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+  -->{array_base@Wallet.java:259,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+  -->{pc26} <= {buffer} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+  -->{pc27} == {sum(apdu); pc25} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:265,15-33
+  -->{receiver} == {sum(apdu); pc25} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:265,15-33
+  -->{pc27} <= {le} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:265,15-33
+  -->{pc28} == {pc27} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,37-284:3
+  -->{pc29} == {pc28; le} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:267,4-269:49
+  -->{arg1label} == {pc29} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:268,7-269:48
+  -->{pc30} == {sum(apdu); pc28} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:273,4-35
+  -->{receiver} == {sum(apdu); pc28} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:273,4-35
+  -->{arg1label} == {pc30} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:273,4-35
+  -->{pc31} == {pc30} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,37-284:3
+  -->{pc31; inst(balance); this} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:277,4-10
+  -->{sum(caller_pc@getBalance:Wallet.java:257,10-25)} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:277,4-10
+  -->{pc31; inst(balance); this} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:278,4-10
+  -->{sum(caller_pc@getBalance:Wallet.java:257,10-25)} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:278,4-10
+  -->{pc32} == {sum(apdu); pc31} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,4-38
+  -->{pc32} <= {Bob: } in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,19-27
+  -->{receiver} == {sum(apdu); pc31} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,4-38
+  -->{arg1label} == {pc32} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,4-38
+  -->{arg2label} == {pc32} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,4-38
+  -->{pc33} == {pc32} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,37-284:3
+  -->{pc32} <= {sum(caller_pc@getBalance:Wallet.java:257,10-25)} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,10-25
+  summary constraints for method public boolean{select_rv} select{sum(caller_pc@select:Wallet.java:118,9-23)}() : {*!: }
+  -->{pc1} == {sum(caller_pc@select:Wallet.java:118,9-23)} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:118,9-23
+  -->{pc2} == {Alice: ; _!: _; this; pc1} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:122,9-32
+  -->{receiver} == {Alice: ; _!: _; this; pc1} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:122,9-32
+  -->{pc3} == {pc2} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:122,9-37
+  -->{pc4} == {pc3; pc2} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:122,4-123:20
+  -->{pc4} <= {select_rv; sum(caller_pc@select:Wallet.java:118,9-23)} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:123,7-20
+  -->{pc5} == {pc3; pc2} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:118,26-127:3
+  -->{pc5} <= {select_rv; sum(caller_pc@select:Wallet.java:118,9-23)} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:125,4-16
+  -->{pc1} <= {sum(caller_pc@select:Wallet.java:118,9-23)} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:118,9-23
+  summary constraints for method private void verify{sum(caller_pc@verify:Wallet.java:286,10-21)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+  -->{pc17} == {sum(caller_pc@verify:Wallet.java:286,10-21)} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:286,10-21
+  -->{pc18} == {sum(apdu); pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+  -->{receiver} == {sum(apdu); pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+  -->{array_base@Wallet.java:288,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+  -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:288,4-8} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+  -->{pc18} <= {buffer} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+  -->{pc19} == {sum(apdu); pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:291,19-47
+  -->{receiver} == {sum(apdu); pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:291,19-47
+  -->{pc20} == {pc19} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:291,12-47
+  -->{pc19} <= {byteRead} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:291,12-47
+  -->{pc21} == {Alice: ; _!: _; this; pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+  -->{array_base@sig-src/javacard/framework/OwnerPIN.jif:21,29-33} <= {array_base@Wallet.java:288,4-8} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,17-23
+  -->{array_base@Wallet.java:288,4-8} <= {array_base@sig-src/javacard/framework/OwnerPIN.jif:21,29-33} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,17-23
+  -->{receiver} == {Alice: ; _!: _; this; pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+  -->{arg1label} == {buffer; pc21} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+  -->{arg2label} == {pc21} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+  -->{arg3label} == {byteRead; pc21} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+  -->{pc22} == {pc21} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:25
+  -->{pc23} == {pc22; buffer; pc21; byteRead} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,2-300:47
+  -->{arg1label} == {inst(SW_VERIFICATION_FAILED); pc23} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:299,5-300:46
+  -->{pc24} == {pc22; buffer; pc21; byteRead; pc23} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:286,33-302:3
+  -->{pc22; buffer; pc21; byteRead; pc23} <= {sum(caller_pc@verify:Wallet.java:286,10-21)} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:286,10-21
+   summary constraints for method public void process{Bob: }(javacard.framework.APDU{[_: _; _!: _]}) : {*!: }
+   -->{pc56} == {Bob: } in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:134,11-23
+   -->{pc57} == {_: _; _!: _; pc56} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+   -->{receiver} == {_: _; _!: _; pc56} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+   -->{array_base@Wallet.java:147,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+   -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:147,4-8} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+   -->{pc57} <= {buffer} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:147,20-36
+   -->{pc58} == {pc56; array_base@Wallet.java:147,4-8; buffer} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:149,9-150:49
+   -->{pc59} == {pc58; array_base@Wallet.java:147,4-8; buffer; pc56} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:149,4-151:13
+   -->{pc60} == {pc58; array_base@Wallet.java:147,4-8; buffer; pc56} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:134,43-171:2
+   -->{pc61} == {inst(Wallet_CLA); pc60; array_base@Wallet.java:147,4-8; buffer} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:155,4-157:31
+   -->{arg1label} == {pc61} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:156,7-157:30
+   -->{pc62} == {array_base@Wallet.java:147,4-8; pc60; buffer} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:158,4-168:51
+   -->{pc25} == {caller_pc@getBalance:Wallet.java:257,10-25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,10-25
+   -->{pc26} == {apdu@getBalance:Wallet.java:159,26-42; pc25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+   -->{receiver} == {apdu@getBalance:Wallet.java:159,26-42; pc25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+   -->{array_base@Wallet.java:259,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+   -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+   -->{pc26} <= {buffer} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:259,20-36
+   -->{pc27} == {apdu@getBalance:Wallet.java:159,26-42; pc25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:265,15-33
+   -->{receiver} == {apdu@getBalance:Wallet.java:159,26-42; pc25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:265,15-33
+   -->{pc27} <= {le} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:265,15-33
+   -->{pc28} == {pc27} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,37-284:3
+   -->{pc29} == {pc28; le} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:267,4-269:49
+   -->{arg1label} == {pc29} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:268,7-269:48
+   -->{pc30} == {apdu@getBalance:Wallet.java:159,26-42; pc28} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:273,4-35
+   -->{receiver} == {apdu@getBalance:Wallet.java:159,26-42; pc28} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:273,4-35
+   -->{arg1label} == {pc30} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:273,4-35
+   -->{pc31} == {pc30} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,37-284:3
+   -->{pc31; inst(balance); this} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:277,4-10
+   -->{caller_pc@getBalance:Wallet.java:257,10-25} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:277,4-10
+   -->{pc31; inst(balance); this} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:278,4-10
+   -->{caller_pc@getBalance:Wallet.java:257,10-25} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:278,4-10
+   -->{pc32} == {apdu@getBalance:Wallet.java:159,26-42; pc31} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,4-38
+   -->{pc32} <= {Bob: } in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,19-27
+   -->{receiver} == {apdu@getBalance:Wallet.java:159,26-42; pc31} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,4-38
+   -->{arg1label} == {pc32} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,4-38
+   -->{arg2label} == {pc32} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:282,4-38
+   -->{pc33} == {pc32} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,37-284:3
+   -->{pc32} <= {caller_pc@getBalance:Wallet.java:257,10-25} in environment [{this} <= {caller_pc@getBalance:Wallet.java:257,10-25}]@Wallet.java:257,10-25
+   -->{_: _; _!: _; pc62} <= {apdu@getBalance:Wallet.java:159,26-42} in environment []@Wallet.java:257,26-35
+   -->{pc62} <= {caller_pc@getBalance:Wallet.java:257,10-25} in environment []@Wallet.java:257,10-25
+   -->{receiver} == {this} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:159,26-42
+   -->{arg1label} == {_: _; _!: _; pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:159,26-42
+   -->{pc34} == {caller_pc@debit:Wallet.java:220,10-20} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:220,10-20
+   -->{pc35} == {Alice: ; _!: _; this; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:223,11-28
+   -->{receiver} == {Alice: ; _!: _; this; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:223,11-28
+   -->{pc36} == {pc35} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:223,4-225:31
+   -->{arg1label} == {inst(SW_PIN_VERIFICATION_REQUIRED); pc36} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:224,7-225:30
+   -->{pc37} == {apdu@debit:Wallet.java:161,26-37; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+   -->{receiver} == {apdu@debit:Wallet.java:161,26-37; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+   -->{array_base@Wallet.java:227,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+   -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:227,4-8} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+   -->{pc37} <= {buffer} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:227,20-36
+   -->{array_base@Wallet.java:227,4-8; pc34; buffer} <= {numBytes} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:230,12-25
+   -->{pc38} == {apdu@debit:Wallet.java:161,26-37; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:233,19-47
+   -->{receiver} == {apdu@debit:Wallet.java:161,26-37; pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:233,19-47
+   -->{pc39} == {pc38} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:233,12-47
+   -->{pc38} <= {byteRead} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:233,12-47
+   -->{pc40} == {pc34; numBytes} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:235,11-44
+   -->{pc41} == {pc40; byteRead; pc34; numBytes} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:235,4-237:50
+   -->{arg1label} == {pc41} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:236,7-237:49
+   -->{array_base@Wallet.java:227,4-8; pc34; buffer} <= {debitAmount} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:241,21-27
+   -->{pc42} == {inst(MAX_TRANSACTION_AMOUNT); pc34; debitAmount} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:244,11-245:30
+   -->{pc43} == {pc42; debitAmount; inst(MAX_TRANSACTION_AMOUNT); pc34} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:244,4-247:51
+   -->{arg1label} == {inst(SW_INVALID_TRANSACTION_AMOUNT); pc43} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:246,7-247:50
+   -->{pc44} == {pc34; debitAmount; inst(balance); this} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:250,4-251:51
+   -->{arg1label} == {inst(SW_NEGATIVE_BALANCE); pc44} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:251,9-50
+   -->{debitAmount; pc34; inst(balance); this} <= {inst(balance)} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:253,4-11
+   -->{caller_pc@debit:Wallet.java:220,10-20} <= {inst(balance)} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:253,4-11
+   -->{pc34} <= {caller_pc@debit:Wallet.java:220,10-20} in environment [{this} <= {caller_pc@debit:Wallet.java:220,10-20}]@Wallet.java:220,10-20
+   -->{_: _; _!: _; pc62} <= {apdu@debit:Wallet.java:161,26-37} in environment []@Wallet.java:220,21-30
+   -->{pc62} <= {caller_pc@debit:Wallet.java:220,10-20} in environment []@Wallet.java:220,10-20
+   -->{receiver} == {this} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:161,26-37
+   -->{arg1label} == {_: _; _!: _; pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:161,26-37
+   -->{pc45} == {caller_pc@credit:Wallet.java:173,9-20} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:173,9-20
+   -->{pc46} == {Alice: ; _!: _; this; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:176,10-27
+   -->{receiver} == {Alice: ; _!: _; this; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:176,10-27
+   -->{pc47} == {pc46} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:176,3-178:38
+   -->{arg1label} == {inst(SW_PIN_VERIFICATION_REQUIRED); pc47} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:177,1-178:37
+   -->{pc48} == {apdu@credit:Wallet.java:163,26-38; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+   -->{receiver} == {apdu@credit:Wallet.java:163,26-38; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+   -->{array_base@Wallet.java:180,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+   -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:180,4-8} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+   -->{pc48} <= {buffer} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:180,20-36
+   -->{array_base@Wallet.java:180,4-8; pc45; buffer} <= {numBytes} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:184,20-26
+   -->{pc49} == {apdu@credit:Wallet.java:163,26-38; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:192,21-49
+   -->{receiver} == {apdu@credit:Wallet.java:163,26-38; pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:192,21-49
+   -->{pc50} == {pc49} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:192,14-49
+   -->{pc49} <= {byteRead} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:192,14-49
+   -->{pc51} == {pc45; numBytes} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:196,11-44
+   -->{pc52} == {pc51; byteRead; pc45; numBytes} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:196,4-197:51
+   -->{arg1label} == {pc52} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:197,5-50
+   -->{array_base@Wallet.java:180,4-8; pc45; buffer} <= {creditAmount} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:201,18-24
+   -->{pc53} == {inst(MAX_TRANSACTION_AMOUNT); pc45; creditAmount} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:204,11-205:30
+   -->{pc54} == {pc53; creditAmount; inst(MAX_TRANSACTION_AMOUNT); pc45} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:204,4-207:51
+   -->{arg1label} == {inst(SW_INVALID_TRANSACTION_AMOUNT); pc54} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:206,8-207:50
+   -->{pc55} == {inst(MAX_BALANCE); pc45; creditAmount; inst(balance); this} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:210,4-212:49
+   -->{arg1label} == {inst(SW_EXCEED_MAXIMUM_BALANCE); pc55} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:211,7-212:48
+   -->{creditAmount; pc45; inst(balance); this} <= {inst(balance)} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:216,4-11
+   -->{caller_pc@credit:Wallet.java:173,9-20} <= {inst(balance)} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:216,4-11
+   -->{pc45} <= {caller_pc@credit:Wallet.java:173,9-20} in environment [{this} <= {caller_pc@credit:Wallet.java:173,9-20}]@Wallet.java:173,9-20
+   -->{_: _; _!: _; pc62} <= {apdu@credit:Wallet.java:163,26-38} in environment []@Wallet.java:173,21-30
+   -->{pc62} <= {caller_pc@credit:Wallet.java:173,9-20} in environment []@Wallet.java:173,9-20
+   -->{receiver} == {this} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:163,26-38
+   -->{arg1label} == {_: _; _!: _; pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:163,26-38
+   -->{pc17} == {caller_pc@verify:Wallet.java:286,10-21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:286,10-21
+   -->{pc18} == {apdu@verify:Wallet.java:165,26-38; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+   -->{receiver} == {apdu@verify:Wallet.java:165,26-38; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+   -->{array_base@Wallet.java:288,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+   -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:288,4-8} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+   -->{pc18} <= {buffer} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:288,20-36
+   -->{pc19} == {apdu@verify:Wallet.java:165,26-38; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:291,19-47
+   -->{receiver} == {apdu@verify:Wallet.java:165,26-38; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:291,19-47
+   -->{pc20} == {pc19} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:291,12-47
+   -->{pc19} <= {byteRead} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:291,12-47
+   -->{pc21} == {Alice: ; _!: _; this; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+   -->{array_base@sig-src/javacard/framework/OwnerPIN.jif:21,29-33} <= {array_base@Wallet.java:288,4-8} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,17-23
+   -->{array_base@Wallet.java:288,4-8} <= {array_base@sig-src/javacard/framework/OwnerPIN.jif:21,29-33} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,17-23
+   -->{receiver} == {Alice: ; _!: _; this; pc17} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+   -->{arg1label} == {buffer; pc21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+   -->{arg2label} == {pc21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+   -->{arg3label} == {byteRead; pc21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:16
+   -->{pc22} == {pc21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,7-298:25
+   -->{pc23} == {pc22; buffer; pc21; byteRead} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:297,2-300:47
+   -->{arg1label} == {inst(SW_VERIFICATION_FAILED); pc23} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:299,5-300:46
+   -->{pc24} == {pc22; buffer; pc21; byteRead; pc23} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:286,33-302:3
+   -->{pc22; buffer; pc21; byteRead; pc23} <= {caller_pc@verify:Wallet.java:286,10-21} in environment [{this} <= {caller_pc@verify:Wallet.java:286,10-21}]@Wallet.java:286,10-21
+   -->{_: _; _!: _; pc62} <= {apdu@verify:Wallet.java:165,26-38} in environment []@Wallet.java:286,22-31
+   -->{pc62} <= {caller_pc@verify:Wallet.java:286,10-21} in environment []@Wallet.java:286,10-21
+   -->{receiver} == {this} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:165,26-38
+   -->{arg1label} == {_: _; _!: _; pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:165,26-38
+   -->{arg1label} == {pc62} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:167,21-168:50
+   -->{pc62} <= {switch} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:158,4-168:51
+   -->{pc67} == {switch} in environment [{this} <= {[Bob: ; _!: _]}]@Wallet.java:134,43-171:2
+   summary constraints for method public static void install{sum(caller_pc@install:Wallet.java:114,16-28)}(byte{sum(array_base@Wallet.java:114,29-33)}[]{[sum(bArray)]}, short{[sum(bOffset)]}, byte{[sum(bLength)]}) : {*!: }
+   -->{pc16} == {sum(caller_pc@install:Wallet.java:114,16-28)} in environment []@Wallet.java:114,16-28
+   -->{pc9} == {caller_pc@Wallet:Wallet.java:100,10-59} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+   -->{pc10} == {*!: } in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+   -->{pc11} == {pc10; caller_pc@Wallet:Wallet.java:100,10-59} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+   -->{pc12} == {pc10} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+   -->{pc12; newOwnerPIN; newWallet} <= {Alice: } in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:105,4-7
+   -->{caller_pc@Wallet:Wallet.java:100,10-59} <= {Alice: } in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:105,4-7
+   -->{pc13} == {Alice: ; _!: _; newWallet; pc12} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+   -->{array_base@sig-src/javacard/framework/OwnerPIN.jif:23,27-31} <= {array_base@Wallet.java:100,18-22} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,15-21
+   -->{array_base@Wallet.java:100,18-22} <= {array_base@sig-src/javacard/framework/OwnerPIN.jif:23,27-31} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,15-21
+   -->{receiver} == {Alice: ; _!: _; newWallet; pc12} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+   -->{arg1label} == {bArray@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40; pc13} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+   -->{arg2label} == {bOffset@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40; pc13} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+   -->{arg3label} == {bLength@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40; pc13} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:109,4-40
+   -->{pc14} == {pc13} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+   -->{receiver} == {newWallet} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:110,4-14
+   -->{pc15} == {pc14; caller_pc@Wallet:Wallet.java:100,10-59} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+   -->{pc14} <= {caller_pc@Wallet:Wallet.java:100,10-59} in environment [{this} <= {caller_pc@Wallet:Wallet.java:100,10-59}]@Wallet.java:100,10-59
+   -->{sum(bArray); pc16} <= {bArray@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40} in environment []@Wallet.java:100,18-31
+   -->{sum(array_base@Wallet.java:114,29-33)} <= {array_base@Wallet.java:100,18-22} in environment []@Wallet.java:100,18-22
+   -->{sum(bOffset); pc16} <= {bOffset@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40} in environment []@Wallet.java:100,32-45
+   -->{sum(bLength); pc16} <= {bLength@com.sun.javacard.samples.wallet.Wallet:Wallet.java:116,4-40} in environment []@Wallet.java:100,46-58
+   -->{pc16} <= {caller_pc@Wallet:Wallet.java:100,10-59} in environment []@Wallet.java:100,10-59
+   ** label {sum(caller_pc@install:Wallet.java:114,16-28)} contains summary variables [{sum(caller_pc@install:Wallet.java:114,16-28)}]
+   summary constraints for method public void deselect{sum(caller_pc@deselect:Wallet.java:128,9-22)}() : {*!: }
+   -->{pc7} == {sum(caller_pc@deselect:Wallet.java:128,9-22)} in environment [{this} <= {[sum(caller_pc@deselect:Wallet.java:128,9-22)]}]@Wallet.java:128,9-22
+   -->{pc8} == {Alice: ; _!: _; this; pc7} in environment [{this} <= {[sum(caller_pc@deselect:Wallet.java:128,9-22)]}]@Wallet.java:131,4-15
+   -->{receiver} == {Alice: ; _!: _; this; pc7} in environment [{this} <= {[sum(caller_pc@deselect:Wallet.java:128,9-22)]}]@Wallet.java:131,4-15
+   ** label {sum(caller_pc@deselect:Wallet.java:128,9-22)} contains summary variables [{sum(caller_pc@deselect:Wallet.java:128,9-22)}]
+   summary constraints for method private void credit{sum(caller_pc@credit:Wallet.java:173,9-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+   -->{pc45} == {sum(caller_pc@credit:Wallet.java:173,9-20)} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:173,9-20
+   -->{pc46} == {Alice: ; _!: _; this; pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:176,10-27
+   -->{receiver} == {Alice: ; _!: _; this; pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:176,10-27
+   -->{pc47} == {pc46} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:176,3-178:38
+   -->{arg1label} == {inst(SW_PIN_VERIFICATION_REQUIRED); pc47} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:177,1-178:37
+   -->{pc48} == {sum(apdu); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+   -->{receiver} == {sum(apdu); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+   -->{array_base@Wallet.java:180,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+   -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:180,4-8} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+   -->{pc48} <= {buffer} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:180,20-36
+   -->{array_base@Wallet.java:180,4-8; pc45; buffer} <= {numBytes} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:184,20-26
+   -->{pc49} == {sum(apdu); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:192,21-49
+   -->{receiver} == {sum(apdu); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:192,21-49
+   -->{pc50} == {pc49} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:192,14-49
+   -->{pc49} <= {byteRead} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:192,14-49
+   -->{pc51} == {pc45; numBytes} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:196,11-44
+   -->{pc52} == {pc51; byteRead; pc45; numBytes} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:196,4-197:51
+   -->{arg1label} == {pc52} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:197,5-50
+   -->{array_base@Wallet.java:180,4-8; pc45; buffer} <= {creditAmount} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:201,18-24
+   -->{pc53} == {inst(MAX_TRANSACTION_AMOUNT); pc45; creditAmount} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:204,11-205:30
+   -->{pc54} == {pc53; creditAmount; inst(MAX_TRANSACTION_AMOUNT); pc45} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:204,4-207:51
+   -->{arg1label} == {inst(SW_INVALID_TRANSACTION_AMOUNT); pc54} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:206,8-207:50
+   -->{pc55} == {inst(MAX_BALANCE); pc45; creditAmount; inst(balance); this} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:210,4-212:49
+   -->{arg1label} == {inst(SW_EXCEED_MAXIMUM_BALANCE); pc55} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:211,7-212:48
+   -->{creditAmount; pc45; inst(balance); this} <= {inst(balance)} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:216,4-11
+   -->{sum(caller_pc@credit:Wallet.java:173,9-20)} <= {inst(balance)} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:216,4-11
+   -->{pc45} <= {sum(caller_pc@credit:Wallet.java:173,9-20)} in environment [{this} <= {[sum(caller_pc@credit:Wallet.java:173,9-20)]}]@Wallet.java:173,9-20
+   ** label {sum(caller_pc@credit:Wallet.java:173,9-20)} contains summary variables [{sum(caller_pc@credit:Wallet.java:173,9-20)}]
+   summary constraints for constructor private private com.sun.javacard.samples.wallet.Wallet(byte{sum(array_base@Wallet.java:100,18-22)}[], short, byte)
+   -->{pc9} == {sum(caller_pc@Wallet:Wallet.java:100,10-59)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+   -->{pc10} == {*!: } in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+   -->{pc11} == {pc10; sum(caller_pc@Wallet:Wallet.java:100,10-59)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+   -->{pc12} == {pc10} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+   -->{pc12; newOwnerPIN; this} <= {Alice: } in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:105,4-7
+   -->{sum(caller_pc@Wallet:Wallet.java:100,10-59)} <= {Alice: } in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:105,4-7
+   -->{pc13} == {Alice: ; _!: _; this; pc12} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+   -->{array_base@sig-src/javacard/framework/OwnerPIN.jif:23,27-31} <= {sum(array_base@Wallet.java:100,18-22)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,15-21
+   -->{sum(array_base@Wallet.java:100,18-22)} <= {array_base@sig-src/javacard/framework/OwnerPIN.jif:23,27-31} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,15-21
+   -->{receiver} == {Alice: ; _!: _; this; pc12} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+   -->{arg1label} == {sum(bArray); pc13} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+   -->{arg2label} == {sum(bOffset); pc13} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+   -->{arg3label} == {sum(bLength); pc13} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:109,4-40
+   -->{pc14} == {pc13} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+   -->{receiver} == {this} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:110,4-14
+   -->{pc15} == {pc14; sum(caller_pc@Wallet:Wallet.java:100,10-59)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+   -->{pc14} <= {sum(caller_pc@Wallet:Wallet.java:100,10-59)} in environment [{this} <= {[sum(caller_pc@Wallet:Wallet.java:100,10-59)]}]@Wallet.java:100,10-59
+   ** label {sum(caller_pc@Wallet:Wallet.java:100,10-59)} contains summary variables [{sum(caller_pc@Wallet:Wallet.java:100,10-59)}]
+   summary constraints for method private void debit{sum(caller_pc@debit:Wallet.java:220,10-20)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+   -->{pc34} == {sum(caller_pc@debit:Wallet.java:220,10-20)} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:220,10-20
+   -->{pc35} == {Alice: ; _!: _; this; pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:223,11-28
+   -->{receiver} == {Alice: ; _!: _; this; pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:223,11-28
+   -->{pc36} == {pc35} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:223,4-225:31
+   -->{arg1label} == {inst(SW_PIN_VERIFICATION_REQUIRED); pc36} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:224,7-225:30
+   -->{pc37} == {sum(apdu); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+   -->{receiver} == {sum(apdu); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+   -->{array_base@Wallet.java:227,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+   -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:227,4-8} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+   -->{pc37} <= {buffer} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:227,20-36
+   -->{array_base@Wallet.java:227,4-8; pc34; buffer} <= {numBytes} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:230,12-25
+   -->{pc38} == {sum(apdu); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:233,19-47
+   -->{receiver} == {sum(apdu); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:233,19-47
+   -->{pc39} == {pc38} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:233,12-47
+   -->{pc38} <= {byteRead} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:233,12-47
+   -->{pc40} == {pc34; numBytes} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:235,11-44
+   -->{pc41} == {pc40; byteRead; pc34; numBytes} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:235,4-237:50
+   -->{arg1label} == {pc41} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:236,7-237:49
+   -->{array_base@Wallet.java:227,4-8; pc34; buffer} <= {debitAmount} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:241,21-27
+   -->{pc42} == {inst(MAX_TRANSACTION_AMOUNT); pc34; debitAmount} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:244,11-245:30
+   -->{pc43} == {pc42; debitAmount; inst(MAX_TRANSACTION_AMOUNT); pc34} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:244,4-247:51
+   -->{arg1label} == {inst(SW_INVALID_TRANSACTION_AMOUNT); pc43} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:246,7-247:50
+   -->{pc44} == {pc34; debitAmount; inst(balance); this} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:250,4-251:51
+   -->{arg1label} == {inst(SW_NEGATIVE_BALANCE); pc44} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:251,9-50
+   -->{debitAmount; pc34; inst(balance); this} <= {inst(balance)} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:253,4-11
+   -->{sum(caller_pc@debit:Wallet.java:220,10-20)} <= {inst(balance)} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:253,4-11
+   -->{pc34} <= {sum(caller_pc@debit:Wallet.java:220,10-20)} in environment [{this} <= {[sum(caller_pc@debit:Wallet.java:220,10-20)]}]@Wallet.java:220,10-20
+   ** label {sum(caller_pc@debit:Wallet.java:220,10-20)} contains summary variables [{sum(caller_pc@debit:Wallet.java:220,10-20)}]
+   summary constraints for method private void getBalance{sum(caller_pc@getBalance:Wallet.java:257,10-25)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+   -->{pc25} == {sum(caller_pc@getBalance:Wallet.java:257,10-25)} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,10-25
+   -->{pc26} == {sum(apdu); pc25} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+   -->{receiver} == {sum(apdu); pc25} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+   -->{array_base@Wallet.java:259,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+   -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+   -->{pc26} <= {buffer} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:259,20-36
+   -->{pc27} == {sum(apdu); pc25} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:265,15-33
+   -->{receiver} == {sum(apdu); pc25} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:265,15-33
+   -->{pc27} <= {le} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:265,15-33
+   -->{pc28} == {pc27} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,37-284:3
+   -->{pc29} == {pc28; le} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:267,4-269:49
+   -->{arg1label} == {pc29} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:268,7-269:48
+   -->{pc30} == {sum(apdu); pc28} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:273,4-35
+   -->{receiver} == {sum(apdu); pc28} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:273,4-35
+   -->{arg1label} == {pc30} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:273,4-35
+   -->{pc31} == {pc30} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,37-284:3
+   -->{pc31; inst(balance); this} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:277,4-10
+   -->{sum(caller_pc@getBalance:Wallet.java:257,10-25)} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:277,4-10
+   -->{pc31; inst(balance); this} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:278,4-10
+   -->{sum(caller_pc@getBalance:Wallet.java:257,10-25)} <= {array_base@Wallet.java:259,4-8} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:278,4-10
+   -->{pc32} == {sum(apdu); pc31} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,4-38
+   -->{pc32} <= {Bob: } in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,19-27
+   -->{receiver} == {sum(apdu); pc31} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,4-38
+   -->{arg1label} == {pc32} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,4-38
+   -->{arg2label} == {pc32} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:282,4-38
+   -->{pc33} == {pc32} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,37-284:3
+   -->{pc32} <= {sum(caller_pc@getBalance:Wallet.java:257,10-25)} in environment [{this} <= {[sum(caller_pc@getBalance:Wallet.java:257,10-25)]}]@Wallet.java:257,10-25
+   ** label {sum(caller_pc@getBalance:Wallet.java:257,10-25)} contains summary variables [{sum(caller_pc@getBalance:Wallet.java:257,10-25)}]
+   summary constraints for method public boolean{select_rv} select{sum(caller_pc@select:Wallet.java:118,9-23)}() : {*!: }
+   -->{pc1} == {sum(caller_pc@select:Wallet.java:118,9-23)} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:118,9-23
+   -->{pc2} == {Alice: ; _!: _; this; pc1} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:122,9-32
+   -->{receiver} == {Alice: ; _!: _; this; pc1} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:122,9-32
+   -->{pc3} == {pc2} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:122,9-37
+   -->{pc4} == {pc3; pc2} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:122,4-123:20
+   -->{pc4} <= {select_rv; sum(caller_pc@select:Wallet.java:118,9-23)} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:123,7-20
+   -->{pc5} == {pc3; pc2} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:118,26-127:3
+   -->{pc5} <= {select_rv; sum(caller_pc@select:Wallet.java:118,9-23)} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:125,4-16
+   -->{pc1} <= {sum(caller_pc@select:Wallet.java:118,9-23)} in environment [{this} <= {[sum(caller_pc@select:Wallet.java:118,9-23)]}]@Wallet.java:118,9-23
+   ** label {sum(caller_pc@select:Wallet.java:118,9-23)} contains summary variables [{sum(caller_pc@select:Wallet.java:118,9-23)}]
+   summary constraints for method private void verify{sum(caller_pc@verify:Wallet.java:286,10-21)}(javacard.framework.APDU{[sum(apdu)]}) : {*!: }
+   -->{pc17} == {sum(caller_pc@verify:Wallet.java:286,10-21)} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:286,10-21
+   -->{pc18} == {sum(apdu); pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+   -->{receiver} == {sum(apdu); pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+   -->{array_base@Wallet.java:288,4-8} <= {array_base@sig-src/javacard/framework/APDU.jif:40,15-19} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+   -->{array_base@sig-src/javacard/framework/APDU.jif:40,15-19} <= {array_base@Wallet.java:288,4-8} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+   -->{pc18} <= {buffer} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:288,20-36
+   -->{pc19} == {sum(apdu); pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:291,19-47
+   -->{receiver} == {sum(apdu); pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:291,19-47
+   -->{pc20} == {pc19} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:291,12-47
+   -->{pc19} <= {byteRead} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:291,12-47
+   -->{pc21} == {Alice: ; _!: _; this; pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+   -->{array_base@sig-src/javacard/framework/OwnerPIN.jif:21,29-33} <= {array_base@Wallet.java:288,4-8} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,17-23
+   -->{array_base@Wallet.java:288,4-8} <= {array_base@sig-src/javacard/framework/OwnerPIN.jif:21,29-33} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,17-23
+   -->{receiver} == {Alice: ; _!: _; this; pc17} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+   -->{arg1label} == {buffer; pc21} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+   -->{arg2label} == {pc21} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+   -->{arg3label} == {byteRead; pc21} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:16
+   -->{pc22} == {pc21} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,7-298:25
+   -->{pc23} == {pc22; buffer; pc21; byteRead} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:297,2-300:47
+   -->{arg1label} == {inst(SW_VERIFICATION_FAILED); pc23} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:299,5-300:46
+   -->{pc24} == {pc22; buffer; pc21; byteRead; pc23} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:286,33-302:3
+   -->{pc22; buffer; pc21; byteRead; pc23} <= {sum(caller_pc@verify:Wallet.java:286,10-21)} in environment [{this} <= {[sum(caller_pc@verify:Wallet.java:286,10-21)]}]@Wallet.java:286,10-21
+   ** label {sum(caller_pc@verify:Wallet.java:286,10-21)} contains summary variables [{sum(caller_pc@verify:Wallet.java:286,10-21)}]

@@ -1,0 +1,9 @@
+public class LegalStaticInitializer {
+
+    static int{Alice:} aliceInt;
+
+    static {
+	aliceInt = 0;
+    }
+
+}

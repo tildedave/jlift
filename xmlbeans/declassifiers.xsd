@@ -1,0 +1,38 @@
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:decl="http://openuri.org/declassifiers"
+  targetNamespace="http://openuri.org/declassifiers"
+  elementFormDefault="qualified">
+
+    <xs:element name="declassifier-suggestions">
+       <xs:complexType>
+          <xs:sequence>
+             <xs:element name="flow" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                   <xs:sequence>
+                      <xs:element name="suggestion" type="decl:DeclSuggestion" minOccurs="0" maxOccurs="unbounded"/>
+                   </xs:sequence> 
+                   <xs:attribute name="from" type="xs:string" />
+                   <xs:attribute name="to" type="xs:string" />
+               </xs:complexType>
+             </xs:element>
+          </xs:sequence>
+       </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="DeclSuggestion">
+       <xs:sequence>
+             <xs:element name="decl" type="decl:DeclElement" minOccurs="0" maxOccurs="unbounded"/>
+       </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DeclElement">
+          <xs:attribute name="exp" type="xs:string" />
+          <xs:attribute name="path" type="xs:string" />
+          <xs:attribute name="file" type="xs:string" />
+          <xs:attribute name="lineStart" type="xs:string" />
+          <xs:attribute name="lineEnd" type="xs:string" />
+          <xs:attribute name="columnStart" type="xs:string" />
+          <xs:attribute name="columnEnd" type="xs:string" />
+    </xs:complexType>
+</xs:schema>

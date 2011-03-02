@@ -1,0 +1,14 @@
+public class IllegalAssign {
+
+    int{Alice:} aliceInt;
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	aliceInt = getBobInt();
+    }
+
+    public int getBobInt() {
+	return bobInt;
+    }
+
+}

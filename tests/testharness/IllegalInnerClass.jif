@@ -1,0 +1,21 @@
+public class IllegalInnerClass {
+
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	if (bobInt > 3) {
+	    new A.Inner().foo();
+	}
+    }
+}
+
+class A {
+
+    public static final class Inner {
+	int{Alice:} aliceInt;
+
+	public void foo() {
+	    aliceInt = 1;
+	}
+    }
+}

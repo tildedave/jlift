@@ -1,0 +1,15 @@
+public class IllegalInnerClass2 {
+
+    int{Alice:} aliceInt;
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	new Inner().foo(bobInt);
+    }
+
+    public final class Inner {
+	public void foo(int k) {
+	    aliceInt = k;
+	}
+    }
+}

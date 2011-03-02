@@ -1,0 +1,24 @@
+public class LegalRecursiveSideEffectCall {
+
+    int{Alice:} aliceInt;
+    int{Bob:} bobInt;
+
+    public void test{}() {
+	doRecursion();
+    }
+
+    public void doRecursion() {
+	setAliceInt();
+    }
+
+    public void setAliceInt() {
+	aliceInt = 3;
+	setBobInt();
+    }
+
+    public void setBobInt() {
+	bobInt = 2;
+	doRecursion();
+    }
+
+}

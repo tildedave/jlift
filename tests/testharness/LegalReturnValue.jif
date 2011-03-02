@@ -1,0 +1,11 @@
+public class LegalReturn {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	aliceInt = getAliceInt();
+    }
+
+    public int{Alice:} getAliceInt() { return 1; }
+
+}

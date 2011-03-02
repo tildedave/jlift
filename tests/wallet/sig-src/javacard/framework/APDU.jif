@@ -1,0 +1,61 @@
+package javacard.framework;
+
+/*
+* This is a Jif signature for the Java class. It provides Jif label
+* annotations for the Java class, allowing it to be usable by Jif
+* code. There is no automated check that the signature provided here
+* agrees with the actual Java code.
+*/
+
+import javacard.framework.APDU;
+import javacard.framework.APDUException;
+import java.lang.SecurityException;
+import java.lang.Object;
+
+
+public final class APDU extends Object {
+	static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0; // jif signature of a java class
+	public APDU() { }
+	public static final byte STATE_INITIAL = 0;
+	public static final byte STATE_PARTIAL_INCOMING = 0;
+	public static final byte STATE_FULL_INCOMING = 0;
+	public static final byte STATE_OUTGOING = 0;
+	public static final byte STATE_OUTGOING_LENGTH_KNOWN = 0;
+	public static final byte STATE_PARTIAL_OUTGOING = 0;
+	public static final byte STATE_FULL_OUTGOING = 0;
+	public static final byte STATE_ERROR_NO_T0_GETRESPONSE = 0;
+	public static final byte STATE_ERROR_T1_IFD_ABORT = 0;
+	public static final byte STATE_ERROR_IO = 0;
+	public static final byte STATE_ERROR_NO_T0_REISSUE = 0;
+	public static final byte PROTOCOL_MEDIA_MASK = 0;
+	public static final byte PROTOCOL_TYPE_MASK = 0;
+	public static final byte PROTOCOL_T0 = 0;
+	public static final byte PROTOCOL_T1 = 0;
+	public static final byte PROTOCOL_MEDIA_DEFAULT = 0;
+	public static final byte PROTOCOL_MEDIA_CONTACTLESS_TYPE_A = 0;
+	public static final byte PROTOCOL_MEDIA_CONTACTLESS_TYPE_B = 0;
+	public static final byte PROTOCOL_MEDIA_USB = 0;
+	native public static byte getProtocol();
+	native  byte{this} getLogicalChannel();
+	native  boolean{this} getNoChainingFlag();
+    native public byte{}[]{} getBuffer();
+	native public static short getInBlockSize();
+	native public static short getOutBlockSize();
+	native public byte{this} getNAD();
+	native public short{this} setOutgoing() throws APDUException;
+	native public short{this} setOutgoingNoChaining() throws APDUException;
+	native public void setOutgoingLength(short v0) throws APDUException;
+	native public short{this; v1} receiveBytes(short v1) throws APDUException;
+	native public short{this} setIncomingAndReceive() throws APDUException;
+        native public void sendBytes(short{} v2, short{} v3) throws APDUException;
+        native public void sendBytesLong(byte{}[]{} v4, short{} v5, short{} v6) throws APDUException, SecurityException;
+	native public void setOutgoingAndSend(short{} v7, short{} v8) throws APDUException;
+	native public byte{this} getCurrentState();
+	native public static APDU getCurrentAPDU() throws SecurityException;
+	native public static byte[] getCurrentAPDUBuffer() throws SecurityException;
+	native public static byte getCLAChannel();
+	native  void resetAPDU();
+	native  void complete(short v9) throws APDUException;
+	native  void undoIncomingAndReceive();
+	native public static void waitExtension() throws APDUException;
+}

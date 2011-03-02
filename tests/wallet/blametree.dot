@@ -1,0 +1,40 @@
+digraph G {
+	constraint0 [shape=rectangle,label="{debit:normal_termination} == {pc39}"];
+	constraint1 [shape=rectangle,label="{caller_pc@debit:Wallet.jl:220,12-22} == {pc60}"];
+	constraint2 [shape=rectangle,label="{pc32} == {pc29; byteRead; pc27; numBytes; throwIt:return_observed; pc30}"];
+	constraint3 [shape=rectangle,label="{pc36} == {pc33; debitAmount; inst(MAX_TRANSACTION_AMOUNT); pc32; throwIt:return_observed; pc34}"];
+	constraint4 [shape=rectangle,label="{process:normal_termination} == {switch}"];
+	constraint5 [shape=rectangle,label="{pc39} == {pc36; debitAmount; inst(balance); debit_reciever; throwIt:return_observed; pc37}"];
+	constraint6 [shape=rectangle,label="{pc59} == {inst(Wallet_CLA); pc57; array_base@Wallet.jl:147,4-8; _: _; _!: _; buffer; throwIt:return_observed; pc58}"];
+	constraint7 [shape=rectangle,label="{setOutgoing:value_returned} == {apdu@callto:getBalance:Wallet.jl:159,26-42; pc18}"];
+	constraint8 [shape=rectangle,label="{throwIt:return_observed; pc60} <= {switch}"];
+	constraint9 [shape=rectangle,label="{apdu@callto:getBalance:Wallet.jl:159,26-42} == {_: _; _!: _; pc60}"];
+	constraint10 [shape=rectangle,label="{setOutgoing:value_returned; pc18} <= {le}"];
+	constraint11 [shape=rectangle,label="{pc27} == {isValidated:value_returned; pc25; throwIt:return_observed; pc26}"];
+	constraint12 [shape=rectangle,label="{isValidated:value_returned} == {Alice: ; _!: _; debit_reciever; pc25}"];
+	constraint13 [shape=rectangle,label="{debit:normal_termination} <= {caller_pc@debit:Wallet.jl:220,12-22}"];
+	constraint14 [shape=rectangle,label="{pc21} == {pc19; le; throwIt:return_observed; pc20}"];
+	constraint15 [shape=rectangle,label="{pc22} == {setOutgoingLength:return_observed; pc21}"];
+	constraint0 -> constraint13
+	constraint0 -> constraint13
+	constraint1 -> constraint8
+	constraint1 -> constraint9
+	constraint2 -> constraint3
+	constraint2 -> constraint3
+	constraint3 -> constraint5
+	constraint3 -> constraint5
+	constraint5 -> constraint0
+	constraint5 -> constraint0
+	constraint6 -> constraint6
+	constraint7 -> constraint10
+	constraint8 -> constraint4
+	constraint9 -> constraint7
+	constraint10 -> constraint14
+	constraint11 -> constraint2
+	constraint11 -> constraint2
+	constraint12 -> constraint11
+	constraint12 -> constraint11
+	constraint13 -> constraint1
+	constraint13 -> constraint1
+	constraint14 -> constraint15
+}

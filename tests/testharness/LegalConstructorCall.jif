@@ -1,0 +1,15 @@
+public class ConstructorCall {
+
+    int{Alice:} aliceInt;
+    int{Bob:} bobInt;
+
+    public ConstructorCall(int k, int j) {
+	this.aliceInt = k;
+	this.bobInt = j;
+    }
+
+    public void test{}() {
+	ConstructorCall cc = new ConstructorCall(aliceInt, bobInt);
+    }
+
+}

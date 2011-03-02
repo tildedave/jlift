@@ -1,0 +1,28 @@
+public class LegalParam {
+
+    int{Alice:} aliceInt;
+    int{Alice:} otherAliceInt;
+
+    public void test{}() {
+	Container[{Alice:}] c = new Container[{Alice:}]();
+	c.setInt(aliceInt);
+	otherAliceInt = c.getInt();
+    }
+
+}
+
+class Container[label L] {
+
+    int{L} myInt;
+
+    Container() {
+    }
+
+    public int getInt() { 
+	return myInt;
+    }
+
+    public void setInt(int k) {
+	this.myInt = k;
+    }
+}

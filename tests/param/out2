@@ -1,0 +1,280 @@
+  call graph: adding new class F
+  call graph: adding new method method public void api{}() : {*!: }
+     currently called by null
+  call graph: adding new call of constructor Container[{L_var#8628}]() (Container[{L_var#8628}]) from method public void api{}() : {*!: }@F
+  call graph: adding new call of constructor Container[{L_var#6426}]() (Container[{L_var#6426}]) from method public void api{}() : {*!: }@F
+  call graph: adding new call of method int{Alice: } getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: } (Container[{Alice: }]) from method public void api{}() : {*!: }@F
+  call graph: adding new call of method int{Bob: } getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: } (Container[{Bob: }]) from method public void api{}() : {*!: }@F
+  call graph: adding new method constructor public public F()
+     currently called by null
+  call graph: adding new call of constructor public public java.lang.Object() (java.lang.Object) from constructor public public F()@F
+  call graph: adding new class Container[label L]
+  call graph: adding new method constructor Container[label L]()
+     currently called by [method public void api{}() : {*!: }]
+  call graph: adding new call of constructor public public java.lang.Object() (java.lang.Object) from constructor Container[label L]()@Container[label L]
+  call graph: adding new method method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }
+     currently called by [method public void api{}() : {*!: }]
+generating list to iterate over
+adding component #1
+adding component #2
+adding component #3
+adding component #4
+  1: [constructor Container[label L]()]
+  2: [method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }]
+  3: [method public void api{}() : {*!: }]
+  4: [constructor public public F()]
+thread Thread1 starting
+thread Thread2 starting
+   thread Thread1 considers [constructor Container[label L]()]
+   thread Thread2 considers [constructor Container[label L]()]
+  thread Thread1 claims [constructor Container[label L]()]
+  generate summary information: constructor Container[label L]()@F.jl:16,4-15 inside Container[label L]
+   thread Thread2 considers [method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }]
+  thread Thread2 claims [method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }]
+  generate summary information: method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }@F.jl:18,4-18 inside Container[label L]
+    we found the node -- Container(...)@F.jl:16,4-15
+    we found the node -- int{L} getData(...)@F.jl:18,4-18
+   call to constructor public public java.lang.Object() requires checking 1 possible subtypes/implementors
+   procedure constructor public public java.lang.Object() is not in the call graph, so we are not getting its summary constraints
+   checking call to constructor public public java.lang.Object() (after introducing variables for array bases)
+summary constraints generated for method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }
+non-call constraints: 4/ call constraints: 0
+    unclosed constraints for method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }:
+    summary constraints for method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }
+    -->{pc2} ==_{def} {sum(caller_pc@getData:F.jl:18,4-18)} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{pc2} <= {L; sum(caller_pc@getData:F.jl:18,4-18)} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,23-32
+    -->{getData:return} ==_{def} {pc2} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{getData:return} <= {sum(caller_pc@getData:F.jl:18,4-18)} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    closing constraints for [method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }]
+summary constraints generated for constructor Container[label L]()
+non-call constraints: 7/ call constraints: 0
+    closed constraints for method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }:
+    summary constraints for method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }
+    -->{pc2} ==_{def} {sum(caller_pc@getData:F.jl:18,4-18)} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{pc2} <= {L; sum(caller_pc@getData:F.jl:18,4-18)} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,23-32
+    -->{getData:return} ==_{def} {pc2} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{getData:return} <= {sum(caller_pc@getData:F.jl:18,4-18)} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+   total number of label constraints: 13
+    unclosed constraints for constructor Container[label L]():
+   size of summary constraint info: 4
+    summary constraints for constructor Container[label L]()
+   thread Thread2 considers [method public void api{}() : {*!: }]
+    -->{pc1} ==_{def} {sum(caller_pc@Container:F.jl:16,4-15)} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{pc3} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+  thread Thread2 claims [method public void api{}() : {*!: }]
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}, {[sum(caller_pc@Container:F.jl:16,4-15)]} <= {pc3}]@F.jl:16,16-17
+  generate summary information: method public void api{}() : {*!: }@F.jl:5,11-19 inside F
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}, {[sum(caller_pc@Container:F.jl:16,4-15)]} <= {pc3}]@F.jl:16,16-17
+    -->{pc5} ==_{def} {pc3; sum(caller_pc@Container:F.jl:16,4-15)} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    we found the node -- public void api(...)@F.jl:5,11-19
+    -->{Container:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{Container:return} <= {sum(caller_pc@Container:F.jl:16,4-15)} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    closing constraints for [constructor Container[label L]()]
+    closed constraints for constructor Container[label L]():
+    summary constraints for constructor Container[label L]()
+    -->{pc1} ==_{def} {sum(caller_pc@Container:F.jl:16,4-15)} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{pc3} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}, {[sum(caller_pc@Container:F.jl:16,4-15)]} <= {pc3}]@F.jl:16,16-17
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}, {[sum(caller_pc@Container:F.jl:16,4-15)]} <= {pc3}]@F.jl:16,16-17
+    -->{pc5} ==_{def} {pc3; sum(caller_pc@Container:F.jl:16,4-15)} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{Container:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{Container:return} <= {sum(caller_pc@Container:F.jl:16,4-15)} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+   total number of label constraints: 11
+   size of summary constraint info: 11
+   thread Thread1 considers [method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }]
+   thread Thread1 considers [method public void api{}() : {*!: }]
+   thread Thread1 considers [constructor public public F()]
+  thread Thread1 claims [constructor public public F()]
+  generate summary information: constructor public public F()@F.jl:3,7-14 inside F
+    we found the node -- public F(...)@F.jl:3,7-14
+   call to constructor Container[{L_var#8628}]() requires checking 1 possible subtypes/implementors
+   total number of label constraints BEFORE call constraints for: constructor Container[{L_var#8628}]() is 15 with 7
+   call to constructor public public java.lang.Object() requires checking 1 possible subtypes/implementors
+   procedure constructor public public java.lang.Object() is not in the call graph, so we are not getting its summary constraints
+   checking call to constructor public public java.lang.Object() (after introducing variables for array bases)
+   total number of label constraints AFTER call constraints: 22
+summary constraints generated for constructor public public F()
+non-call constraints: 7/ call constraints: 0
+    unclosed constraints for constructor public public F():
+    summary constraints for constructor public public F()
+    -->{pc7} ==_{def} {sum(caller_pc@F:F.jl:3,7-14)} in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    -->{pc8} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}, {[sum(caller_pc@F:F.jl:3,7-14)]} <= {pc8}]@F.jl:3,7-14
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}, {[sum(caller_pc@F:F.jl:3,7-14)]} <= {pc8}]@F.jl:3,7-14
+    -->{pc9} ==_{def} {pc8; sum(caller_pc@F:F.jl:3,7-14)} in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    -->{F:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    -->{F:return} <= {sum(caller_pc@F:F.jl:3,7-14)} in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    closing constraints for [constructor public public F()]
+    closed constraints for constructor public public F():
+    summary constraints for constructor public public F()
+    -->{pc7} ==_{def} {sum(caller_pc@F:F.jl:3,7-14)} in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    -->{pc8} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}, {[sum(caller_pc@F:F.jl:3,7-14)]} <= {pc8}]@F.jl:3,7-14
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}, {[sum(caller_pc@F:F.jl:3,7-14)]} <= {pc8}]@F.jl:3,7-14
+    -->{pc9} ==_{def} {pc8; sum(caller_pc@F:F.jl:3,7-14)} in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    -->{F:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    -->{F:return} <= {sum(caller_pc@F:F.jl:3,7-14)} in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+   total number of label constraints: 35
+   size of summary constraint info: 18
+   call to constructor Container[{L_var#6426}]() requires checking 1 possible subtypes/implementors
+   total number of label constraints BEFORE call constraints for: constructor Container[{L_var#6426}]() is 34 with 7
+   total number of label constraints AFTER call constraints: 37
+   call to method int{Alice: } getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: } requires checking 1 possible subtypes/implementors
+   total number of label constraints BEFORE call constraints for: method int{Alice: } getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: } is 43 with 4
+   total number of label constraints AFTER call constraints: 47
+   call to method int{Bob: } getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: } requires checking 1 possible subtypes/implementors
+   total number of label constraints BEFORE call constraints for: method int{Bob: } getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: } is 53 with 4
+   total number of label constraints AFTER call constraints: 56
+summary constraints generated for method public void api{}() : {*!: }
+non-call constraints: 37/ call constraints: 0
+    unclosed constraints for method public void api{}() : {*!: }:
+    summary constraints for method public void api{}() : {*!: }
+    -->{pc6} ==_{def} {} in environment [{this} <= {[_: _; _!: _]}]@F.jl:5,11-19
+    -->{pc6} <= {newContainer} in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{pc1} ==_{def} {caller_pc@Container:F.jl:16,4-15} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{pc3} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}, {[sum(caller_pc@Container:F.jl:16,4-15)]} <= {pc3}]@F.jl:16,16-17
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}, {[sum(caller_pc@Container:F.jl:16,4-15)]} <= {pc3}]@F.jl:16,16-17
+    -->{pc5} ==_{def} {pc3; caller_pc@Container:F.jl:16,4-15} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{Container:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{Container:return} <= {caller_pc@Container:F.jl:16,4-15} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{caller_pc@Container:F.jl:16,4-15} == {pc6} in environment []@F.jl:6,38-53
+    -->{Container[{L_var#8628}]_reciever} ==_{def} {newContainer} in environment []@F.jl:6,38-53
+    -->{Container[{L_var#8628}]:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{Container[{L_var#8628}]:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{L_var#8628} == {Alice: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{Container[{L_var#8628}]:value_returned; pc6; newContainer} <= {aliceContainer} in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{Container[{L_var#6426}]_reciever} ==_{def} {newContainer} in environment []@F.jl:7,34-49
+    -->{Container[{L_var#6426}]:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:7,34-49
+    -->{Container[{L_var#6426}]:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:7,34-49
+    -->{L_var#6426} == {Bob: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:7,34-49
+    -->{Container[{L_var#6426}]:value_returned; pc6; newContainer} <= {bobContainer} in environment [{this} <= {[_: _; _!: _]}]@F.jl:7,34-49
+    -->{pc2} ==_{def} {caller_pc@getData:F.jl:18,4-18} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{pc2} <= {L:param@F.jl:9,1-15; caller_pc@getData:F.jl:18,4-18} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,23-32
+    -->{getData:return} ==_{def} {pc2} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{getData:return} <= {caller_pc@getData:F.jl:18,4-18} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{L:param@F.jl:9,1-15} == {Alice: } in environment []@F.jl:6,11-19
+    -->{caller_pc@getData:F.jl:18,4-18} == {pc6} in environment []@F.jl:9,1-25
+    -->{getData_reciever} ==_{def} {aliceContainer; pc6} in environment []@F.jl:6,21-35
+    -->{getData:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:9,1-25
+    -->{getData:value_returned} ==_{def} {Alice: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:9,1-25
+    -->{receiver} == {aliceContainer; pc6} in environment [{this} <= {[_: _; _!: _]}]@F.jl:9,1-25
+    -->{pc2} <= {L:param@F.jl:10,1-13; caller_pc@getData:F.jl:18,4-18} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,23-32
+    -->{L:param@F.jl:10,1-13} == {Bob: } in environment []@F.jl:7,11-17
+    -->{getData_reciever} ==_{def} {bobContainer; pc6} in environment []@F.jl:7,19-31
+    -->{getData:value_returned} ==_{def} {Bob: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:10,1-23
+    -->{receiver} == {bobContainer; pc6} in environment [{this} <= {[_: _; _!: _]}]@F.jl:10,1-23
+    -->{api:return} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:5,11-19
+    -->{api:return} <= {} in environment [{this} <= {[_: _; _!: _]}]@F.jl:5,11-19
+    closing constraints for [method public void api{}() : {*!: }]
+    closed constraints for method public void api{}() : {*!: }:
+    summary constraints for method public void api{}() : {*!: }
+    -->{pc6} ==_{def} {} in environment [{this} <= {[_: _; _!: _]}]@F.jl:5,11-19
+    -->{pc6} <= {newContainer} in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{pc1} ==_{def} {caller_pc@Container:F.jl:16,4-15} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{pc3} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}, {[sum(caller_pc@Container:F.jl:16,4-15)]} <= {pc3}]@F.jl:16,16-17
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}, {[sum(caller_pc@Container:F.jl:16,4-15)]} <= {pc3}]@F.jl:16,16-17
+    -->{pc5} ==_{def} {pc3; caller_pc@Container:F.jl:16,4-15} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{Container:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{Container:return} <= {caller_pc@Container:F.jl:16,4-15} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{caller_pc@Container:F.jl:16,4-15} == {pc6} in environment []@F.jl:6,38-53
+    -->{Container[{L_var#8628}]_reciever} ==_{def} {newContainer} in environment []@F.jl:6,38-53
+    -->{Container[{L_var#8628}]:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{Container[{L_var#8628}]:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{L_var#8628} == {Alice: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{Container[{L_var#8628}]:value_returned; pc6; newContainer} <= {aliceContainer} in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{Container[{L_var#6426}]_reciever} ==_{def} {newContainer} in environment []@F.jl:7,34-49
+    -->{Container[{L_var#6426}]:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:7,34-49
+    -->{Container[{L_var#6426}]:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:7,34-49
+    -->{L_var#6426} == {Bob: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:7,34-49
+    -->{Container[{L_var#6426}]:value_returned; pc6; newContainer} <= {bobContainer} in environment [{this} <= {[_: _; _!: _]}]@F.jl:7,34-49
+    -->{pc2} ==_{def} {caller_pc@getData:F.jl:18,4-18} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{pc2} <= {L:param@F.jl:9,1-15; caller_pc@getData:F.jl:18,4-18} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,23-32
+    -->{getData:return} ==_{def} {pc2} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{getData:return} <= {caller_pc@getData:F.jl:18,4-18} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{L:param@F.jl:9,1-15} == {Alice: } in environment []@F.jl:6,11-19
+    -->{caller_pc@getData:F.jl:18,4-18} == {pc6} in environment []@F.jl:9,1-25
+    -->{getData_reciever} ==_{def} {aliceContainer; pc6} in environment []@F.jl:6,21-35
+    -->{getData:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:9,1-25
+    -->{getData:value_returned} ==_{def} {Alice: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:9,1-25
+    -->{receiver} == {aliceContainer; pc6} in environment [{this} <= {[_: _; _!: _]}]@F.jl:9,1-25
+    -->{pc2} <= {L:param@F.jl:10,1-13; caller_pc@getData:F.jl:18,4-18} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,23-32
+    -->{L:param@F.jl:10,1-13} == {Bob: } in environment []@F.jl:7,11-17
+    -->{getData_reciever} ==_{def} {bobContainer; pc6} in environment []@F.jl:7,19-31
+    -->{getData:value_returned} ==_{def} {Bob: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:10,1-23
+    -->{receiver} == {bobContainer; pc6} in environment [{this} <= {[_: _; _!: _]}]@F.jl:10,1-23
+    -->{api:return} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:5,11-19
+    -->{api:return} <= {} in environment [{this} <= {[_: _; _!: _]}]@F.jl:5,11-19
+   total number of label constraints: 55
+   size of summary constraint info: 55
+   thread Thread2 considers [constructor public public F()]
+thread Thread2 finished
+   thread Thread1 considers [constructor Container[label L]()]
+   thread Thread1 considers [method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }]
+   thread Thread1 considers [method public void api{}() : {*!: }]
+   thread Thread1 considers [constructor public public F()]
+thread Thread1 finished
+finished generating summary constraints
+    summary constraints for constructor Container[label L]()
+    -->{pc1} ==_{def} {sum(caller_pc@Container:F.jl:16,4-15)} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{pc3} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}, {[sum(caller_pc@Container:F.jl:16,4-15)]} <= {pc3}]@F.jl:16,16-17
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}, {[sum(caller_pc@Container:F.jl:16,4-15)]} <= {pc3}]@F.jl:16,16-17
+    -->{pc5} ==_{def} {pc3; sum(caller_pc@Container:F.jl:16,4-15)} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{Container:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{Container:return} <= {sum(caller_pc@Container:F.jl:16,4-15)} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+   ** label {sum(caller_pc@Container:F.jl:16,4-15)} contains summary variables [{sum(caller_pc@Container:F.jl:16,4-15)}]
+    summary constraints for method int{L} getData{sum(caller_pc@getData:F.jl:18,4-18)}() : {*!: }
+    -->{pc2} ==_{def} {sum(caller_pc@getData:F.jl:18,4-18)} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{pc2} <= {L; sum(caller_pc@getData:F.jl:18,4-18)} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,23-32
+    -->{getData:return} ==_{def} {pc2} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{getData:return} <= {sum(caller_pc@getData:F.jl:18,4-18)} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+   ** label {sum(caller_pc@getData:F.jl:18,4-18)} contains summary variables [{sum(caller_pc@getData:F.jl:18,4-18)}]
+    summary constraints for method public void api{}() : {*!: }
+    -->{pc6} ==_{def} {} in environment [{this} <= {[_: _; _!: _]}]@F.jl:5,11-19
+    -->{pc6} <= {newContainer} in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{pc1} ==_{def} {caller_pc@Container:F.jl:16,4-15} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{pc3} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}, {[sum(caller_pc@Container:F.jl:16,4-15)]} <= {pc3}]@F.jl:16,16-17
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}, {[sum(caller_pc@Container:F.jl:16,4-15)]} <= {pc3}]@F.jl:16,16-17
+    -->{pc5} ==_{def} {pc3; caller_pc@Container:F.jl:16,4-15} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{Container:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{Container:return} <= {caller_pc@Container:F.jl:16,4-15} in environment [{this} <= {[sum(caller_pc@Container:F.jl:16,4-15)]}]@F.jl:16,4-15
+    -->{caller_pc@Container:F.jl:16,4-15} == {pc6} in environment []@F.jl:6,38-53
+    -->{Container[{L_var#8628}]_reciever} ==_{def} {newContainer} in environment []@F.jl:6,38-53
+    -->{Container[{L_var#8628}]:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{Container[{L_var#8628}]:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{L_var#8628} == {Alice: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{Container[{L_var#8628}]:value_returned; pc6; newContainer} <= {aliceContainer} in environment [{this} <= {[_: _; _!: _]}]@F.jl:6,38-53
+    -->{Container[{L_var#6426}]_reciever} ==_{def} {newContainer} in environment []@F.jl:7,34-49
+    -->{Container[{L_var#6426}]:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:7,34-49
+    -->{Container[{L_var#6426}]:value_returned} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:7,34-49
+    -->{L_var#6426} == {Bob: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:7,34-49
+    -->{Container[{L_var#6426}]:value_returned; pc6; newContainer} <= {bobContainer} in environment [{this} <= {[_: _; _!: _]}]@F.jl:7,34-49
+    -->{pc2} ==_{def} {caller_pc@getData:F.jl:18,4-18} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{pc2} <= {L:param@F.jl:9,1-15; caller_pc@getData:F.jl:18,4-18} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,23-32
+    -->{getData:return} ==_{def} {pc2} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{getData:return} <= {caller_pc@getData:F.jl:18,4-18} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,4-18
+    -->{L:param@F.jl:9,1-15} == {Alice: } in environment []@F.jl:6,11-19
+    -->{caller_pc@getData:F.jl:18,4-18} == {pc6} in environment []@F.jl:9,1-25
+    -->{getData_reciever} ==_{def} {aliceContainer; pc6} in environment []@F.jl:6,21-35
+    -->{getData:return_observed} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:9,1-25
+    -->{getData:value_returned} ==_{def} {Alice: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:9,1-25
+    -->{receiver} == {aliceContainer; pc6} in environment [{this} <= {[_: _; _!: _]}]@F.jl:9,1-25
+    -->{pc2} <= {L:param@F.jl:10,1-13; caller_pc@getData:F.jl:18,4-18} in environment [{this} <= {[sum(caller_pc@getData:F.jl:18,4-18)]}]@F.jl:18,23-32
+    -->{L:param@F.jl:10,1-13} == {Bob: } in environment []@F.jl:7,11-17
+    -->{getData_reciever} ==_{def} {bobContainer; pc6} in environment []@F.jl:7,19-31
+    -->{getData:value_returned} ==_{def} {Bob: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:10,1-23
+    -->{receiver} == {bobContainer; pc6} in environment [{this} <= {[_: _; _!: _]}]@F.jl:10,1-23
+    -->{api:return} ==_{def} {*!: } in environment [{this} <= {[_: _; _!: _]}]@F.jl:5,11-19
+    -->{api:return} <= {} in environment [{this} <= {[_: _; _!: _]}]@F.jl:5,11-19
+    summary constraints for constructor public public F()
+    -->{pc7} ==_{def} {sum(caller_pc@F:F.jl:3,7-14)} in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    -->{pc8} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    -->{java.lang.Object:return_observed} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}, {[sum(caller_pc@F:F.jl:3,7-14)]} <= {pc8}]@F.jl:3,7-14
+    -->{java.lang.Object:value_returned} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}, {[sum(caller_pc@F:F.jl:3,7-14)]} <= {pc8}]@F.jl:3,7-14
+    -->{pc9} ==_{def} {pc8; sum(caller_pc@F:F.jl:3,7-14)} in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    -->{F:return} ==_{def} {*!: } in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+    -->{F:return} <= {sum(caller_pc@F:F.jl:3,7-14)} in environment [{this} <= {[sum(caller_pc@F:F.jl:3,7-14)]}]@F.jl:3,7-14
+   ** label {sum(caller_pc@F:F.jl:3,7-14)} contains summary variables [{sum(caller_pc@F:F.jl:3,7-14)}]

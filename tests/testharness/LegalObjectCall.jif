@@ -1,0 +1,19 @@
+public class LegalObjectCall {
+
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	B myB = new B();
+	myB.foo(aliceInt);
+    }
+}
+
+class A {
+    public void foo(int{Alice:} i) {
+    }
+}
+
+class B extends A {
+    public void foo(int k) {
+    }
+}

@@ -1,0 +1,1650 @@
+ digraph CFGBuildReachChecker0 {
+   label="CFGBuilder: ReachChecker0\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test(...) -> void
+ 12213211 [ label = "public void test(...)" ];
+ 14982605 [ label = "void" ];
+ 12213211 -> 14982605 [label=""];
+ // node public void test(...) -> []
+ //     edge void -> void
+ 14982605 [ label = "void" ];
+ 20712275 [ label = "void" ];
+ 14982605 -> 20712275 [label=""];
+ // node void -> [{edgeKey=,term={ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); },entry}]
+ //     edge void -> { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }
+ 20712275 [ label = "void" ];
+ 12413535 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 20712275 -> 12413535 [label=""];
+ //     edge { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> if (0 == 1) { eval(this.myField = null); }
+ 12413535 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 23467239 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 12413535 -> 23467239 [label=""];
+ // node { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> [{edgeKey=,term=public void test(...),exit}]
+ //     edge if (0 == 1) { eval(this.myField = null); } -> 0 == 1
+ 23467239 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 9936523 [ label = "0 == 1" ];
+ 23467239 -> 9936523 [label=""];
+ // node if (0 == 1) { eval(this.myField = null); } -> [{edgeKey=,term=eval(this.myField.getClass());,entry}]
+ //     edge 0 == 1 -> 0
+ 9936523 [ label = "0 == 1" ];
+ 12014770 [ label = "0" ];
+ 9936523 -> 12014770 [label=""];
+ // node 0 == 1 -> [{edgeKey=true,term={ eval(this.myField = null); },entry}, {edgeKey=false,term=if (0 == 1) { eval(this.myField = null); },exit}]
+ //     edge 0 -> 0
+ 12014770 [ label = "0" ];
+ 1670071 [ label = "0" ];
+ 12014770 -> 1670071 [label=""];
+ // node 0 -> [{edgeKey=,term=1,entry}]
+ //     edge 0 -> 1
+ 1670071 [ label = "0" ];
+ 28360136 [ label = "1" ];
+ 1670071 -> 28360136 [label=""];
+ //     edge 1 -> 1
+ 28360136 [ label = "1" ];
+ 8112281 [ label = "1" ];
+ 28360136 -> 8112281 [label=""];
+ // node 1 -> [{edgeKey=,term=0 == 1,exit}]
+ //     edge 1 -> 0 == 1
+ 8112281 [ label = "1" ];
+ 11463270 [ label = "0 == 1" ];
+ 8112281 -> 11463270 [label=""];
+ //     edge 0 == 1 -> { eval(this.myField = null); }
+ 11463270 [ label = "0 == 1" ];
+ 367156 [ label = "{ eval(this.myField = null); }" ];
+ 11463270 -> 367156 [label="true"];
+ //     edge 0 == 1 -> if (0 == 1) { eval(this.myField = null); }
+ 11463270 [ label = "0 == 1" ];
+ 30340343 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 11463270 -> 30340343 [label="false"];
+ //     edge { eval(this.myField = null); } -> eval(this.myField = null);
+ 367156 [ label = "{ eval(this.myField = null); }" ];
+ 33402317 [ label = "eval(this.myField = null);" ];
+ 367156 -> 33402317 [label=""];
+ // node { eval(this.myField = null); } -> [{edgeKey=,term=if (0 == 1) { eval(this.myField = null); },exit}]
+ //     edge eval(this.myField = null); -> this.myField = null
+ 33402317 [ label = "eval(this.myField = null);" ];
+ 11110706 [ label = "this.myField = null" ];
+ 33402317 -> 11110706 [label=""];
+ // node eval(this.myField = null); -> [{edgeKey=,term={ eval(this.myField = null); },exit}]
+ //     edge this.myField = null -> this
+ 11110706 [ label = "this.myField = null" ];
+ 17477791 [ label = "this" ];
+ 11110706 -> 17477791 [label=""];
+ // node this.myField = null -> [{edgeKey=,term=eval(this.myField = null);,exit}]
+ //     edge this -> this
+ 17477791 [ label = "this" ];
+ 13748088 [ label = "this" ];
+ 17477791 -> 13748088 [label=""];
+ // node this -> [{edgeKey=,term=null,entry}]
+ //     edge this -> null
+ 13748088 [ label = "this" ];
+ 3403998 [ label = "null" ];
+ 13748088 -> 3403998 [label=""];
+ //     edge null -> null
+ 3403998 [ label = "null" ];
+ 701508 [ label = "null" ];
+ 3403998 -> 701508 [label=""];
+ // node null -> [{edgeKey=,term=this.myField = null,exit}]
+ //     edge null -> this.myField = null
+ 701508 [ label = "null" ];
+ 12644844 [ label = "this.myField = null" ];
+ 701508 -> 12644844 [label=""];
+ //     edge this.myField = null -> eval(this.myField = null);
+ 12644844 [ label = "this.myField = null" ];
+ 21680077 [ label = "eval(this.myField = null);" ];
+ 12644844 -> 21680077 [label=""];
+ //     edge eval(this.myField = null); -> { eval(this.myField = null); }
+ 21680077 [ label = "eval(this.myField = null);" ];
+ 9492714 [ label = "{ eval(this.myField = null); }" ];
+ 21680077 -> 9492714 [label=""];
+ //     edge { eval(this.myField = null); } -> if (0 == 1) { eval(this.myField = null); }
+ 9492714 [ label = "{ eval(this.myField = null); }" ];
+ 30340343 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 9492714 -> 30340343 [label=""];
+ //     edge if (0 == 1) { eval(this.myField = null); } -> eval(this.myField.getClass());
+ 30340343 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 28715691 [ label = "eval(this.myField.getClass());" ];
+ 30340343 -> 28715691 [label=""];
+ //     edge eval(this.myField.getClass()); -> this.myField.getClass()
+ 28715691 [ label = "eval(this.myField.getClass());" ];
+ 5514537 [ label = "this.myField.getClass()" ];
+ 28715691 -> 5514537 [label=""];
+ // node eval(this.myField.getClass()); -> [{edgeKey=,term={ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); },exit}]
+ //     edge this.myField.getClass() -> this.myField
+ 5514537 [ label = "this.myField.getClass()" ];
+ 16825026 [ label = "this.myField" ];
+ 5514537 -> 16825026 [label=""];
+ // node this.myField.getClass() -> [{edgeKey=,term=eval(this.myField.getClass());,exit}]
+ //     edge this.myField -> this
+ 16825026 [ label = "this.myField" ];
+ 22736215 [ label = "this" ];
+ 16825026 -> 22736215 [label=""];
+ // node this.myField -> [{edgeKey=,term=this.myField.getClass(),exit}]
+ //     edge this -> this
+ 22736215 [ label = "this" ];
+ 9706934 [ label = "this" ];
+ 22736215 -> 9706934 [label=""];
+ // node this -> [{edgeKey=,term=this.myField,exit}]
+ //     edge this -> this.myField
+ 9706934 [ label = "this" ];
+ 2804823 [ label = "this.myField" ];
+ 9706934 -> 2804823 [label=""];
+ //     edge this.myField -> this.myField.getClass()
+ 2804823 [ label = "this.myField" ];
+ 30238442 [ label = "this.myField.getClass()" ];
+ 2804823 -> 30238442 [label=""];
+ //     edge this.myField.getClass() -> eval(this.myField.getClass());
+ 30238442 [ label = "this.myField.getClass()" ];
+ 2080726 [ label = "eval(this.myField.getClass());" ];
+ 30238442 -> 2080726 [label=""];
+ //     edge this.myField.getClass() -> public void test(...)
+ 30238442 [ label = "this.myField.getClass()" ];
+ 7052420 [ label = "public void test(...)" ];
+ 30238442 -> 7052420 [label="NullPointerException"];
+ //     edge eval(this.myField.getClass()); -> { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }
+ 2080726 [ label = "eval(this.myField.getClass());" ];
+ 15775736 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 2080726 -> 15775736 [label=""];
+ //     edge { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> public void test(...)
+ 15775736 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 7052420 [ label = "public void test(...)" ];
+ 15775736 -> 7052420 [label=""];
+ }
+ digraph DataFlowReachChecker0 {
+   label="Dataflow: ReachChecker0\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 1670071 [ label = "0\n(IntLit_c)" ];
+ 28360136 [ label = "1 (IntLit_c)" ];
+ 1670071 -> 28360136 [label="\nreachable"];
+ 12014770 [ label = "0\n(IntLit_c)" ];
+ 1670071 [ label = "0 (IntLit_c)" ];
+ 12014770 -> 1670071 [label="\nreachable"];
+ 701508 [ label = "null\n(NullLit_c)" ];
+ 12644844 [ label = "this.myField = null (FieldAssign_c)" ];
+ 701508 -> 12644844 [label="\nreachable"];
+ 3403998 [ label = "null\n(NullLit_c)" ];
+ 701508 [ label = "null (NullLit_c)" ];
+ 3403998 -> 701508 [label="\nreachable"];
+ 9706934 [ label = "this\n(Special_c)" ];
+ 2804823 [ label = "this.myField (Field_c)" ];
+ 9706934 -> 2804823 [label="\nreachable"];
+ 22736215 [ label = "this\n(Special_c)" ];
+ 9706934 [ label = "this (Special_c)" ];
+ 22736215 -> 9706934 [label="\nreachable"];
+ 11463270 [ label = "0 == 1\n(JifBinary_c)" ];
+ 367156 [ label = "{ eval(this.myField = null); } (Block_c)" ];
+ 11463270 -> 367156 [label="true\nreachable"];
+ 30340343 [ label = "if (0 == 1) { eval(this.myField = null); } (If_c)" ];
+ 11463270 -> 30340343 [label="false\nreachable"];
+ 9936523 [ label = "0 == 1\n(JifBinary_c)" ];
+ 12014770 [ label = "0 (IntLit_c)" ];
+ 9936523 -> 12014770 [label="\nreachable"];
+ 8112281 [ label = "1\n(IntLit_c)" ];
+ 11463270 [ label = "0 == 1 (JifBinary_c)" ];
+ 8112281 -> 11463270 [label="\nreachable"];
+ 28360136 [ label = "1\n(IntLit_c)" ];
+ 8112281 [ label = "1 (IntLit_c)" ];
+ 28360136 -> 8112281 [label="\nreachable"];
+ 12644844 [ label = "this.myField = null\n(FieldAssign_c)" ];
+ 21680077 [ label = "eval(this.myField = null); (Eval_c)" ];
+ 12644844 -> 21680077 [label="\nreachable"];
+ 11110706 [ label = "this.myField = null\n(FieldAssign_c)" ];
+ 17477791 [ label = "this (Special_c)" ];
+ 11110706 -> 17477791 [label="\nreachable"];
+ 2080726 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 15775736 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } (Block_c)" ];
+ 2080726 -> 15775736 [label="\nreachable"];
+ 28715691 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 5514537 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 28715691 -> 5514537 [label="\nreachable"];
+ 2804823 [ label = "this.myField\n(Field_c)" ];
+ 30238442 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 2804823 -> 30238442 [label="\nreachable"];
+ 16825026 [ label = "this.myField\n(Field_c)" ];
+ 22736215 [ label = "this (Special_c)" ];
+ 16825026 -> 22736215 [label="\nreachable"];
+ 13748088 [ label = "this\n(Special_c)" ];
+ 3403998 [ label = "null (NullLit_c)" ];
+ 13748088 -> 3403998 [label="\nreachable"];
+ 17477791 [ label = "this\n(Special_c)" ];
+ 13748088 [ label = "this (Special_c)" ];
+ 17477791 -> 13748088 [label="\nreachable"];
+ 30238442 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 2080726 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 30238442 -> 2080726 [label="\nreachable"];
+ 7052420 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 30238442 -> 7052420 [label="NullPointerException\nreachable by exceptions only"];
+ 5514537 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 16825026 [ label = "this.myField (Field_c)" ];
+ 5514537 -> 16825026 [label="\nreachable"];
+ 7052420 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 12213211 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 14982605 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 12213211 -> 14982605 [label="\nreachable"];
+ 21680077 [ label = "eval(this.myField = null);\n(Eval_c)" ];
+ 9492714 [ label = "{ eval(this.myField = null); } (Block_c)" ];
+ 21680077 -> 9492714 [label="\nreachable"];
+ 33402317 [ label = "eval(this.myField = null);\n(Eval_c)" ];
+ 11110706 [ label = "this.myField = null (FieldAssign_c)" ];
+ 33402317 -> 11110706 [label="\nreachable"];
+ 20712275 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 12413535 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } (Block_c)" ];
+ 20712275 -> 12413535 [label="\nreachable"];
+ 14982605 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 20712275 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 14982605 -> 20712275 [label="\nreachable"];
+ 9492714 [ label = "{ eval(this.myField = null); }\n(Block_c)" ];
+ 30340343 [ label = "if (0 == 1) { eval(this.myField = null); } (If_c)" ];
+ 9492714 -> 30340343 [label="\nreachable"];
+ 367156 [ label = "{ eval(this.myField = null); }\n(Block_c)" ];
+ 33402317 [ label = "eval(this.myField = null); (Eval_c)" ];
+ 367156 -> 33402317 [label="\nreachable"];
+ 15775736 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }\n(Block_c)" ];
+ 7052420 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 15775736 -> 7052420 [label="\nreachable"];
+ 12413535 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }\n(Block_c)" ];
+ 23467239 [ label = "if (0 == 1) { eval(this.myField = null); } (If_c)" ];
+ 12413535 -> 23467239 [label="\nreachable"];
+ 30340343 [ label = "if (0 == 1) { eval(this.myField = null); }\n(If_c)" ];
+ 28715691 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 30340343 -> 28715691 [label="\nreachable"];
+ 23467239 [ label = "if (0 == 1) { eval(this.myField = null); }\n(If_c)" ];
+ 9936523 [ label = "0 == 1 (JifBinary_c)" ];
+ 23467239 -> 9936523 [label="\nreachable"];
+ }
+ digraph CFGBuildReachChecker1 {
+   label="CFGBuilder: ReachChecker1\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:12,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test2(...) -> void
+ 3556929 [ label = "public void test2(...)" ];
+ 20870479 [ label = "void" ];
+ 3556929 -> 20870479 [label=""];
+ // node public void test2(...) -> []
+ //     edge void -> void
+ 20870479 [ label = "void" ];
+ 25675100 [ label = "void" ];
+ 20870479 -> 25675100 [label=""];
+ // node void -> [{edgeKey=,term={ },entry}]
+ //     edge void -> { }
+ 25675100 [ label = "void" ];
+ 11544872 [ label = "{ }" ];
+ 25675100 -> 11544872 [label=""];
+ //     edge { } -> { }
+ 11544872 [ label = "{ }" ];
+ 22946636 [ label = "{ }" ];
+ 11544872 -> 22946636 [label=""];
+ // node { } -> [{edgeKey=,term=public void test2(...),exit}]
+ //     edge { } -> public void test2(...)
+ 22946636 [ label = "{ }" ];
+ 23032071 [ label = "public void test2(...)" ];
+ 22946636 -> 23032071 [label=""];
+ }
+ digraph DataFlowReachChecker1 {
+   label="Dataflow: ReachChecker1\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:12,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 22946636 [ label = "{ }\n(Block_c)" ];
+ 23032071 [ label = "public void test2(...) (JifMethodDecl_c)" ];
+ 22946636 -> 23032071 [label="\nreachable"];
+ 11544872 [ label = "{ }\n(Block_c)" ];
+ 22946636 [ label = "{ } (Block_c)" ];
+ 11544872 -> 22946636 [label="\nreachable"];
+ 25675100 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 11544872 [ label = "{ } (Block_c)" ];
+ 25675100 -> 11544872 [label="\nreachable"];
+ 20870479 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 25675100 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 20870479 -> 25675100 [label="\nreachable"];
+ 23032071 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 3556929 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 20870479 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 3556929 -> 20870479 [label="\nreachable"];
+ }
+ digraph CFGBuildReachChecker2 {
+   label="CFGBuilder: ReachChecker2\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public NullPrecond(...) -> { super(...) }
+ 3560063 [ label = "public NullPrecond(...)" ];
+ 6426875 [ label = "{ super(...) }" ];
+ 3560063 -> 6426875 [label=""];
+ // node public NullPrecond(...) -> []
+ //     edge { super(...) } -> super(...)
+ 6426875 [ label = "{ super(...) }" ];
+ 32386092 [ label = "super(...)" ];
+ 6426875 -> 32386092 [label=""];
+ // node { super(...) } -> [{edgeKey=,term=public NullPrecond(...),exit}]
+ //     edge super(...) -> super(...)
+ 32386092 [ label = "super(...)" ];
+ 26622782 [ label = "super(...)" ];
+ 32386092 -> 26622782 [label=""];
+ // node super(...) -> [{edgeKey=,term={ super(...) },exit}]
+ //     edge super(...) -> { super(...) }
+ 26622782 [ label = "super(...)" ];
+ 746824 [ label = "{ super(...) }" ];
+ 26622782 -> 746824 [label=""];
+ //     edge { super(...) } -> public NullPrecond(...)
+ 746824 [ label = "{ super(...) }" ];
+ 2529687 [ label = "public NullPrecond(...)" ];
+ 746824 -> 2529687 [label=""];
+ }
+ digraph DataFlowReachChecker2 {
+   label="Dataflow: ReachChecker2\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 2529687 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 3560063 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 6426875 [ label = "{ super(...) } (Block_c)" ];
+ 3560063 -> 6426875 [label="\nreachable"];
+ 26622782 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 746824 [ label = "{ super(...) } (Block_c)" ];
+ 26622782 -> 746824 [label="\nreachable"];
+ 32386092 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 26622782 [ label = "super(...) (ConstructorCall_c)" ];
+ 32386092 -> 26622782 [label="\nreachable"];
+ 746824 [ label = "{ super(...) }\n(Block_c)" ];
+ 2529687 [ label = "public NullPrecond(...) (JLiftConstructorDecl_c)" ];
+ 746824 -> 2529687 [label="\nreachable"];
+ 6426875 [ label = "{ super(...) }\n(Block_c)" ];
+ 32386092 [ label = "super(...) (ConstructorCall_c)" ];
+ 6426875 -> 32386092 [label="\nreachable"];
+ }
+ digraph CFGBuildNotNullChecker3 {
+   label="CFGBuilder: NotNullChecker3\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test(...) -> void
+ 33526517 [ label = "public void test(...)" ];
+ 610399 [ label = "void" ];
+ 33526517 -> 610399 [label=""];
+ // node public void test(...) -> []
+ //     edge void -> void
+ 610399 [ label = "void" ];
+ 24880015 [ label = "void" ];
+ 610399 -> 24880015 [label=""];
+ // node void -> [{edgeKey=,term={ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); },entry}]
+ //     edge void -> { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }
+ 24880015 [ label = "void" ];
+ 18096534 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 24880015 -> 18096534 [label=""];
+ //     edge { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> if (0 == 1) { eval(this.myField = null); }
+ 18096534 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 13878947 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 18096534 -> 13878947 [label=""];
+ // node { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> [{edgeKey=,term=public void test(...),exit}]
+ //     edge if (0 == 1) { eval(this.myField = null); } -> 0 == 1
+ 13878947 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 6151022 [ label = "0 == 1" ];
+ 13878947 -> 6151022 [label=""];
+ // node if (0 == 1) { eval(this.myField = null); } -> [{edgeKey=,term=eval(this.myField.getClass());,entry}]
+ //     edge 0 == 1 -> 0
+ 6151022 [ label = "0 == 1" ];
+ 4744654 [ label = "0" ];
+ 6151022 -> 4744654 [label=""];
+ // node 0 == 1 -> [{edgeKey=true,term={ eval(this.myField = null); },entry}, {edgeKey=false,term=if (0 == 1) { eval(this.myField = null); },exit}]
+ //     edge 0 -> 0
+ 4744654 [ label = "0" ];
+ 18071221 [ label = "0" ];
+ 4744654 -> 18071221 [label=""];
+ // node 0 -> [{edgeKey=,term=1,entry}]
+ //     edge 0 -> 1
+ 18071221 [ label = "0" ];
+ 13729475 [ label = "1" ];
+ 18071221 -> 13729475 [label=""];
+ //     edge 1 -> 1
+ 13729475 [ label = "1" ];
+ 31022504 [ label = "1" ];
+ 13729475 -> 31022504 [label=""];
+ // node 1 -> [{edgeKey=,term=0 == 1,exit}]
+ //     edge 1 -> 0 == 1
+ 31022504 [ label = "1" ];
+ 26474210 [ label = "0 == 1" ];
+ 31022504 -> 26474210 [label=""];
+ //     edge 0 == 1 -> { eval(this.myField = null); }
+ 26474210 [ label = "0 == 1" ];
+ 20983130 [ label = "{ eval(this.myField = null); }" ];
+ 26474210 -> 20983130 [label="true"];
+ //     edge 0 == 1 -> if (0 == 1) { eval(this.myField = null); }
+ 26474210 [ label = "0 == 1" ];
+ 6386542 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 26474210 -> 6386542 [label="false"];
+ //     edge { eval(this.myField = null); } -> eval(this.myField = null);
+ 20983130 [ label = "{ eval(this.myField = null); }" ];
+ 11498200 [ label = "eval(this.myField = null);" ];
+ 20983130 -> 11498200 [label=""];
+ // node { eval(this.myField = null); } -> [{edgeKey=,term=if (0 == 1) { eval(this.myField = null); },exit}]
+ //     edge eval(this.myField = null); -> this.myField = null
+ 11498200 [ label = "eval(this.myField = null);" ];
+ 18433730 [ label = "this.myField = null" ];
+ 11498200 -> 18433730 [label=""];
+ // node eval(this.myField = null); -> [{edgeKey=,term={ eval(this.myField = null); },exit}]
+ //     edge this.myField = null -> this
+ 18433730 [ label = "this.myField = null" ];
+ 6783657 [ label = "this" ];
+ 18433730 -> 6783657 [label=""];
+ // node this.myField = null -> [{edgeKey=,term=eval(this.myField = null);,exit}]
+ //     edge this -> this
+ 6783657 [ label = "this" ];
+ 28524838 [ label = "this" ];
+ 6783657 -> 28524838 [label=""];
+ // node this -> [{edgeKey=,term=null,entry}]
+ //     edge this -> null
+ 28524838 [ label = "this" ];
+ 24248500 [ label = "null" ];
+ 28524838 -> 24248500 [label=""];
+ //     edge null -> null
+ 24248500 [ label = "null" ];
+ 25966201 [ label = "null" ];
+ 24248500 -> 25966201 [label=""];
+ // node null -> [{edgeKey=,term=this.myField = null,exit}]
+ //     edge null -> this.myField = null
+ 25966201 [ label = "null" ];
+ 4999131 [ label = "this.myField = null" ];
+ 25966201 -> 4999131 [label=""];
+ //     edge this.myField = null -> eval(this.myField = null);
+ 4999131 [ label = "this.myField = null" ];
+ 101492 [ label = "eval(this.myField = null);" ];
+ 4999131 -> 101492 [label=""];
+ //     edge eval(this.myField = null); -> { eval(this.myField = null); }
+ 101492 [ label = "eval(this.myField = null);" ];
+ 28062585 [ label = "{ eval(this.myField = null); }" ];
+ 101492 -> 28062585 [label=""];
+ //     edge { eval(this.myField = null); } -> if (0 == 1) { eval(this.myField = null); }
+ 28062585 [ label = "{ eval(this.myField = null); }" ];
+ 6386542 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 28062585 -> 6386542 [label=""];
+ //     edge if (0 == 1) { eval(this.myField = null); } -> eval(this.myField.getClass());
+ 6386542 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 24387997 [ label = "eval(this.myField.getClass());" ];
+ 6386542 -> 24387997 [label=""];
+ //     edge eval(this.myField.getClass()); -> this.myField.getClass()
+ 24387997 [ label = "eval(this.myField.getClass());" ];
+ 23930626 [ label = "this.myField.getClass()" ];
+ 24387997 -> 23930626 [label=""];
+ // node eval(this.myField.getClass()); -> [{edgeKey=,term={ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); },exit}]
+ //     edge this.myField.getClass() -> this.myField
+ 23930626 [ label = "this.myField.getClass()" ];
+ 6659511 [ label = "this.myField" ];
+ 23930626 -> 6659511 [label=""];
+ // node this.myField.getClass() -> [{edgeKey=,term=eval(this.myField.getClass());,exit}]
+ //     edge this.myField -> this
+ 6659511 [ label = "this.myField" ];
+ 23848591 [ label = "this" ];
+ 6659511 -> 23848591 [label=""];
+ // node this.myField -> [{edgeKey=,term=this.myField.getClass(),exit}]
+ //     edge this -> this
+ 23848591 [ label = "this" ];
+ 15594377 [ label = "this" ];
+ 23848591 -> 15594377 [label=""];
+ // node this -> [{edgeKey=,term=this.myField,exit}]
+ //     edge this -> this.myField
+ 15594377 [ label = "this" ];
+ 1035988 [ label = "this.myField" ];
+ 15594377 -> 1035988 [label=""];
+ //     edge this.myField -> this.myField.getClass()
+ 1035988 [ label = "this.myField" ];
+ 30657962 [ label = "this.myField.getClass()" ];
+ 1035988 -> 30657962 [label=""];
+ //     edge this.myField.getClass() -> eval(this.myField.getClass());
+ 30657962 [ label = "this.myField.getClass()" ];
+ 6510044 [ label = "eval(this.myField.getClass());" ];
+ 30657962 -> 6510044 [label=""];
+ //     edge this.myField.getClass() -> public void test(...)
+ 30657962 [ label = "this.myField.getClass()" ];
+ 26870430 [ label = "public void test(...)" ];
+ 30657962 -> 26870430 [label="NullPointerException"];
+ //     edge eval(this.myField.getClass()); -> { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }
+ 6510044 [ label = "eval(this.myField.getClass());" ];
+ 2221396 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 6510044 -> 2221396 [label=""];
+ //     edge { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> public void test(...)
+ 2221396 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 26870430 [ label = "public void test(...)" ];
+ 2221396 -> 26870430 [label=""];
+ }
+ digraph DataFlowNotNullChecker3 {
+   label="Dataflow: NotNullChecker3\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 101492 [ label = "eval(this.myField = null);\n(Eval_c)" ];
+ 28062585 [ label = "{ eval(this.myField = null); } (Block_c)" ];
+ 101492 -> 28062585 [label="\n[nn access paths: []]"];
+ 11498200 [ label = "eval(this.myField = null);\n(Eval_c)" ];
+ 18433730 [ label = "this.myField = null (FieldAssign_c)" ];
+ 11498200 -> 18433730 [label="\n[nn access paths: []]"];
+ 1035988 [ label = "this.myField\n(Field_c)" ];
+ 30657962 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 1035988 -> 30657962 [label="\n[nn access paths: []]"];
+ 6659511 [ label = "this.myField\n(Field_c)" ];
+ 23848591 [ label = "this (Special_c)" ];
+ 6659511 -> 23848591 [label="\n[nn access paths: []]"];
+ 4999131 [ label = "this.myField = null\n(FieldAssign_c)" ];
+ 101492 [ label = "eval(this.myField = null); (Eval_c)" ];
+ 4999131 -> 101492 [label="\n[nn access paths: []]"];
+ 18433730 [ label = "this.myField = null\n(FieldAssign_c)" ];
+ 6783657 [ label = "this (Special_c)" ];
+ 18433730 -> 6783657 [label="\n[nn access paths: []]"];
+ 18071221 [ label = "0\n(IntLit_c)" ];
+ 13729475 [ label = "1 (IntLit_c)" ];
+ 18071221 -> 13729475 [label="\n[nn access paths: []]"];
+ 4744654 [ label = "0\n(IntLit_c)" ];
+ 18071221 [ label = "0 (IntLit_c)" ];
+ 4744654 -> 18071221 [label="\n[nn access paths: []]"];
+ 24880015 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 18096534 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } (Block_c)" ];
+ 24880015 -> 18096534 [label="\n[nn access paths: []]"];
+ 610399 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 24880015 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 610399 -> 24880015 [label="\n[nn access paths: []]"];
+ 28524838 [ label = "this\n(Special_c)" ];
+ 24248500 [ label = "null (NullLit_c)" ];
+ 28524838 -> 24248500 [label="\n[nn access paths: []]"];
+ 6783657 [ label = "this\n(Special_c)" ];
+ 28524838 [ label = "this (Special_c)" ];
+ 6783657 -> 28524838 [label="\n[nn access paths: []]"];
+ 15594377 [ label = "this\n(Special_c)" ];
+ 1035988 [ label = "this.myField (Field_c)" ];
+ 15594377 -> 1035988 [label="\n[nn access paths: []]"];
+ 23848591 [ label = "this\n(Special_c)" ];
+ 15594377 [ label = "this (Special_c)" ];
+ 23848591 -> 15594377 [label="\n[nn access paths: []]"];
+ 26870430 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 33526517 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 610399 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 33526517 -> 610399 [label="\n[nn access paths: []]"];
+ 2221396 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }\n(Block_c)" ];
+ 26870430 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 2221396 -> 26870430 [label="\n[nn access paths: []]"];
+ 18096534 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }\n(Block_c)" ];
+ 13878947 [ label = "if (0 == 1) { eval(this.myField = null); } (If_c)" ];
+ 18096534 -> 13878947 [label="\n[nn access paths: []]"];
+ 30657962 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 6510044 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 30657962 -> 6510044 [label="\n[nn access paths: []]"];
+ 26870430 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 30657962 -> 26870430 [label="NullPointerException\n[nn access paths: []]"];
+ 23930626 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 6659511 [ label = "this.myField (Field_c)" ];
+ 23930626 -> 6659511 [label="\n[nn access paths: []]"];
+ 6386542 [ label = "if (0 == 1) { eval(this.myField = null); }\n(If_c)" ];
+ 24387997 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 6386542 -> 24387997 [label="\n[nn access paths: []]"];
+ 13878947 [ label = "if (0 == 1) { eval(this.myField = null); }\n(If_c)" ];
+ 6151022 [ label = "0 == 1 (JifBinary_c)" ];
+ 13878947 -> 6151022 [label="\n[nn access paths: []]"];
+ 26474210 [ label = "0 == 1\n(JifBinary_c)" ];
+ 20983130 [ label = "{ eval(this.myField = null); } (Block_c)" ];
+ 26474210 -> 20983130 [label="true\n[nn access paths: []]"];
+ 6386542 [ label = "if (0 == 1) { eval(this.myField = null); } (If_c)" ];
+ 26474210 -> 6386542 [label="false\n[nn access paths: []]"];
+ 6151022 [ label = "0 == 1\n(JifBinary_c)" ];
+ 4744654 [ label = "0 (IntLit_c)" ];
+ 6151022 -> 4744654 [label="\n[nn access paths: []]"];
+ 28062585 [ label = "{ eval(this.myField = null); }\n(Block_c)" ];
+ 6386542 [ label = "if (0 == 1) { eval(this.myField = null); } (If_c)" ];
+ 28062585 -> 6386542 [label="\n[nn access paths: []]"];
+ 20983130 [ label = "{ eval(this.myField = null); }\n(Block_c)" ];
+ 11498200 [ label = "eval(this.myField = null); (Eval_c)" ];
+ 20983130 -> 11498200 [label="\n[nn access paths: []]"];
+ 25966201 [ label = "null\n(NullLit_c)" ];
+ 4999131 [ label = "this.myField = null (FieldAssign_c)" ];
+ 25966201 -> 4999131 [label="\n[nn access paths: []]"];
+ 24248500 [ label = "null\n(NullLit_c)" ];
+ 25966201 [ label = "null (NullLit_c)" ];
+ 24248500 -> 25966201 [label="\n[nn access paths: []]"];
+ 31022504 [ label = "1\n(IntLit_c)" ];
+ 26474210 [ label = "0 == 1 (JifBinary_c)" ];
+ 31022504 -> 26474210 [label="\n[nn access paths: []]"];
+ 13729475 [ label = "1\n(IntLit_c)" ];
+ 31022504 [ label = "1 (IntLit_c)" ];
+ 13729475 -> 31022504 [label="\n[nn access paths: []]"];
+ 6510044 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 2221396 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } (Block_c)" ];
+ 6510044 -> 2221396 [label="\n[nn access paths: []]"];
+ 24387997 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 23930626 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 24387997 -> 23930626 [label="\n[nn access paths: []]"];
+ }
+ digraph CFGBuildNotNullChecker4 {
+   label="CFGBuilder: NotNullChecker4\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:12,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test2(...) -> void
+ 23984709 [ label = "public void test2(...)" ];
+ 21621663 [ label = "void" ];
+ 23984709 -> 21621663 [label=""];
+ // node public void test2(...) -> []
+ //     edge void -> void
+ 21621663 [ label = "void" ];
+ 798740 [ label = "void" ];
+ 21621663 -> 798740 [label=""];
+ // node void -> [{edgeKey=,term={ },entry}]
+ //     edge void -> { }
+ 798740 [ label = "void" ];
+ 32689826 [ label = "{ }" ];
+ 798740 -> 32689826 [label=""];
+ //     edge { } -> { }
+ 32689826 [ label = "{ }" ];
+ 31198842 [ label = "{ }" ];
+ 32689826 -> 31198842 [label=""];
+ // node { } -> [{edgeKey=,term=public void test2(...),exit}]
+ //     edge { } -> public void test2(...)
+ 31198842 [ label = "{ }" ];
+ 3840954 [ label = "public void test2(...)" ];
+ 31198842 -> 3840954 [label=""];
+ }
+ digraph DataFlowNotNullChecker4 {
+   label="Dataflow: NotNullChecker4\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:12,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 3840954 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 23984709 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 21621663 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 23984709 -> 21621663 [label="\n[nn access paths: []]"];
+ 798740 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 32689826 [ label = "{ } (Block_c)" ];
+ 798740 -> 32689826 [label="\n[nn access paths: []]"];
+ 21621663 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 798740 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 21621663 -> 798740 [label="\n[nn access paths: []]"];
+ 31198842 [ label = "{ }\n(Block_c)" ];
+ 3840954 [ label = "public void test2(...) (JifMethodDecl_c)" ];
+ 31198842 -> 3840954 [label="\n[nn access paths: []]"];
+ 32689826 [ label = "{ }\n(Block_c)" ];
+ 31198842 [ label = "{ } (Block_c)" ];
+ 32689826 -> 31198842 [label="\n[nn access paths: []]"];
+ }
+ digraph CFGBuildNotNullChecker5 {
+   label="CFGBuilder: NotNullChecker5\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public NullPrecond(...) -> { super(...) }
+ 1478827 [ label = "public NullPrecond(...)" ];
+ 24374386 [ label = "{ super(...) }" ];
+ 1478827 -> 24374386 [label=""];
+ // node public NullPrecond(...) -> []
+ //     edge { super(...) } -> super(...)
+ 24374386 [ label = "{ super(...) }" ];
+ 8406772 [ label = "super(...)" ];
+ 24374386 -> 8406772 [label=""];
+ // node { super(...) } -> [{edgeKey=,term=public NullPrecond(...),exit}]
+ //     edge super(...) -> super(...)
+ 8406772 [ label = "super(...)" ];
+ 28472268 [ label = "super(...)" ];
+ 8406772 -> 28472268 [label=""];
+ // node super(...) -> [{edgeKey=,term={ super(...) },exit}]
+ //     edge super(...) -> { super(...) }
+ 28472268 [ label = "super(...)" ];
+ 13655059 [ label = "{ super(...) }" ];
+ 28472268 -> 13655059 [label=""];
+ //     edge { super(...) } -> public NullPrecond(...)
+ 13655059 [ label = "{ super(...) }" ];
+ 21830977 [ label = "public NullPrecond(...)" ];
+ 13655059 -> 21830977 [label=""];
+ }
+ digraph DataFlowNotNullChecker5 {
+   label="Dataflow: NotNullChecker5\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 13655059 [ label = "{ super(...) }\n(Block_c)" ];
+ 21830977 [ label = "public NullPrecond(...) (JLiftConstructorDecl_c)" ];
+ 13655059 -> 21830977 [label="\n[nn access paths: []]"];
+ 24374386 [ label = "{ super(...) }\n(Block_c)" ];
+ 8406772 [ label = "super(...) (ConstructorCall_c)" ];
+ 24374386 -> 8406772 [label="\n[nn access paths: []]"];
+ 28472268 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 13655059 [ label = "{ super(...) } (Block_c)" ];
+ 28472268 -> 13655059 [label="\n[nn access paths: []]"];
+ 8406772 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 28472268 [ label = "super(...) (ConstructorCall_c)" ];
+ 8406772 -> 28472268 [label="\n[nn access paths: []]"];
+ 21830977 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 1478827 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 24374386 [ label = "{ super(...) } (Block_c)" ];
+ 1478827 -> 24374386 [label="\n[nn access paths: []]"];
+ }
+ digraph CFGBuildPreciseClassChecker6 {
+   label="CFGBuilder: PreciseClassChecker6\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test(...) -> void
+ 29087666 [ label = "public void test(...)" ];
+ 21886820 [ label = "void" ];
+ 29087666 -> 21886820 [label=""];
+ // node public void test(...) -> []
+ //     edge void -> void
+ 21886820 [ label = "void" ];
+ 28113457 [ label = "void" ];
+ 21886820 -> 28113457 [label=""];
+ // node void -> [{edgeKey=,term={ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); },entry}]
+ //     edge void -> { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }
+ 28113457 [ label = "void" ];
+ 22927632 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 28113457 -> 22927632 [label=""];
+ //     edge { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> if (0 == 1) { eval(this.myField = null); }
+ 22927632 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 5618579 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 22927632 -> 5618579 [label=""];
+ // node { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> [{edgeKey=,term=public void test(...),exit}]
+ //     edge if (0 == 1) { eval(this.myField = null); } -> 0 == 1
+ 5618579 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 9299042 [ label = "0 == 1" ];
+ 5618579 -> 9299042 [label=""];
+ // node if (0 == 1) { eval(this.myField = null); } -> [{edgeKey=,term=eval(this.myField.getClass());,entry}]
+ //     edge 0 == 1 -> 0
+ 9299042 [ label = "0 == 1" ];
+ 26009930 [ label = "0" ];
+ 9299042 -> 26009930 [label=""];
+ // node 0 == 1 -> [{edgeKey=true,term={ eval(this.myField = null); },entry}, {edgeKey=false,term=if (0 == 1) { eval(this.myField = null); },exit}]
+ //     edge 0 -> 0
+ 26009930 [ label = "0" ];
+ 1763596 [ label = "0" ];
+ 26009930 -> 1763596 [label=""];
+ // node 0 -> [{edgeKey=,term=1,entry}]
+ //     edge 0 -> 1
+ 1763596 [ label = "0" ];
+ 12206609 [ label = "1" ];
+ 1763596 -> 12206609 [label=""];
+ //     edge 1 -> 1
+ 12206609 [ label = "1" ];
+ 4694228 [ label = "1" ];
+ 12206609 -> 4694228 [label=""];
+ // node 1 -> [{edgeKey=,term=0 == 1,exit}]
+ //     edge 1 -> 0 == 1
+ 4694228 [ label = "1" ];
+ 9434319 [ label = "0 == 1" ];
+ 4694228 -> 9434319 [label=""];
+ //     edge 0 == 1 -> { eval(this.myField = null); }
+ 9434319 [ label = "0 == 1" ];
+ 17908832 [ label = "{ eval(this.myField = null); }" ];
+ 9434319 -> 17908832 [label="true"];
+ //     edge 0 == 1 -> if (0 == 1) { eval(this.myField = null); }
+ 9434319 [ label = "0 == 1" ];
+ 10485311 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 9434319 -> 10485311 [label="false"];
+ //     edge { eval(this.myField = null); } -> eval(this.myField = null);
+ 17908832 [ label = "{ eval(this.myField = null); }" ];
+ 32316171 [ label = "eval(this.myField = null);" ];
+ 17908832 -> 32316171 [label=""];
+ // node { eval(this.myField = null); } -> [{edgeKey=,term=if (0 == 1) { eval(this.myField = null); },exit}]
+ //     edge eval(this.myField = null); -> this.myField = null
+ 32316171 [ label = "eval(this.myField = null);" ];
+ 25857250 [ label = "this.myField = null" ];
+ 32316171 -> 25857250 [label=""];
+ // node eval(this.myField = null); -> [{edgeKey=,term={ eval(this.myField = null); },exit}]
+ //     edge this.myField = null -> this
+ 25857250 [ label = "this.myField = null" ];
+ 19368402 [ label = "this" ];
+ 25857250 -> 19368402 [label=""];
+ // node this.myField = null -> [{edgeKey=,term=eval(this.myField = null);,exit}]
+ //     edge this -> this
+ 19368402 [ label = "this" ];
+ 13190097 [ label = "this" ];
+ 19368402 -> 13190097 [label=""];
+ // node this -> [{edgeKey=,term=null,entry}]
+ //     edge this -> null
+ 13190097 [ label = "this" ];
+ 25383640 [ label = "null" ];
+ 13190097 -> 25383640 [label=""];
+ //     edge null -> null
+ 25383640 [ label = "null" ];
+ 11800260 [ label = "null" ];
+ 25383640 -> 11800260 [label=""];
+ // node null -> [{edgeKey=,term=this.myField = null,exit}]
+ //     edge null -> this.myField = null
+ 11800260 [ label = "null" ];
+ 20280994 [ label = "this.myField = null" ];
+ 11800260 -> 20280994 [label=""];
+ //     edge this.myField = null -> eval(this.myField = null);
+ 20280994 [ label = "this.myField = null" ];
+ 16747636 [ label = "eval(this.myField = null);" ];
+ 20280994 -> 16747636 [label=""];
+ //     edge eval(this.myField = null); -> { eval(this.myField = null); }
+ 16747636 [ label = "eval(this.myField = null);" ];
+ 22949069 [ label = "{ eval(this.myField = null); }" ];
+ 16747636 -> 22949069 [label=""];
+ //     edge { eval(this.myField = null); } -> if (0 == 1) { eval(this.myField = null); }
+ 22949069 [ label = "{ eval(this.myField = null); }" ];
+ 10485311 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 22949069 -> 10485311 [label=""];
+ //     edge if (0 == 1) { eval(this.myField = null); } -> eval(this.myField.getClass());
+ 10485311 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 30373009 [ label = "eval(this.myField.getClass());" ];
+ 10485311 -> 30373009 [label=""];
+ //     edge eval(this.myField.getClass()); -> this.myField.getClass()
+ 30373009 [ label = "eval(this.myField.getClass());" ];
+ 15595312 [ label = "this.myField.getClass()" ];
+ 30373009 -> 15595312 [label=""];
+ // node eval(this.myField.getClass()); -> [{edgeKey=,term={ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); },exit}]
+ //     edge this.myField.getClass() -> this.myField
+ 15595312 [ label = "this.myField.getClass()" ];
+ 16749745 [ label = "this.myField" ];
+ 15595312 -> 16749745 [label=""];
+ // node this.myField.getClass() -> [{edgeKey=,term=eval(this.myField.getClass());,exit}]
+ //     edge this.myField -> this
+ 16749745 [ label = "this.myField" ];
+ 24840600 [ label = "this" ];
+ 16749745 -> 24840600 [label=""];
+ // node this.myField -> [{edgeKey=,term=this.myField.getClass(),exit}]
+ //     edge this -> this
+ 24840600 [ label = "this" ];
+ 11733267 [ label = "this" ];
+ 24840600 -> 11733267 [label=""];
+ // node this -> [{edgeKey=,term=this.myField,exit}]
+ //     edge this -> this.myField
+ 11733267 [ label = "this" ];
+ 1635615 [ label = "this.myField" ];
+ 11733267 -> 1635615 [label=""];
+ //     edge this.myField -> this.myField.getClass()
+ 1635615 [ label = "this.myField" ];
+ 8703610 [ label = "this.myField.getClass()" ];
+ 1635615 -> 8703610 [label=""];
+ //     edge this.myField.getClass() -> eval(this.myField.getClass());
+ 8703610 [ label = "this.myField.getClass()" ];
+ 17815542 [ label = "eval(this.myField.getClass());" ];
+ 8703610 -> 17815542 [label=""];
+ //     edge this.myField.getClass() -> public void test(...)
+ 8703610 [ label = "this.myField.getClass()" ];
+ 19623049 [ label = "public void test(...)" ];
+ 8703610 -> 19623049 [label="NullPointerException"];
+ //     edge eval(this.myField.getClass()); -> { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }
+ 17815542 [ label = "eval(this.myField.getClass());" ];
+ 31637242 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 17815542 -> 31637242 [label=""];
+ //     edge { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> public void test(...)
+ 31637242 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 19623049 [ label = "public void test(...)" ];
+ 31637242 -> 19623049 [label=""];
+ }
+ digraph DataFlowPreciseClassChecker6 {
+   label="Dataflow: PreciseClassChecker6\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 16747636 [ label = "eval(this.myField = null);\n(Eval_c)" ];
+ 22949069 [ label = "{ eval(this.myField = null); } (Block_c)" ];
+ 16747636 -> 22949069 [label="\n[{}]"];
+ 32316171 [ label = "eval(this.myField = null);\n(Eval_c)" ];
+ 25857250 [ label = "this.myField = null (FieldAssign_c)" ];
+ 32316171 -> 25857250 [label="\n[{}]"];
+ 1635615 [ label = "this.myField\n(Field_c)" ];
+ 8703610 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 1635615 -> 8703610 [label="\n[{}]"];
+ 16749745 [ label = "this.myField\n(Field_c)" ];
+ 24840600 [ label = "this (Special_c)" ];
+ 16749745 -> 24840600 [label="\n[{}]"];
+ 20280994 [ label = "this.myField = null\n(FieldAssign_c)" ];
+ 16747636 [ label = "eval(this.myField = null); (Eval_c)" ];
+ 20280994 -> 16747636 [label="\n[{}]"];
+ 25857250 [ label = "this.myField = null\n(FieldAssign_c)" ];
+ 19368402 [ label = "this (Special_c)" ];
+ 25857250 -> 19368402 [label="\n[{}]"];
+ 1763596 [ label = "0\n(IntLit_c)" ];
+ 12206609 [ label = "1 (IntLit_c)" ];
+ 1763596 -> 12206609 [label="\n[{}]"];
+ 26009930 [ label = "0\n(IntLit_c)" ];
+ 1763596 [ label = "0 (IntLit_c)" ];
+ 26009930 -> 1763596 [label="\n[{}]"];
+ 28113457 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 22927632 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } (Block_c)" ];
+ 28113457 -> 22927632 [label="\n[{}]"];
+ 21886820 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 28113457 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 21886820 -> 28113457 [label="\n[{}]"];
+ 13190097 [ label = "this\n(Special_c)" ];
+ 25383640 [ label = "null (NullLit_c)" ];
+ 13190097 -> 25383640 [label="\n[{}]"];
+ 19368402 [ label = "this\n(Special_c)" ];
+ 13190097 [ label = "this (Special_c)" ];
+ 19368402 -> 13190097 [label="\n[{}]"];
+ 11733267 [ label = "this\n(Special_c)" ];
+ 1635615 [ label = "this.myField (Field_c)" ];
+ 11733267 -> 1635615 [label="\n[{}]"];
+ 24840600 [ label = "this\n(Special_c)" ];
+ 11733267 [ label = "this (Special_c)" ];
+ 24840600 -> 11733267 [label="\n[{}]"];
+ 19623049 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 29087666 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 21886820 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 29087666 -> 21886820 [label="\n[{}]"];
+ 31637242 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }\n(Block_c)" ];
+ 19623049 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 31637242 -> 19623049 [label="\n[{}]"];
+ 22927632 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }\n(Block_c)" ];
+ 5618579 [ label = "if (0 == 1) { eval(this.myField = null); } (If_c)" ];
+ 22927632 -> 5618579 [label="\n[{}]"];
+ 8703610 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 17815542 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 8703610 -> 17815542 [label="\n[{}]"];
+ 19623049 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 8703610 -> 19623049 [label="NullPointerException\n[{}]"];
+ 15595312 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 16749745 [ label = "this.myField (Field_c)" ];
+ 15595312 -> 16749745 [label="\n[{}]"];
+ 10485311 [ label = "if (0 == 1) { eval(this.myField = null); }\n(If_c)" ];
+ 30373009 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 10485311 -> 30373009 [label="\n[{}]"];
+ 5618579 [ label = "if (0 == 1) { eval(this.myField = null); }\n(If_c)" ];
+ 9299042 [ label = "0 == 1 (JifBinary_c)" ];
+ 5618579 -> 9299042 [label="\n[{}]"];
+ 9434319 [ label = "0 == 1\n(JifBinary_c)" ];
+ 17908832 [ label = "{ eval(this.myField = null); } (Block_c)" ];
+ 9434319 -> 17908832 [label="true\n[{}]"];
+ 10485311 [ label = "if (0 == 1) { eval(this.myField = null); } (If_c)" ];
+ 9434319 -> 10485311 [label="false\n[{}]"];
+ 9299042 [ label = "0 == 1\n(JifBinary_c)" ];
+ 26009930 [ label = "0 (IntLit_c)" ];
+ 9299042 -> 26009930 [label="\n[{}]"];
+ 22949069 [ label = "{ eval(this.myField = null); }\n(Block_c)" ];
+ 10485311 [ label = "if (0 == 1) { eval(this.myField = null); } (If_c)" ];
+ 22949069 -> 10485311 [label="\n[{}]"];
+ 17908832 [ label = "{ eval(this.myField = null); }\n(Block_c)" ];
+ 32316171 [ label = "eval(this.myField = null); (Eval_c)" ];
+ 17908832 -> 32316171 [label="\n[{}]"];
+ 11800260 [ label = "null\n(NullLit_c)" ];
+ 20280994 [ label = "this.myField = null (FieldAssign_c)" ];
+ 11800260 -> 20280994 [label="\n[{}]"];
+ 25383640 [ label = "null\n(NullLit_c)" ];
+ 11800260 [ label = "null (NullLit_c)" ];
+ 25383640 -> 11800260 [label="\n[{}]"];
+ 4694228 [ label = "1\n(IntLit_c)" ];
+ 9434319 [ label = "0 == 1 (JifBinary_c)" ];
+ 4694228 -> 9434319 [label="\n[{}]"];
+ 12206609 [ label = "1\n(IntLit_c)" ];
+ 4694228 [ label = "1 (IntLit_c)" ];
+ 12206609 -> 4694228 [label="\n[{}]"];
+ 17815542 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 31637242 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } (Block_c)" ];
+ 17815542 -> 31637242 [label="\n[{}]"];
+ 30373009 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 15595312 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 30373009 -> 15595312 [label="\n[{}]"];
+ }
+ digraph CFGBuildPreciseClassChecker7 {
+   label="CFGBuilder: PreciseClassChecker7\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:12,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test2(...) -> void
+ 23257749 [ label = "public void test2(...)" ];
+ 17423963 [ label = "void" ];
+ 23257749 -> 17423963 [label=""];
+ // node public void test2(...) -> []
+ //     edge void -> void
+ 17423963 [ label = "void" ];
+ 15020576 [ label = "void" ];
+ 17423963 -> 15020576 [label=""];
+ // node void -> [{edgeKey=,term={ },entry}]
+ //     edge void -> { }
+ 15020576 [ label = "void" ];
+ 20843194 [ label = "{ }" ];
+ 15020576 -> 20843194 [label=""];
+ //     edge { } -> { }
+ 20843194 [ label = "{ }" ];
+ 3299256 [ label = "{ }" ];
+ 20843194 -> 3299256 [label=""];
+ // node { } -> [{edgeKey=,term=public void test2(...),exit}]
+ //     edge { } -> public void test2(...)
+ 3299256 [ label = "{ }" ];
+ 18687346 [ label = "public void test2(...)" ];
+ 3299256 -> 18687346 [label=""];
+ }
+ digraph DataFlowPreciseClassChecker7 {
+   label="Dataflow: PreciseClassChecker7\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:12,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 18687346 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 23257749 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 17423963 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 23257749 -> 17423963 [label="\n[{}]"];
+ 15020576 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 20843194 [ label = "{ } (Block_c)" ];
+ 15020576 -> 20843194 [label="\n[{}]"];
+ 17423963 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 15020576 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 17423963 -> 15020576 [label="\n[{}]"];
+ 3299256 [ label = "{ }\n(Block_c)" ];
+ 18687346 [ label = "public void test2(...) (JifMethodDecl_c)" ];
+ 3299256 -> 18687346 [label="\n[{}]"];
+ 20843194 [ label = "{ }\n(Block_c)" ];
+ 3299256 [ label = "{ } (Block_c)" ];
+ 20843194 -> 3299256 [label="\n[{}]"];
+ }
+ digraph CFGBuildPreciseClassChecker8 {
+   label="CFGBuilder: PreciseClassChecker8\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public NullPrecond(...) -> { super(...) }
+ 22831804 [ label = "public NullPrecond(...)" ];
+ 5660886 [ label = "{ super(...) }" ];
+ 22831804 -> 5660886 [label=""];
+ // node public NullPrecond(...) -> []
+ //     edge { super(...) } -> super(...)
+ 5660886 [ label = "{ super(...) }" ];
+ 15696851 [ label = "super(...)" ];
+ 5660886 -> 15696851 [label=""];
+ // node { super(...) } -> [{edgeKey=,term=public NullPrecond(...),exit}]
+ //     edge super(...) -> super(...)
+ 15696851 [ label = "super(...)" ];
+ 12039161 [ label = "super(...)" ];
+ 15696851 -> 12039161 [label=""];
+ // node super(...) -> [{edgeKey=,term={ super(...) },exit}]
+ //     edge super(...) -> { super(...) }
+ 12039161 [ label = "super(...)" ];
+ 8970080 [ label = "{ super(...) }" ];
+ 12039161 -> 8970080 [label=""];
+ //     edge { super(...) } -> public NullPrecond(...)
+ 8970080 [ label = "{ super(...) }" ];
+ 78219 [ label = "public NullPrecond(...)" ];
+ 8970080 -> 78219 [label=""];
+ }
+ digraph DataFlowPreciseClassChecker8 {
+   label="Dataflow: PreciseClassChecker8\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 8970080 [ label = "{ super(...) }\n(Block_c)" ];
+ 78219 [ label = "public NullPrecond(...) (JLiftConstructorDecl_c)" ];
+ 8970080 -> 78219 [label="\n[{}]"];
+ 5660886 [ label = "{ super(...) }\n(Block_c)" ];
+ 15696851 [ label = "super(...) (ConstructorCall_c)" ];
+ 5660886 -> 15696851 [label="\n[{}]"];
+ 12039161 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 8970080 [ label = "{ super(...) } (Block_c)" ];
+ 12039161 -> 8970080 [label="\n[{}]"];
+ 15696851 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 12039161 [ label = "super(...) (ConstructorCall_c)" ];
+ 15696851 -> 12039161 [label="\n[{}]"];
+ 78219 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 22831804 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 5660886 [ label = "{ super(...) } (Block_c)" ];
+ 22831804 -> 5660886 [label="\n[{}]"];
+ }
+ digraph CFGBuildIntegerBoundsChecker9 {
+   label="CFGBuilder: IntegerBoundsChecker9\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test(...) -> void
+ 6011238 [ label = "public void test(...)" ];
+ 32048085 [ label = "void" ];
+ 6011238 -> 32048085 [label=""];
+ // node public void test(...) -> []
+ //     edge void -> void
+ 32048085 [ label = "void" ];
+ 16426320 [ label = "void" ];
+ 32048085 -> 16426320 [label=""];
+ // node void -> [{edgeKey=,term={ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); },entry}]
+ //     edge void -> { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }
+ 16426320 [ label = "void" ];
+ 24864323 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 16426320 -> 24864323 [label=""];
+ //     edge { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> if (0 == 1) { eval(this.myField = null); }
+ 24864323 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 7792807 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 24864323 -> 7792807 [label=""];
+ // node { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> [{edgeKey=,term=public void test(...),exit}]
+ //     edge if (0 == 1) { eval(this.myField = null); } -> 0 == 1
+ 7792807 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 10769718 [ label = "0 == 1" ];
+ 7792807 -> 10769718 [label=""];
+ // node if (0 == 1) { eval(this.myField = null); } -> [{edgeKey=,term=eval(this.myField.getClass());,entry}]
+ //     edge 0 == 1 -> 0
+ 10769718 [ label = "0 == 1" ];
+ 14050342 [ label = "0" ];
+ 10769718 -> 14050342 [label=""];
+ // node 0 == 1 -> [{edgeKey=true,term={ eval(this.myField = null); },entry}, {edgeKey=false,term=if (0 == 1) { eval(this.myField = null); },exit}]
+ //     edge 0 -> 0
+ 14050342 [ label = "0" ];
+ 21565109 [ label = "0" ];
+ 14050342 -> 21565109 [label=""];
+ // node 0 -> [{edgeKey=,term=1,entry}]
+ //     edge 0 -> 1
+ 21565109 [ label = "0" ];
+ 23376028 [ label = "1" ];
+ 21565109 -> 23376028 [label=""];
+ //     edge 1 -> 1
+ 23376028 [ label = "1" ];
+ 25621063 [ label = "1" ];
+ 23376028 -> 25621063 [label=""];
+ // node 1 -> [{edgeKey=,term=0 == 1,exit}]
+ //     edge 1 -> 0 == 1
+ 25621063 [ label = "1" ];
+ 9194103 [ label = "0 == 1" ];
+ 25621063 -> 9194103 [label=""];
+ //     edge 0 == 1 -> { eval(this.myField = null); }
+ 9194103 [ label = "0 == 1" ];
+ 7143488 [ label = "{ eval(this.myField = null); }" ];
+ 9194103 -> 7143488 [label="true"];
+ //     edge 0 == 1 -> if (0 == 1) { eval(this.myField = null); }
+ 9194103 [ label = "0 == 1" ];
+ 2855942 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 9194103 -> 2855942 [label="false"];
+ //     edge { eval(this.myField = null); } -> eval(this.myField = null);
+ 7143488 [ label = "{ eval(this.myField = null); }" ];
+ 16994425 [ label = "eval(this.myField = null);" ];
+ 7143488 -> 16994425 [label=""];
+ // node { eval(this.myField = null); } -> [{edgeKey=,term=if (0 == 1) { eval(this.myField = null); },exit}]
+ //     edge eval(this.myField = null); -> this.myField = null
+ 16994425 [ label = "eval(this.myField = null);" ];
+ 9977237 [ label = "this.myField = null" ];
+ 16994425 -> 9977237 [label=""];
+ // node eval(this.myField = null); -> [{edgeKey=,term={ eval(this.myField = null); },exit}]
+ //     edge this.myField = null -> this
+ 9977237 [ label = "this.myField = null" ];
+ 15926420 [ label = "this" ];
+ 9977237 -> 15926420 [label=""];
+ // node this.myField = null -> [{edgeKey=,term=eval(this.myField = null);,exit}]
+ //     edge this -> this
+ 15926420 [ label = "this" ];
+ 11652231 [ label = "this" ];
+ 15926420 -> 11652231 [label=""];
+ // node this -> [{edgeKey=,term=null,entry}]
+ //     edge this -> null
+ 11652231 [ label = "this" ];
+ 15397900 [ label = "null" ];
+ 11652231 -> 15397900 [label=""];
+ //     edge null -> null
+ 15397900 [ label = "null" ];
+ 20735553 [ label = "null" ];
+ 15397900 -> 20735553 [label=""];
+ // node null -> [{edgeKey=,term=this.myField = null,exit}]
+ //     edge null -> this.myField = null
+ 20735553 [ label = "null" ];
+ 6109469 [ label = "this.myField = null" ];
+ 20735553 -> 6109469 [label=""];
+ //     edge this.myField = null -> eval(this.myField = null);
+ 6109469 [ label = "this.myField = null" ];
+ 5285449 [ label = "eval(this.myField = null);" ];
+ 6109469 -> 5285449 [label=""];
+ //     edge eval(this.myField = null); -> { eval(this.myField = null); }
+ 5285449 [ label = "eval(this.myField = null);" ];
+ 13961193 [ label = "{ eval(this.myField = null); }" ];
+ 5285449 -> 13961193 [label=""];
+ //     edge { eval(this.myField = null); } -> if (0 == 1) { eval(this.myField = null); }
+ 13961193 [ label = "{ eval(this.myField = null); }" ];
+ 2855942 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 13961193 -> 2855942 [label=""];
+ //     edge if (0 == 1) { eval(this.myField = null); } -> eval(this.myField.getClass());
+ 2855942 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 33189144 [ label = "eval(this.myField.getClass());" ];
+ 2855942 -> 33189144 [label=""];
+ //     edge eval(this.myField.getClass()); -> this.myField.getClass()
+ 33189144 [ label = "eval(this.myField.getClass());" ];
+ 1067475 [ label = "this.myField.getClass()" ];
+ 33189144 -> 1067475 [label=""];
+ // node eval(this.myField.getClass()); -> [{edgeKey=,term={ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); },exit}]
+ //     edge this.myField.getClass() -> this.myField
+ 1067475 [ label = "this.myField.getClass()" ];
+ 22992473 [ label = "this.myField" ];
+ 1067475 -> 22992473 [label=""];
+ // node this.myField.getClass() -> [{edgeKey=,term=eval(this.myField.getClass());,exit}]
+ //     edge this.myField -> this
+ 22992473 [ label = "this.myField" ];
+ 21658130 [ label = "this" ];
+ 22992473 -> 21658130 [label=""];
+ // node this.myField -> [{edgeKey=,term=this.myField.getClass(),exit}]
+ //     edge this -> this
+ 21658130 [ label = "this" ];
+ 9716945 [ label = "this" ];
+ 21658130 -> 9716945 [label=""];
+ // node this -> [{edgeKey=,term=this.myField,exit}]
+ //     edge this -> this.myField
+ 9716945 [ label = "this" ];
+ 3278348 [ label = "this.myField" ];
+ 9716945 -> 3278348 [label=""];
+ //     edge this.myField -> this.myField.getClass()
+ 3278348 [ label = "this.myField" ];
+ 2830910 [ label = "this.myField.getClass()" ];
+ 3278348 -> 2830910 [label=""];
+ //     edge this.myField.getClass() -> eval(this.myField.getClass());
+ 2830910 [ label = "this.myField.getClass()" ];
+ 32486590 [ label = "eval(this.myField.getClass());" ];
+ 2830910 -> 32486590 [label=""];
+ //     edge this.myField.getClass() -> public void test(...)
+ 2830910 [ label = "this.myField.getClass()" ];
+ 4414010 [ label = "public void test(...)" ];
+ 2830910 -> 4414010 [label="NullPointerException"];
+ //     edge eval(this.myField.getClass()); -> { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }
+ 32486590 [ label = "eval(this.myField.getClass());" ];
+ 30983464 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 32486590 -> 30983464 [label=""];
+ //     edge { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> public void test(...)
+ 30983464 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 4414010 [ label = "public void test(...)" ];
+ 30983464 -> 4414010 [label=""];
+ }
+ digraph DataFlowIntegerBoundsChecker9 {
+   label="Dataflow: IntegerBoundsChecker9\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 5285449 [ label = "eval(this.myField = null);\n(Eval_c)" ];
+ 13961193 [ label = "{ eval(this.myField = null); } (Block_c)" ];
+ 5285449 -> 13961193 [label="\n{}"];
+ 16994425 [ label = "eval(this.myField = null);\n(Eval_c)" ];
+ 9977237 [ label = "this.myField = null (FieldAssign_c)" ];
+ 16994425 -> 9977237 [label="\n{}"];
+ 3278348 [ label = "this.myField\n(Field_c)" ];
+ 2830910 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 3278348 -> 2830910 [label="\n{}"];
+ 22992473 [ label = "this.myField\n(Field_c)" ];
+ 21658130 [ label = "this (Special_c)" ];
+ 22992473 -> 21658130 [label="\n{}"];
+ 6109469 [ label = "this.myField = null\n(FieldAssign_c)" ];
+ 5285449 [ label = "eval(this.myField = null); (Eval_c)" ];
+ 6109469 -> 5285449 [label="\n{}"];
+ 9977237 [ label = "this.myField = null\n(FieldAssign_c)" ];
+ 15926420 [ label = "this (Special_c)" ];
+ 9977237 -> 15926420 [label="\n{}"];
+ 21565109 [ label = "0\n(IntLit_c)" ];
+ 23376028 [ label = "1 (IntLit_c)" ];
+ 21565109 -> 23376028 [label="\n{}"];
+ 14050342 [ label = "0\n(IntLit_c)" ];
+ 21565109 [ label = "0 (IntLit_c)" ];
+ 14050342 -> 21565109 [label="\n{}"];
+ 16426320 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 24864323 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } (Block_c)" ];
+ 16426320 -> 24864323 [label="\n{}"];
+ 32048085 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 16426320 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 32048085 -> 16426320 [label="\n{}"];
+ 11652231 [ label = "this\n(Special_c)" ];
+ 15397900 [ label = "null (NullLit_c)" ];
+ 11652231 -> 15397900 [label="\n{}"];
+ 15926420 [ label = "this\n(Special_c)" ];
+ 11652231 [ label = "this (Special_c)" ];
+ 15926420 -> 11652231 [label="\n{}"];
+ 9716945 [ label = "this\n(Special_c)" ];
+ 3278348 [ label = "this.myField (Field_c)" ];
+ 9716945 -> 3278348 [label="\n{}"];
+ 21658130 [ label = "this\n(Special_c)" ];
+ 9716945 [ label = "this (Special_c)" ];
+ 21658130 -> 9716945 [label="\n{}"];
+ 4414010 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 6011238 [ label = "public void test(...)\n(JifMethodDecl_c)" ];
+ 32048085 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 6011238 -> 32048085 [label="\n{}"];
+ 30983464 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }\n(Block_c)" ];
+ 4414010 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 30983464 -> 4414010 [label="\n{}"];
+ 24864323 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }\n(Block_c)" ];
+ 7792807 [ label = "if (0 == 1) { eval(this.myField = null); } (If_c)" ];
+ 24864323 -> 7792807 [label="\n{}"];
+ 2830910 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 32486590 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 2830910 -> 32486590 [label="\n{}"];
+ 4414010 [ label = "public void test(...) (JifMethodDecl_c)" ];
+ 2830910 -> 4414010 [label="NullPointerException\n{}"];
+ 1067475 [ label = "this.myField.getClass()\n(JifCall_c)" ];
+ 22992473 [ label = "this.myField (Field_c)" ];
+ 1067475 -> 22992473 [label="\n{}"];
+ 2855942 [ label = "if (0 == 1) { eval(this.myField = null); }\n(If_c)" ];
+ 33189144 [ label = "eval(this.myField.getClass()); (Eval_c)" ];
+ 2855942 -> 33189144 [label="\n{}"];
+ 7792807 [ label = "if (0 == 1) { eval(this.myField = null); }\n(If_c)" ];
+ 10769718 [ label = "0 == 1 (JifBinary_c)" ];
+ 7792807 -> 10769718 [label="\n{}"];
+ 9194103 [ label = "0 == 1\n(JifBinary_c)" ];
+ 7143488 [ label = "{ eval(this.myField = null); } (Block_c)" ];
+ 9194103 -> 7143488 [label="true\n{}"];
+ 2855942 [ label = "if (0 == 1) { eval(this.myField = null); } (If_c)" ];
+ 9194103 -> 2855942 [label="false\n{}"];
+ 10769718 [ label = "0 == 1\n(JifBinary_c)" ];
+ 14050342 [ label = "0 (IntLit_c)" ];
+ 10769718 -> 14050342 [label="\n{}"];
+ 13961193 [ label = "{ eval(this.myField = null); }\n(Block_c)" ];
+ 2855942 [ label = "if (0 == 1) { eval(this.myField = null); } (If_c)" ];
+ 13961193 -> 2855942 [label="\n{}"];
+ 7143488 [ label = "{ eval(this.myField = null); }\n(Block_c)" ];
+ 16994425 [ label = "eval(this.myField = null); (Eval_c)" ];
+ 7143488 -> 16994425 [label="\n{}"];
+ 20735553 [ label = "null\n(NullLit_c)" ];
+ 6109469 [ label = "this.myField = null (FieldAssign_c)" ];
+ 20735553 -> 6109469 [label="\n{}"];
+ 15397900 [ label = "null\n(NullLit_c)" ];
+ 20735553 [ label = "null (NullLit_c)" ];
+ 15397900 -> 20735553 [label="\n{}"];
+ 25621063 [ label = "1\n(IntLit_c)" ];
+ 9194103 [ label = "0 == 1 (JifBinary_c)" ];
+ 25621063 -> 9194103 [label="\n{}"];
+ 23376028 [ label = "1\n(IntLit_c)" ];
+ 25621063 [ label = "1 (IntLit_c)" ];
+ 23376028 -> 25621063 [label="\n{}"];
+ 32486590 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 30983464 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } (Block_c)" ];
+ 32486590 -> 30983464 [label="\n{}"];
+ 33189144 [ label = "eval(this.myField.getClass());\n(Eval_c)" ];
+ 1067475 [ label = "this.myField.getClass() (JifCall_c)" ];
+ 33189144 -> 1067475 [label="\n{}"];
+ }
+ digraph CFGBuildIntegerBoundsChecker10 {
+   label="CFGBuilder: IntegerBoundsChecker10\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:12,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test2(...) -> void
+ 15453627 [ label = "public void test2(...)" ];
+ 17818297 [ label = "void" ];
+ 15453627 -> 17818297 [label=""];
+ // node public void test2(...) -> []
+ //     edge void -> void
+ 17818297 [ label = "void" ];
+ 32380043 [ label = "void" ];
+ 17818297 -> 32380043 [label=""];
+ // node void -> [{edgeKey=,term={ },entry}]
+ //     edge void -> { }
+ 32380043 [ label = "void" ];
+ 25613444 [ label = "{ }" ];
+ 32380043 -> 25613444 [label=""];
+ //     edge { } -> { }
+ 25613444 [ label = "{ }" ];
+ 15354046 [ label = "{ }" ];
+ 25613444 -> 15354046 [label=""];
+ // node { } -> [{edgeKey=,term=public void test2(...),exit}]
+ //     edge { } -> public void test2(...)
+ 15354046 [ label = "{ }" ];
+ 21878616 [ label = "public void test2(...)" ];
+ 15354046 -> 21878616 [label=""];
+ }
+ digraph DataFlowIntegerBoundsChecker10 {
+   label="Dataflow: IntegerBoundsChecker10\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:12,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 21878616 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 15453627 [ label = "public void test2(...)\n(JifMethodDecl_c)" ];
+ 17818297 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 15453627 -> 17818297 [label="\n{}"];
+ 32380043 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 25613444 [ label = "{ } (Block_c)" ];
+ 32380043 -> 25613444 [label="\n{}"];
+ 17818297 [ label = "void\n(JifCanonicalTypeNode_c)" ];
+ 32380043 [ label = "void (JifCanonicalTypeNode_c)" ];
+ 17818297 -> 32380043 [label="\n{}"];
+ 15354046 [ label = "{ }\n(Block_c)" ];
+ 21878616 [ label = "public void test2(...) (JifMethodDecl_c)" ];
+ 15354046 -> 21878616 [label="\n{}"];
+ 25613444 [ label = "{ }\n(Block_c)" ];
+ 15354046 [ label = "{ } (Block_c)" ];
+ 25613444 -> 15354046 [label="\n{}"];
+ }
+ digraph CFGBuildIntegerBoundsChecker11 {
+   label="CFGBuilder: IntegerBoundsChecker11\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public NullPrecond(...) -> { super(...) }
+ 24435002 [ label = "public NullPrecond(...)" ];
+ 6400263 [ label = "{ super(...) }" ];
+ 24435002 -> 6400263 [label=""];
+ // node public NullPrecond(...) -> []
+ //     edge { super(...) } -> super(...)
+ 6400263 [ label = "{ super(...) }" ];
+ 27271771 [ label = "super(...)" ];
+ 6400263 -> 27271771 [label=""];
+ // node { super(...) } -> [{edgeKey=,term=public NullPrecond(...),exit}]
+ //     edge super(...) -> super(...)
+ 27271771 [ label = "super(...)" ];
+ 3115866 [ label = "super(...)" ];
+ 27271771 -> 3115866 [label=""];
+ // node super(...) -> [{edgeKey=,term={ super(...) },exit}]
+ //     edge super(...) -> { super(...) }
+ 3115866 [ label = "super(...)" ];
+ 23447542 [ label = "{ super(...) }" ];
+ 3115866 -> 23447542 [label=""];
+ //     edge { super(...) } -> public NullPrecond(...)
+ 23447542 [ label = "{ super(...) }" ];
+ 19589694 [ label = "public NullPrecond(...)" ];
+ 23447542 -> 19589694 [label=""];
+ }
+ digraph DataFlowIntegerBoundsChecker11 {
+   label="Dataflow: IntegerBoundsChecker11\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ 23447542 [ label = "{ super(...) }\n(Block_c)" ];
+ 19589694 [ label = "public NullPrecond(...) (JLiftConstructorDecl_c)" ];
+ 23447542 -> 19589694 [label="\n{}"];
+ 6400263 [ label = "{ super(...) }\n(Block_c)" ];
+ 27271771 [ label = "super(...) (ConstructorCall_c)" ];
+ 6400263 -> 27271771 [label="\n{}"];
+ 3115866 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 23447542 [ label = "{ super(...) } (Block_c)" ];
+ 3115866 -> 23447542 [label="\n{}"];
+ 27271771 [ label = "super(...)\n(ConstructorCall_c)" ];
+ 3115866 [ label = "super(...) (ConstructorCall_c)" ];
+ 27271771 -> 3115866 [label="\n{}"];
+ 19589694 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 24435002 [ label = "public NullPrecond(...)\n(JLiftConstructorDecl_c)" ];
+ 6400263 [ label = "{ super(...) } (Block_c)" ];
+ 24435002 -> 6400263 [label="\n{}"];
+ }
+ digraph CFGBuildCallGraphVisitor$MockDataFlow12 {
+   label="CFGBuilder: CallGraphVisitor$MockDataFlow12\nmethod public void test{sum(caller_pc@test:NullPrecond.jl:5,11-20)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test(...) -> void
+ 14298351 [ label = "public void test(...)" ];
+ 29103856 [ label = "void" ];
+ 29103856 -> 14298351 [label=""];
+ // node public void test(...) -> []
+ //     edge void -> void
+ 29103856 [ label = "void" ];
+ 25567987 [ label = "void" ];
+ 25567987 -> 29103856 [label=""];
+ // node void -> [{edgeKey=,term={ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); },entry}]
+ //     edge void -> { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }
+ 25567987 [ label = "void" ];
+ 23103355 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 23103355 -> 25567987 [label=""];
+ //     edge { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> if (0 == 1) { eval(this.myField = null); }
+ 23103355 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 6206601 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 6206601 -> 23103355 [label=""];
+ // node { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> [{edgeKey=,term=public void test(...),exit}]
+ //     edge if (0 == 1) { eval(this.myField = null); } -> 0 == 1
+ 6206601 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 27182317 [ label = "0 == 1" ];
+ 27182317 -> 6206601 [label=""];
+ // node if (0 == 1) { eval(this.myField = null); } -> [{edgeKey=,term=eval(this.myField.getClass());,entry}]
+ //     edge 0 == 1 -> 0
+ 27182317 [ label = "0 == 1" ];
+ 9624795 [ label = "0" ];
+ 9624795 -> 27182317 [label=""];
+ // node 0 == 1 -> [{edgeKey=true,term={ eval(this.myField = null); },entry}, {edgeKey=false,term=if (0 == 1) { eval(this.myField = null); },exit}]
+ //     edge 0 -> 0
+ 9624795 [ label = "0" ];
+ 31571602 [ label = "0" ];
+ 31571602 -> 9624795 [label=""];
+ // node 0 -> [{edgeKey=,term=1,entry}]
+ //     edge 0 -> 1
+ 31571602 [ label = "0" ];
+ 27682895 [ label = "1" ];
+ 27682895 -> 31571602 [label=""];
+ //     edge 1 -> 1
+ 27682895 [ label = "1" ];
+ 671035 [ label = "1" ];
+ 671035 -> 27682895 [label=""];
+ // node 1 -> [{edgeKey=,term=0 == 1,exit}]
+ //     edge 1 -> 0 == 1
+ 671035 [ label = "1" ];
+ 3808966 [ label = "0 == 1" ];
+ 3808966 -> 671035 [label=""];
+ //     edge 0 == 1 -> { eval(this.myField = null); }
+ 3808966 [ label = "0 == 1" ];
+ 28991606 [ label = "{ eval(this.myField = null); }" ];
+ 28991606 -> 3808966 [label="true"];
+ //     edge 0 == 1 -> if (0 == 1) { eval(this.myField = null); }
+ 3808966 [ label = "0 == 1" ];
+ 18016247 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 18016247 -> 3808966 [label="false"];
+ //     edge { eval(this.myField = null); } -> eval(this.myField = null);
+ 28991606 [ label = "{ eval(this.myField = null); }" ];
+ 3874616 [ label = "eval(this.myField = null);" ];
+ 3874616 -> 28991606 [label=""];
+ // node { eval(this.myField = null); } -> [{edgeKey=,term=if (0 == 1) { eval(this.myField = null); },exit}]
+ //     edge eval(this.myField = null); -> this.myField = null
+ 3874616 [ label = "eval(this.myField = null);" ];
+ 25086455 [ label = "this.myField = null" ];
+ 25086455 -> 3874616 [label=""];
+ // node eval(this.myField = null); -> [{edgeKey=,term={ eval(this.myField = null); },exit}]
+ //     edge this.myField = null -> this
+ 25086455 [ label = "this.myField = null" ];
+ 16617866 [ label = "this" ];
+ 16617866 -> 25086455 [label=""];
+ // node this.myField = null -> [{edgeKey=,term=eval(this.myField = null);,exit}]
+ //     edge this -> this
+ 16617866 [ label = "this" ];
+ 22945909 [ label = "this" ];
+ 22945909 -> 16617866 [label=""];
+ // node this -> [{edgeKey=,term=null,entry}]
+ //     edge this -> null
+ 22945909 [ label = "this" ];
+ 10822310 [ label = "null" ];
+ 10822310 -> 22945909 [label=""];
+ //     edge null -> null
+ 10822310 [ label = "null" ];
+ 25559096 [ label = "null" ];
+ 25559096 -> 10822310 [label=""];
+ // node null -> [{edgeKey=,term=this.myField = null,exit}]
+ //     edge null -> this.myField = null
+ 25559096 [ label = "null" ];
+ 7896086 [ label = "this.myField = null" ];
+ 7896086 -> 25559096 [label=""];
+ //     edge this.myField = null -> eval(this.myField = null);
+ 7896086 [ label = "this.myField = null" ];
+ 1744155 [ label = "eval(this.myField = null);" ];
+ 1744155 -> 7896086 [label=""];
+ //     edge eval(this.myField = null); -> { eval(this.myField = null); }
+ 1744155 [ label = "eval(this.myField = null);" ];
+ 21010507 [ label = "{ eval(this.myField = null); }" ];
+ 21010507 -> 1744155 [label=""];
+ //     edge { eval(this.myField = null); } -> if (0 == 1) { eval(this.myField = null); }
+ 21010507 [ label = "{ eval(this.myField = null); }" ];
+ 18016247 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 18016247 -> 21010507 [label=""];
+ //     edge if (0 == 1) { eval(this.myField = null); } -> eval(this.myField.getClass());
+ 18016247 [ label = "if (0 == 1) { eval(this.myField = null); }" ];
+ 30303902 [ label = "eval(this.myField.getClass());" ];
+ 30303902 -> 18016247 [label=""];
+ //     edge eval(this.myField.getClass()); -> this.myField.getClass()
+ 30303902 [ label = "eval(this.myField.getClass());" ];
+ 28523022 [ label = "this.myField.getClass()" ];
+ 28523022 -> 30303902 [label=""];
+ // node eval(this.myField.getClass()); -> [{edgeKey=,term={ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); },exit}]
+ //     edge this.myField.getClass() -> this.myField
+ 28523022 [ label = "this.myField.getClass()" ];
+ 27817788 [ label = "this.myField" ];
+ 27817788 -> 28523022 [label=""];
+ // node this.myField.getClass() -> [{edgeKey=,term=eval(this.myField.getClass());,exit}]
+ //     edge this.myField -> this
+ 27817788 [ label = "this.myField" ];
+ 16617866 [ label = "this" ];
+ 16617866 -> 27817788 [label=""];
+ // node this.myField -> [{edgeKey=,term=this.myField.getClass(),exit}]
+ //     edge this -> this
+ 16617866 [ label = "this" ];
+ 22945909 [ label = "this" ];
+ 22945909 -> 16617866 [label=""];
+ // node this -> [{edgeKey=,term=this.myField,exit}]
+ //     edge this -> this.myField
+ 22945909 [ label = "this" ];
+ 19673895 [ label = "this.myField" ];
+ 19673895 -> 22945909 [label=""];
+ //     edge this.myField -> this.myField.getClass()
+ 19673895 [ label = "this.myField" ];
+ 13782591 [ label = "this.myField.getClass()" ];
+ 13782591 -> 19673895 [label=""];
+ //     edge this.myField.getClass() -> eval(this.myField.getClass());
+ 13782591 [ label = "this.myField.getClass()" ];
+ 17777129 [ label = "eval(this.myField.getClass());" ];
+ 17777129 -> 13782591 [label=""];
+ //     edge this.myField.getClass() -> public void test(...)
+ 13782591 [ label = "this.myField.getClass()" ];
+ 11557581 [ label = "public void test(...)" ];
+ 11557581 -> 13782591 [label="NullPointerException"];
+ //     edge eval(this.myField.getClass()); -> { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }
+ 17777129 [ label = "eval(this.myField.getClass());" ];
+ 1673653 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 1673653 -> 17777129 [label=""];
+ //     edge { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); } -> public void test(...)
+ 1673653 [ label = "{ if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }" ];
+ 11557581 [ label = "public void test(...)" ];
+ 11557581 -> 1673653 [label=""];
+ }
+successfully built polyglot.visit.CFGBuilder@a00185 for public void test(...)
+ digraph CFGBuildCallGraphVisitor$MockDataFlow13 {
+   label="CFGBuilder: CallGraphVisitor$MockDataFlow13\nmethod public void test2{sum(caller_pc@test2:NullPrecond.jl:12,11-21)}() : {*!: } in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public void test2(...) -> void
+ 12829461 [ label = "public void test2(...)" ];
+ 3972145 [ label = "void" ];
+ 3972145 -> 12829461 [label=""];
+ // node public void test2(...) -> []
+ //     edge void -> void
+ 3972145 [ label = "void" ];
+ 20089978 [ label = "void" ];
+ 20089978 -> 3972145 [label=""];
+ // node void -> [{edgeKey=,term={ },entry}]
+ //     edge void -> { }
+ 20089978 [ label = "void" ];
+ 27582163 [ label = "{ }" ];
+ 27582163 -> 20089978 [label=""];
+ //     edge { } -> { }
+ 27582163 [ label = "{ }" ];
+ 18945918 [ label = "{ }" ];
+ 18945918 -> 27582163 [label=""];
+ // node { } -> [{edgeKey=,term=public void test2(...),exit}]
+ //     edge { } -> public void test2(...)
+ 18945918 [ label = "{ }" ];
+ 26049230 [ label = "public void test2(...)" ];
+ 26049230 -> 18945918 [label=""];
+ }
+successfully built polyglot.visit.CFGBuilder@179953c for public void test2(...)
+ digraph CFGBuildCallGraphVisitor$MockDataFlow14 {
+   label="CFGBuilder: CallGraphVisitor$MockDataFlow14\nconstructor public public NullPrecond() in NullPrecond"; fontsize=20; center=true; ratio=auto; size = "8.5,11";
+ //     edge public NullPrecond(...) -> { super(...) }
+ 30638546 [ label = "public NullPrecond(...)" ];
+ 15734641 [ label = "{ super(...) }" ];
+ 15734641 -> 30638546 [label=""];
+ // node public NullPrecond(...) -> []
+ //     edge { super(...) } -> super(...)
+ 15734641 [ label = "{ super(...) }" ];
+ 9649099 [ label = "super(...)" ];
+ 9649099 -> 15734641 [label=""];
+ // node { super(...) } -> [{edgeKey=,term=public NullPrecond(...),exit}]
+ //     edge super(...) -> super(...)
+ 9649099 [ label = "super(...)" ];
+ 3852606 [ label = "super(...)" ];
+ 3852606 -> 9649099 [label=""];
+ // node super(...) -> [{edgeKey=,term={ super(...) },exit}]
+ //     edge super(...) -> { super(...) }
+ 3852606 [ label = "super(...)" ];
+ 24257622 [ label = "{ super(...) }" ];
+ 24257622 -> 3852606 [label=""];
+ //     edge { super(...) } -> public NullPrecond(...)
+ 24257622 [ label = "{ super(...) }" ];
+ 11511434 [ label = "public NullPrecond(...)" ];
+ 11511434 -> 24257622 [label=""];
+ }
+successfully built polyglot.visit.CFGBuilder@1dec1dd for public NullPrecond(...)
+ENTRY PEERS:
+	[entry: public void test(...)[]]
+[entry: public void test(...)[]]
+entry: this.myField.getClass()[]
+predecessors of entry: this.myField.getClass()[]: 1
+	[()entry: eval(this.myField.getClass());[]]
+entry: eval(this.myField.getClass());[]
+predecessors of entry: eval(this.myField.getClass());[]: 1
+	[()if (0 == 1) { eval(this.myField = null); }[]]
+if (0 == 1) { eval(this.myField = null); }[]
+predecessors of if (0 == 1) { eval(this.myField = null); }[]: 2
+	[(false)0 == 1[], (){ eval(this.myField = null); }[]]
+0 == 1[]
+predecessors of 0 == 1[]: 1
+	[()1[]]
+1[]
+predecessors of 1[]: 1
+	[()entry: 1[]]
+entry: 1[]
+predecessors of entry: 1[]: 1
+	[()0[]]
+0[]
+predecessors of 0[]: 1
+	[()entry: 0[]]
+entry: 0[]
+predecessors of entry: 0[]: 1
+	[()entry: 0 == 1[]]
+entry: 0 == 1[]
+predecessors of entry: 0 == 1[]: 1
+	[()entry: if (0 == 1) { eval(this.myField = null); }[]]
+entry: if (0 == 1) { eval(this.myField = null); }[]
+predecessors of entry: if (0 == 1) { eval(this.myField = null); }[]: 1
+	[()entry: { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }[]]
+entry: { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }[]
+predecessors of entry: { if (0 == 1) { eval(this.myField = null); } eval(this.myField.getClass()); }[]: 1
+	[()void[]]
+void[]
+predecessors of void[]: 1
+	[()entry: void[]]
+entry: void[]
+predecessors of entry: void[]: 1
+	[()entry: public void test(...)[]]
+entry: public void test(...)[]
+{ eval(this.myField = null); }[]
+predecessors of { eval(this.myField = null); }[]: 1
+	[()eval(this.myField = null);[]]
+eval(this.myField = null);[]
+predecessors of eval(this.myField = null);[]: 1
+	[()this.myField = null[]]
+this.myField = null[]
+predecessors of this.myField = null[]: 1
+	[()null[]]
+null[]
+predecessors of null[]: 1
+	[()entry: null[]]
+entry: null[]
+predecessors of entry: null[]: 1
+	[()this[]]
+this[]
+predecessors of this[]: 2
+	[()entry: this[], ()entry: this[]]
+entry: this[]
+predecessors of entry: this[]: 2
+	[()entry: this.myField = null[], ()entry: this.myField[]]
+entry: this.myField = null[]
+predecessors of entry: this.myField = null[]: 1
+	[()entry: eval(this.myField = null);[]]
+entry: eval(this.myField = null);[]
+predecessors of entry: eval(this.myField = null);[]: 1
+	[()entry: { eval(this.myField = null); }[]]
+entry: { eval(this.myField = null); }[]
+predecessors of entry: { eval(this.myField = null); }[]: 1
+	[(true)0 == 1[]]
+entry: this.myField[]
+predecessors of entry: this.myField[]: 1
+	[()entry: this.myField.getClass()[]]

@@ -1,0 +1,23 @@
+package signature;
+
+public class SignatureClass {
+    static int __JIF_SIG_OF_JAVA_CLASS$20030619 = 0;
+
+    public native void passInt(int i);
+    public native void passAliceInt(int{Alice:} i);
+    public native void passPublicInt(int{} i);
+
+    public native void passIntArray(int[] i);
+    public native void passAliceIntArray(int{Alice:}[]{Alice:} i);
+    public native void passPublicIntArray(int{}[]{} i);
+
+    public native int getInt();
+    public native int{Alice:} getAliceInt();
+    public native int{} getPublicInt();
+
+    public native int[] getIntArray();
+    public native int{Alice:}[]{Alice:} getAliceIntArray();
+    public native int{}[]{} getPublicIntArray();
+
+    public native static int getInt(int anotherInt);
+}

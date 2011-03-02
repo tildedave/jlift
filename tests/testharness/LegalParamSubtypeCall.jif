@@ -1,0 +1,18 @@
+public class LegalParamSubtypeCall {
+
+    public void test{}() {
+	B[{Alice:}] myB = new B();
+	passA(myB);
+    }
+
+    public void passA(A[{Alice:}] anA) { }
+
+}
+
+class A[label L] {
+
+}
+
+class B[label L] extends A[L] {
+
+}

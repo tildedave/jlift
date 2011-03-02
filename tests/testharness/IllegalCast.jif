@@ -1,0 +1,19 @@
+public class IllegalCast {
+
+    static int{} publicInt;
+
+    public void test{}() {
+	A[{Alice:}] myA = null;
+	
+	publicInt = ((A) myA).getInt();
+    }
+
+}
+
+class A[label L] {
+    public int{L} getInt() { return 0; }
+}
+
+class B[label L] extends A[L] {
+    public int{L} getIntSecond() { return 0; }
+}

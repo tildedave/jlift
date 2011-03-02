@@ -1,0 +1,23 @@
+public class LegalCatchException {
+
+    public void test{}() {
+	try {
+	    doIt();
+	}
+	catch (Container.ContainerException e) {
+
+	}
+    }
+
+    void doIt() throws Container.ContainerException {
+    }
+
+}
+
+class Container {
+
+    class ContainerException extends RuntimeException {
+
+    }
+
+}

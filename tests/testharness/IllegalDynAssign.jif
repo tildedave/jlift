@@ -1,0 +1,20 @@
+public class TestBorked {
+
+    int{} publicInt;
+    int{Alice:} aliceInt;
+
+    public void test{}() {
+	doAssignment(new label {}, aliceInt);
+    }
+
+    public void doAssignment(label lbl, int i) {
+	Container c = new Container();
+	c.data = i;
+	publicInt = c.data;
+	//publicInt = i;
+    }
+}
+
+class Container[label L] {
+    int{L} data;
+}

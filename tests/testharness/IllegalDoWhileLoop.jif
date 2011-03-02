@@ -1,0 +1,12 @@
+public class IllegalDoWhileLoop {
+
+    public int{} publicInt;
+    public int{Alice:} aliceInt;
+
+    public void test{}() {
+	do {
+	    publicInt = 1;
+	} while (publicInt * aliceInt > 0);
+    }
+
+}

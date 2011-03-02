@@ -1,0 +1,16 @@
+public class IllegalStupidRuntimeException {
+
+    public int{} publicInt;
+    public int{Alice:}[]{Alice:} aliceArray;
+
+    public void test{}() {
+	setAliceArray();
+
+	publicInt = 2;
+    }
+
+    public void setAliceArray() {
+	aliceArray[3] = aliceArray[5] + 1;
+    }
+
+}

@@ -1,0 +1,16 @@
+digraph G {
+procedure1 [shape=rectangle,label="process(...)"];
+procedure2 [shape=rectangle,label="install(...)"];
+procedure3 [shape=rectangle,label="deselect(...)"];
+procedure4 [shape=rectangle,label="credit(...)"];
+procedure5 [shape=rectangle,label="com.sun.javacard.samples.wallet.Wallet(...)"];
+procedure6 [shape=rectangle,label="getBalance(...)"];
+procedure7 [shape=rectangle,label="debit(...)"];
+procedure8 [shape=rectangle,label="select(...)"];
+procedure9 [shape=rectangle,label="verify(...)"];
+procedure1 -> procedure4;
+procedure1 -> procedure7;
+procedure1 -> procedure6;
+procedure1 -> procedure9;
+procedure2 -> procedure5;
+}

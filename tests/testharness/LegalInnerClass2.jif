@@ -1,0 +1,14 @@
+public class LegalInnerClass2 {
+
+    int i;
+
+    public void test{}() {
+	new Inner().foo();
+    }
+
+    public final class Inner {
+	public void foo() {
+	    i = 3;
+	}
+    }
+}

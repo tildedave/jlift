@@ -1,0 +1,4 @@
+public class G
+{
+    public native G returnme();
+}

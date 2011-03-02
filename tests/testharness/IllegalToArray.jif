@@ -1,0 +1,22 @@
+import java.util.Vector; 
+
+public class IllegalToArray {
+
+    public void test{}() {
+	bork();
+    }
+
+    public void bork() {
+	Integer[] integerArray;
+	Vector v = new Vector();
+	v.add(new Integer(5));
+	v.add(new Integer(12));
+	v.add(new Integer(13));
+	v.add(new Integer(10));
+	toArray(integerArray);
+    }
+
+    public Object[] toArray(Object[] obj) {
+	return null;
+    }
+}

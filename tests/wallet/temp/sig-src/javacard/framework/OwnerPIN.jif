@@ -1,0 +1,11 @@
+package javacard.framework;
+
+
+public class OwnerPIN{
+    public OwnerPIN(byte tryLimit, byte maxPINSize) { }
+    public native boolean check(byte[] pin, short offset, byte length);
+    public native boolean isValidated();
+    public native void update(byte[] pin, short offset, byte length);
+    public native void reset();
+    public native byte getTriesRemaining();
+}

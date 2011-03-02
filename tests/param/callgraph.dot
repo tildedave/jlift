@@ -1,0 +1,14 @@
+digraph G {
+procedure1 [shape=rectangle,label="B(...)"];
+procedure2 [shape=rectangle,label="api1(...)"];
+procedure3 [shape=rectangle,label="setData(...)"];
+procedure4 [shape=rectangle,label="launder(...)"];
+procedure5 [shape=rectangle,label="Container[label L](...)"];
+procedure6 [shape=rectangle,label="getData(...)"];
+procedure2 -> procedure4;
+procedure2 -> procedure3;
+procedure2 -> procedure5;
+procedure2 -> procedure6;
+procedure4 -> procedure3;
+procedure4 -> procedure6;
+}

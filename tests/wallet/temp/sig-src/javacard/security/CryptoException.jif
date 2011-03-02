@@ -1,0 +1,9 @@
+package javacard.security;
+
+import javacard.framework.CardRuntimeException;
+
+public class CryptoException extends CardRuntimeException {
+
+    public static short ILLEGAL_USE;
+    public static short ILLEGAL_VALUE;
+}
